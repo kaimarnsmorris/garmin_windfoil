@@ -96,4 +96,35 @@ class FoilTrackerDelegate extends WatchUi.BehaviorDelegate {
         
         return true;
     }
+    
+    // NEW FUNCTION: Handle light button press - Add lap marker with custom fields
+    function onLight() {
+        var app = Application.getApp();
+        
+        // Check if the activity is recording
+        var data = mModel.getData();
+        var isActive = false;
+        
+        // Only add lap when activity is recording and not paused
+        if (data.hasKey("isRecording") && data["isRecording"]) {
+            if (!(data.hasKey("sessionPaused") && data["sessionPaused"])) {
+                isActive = true;
+            }
+        }
+        
+        if (isActive) {
+            // Add a lap marker with all custom fields
+            app.addLapMarker();
+            
+            // Give visual feedback that lap was added
+            WatchUi.requestUpdate();
+            
+            // Optional: WatchUi.playTone(Attention.TONE_LAP); // Play a tone if needed
+            System.println("Lap marker added from Main view");
+        } else {
+            System.println("Cannot add lap marker - not recording or paused");
+        }
+        
+        return true;
+    }
 }

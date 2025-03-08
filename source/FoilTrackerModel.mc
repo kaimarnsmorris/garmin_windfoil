@@ -465,4 +465,46 @@ class FoilTrackerModel {
             };
         }
     }
+
+    // Add these new methods to the FoilTrackerModel class
+
+    // New method to get lap data for recording
+    function getLapData() {
+        // Create a structure with all the lap data
+        var lapData = {
+            "percentOnFoil" => 0,
+            "vmgUp" => 0.0,
+            "vmgDown" => 0.0,
+            "tackSec" => 0.0,
+            "tackMtr" => 0.0,
+            "avgTackAngle" => 0
+        };
+        
+        // Fill in the current values
+        if (mData.hasKey("percentOnFoil")) {
+            lapData["percentOnFoil"] = mData["percentOnFoil"].toNumber();
+        }
+        
+        // For the other values, we'll need to access them from external sources
+        // like the WindTracker, so this will be passed to that class to fill in
+        
+        // Return the data structure
+        return lapData;
+    }
+
+    // New method to calculate time since last tack
+    function getTimeSinceLastTack() {
+        // This would use timing information to calculate seconds since last tack
+        // For now, return a placeholder value - this should be implemented
+        // by tracking the timestamp of the last tack in WindTracker
+        return 0.0;
+    }
+
+    // New method to calculate distance since last tack
+    function getDistanceSinceLastTack() {
+        // This would use position data to calculate meters since last tack
+        // For now, return a placeholder value - this should be implemented
+        // by tracking the position of the last tack in WindTracker
+        return 0.0;
+    }
 }

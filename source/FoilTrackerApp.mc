@@ -19,10 +19,20 @@ class FoilTrackerApp extends Application.AppBase {
     private var mTimerRunning;
     private var mWindTracker;  // Wind tracker
     
-    // FitContributor fields
+    // FitContributor fields for Session
     private var mWorkoutNameField;
     private var mWindStrengthField;
     private var mWindDirectionField;
+    
+    // FitContributor fields for Lap
+    private var mLapPctOnFoilField;
+    private var mLapVMGUpField;
+    private var mLapVMGDownField;
+    private var mLapTackSecField;
+    private var mLapTackMtrField;
+    private var mLapWindDirectionField;
+    private var mLapWindStrengthField;
+    private var mLapAvgTackAngleField;
 
     // Initialize the application
     function initialize() {
@@ -38,6 +48,16 @@ class FoilTrackerApp extends Application.AppBase {
         mWorkoutNameField = null;
         mWindStrengthField = null;
         mWindDirectionField = null;
+        
+        // Initialize Lap fields
+        mLapPctOnFoilField = null;
+        mLapVMGUpField = null;
+        mLapVMGDownField = null;
+        mLapTackSecField = null;
+        mLapTackMtrField = null;
+        mLapWindDirectionField = null;
+        mLapWindStrengthField = null;
+        mLapAvgTackAngleField = null;
     }
 
     // onStart() is called when the application is starting
@@ -140,8 +160,7 @@ class FoilTrackerApp extends Application.AppBase {
         }
     }
     
-    // Create FitContributor fields for the session
- // Create FitContributor fields for the session - numeric approach
+    // Create FitContributor fields for the session - now includes LAP field types
     function createFitContributorFields(sessionName, windStrength) {
         try {
             // Check if the session is valid
@@ -170,7 +189,7 @@ class FoilTrackerApp extends Application.AppBase {
                 }
             }
             
-            // Create numeric fields (no string issues)
+            // Create numeric fields for SESSION
             mWindStrengthField = mSession.createField(
                 "windLow",              // Field for low end of range
                 1,                      // Field ID
@@ -202,8 +221,237 @@ class FoilTrackerApp extends Application.AppBase {
                     System.println("Created wind direction field: " + windAngle);
                 }
             }
+            
+            // Create LAP custom fields
+            // 1. Percent on Foil - 2 digit integer
+            mLapPctOnFoilField = mSession.createField(
+                "pctOnFoil",
+                3,
+                FitContributor.DATA_TYPE_UINT8,
+                { :mesgType => FitContributor.MESG_TYPE_LAP }
+            );
+            
+            // 2. VMG Upwind - 3 digits with 1 decimal point
+            mLapVMGUpField = mSession.createField(
+                "vmgUp",
+                4,
+                FitContributor.DATA_TYPE_UINT16,
+                { :mesgType => FitContributor.MESG_TYPE_LAP, :scale => 10 }
+            );
+            
+            // 3. VMG Downwind - 3 digits with 1 decimal point
+            mLapVMGDownField = mSession.createField(
+                "vmgDown",
+                5,
+                FitContributor.DATA_TYPE_UINT16,
+                { :mesgType => FitContributor.MESG_TYPE_LAP, :scale => 10 }
+            );
+            
+            // 4. Tack Seconds - 4 digits with 1 decimal
+            mLapTackSecField = mSession.createField(
+                "tackSec",
+                6,
+                FitContributor.DATA_TYPE_UINT16,
+                { :mesgType => FitContributor.MESG_TYPE_LAP, :scale => 10 }
+            );
+            
+            // 5. Tack Meters - 4 digits with 1 decimal
+            mLapTackMtrField = mSession.createField(
+                "tackMtr",
+                7,
+                FitContributor.DATA_TYPE_UINT16,
+                { :mesgType => FitContributor.MESG_TYPE_LAP, :scale => 10 }
+            );
+            
+            // 6. Wind Direction - duplicated in lap
+            mLapWindDirectionField = mSession.createField(
+                "windDir",
+                8,
+                FitContributor.DATA_TYPE_UINT16,
+                { :mesgType => FitContributor.MESG_TYPE_LAP }
+            );
+            
+            // 7. Wind Strength - duplicated in lap
+            mLapWindStrengthField = mSession.createField(
+                "windStr",
+                9,
+                FitContributor.DATA_TYPE_UINT8,
+                { :mesgType => FitContributor.MESG_TYPE_LAP }
+            );
+            
+            // 8. Average Tack Angle - 2 digit integer
+            mLapAvgTackAngleField = mSession.createField(
+                "avgTackAng",
+                10,
+                FitContributor.DATA_TYPE_UINT8,
+                { :mesgType => FitContributor.MESG_TYPE_LAP }
+            );
+            
+            // Set initial values for lap fields if we have wind data
+            if (windRangeCode > 0 && mLapWindStrengthField != null) {
+                mLapWindStrengthField.setData(windRangeCode);
+            }
+            
+            if (mModel != null && mModel.getData().hasKey("initialWindAngle") && mLapWindDirectionField != null) {
+                var windAngle = mModel.getData()["initialWindAngle"].toNumber();
+                mLapWindDirectionField.setData(windAngle);
+            }
+            
+            System.println("All lap custom fields created successfully");
+            
         } catch (e) {
             System.println("Error creating FitContributor fields: " + e.getErrorMessage());
+        }
+    }
+    
+    // New function to add a lap marker with all custom fields
+    // New function to add a lap marker with all custom fields
+    function addLapMarker() {
+        if (mSession != null && mSession.isRecording()) {
+            try {
+                System.println("Adding lap marker with custom fields");
+                
+                // Get current position if available
+                var currentPosition = null;
+                
+                // Try to get the most recent position from the Position module
+                try {
+                    currentPosition = Position.getInfo();
+                    System.println("Got current position for lap marker");
+                } catch (ex) {
+                    System.println("Error getting position: " + ex.getErrorMessage());
+                }
+                
+                // Notify WindTracker of the lap change first, passing position info
+                if (mWindTracker != null) {
+                    mWindTracker.onLapMarked(currentPosition);
+                }
+                
+                // Get current data from model
+                var data = mModel.getData();
+                
+                // Get wind and lap data from WindTracker
+                var windData = mWindTracker.getWindData();
+                var lapData = mWindTracker.getLapData();
+                
+                // 1. Percent on Foil - now using lap-specific calculation from WindTracker
+                if (mLapPctOnFoilField != null && lapData != null && lapData.hasKey("pctOnFoil")) {
+                    var pctOnFoil = lapData["pctOnFoil"].toNumber();
+                    mLapPctOnFoilField.setData(pctOnFoil);
+                    System.println("Lap PctOnFoil: " + pctOnFoil + "% (lap-specific)");
+                } 
+                // Fallback to model's overall value if lap-specific not available
+                else if (mLapPctOnFoilField != null && data.hasKey("percentOnFoil")) {
+                    var pctOnFoil = data["percentOnFoil"].toNumber();
+                    mLapPctOnFoilField.setData(pctOnFoil);
+                    System.println("Lap PctOnFoil: " + pctOnFoil + "% (overall)");
+                }
+                
+                // 2 & 3. VMG (Upwind & Downwind) - now using lap averages
+                if (lapData != null) {
+                    // Get lap-specific VMG values
+                    var vmgUpValue = 0;
+                    var vmgDownValue = 0;
+                    
+                    if (lapData.hasKey("vmgUp")) {
+                        vmgUpValue = (lapData["vmgUp"] * 10).toNumber(); // Scale by 10 for 1 decimal place
+                        if (mLapVMGUpField != null) {
+                            mLapVMGUpField.setData(vmgUpValue);
+                            System.println("Lap VMG Upwind: " + (vmgUpValue/10.0) + " (lap average)");
+                        }
+                    }
+                    
+                    if (lapData.hasKey("vmgDown")) {
+                        vmgDownValue = (lapData["vmgDown"] * 10).toNumber(); // Scale by 10 for 1 decimal place
+                        if (mLapVMGDownField != null) {
+                            mLapVMGDownField.setData(vmgDownValue);
+                            System.println("Lap VMG Downwind: " + (vmgDownValue/10.0) + " (lap average)");
+                        }
+                    }
+                }
+                // Fallback to instantaneous values if needed
+                else if (windData != null && windData.hasKey("valid") && windData["valid"]) {
+                    var vmgValue = 0;
+                    if (windData.hasKey("currentVMG")) {
+                        vmgValue = (windData["currentVMG"] * 10).toNumber(); // Scale by 10 for 1 decimal place
+                    }
+                    
+                    var isUpwind = false;
+                    if (windData.hasKey("currentPointOfSail")) {
+                        isUpwind = (windData["currentPointOfSail"] == "Upwind");
+                    }
+                    
+                    // Set VMG in appropriate field based on point of sail
+                    if (isUpwind && mLapVMGUpField != null) {
+                        mLapVMGUpField.setData(vmgValue);
+                        // Set downwind to 0
+                        if (mLapVMGDownField != null) {
+                            mLapVMGDownField.setData(0);
+                        }
+                        System.println("Lap VMG Upwind: " + (vmgValue/10.0) + " (current)");
+                    } else if (!isUpwind && mLapVMGDownField != null) {
+                        mLapVMGDownField.setData(vmgValue);
+                        // Set upwind to 0
+                        if (mLapVMGUpField != null) {
+                            mLapVMGUpField.setData(0);
+                        }
+                        System.println("Lap VMG Downwind: " + (vmgValue/10.0) + " (current)");
+                    }
+                }
+                
+                // 6. Wind Direction
+                if (mLapWindDirectionField != null && windData.hasKey("windDirection")) {
+                    var windDir = windData["windDirection"].toNumber();
+                    mLapWindDirectionField.setData(windDir);
+                    System.println("Lap Wind Direction: " + windDir);
+                }
+                
+                // 8. Average Tack Angle - already using lap-specific values
+                if (mLapAvgTackAngleField != null && lapData.hasKey("avgTackAngle")) {
+                    var avgTackAngle = lapData["avgTackAngle"].toNumber();
+                    mLapAvgTackAngleField.setData(avgTackAngle);
+                    System.println("Lap Avg Tack Angle: " + avgTackAngle + " (lap-specific)");
+                }
+                
+                // 4 & 5. Tack Time and Distance
+                if (lapData != null) {
+                    // Time since last tack in this lap
+                    if (lapData.hasKey("tackSec") && mLapTackSecField != null) {
+                        var tackTimeValue = (lapData["tackSec"] * 10).toNumber(); // Scale by 10 for 1 decimal place
+                        mLapTackSecField.setData(tackTimeValue);
+                        System.println("Lap Tack Seconds: " + (tackTimeValue/10.0));
+                    }
+                    
+                    // Distance related to tack
+                    if (lapData.hasKey("tackMtr") && mLapTackMtrField != null) {
+                        var tackDistValue = (lapData["tackMtr"] * 10).toNumber(); // Scale by 10 for 1 decimal place
+                        mLapTackMtrField.setData(tackDistValue);
+                        System.println("Lap Tack Meters: " + (tackDistValue/10.0));
+                    }
+                }
+                
+                // 7. Wind Strength
+                if (mLapWindStrengthField != null && mWindStrengthField != null) {
+                    // Use the same value as the session field
+                    var windStr = mWindStrengthField.getData();
+                    mLapWindStrengthField.setData(windStr);
+                    System.println("Lap Wind Strength: " + windStr);
+                }
+                
+                // Add lap-to-date VMG to debug log
+                if (lapData != null && lapData.hasKey("lapVMG")) {
+                    System.println("Lap-to-date VMG: " + lapData["lapVMG"].format("%.2f") + " knots");
+                }
+                
+                // Add the lap marker after setting all fields
+                mSession.addLap();
+                System.println("Lap marker added successfully");
+                
+            } catch (e) {
+                System.println("Error adding lap marker: " + e.getErrorMessage());
+            }
+        } else {
+            System.println("Cannot add lap marker - session not recording");
         }
     }
     

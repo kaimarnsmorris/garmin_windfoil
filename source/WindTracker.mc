@@ -57,10 +57,27 @@ class WindTracker {
     private var mManeuverTimestamp;         // Timestamp when maneuver was detected
     private var mPendingManeuver;           // Information about a pending maneuver to calculate angle
     
+    // New variables for lap tracking
+    private var mCurrentLapNumber;          // Current lap number
+    private var mLapManeuvers;              // Dictionary to store maneuvers by lap
+    private var mLapStats;                  // Dictionary to store stats by lap
+    private var mLastLapStartTime;          // Timestamp when current lap started
+    private var mLapStartPositions;         // Store start positions for each lap
+    private var mLapStartTimestamps;        // Store start times for each lap
+    private var mLapDistances;              // Store distances from start for VMG calculation
+
+    // Add these variables to the WindTracker class
+    private var mLapFoilingPoints;        // Dictionary to count foiling points per lap
+    private var mLapTotalPoints;          // Dictionary to count total points per lap
+    private var mLapVMGUpTotal;           // Sum of upwind VMG for the lap
+    private var mLapVMGDownTotal;         // Sum of downwind VMG for the lap
+    private var mLapUpwindPoints;         // Count of upwind data points in lap
+    private var mLapDownwindPoints;       // Count of downwind data points in lap
+    
     function initialize() {
         resetData();
     }
-    
+
     // Reset data structures
     function resetData() {
         mWindDirection = 0;
@@ -113,6 +130,77 @@ class WindTracker {
         mHeadingHistoryIndex = 0;
         mManeuverTimestamp = 0;
         mPendingManeuver = null;
+        
+        // Initialize lap tracking data
+        mCurrentLapNumber = 0;
+        mLapManeuvers = {};
+        mLapStats = {};
+        mLastLapStartTime = System.getTimer();
+        mLapStartPositions = {};
+        mLapStartTimestamps = {};
+        mLapDistances = {};
+        
+        // Initialize lap-specific foiling metrics
+        mLapFoilingPoints = {};
+        mLapTotalPoints = {};
+        mLapVMGUpTotal = {};
+        mLapVMGDownTotal = {};
+        mLapUpwindPoints = {};
+        mLapDownwindPoints = {};
+    }
+    
+    // Track lap changes - called when a lap button is pressed
+    // Track lap changes - called when a lap button is pressed
+    function onLapMarked(position) {
+        // Increment lap counter
+        mCurrentLapNumber++;
+        
+        // Store lap start position if valid
+        if (position != null) {
+            mLapStartPositions[mCurrentLapNumber] = position;
+            log("Stored start position for lap " + mCurrentLapNumber);
+        }
+        
+        // Set timestamp for the new lap
+        var currentTime = System.getTimer();
+        mLastLapStartTime = currentTime;
+        mLapStartTimestamps[mCurrentLapNumber] = currentTime;
+        
+        // Initialize lap distance
+        mLapDistances[mCurrentLapNumber] = 0.0;
+        
+        // Initialize foiling counters for this lap
+        mLapFoilingPoints[mCurrentLapNumber] = 0;
+        mLapTotalPoints[mCurrentLapNumber] = 0;
+        
+        // Initialize VMG averages for this lap
+        mLapVMGUpTotal[mCurrentLapNumber] = 0.0;
+        mLapVMGDownTotal[mCurrentLapNumber] = 0.0;
+        mLapUpwindPoints[mCurrentLapNumber] = 0;
+        mLapDownwindPoints[mCurrentLapNumber] = 0;
+        
+        // Initialize new entries in lap-indexed dictionaries
+        mLapManeuvers[mCurrentLapNumber] = {
+            "tacks" => [],
+            "gybes" => []
+        };
+        
+        mLapStats[mCurrentLapNumber] = {
+            "tackCount" => 0,
+            "gybeCount" => 0, 
+            "avgTackAngle" => 0,
+            "avgGybeAngle" => 0,
+            "maxTackAngle" => 0,
+            "maxGybeAngle" => 0,
+            "lapVMG" => 0.0,
+            "pctOnFoil" => 0.0,
+            "avgVMGUp" => 0.0,
+            "avgVMGDown" => 0.0
+        };
+        
+        log("New lap marked: " + mCurrentLapNumber);
+        
+        return mCurrentLapNumber;
     }
     
     // Set initial wind direction from user input
@@ -157,6 +245,7 @@ class WindTracker {
         log("Wind direction unlocked");
     }
     
+    // Process position data to detect tacks/gybes and calculate VMG
     // Process position data to detect tacks/gybes and calculate VMG
     function processPositionData(info) {
         // Ensure we have valid data
@@ -232,6 +321,148 @@ class WindTracker {
         if (mLastSignificantHeading == 0) {
             mLastSignificantHeading = smoothedHeading;
         }
+        
+        // Track foiling status for current lap if speed is available
+        if (hasSpeed && mCurrentLapNumber > 0) {
+            // Determine if speed is above foiling threshold
+            var foilingThreshold = 7.0; // Default threshold in knots
+            
+            // Try to get from settings
+            var app = Application.getApp();
+            if (app != null && app has :mModel && app.mModel != null) {
+                var data = app.mModel.getData();
+                if (data != null && data.hasKey("settings")) {
+                    var settings = data["settings"];
+                    if (settings != null && settings.hasKey("foilingThreshold")) {
+                        foilingThreshold = settings["foilingThreshold"];
+                    }
+                }
+            }
+            
+            // Check if currently foiling
+            var isOnFoil = (speed >= foilingThreshold);
+            
+            // Update foiling percentage for current lap
+            updateLapFoilingPercentage(isOnFoil);
+            
+            // Update lap VMG averages (upwind or downwind)
+            updateLapVMGAverages(speed);
+        }
+        
+        // Update lap VMG calculations
+        updateLapVMG(info);
+    }
+    
+    // Update lap VMG calculations with each position update
+    function updateLapVMG(posInfo) {
+        if (mCurrentLapNumber <= 0 || posInfo == null) {
+            return;
+        }
+        
+        // Check if we have a valid start position for this lap
+        if (!mLapStartPositions.hasKey(mCurrentLapNumber)) {
+            // Store this as the start position if none exists
+            mLapStartPositions[mCurrentLapNumber] = posInfo;
+            return;
+        }
+        
+        // Get lap start position
+        var startPos = mLapStartPositions[mCurrentLapNumber];
+        
+        // Calculate distance and bearing from start position to current position
+        var distance = 0.0;
+        var bearing = 0.0;
+        
+        // Use Garmin's Position.distanceToPosition method if available
+        if (posInfo has :distanceToPosition && startPos has :toRadians) {
+            // This implementation varies by Garmin device models:
+            try {
+                var distanceResult = Position.distanceToPosition(posInfo, startPos);
+                if (distanceResult != null) {
+                    distance = distanceResult[0];  // Distance in meters
+                    bearing = distanceResult[1];   // Bearing in radians
+                    
+                    // Convert bearing to degrees if needed
+                    if (bearing < 2 * Math.PI) {
+                        bearing = Math.toDegrees(bearing);
+                    }
+                }
+            } catch(e) {
+                log("Error calculating distance: " + e.getErrorMessage());
+                
+                // Fallback to simplified distance calculation based on coordinates
+                if (posInfo has :position && startPos has :position) {
+                    // Simplified distance calculation using coordinates
+                    // This is less accurate but works as a fallback
+                    var lat1 = startPos.position[0];
+                    var lon1 = startPos.position[1];
+                    var lat2 = posInfo.position[0];
+                    var lon2 = posInfo.position[1];
+                    
+                    // Approximate distance using Pythagorean theorem (Euclidean distance)
+                    // Note: This is not accurate for long distances but works for reasonable lap distances
+                    var latDiff = lat2 - lat1;
+                    var lonDiff = lon2 - lon1;
+                    
+                    // Converting to approximate meters (very rough approximation)
+                    var latMeters = latDiff * 111320; // 1 degree latitude is approximately 111.32 km
+                    var lonMeters = lonDiff * 111320 * Math.cos(Math.toRadians((lat1 + lat2) / 2));
+                    
+                    distance = Math.sqrt(latMeters * latMeters + lonMeters * lonMeters);
+                    
+                    // Calculate bearing (direction from start to current)
+                    bearing = Math.toDegrees(Math.atan2(lonDiff, latDiff));
+                    if (bearing < 0) {
+                        bearing += 360;
+                    }
+                }
+            }
+        }
+        
+        // Store distance for other calculations
+        if (distance > 0) {
+            mLapDistances[mCurrentLapNumber] = distance;
+        }
+        
+        // Get current timestamp
+        var currentTime = System.getTimer();
+        
+        // Calculate time elapsed since lap start (in hours for VMG calculation)
+        var lapStartTime = mLapStartTimestamps[mCurrentLapNumber];
+        var elapsedTimeHours = (currentTime - lapStartTime) / (1000.0 * 60.0 * 60.0); // Convert ms to hours
+        
+        // Skip VMG calculation if elapsed time is too small to avoid division by zero
+        if (elapsedTimeHours < 0.001) {
+            return;
+        }
+        
+        // Calculate projection of distance onto wind direction for VMG
+        var windDirRadians = Math.toRadians(mWindDirection);
+        var bearingRadians = Math.toRadians(bearing);
+        
+        // Component of travel in direction of wind (or opposite for upwind)
+        var distanceToWind = distance * Math.cos(bearingRadians - windDirRadians);
+        
+        // If going upwind, we want to go against the wind, so negate
+        if (mIsUpwind) {
+            distanceToWind = -distanceToWind;
+        }
+        
+        // Convert from meters to nautical miles (1 nm = 1852 meters)
+        var distanceNM = distanceToWind / 1852.0;
+        
+        // Calculate VMG in knots (nautical miles per hour)
+        var lapVMG = distanceNM / elapsedTimeHours;
+        
+        // Update lap stats with this VMG
+        if (mLapStats.hasKey(mCurrentLapNumber)) {
+            mLapStats[mCurrentLapNumber]["lapVMG"] = lapVMG;
+        }
+        
+        log("Lap " + mCurrentLapNumber + " VMG calculation:");
+        log("  Distance: " + distance + "m, Bearing: " + bearing + "°");
+        log("  Elapsed time: " + elapsedTimeHours + " hours");
+        log("  Lap VMG: " + lapVMG + " knots");
     }
     
     // Store heading in history array with timestamp
@@ -605,28 +836,97 @@ class WindTracker {
             "isTack" => isTack,
             "heading" => heading,
             "angle" => angle,
-            "time" => Time.now().value()
+            "time" => Time.now().value(),
+            "timestamp" => System.getTimer(),
+            "lapNumber" => mCurrentLapNumber  // Add lap number for lap-specific tracking
         };
         
         // Calculate index based on current count
         var index = -1;
         if (isTack) {
             index = mTackCount - 1;
-            log("Recording tack at index " + index + " with angle " + angle);
+            log("Recording tack at index " + index + " with angle " + angle + " in lap " + mCurrentLapNumber);
         } else {
             index = mGybeCount - 1;
-            log("Recording gybe at index " + index + " with angle " + angle);
+            log("Recording gybe at index " + index + " with angle " + angle + " in lap " + mCurrentLapNumber);
         }
         
         // Double-check to ensure index is valid
         if (index >= 0 && index < MAX_MANEUVERS) {
             mManeuverHistory[index] = maneuver;
             
+            // Also record in lap-specific arrays if lap number is valid
+            if (mCurrentLapNumber > 0 && mLapManeuvers.hasKey(mCurrentLapNumber)) {
+                if (isTack) {
+                    mLapManeuvers[mCurrentLapNumber]["tacks"].add(maneuver);
+                } else {
+                    mLapManeuvers[mCurrentLapNumber]["gybes"].add(maneuver);
+                }
+            }
+            
             // Update statistics
             updateManeuverStats();
+            
+            // Update lap-specific statistics
+            if (mCurrentLapNumber > 0) {
+                updateLapManeuverStats(mCurrentLapNumber);
+            }
         } else {
             log("Warning: Maneuver index out of bounds: " + index);
         }
+    }
+    
+    // Add a method to update lap-specific maneuver stats
+    function updateLapManeuverStats(lapNumber) {
+        if (!mLapManeuvers.hasKey(lapNumber) || !mLapStats.hasKey(lapNumber)) {
+            return;
+        }
+        
+        var lapTacks = mLapManeuvers[lapNumber]["tacks"];
+        var lapGybes = mLapManeuvers[lapNumber]["gybes"];
+        
+        var tackCount = lapTacks.size();
+        var gybeCount = lapGybes.size();
+        var tackSum = 0;
+        var gybeSum = 0;
+        var maxTack = 0;
+        var maxGybe = 0;
+        
+        // Calculate tack statistics
+        for (var i = 0; i < tackCount; i++) {
+            var angle = lapTacks[i]["angle"];
+            tackSum += angle;
+            if (angle > maxTack) {
+                maxTack = angle;
+            }
+        }
+        
+        // Calculate gybe statistics
+        for (var i = 0; i < gybeCount; i++) {
+            var angle = lapGybes[i]["angle"];
+            gybeSum += angle;
+            if (angle > maxGybe) {
+                maxGybe = angle;
+            }
+        }
+        
+        // Calculate averages
+        var avgTack = (tackCount > 0) ? tackSum / tackCount : 0;
+        var avgGybe = (gybeCount > 0) ? gybeSum / gybeCount : 0;
+        
+        // Update lap stats
+        mLapStats[lapNumber] = {
+            "tackCount" => tackCount,
+            "gybeCount" => gybeCount,
+            "avgTackAngle" => avgTack,
+            "avgGybeAngle" => avgGybe,
+            "maxTackAngle" => maxTack,
+            "maxGybeAngle" => maxGybe,
+            "lapVMG" => mLapStats[lapNumber].hasKey("lapVMG") ? mLapStats[lapNumber]["lapVMG"] : 0.0
+        };
+        
+        log("Updated lap " + lapNumber + " stats: TackCount=" + tackCount + 
+            ", GybeCount=" + gybeCount + ", AvgTackAngle=" + avgTack);
     }
     
     // Update maneuver statistics
@@ -870,6 +1170,94 @@ class WindTracker {
         return angle;
     }
     
+    // Get data for lap marker with VMG values
+    // Get data for lap marker with VMG values
+    function getLapData() {
+        // Create a data structure for lap fields
+        var lapData = {
+            "vmgUp" => 0.0,
+            "vmgDown" => 0.0,
+            "tackSec" => 0.0,
+            "tackMtr" => 0.0,
+            "avgTackAngle" => 0,
+            "lapVMG" => 0.0,
+            "pctOnFoil" => 0.0
+        };
+        
+        // Use lap-specific values if available
+        if (mCurrentLapNumber > 0 && mLapStats.hasKey(mCurrentLapNumber)) {
+            var lapStats = mLapStats[mCurrentLapNumber];
+            
+            // Get lap-specific VMG values
+            if (lapStats.hasKey("avgVMGUp")) {
+                lapData["vmgUp"] = lapStats["avgVMGUp"];
+            }
+            
+            if (lapStats.hasKey("avgVMGDown")) {
+                lapData["vmgDown"] = lapStats["avgVMGDown"];
+            }
+            
+            // Get lap-specific percent on foil
+            if (lapStats.hasKey("pctOnFoil")) {
+                lapData["pctOnFoil"] = lapStats["pctOnFoil"].toNumber();
+            }
+            
+            // Get lap-specific tack angle
+            if (lapStats.hasKey("avgTackAngle")) {
+                lapData["avgTackAngle"] = lapStats["avgTackAngle"].toNumber();
+            }
+            
+            // Get lap-specific VMG
+            if (lapStats.hasKey("lapVMG")) {
+                lapData["lapVMG"] = lapStats["lapVMG"];
+            }
+            
+            // Calculate time since last tack in this lap
+            var lastTackTimestamp = 0;
+            
+            if (mLapManeuvers.hasKey(mCurrentLapNumber)) {
+                var tackArray = mLapManeuvers[mCurrentLapNumber]["tacks"];
+                if (tackArray != null && tackArray.size() > 0) {
+                    // Get timestamp of the last tack in this lap
+                    lastTackTimestamp = tackArray[tackArray.size() - 1]["timestamp"];
+                    
+                    // Calculate seconds since that tack
+                    var currentTime = System.getTimer();
+                    var timeSinceTack = (currentTime - lastTackTimestamp) / 1000.0; // Convert to seconds
+                    lapData["tackSec"] = timeSinceTack;
+                } else {
+                    // If no tacks in this lap, use time since lap start
+                    var currentTime = System.getTimer();
+                    if (mLapStartTimestamps.hasKey(mCurrentLapNumber)) {
+                        lapData["tackSec"] = (currentTime - mLapStartTimestamps[mCurrentLapNumber]) / 1000.0;
+                    }
+                }
+            }
+        } else {
+            // Fall back to current values if no lap-specific data
+            // This provides continuity with the existing implementation
+            if (mIsUpwind) {
+                lapData["vmgUp"] = mCurrentVMG;
+                lapData["vmgDown"] = 0.0;
+            } else {
+                lapData["vmgUp"] = 0.0;
+                lapData["vmgDown"] = mCurrentVMG;
+            }
+            
+            // Fall back to overall average tack angle if needed
+            if (mManeuverStats != null && mManeuverStats.hasKey("avgTackAngle")) {
+                lapData["avgTackAngle"] = mManeuverStats["avgTackAngle"].toNumber();
+            }
+        }
+        
+        // Include the distance traveled in this lap if available
+        if (mCurrentLapNumber > 0 && mLapDistances.hasKey(mCurrentLapNumber)) {
+            lapData["tackMtr"] = mLapDistances[mCurrentLapNumber];
+        }
+        
+        return lapData;
+    }
+    
     // Get current wind data
     function getWindData() {
         // Get current tack and point of sail as strings
@@ -931,5 +1319,133 @@ class WindTracker {
             absAngle = -absAngle;
         }
         return absAngle;
+    }
+    
+    // Get the last tack timestamp
+    function getLastTackTimestamp() {
+        if (mCurrentLapNumber > 0 && mLapManeuvers.hasKey(mCurrentLapNumber)) {
+            var tackArray = mLapManeuvers[mCurrentLapNumber]["tacks"];
+            if (tackArray != null && tackArray.size() > 0) {
+                return tackArray[tackArray.size() - 1]["timestamp"];
+            }
+        }
+        return 0;
+    }
+    
+    // Get the position of the last tack
+    function getLastTackPosition() {
+        // This would track the position of the last tack
+        // For now, returning null as placeholder
+        return null;
+    }
+
+    // Add a method to update foiling percentage
+    function updateLapFoilingPercentage(isOnFoil) {
+        if (mCurrentLapNumber <= 0) {
+            return;
+        }
+        
+        // Increment total points for this lap
+        if (!mLapTotalPoints.hasKey(mCurrentLapNumber)) {
+            mLapTotalPoints[mCurrentLapNumber] = 0;
+        }
+        mLapTotalPoints[mCurrentLapNumber]++;
+        
+        // Increment foiling points if currently on foil
+        if (isOnFoil) {
+            if (!mLapFoilingPoints.hasKey(mCurrentLapNumber)) {
+                mLapFoilingPoints[mCurrentLapNumber] = 0;
+            }
+            mLapFoilingPoints[mCurrentLapNumber]++;
+        }
+        
+        // Calculate percentage for this lap
+        if (mLapTotalPoints[mCurrentLapNumber] > 0) {
+            var pctOnFoil = (mLapFoilingPoints[mCurrentLapNumber] * 100.0) / mLapTotalPoints[mCurrentLapNumber];
+            
+            // Update lap stats
+            if (mLapStats.hasKey(mCurrentLapNumber)) {
+                mLapStats[mCurrentLapNumber]["pctOnFoil"] = pctOnFoil;
+            }
+            
+            log("Lap " + mCurrentLapNumber + " foiling: " + 
+                mLapFoilingPoints[mCurrentLapNumber] + "/" + 
+                mLapTotalPoints[mCurrentLapNumber] + " = " + 
+                pctOnFoil.format("%.1f") + "%");
+        }
+    }
+
+    // Add a method to track VMG averages per lap
+    function updateLapVMGAverages(speed) {
+        if (mCurrentLapNumber <= 0) {
+            return;
+        }
+        
+        // Calculate VMG for current speed and wind angle
+        var absWindAngle = mWindAngleLessCOG;
+        if (absWindAngle < 0) {
+            absWindAngle = -absWindAngle;
+        }
+        
+        var windAngleRad;
+        var lapVMG;
+        
+        if (mIsUpwind) {
+            // Upwind calculation
+            windAngleRad = Math.toRadians(absWindAngle);
+            lapVMG = speed * Math.cos(windAngleRad);
+            
+            // Make sure VMG is positive (moving toward wind)
+            if (lapVMG < 0) {
+                lapVMG = -lapVMG;
+            }
+            
+            // Add to upwind totals
+            if (!mLapVMGUpTotal.hasKey(mCurrentLapNumber)) {
+                mLapVMGUpTotal[mCurrentLapNumber] = 0.0;
+                mLapUpwindPoints[mCurrentLapNumber] = 0;
+            }
+            
+            mLapVMGUpTotal[mCurrentLapNumber] += lapVMG;
+            mLapUpwindPoints[mCurrentLapNumber]++;
+            
+            // Calculate average upwind VMG
+            if (mLapUpwindPoints[mCurrentLapNumber] > 0) {
+                var avgVMGUp = mLapVMGUpTotal[mCurrentLapNumber] / mLapUpwindPoints[mCurrentLapNumber];
+                
+                // Update lap stats
+                if (mLapStats.hasKey(mCurrentLapNumber)) {
+                    mLapStats[mCurrentLapNumber]["avgVMGUp"] = avgVMGUp;
+                }
+            }
+        } else {
+            // Downwind calculation
+            windAngleRad = Math.toRadians(180 - absWindAngle);
+            lapVMG = speed * Math.cos(windAngleRad);
+            
+            // Make sure VMG is positive (moving away from wind)
+            if (lapVMG < 0) {
+                lapVMG = -lapVMG;
+            }
+            
+            // Add to downwind totals
+            if (!mLapVMGDownTotal.hasKey(mCurrentLapNumber)) {
+                mLapVMGDownTotal[mCurrentLapNumber] = 0.0;
+                mLapDownwindPoints[mCurrentLapNumber] = 0;
+            }
+            
+            mLapVMGDownTotal[mCurrentLapNumber] += lapVMG;
+            mLapDownwindPoints[mCurrentLapNumber]++;
+            
+            // Calculate average downwind VMG
+            if (mLapDownwindPoints[mCurrentLapNumber] > 0) {
+                var avgVMGDown = mLapVMGDownTotal[mCurrentLapNumber] / mLapDownwindPoints[mCurrentLapNumber];
+                
+                // Update lap stats
+                if (mLapStats.hasKey(mCurrentLapNumber)) {
+                    mLapStats[mCurrentLapNumber]["avgVMGDown"] = avgVMGDown;
+                }
+            }
+        }
     }
 }

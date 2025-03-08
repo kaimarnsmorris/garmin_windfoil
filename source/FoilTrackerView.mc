@@ -1,5 +1,3 @@
-// Updated FoilTrackerView.mc with max speed section moved up 5px
-
 using Toybox.WatchUi;
 using Toybox.Graphics;
 using Toybox.System;
@@ -8,11 +6,22 @@ using Toybox.System;
 class FoilTrackerView extends WatchUi.View {
     // Class variables
     private var mModel;
+    private var mShowLapFeedback;
+    private var mLapFeedbackTimer;
     
     // Constructor
     function initialize(model) {
         View.initialize();
         mModel = model;
+        mShowLapFeedback = false;
+        mLapFeedbackTimer = 0;
+    }
+    
+    // Display lap feedback for a short time
+    function showLapFeedback() {
+        mShowLapFeedback = true;
+        mLapFeedbackTimer = System.getTimer();
+        WatchUi.requestUpdate();
     }
     
     // Load UI resources
@@ -31,6 +40,14 @@ class FoilTrackerView extends WatchUi.View {
         // Get screen dimensions - important for proper scaling
         var width = dc.getWidth();
         var height = dc.getHeight();
+        
+        // Check if lap feedback should be turned off
+        if (mShowLapFeedback) {
+            var currentTime = System.getTimer();
+            if (currentTime - mLapFeedbackTimer > 2000) { // 2 seconds feedback
+                mShowLapFeedback = false;
+            }
+        }
         
         // Check if session is paused
         var isPaused = data.hasKey("sessionPaused") && data["sessionPaused"];
@@ -147,6 +164,21 @@ class FoilTrackerView extends WatchUi.View {
                 dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_RED);
                 dc.fillCircle(width - 15, 15, 5);
             }
+        }
+        
+        // Draw lap feedback if active
+        if (mShowLapFeedback) {
+            // Draw LAP MARKER notice at the top of the screen
+            dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_BLACK);
+            dc.fillRectangle(0, 0, width, 25);
+            dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(width/2, 2, Graphics.FONT_SMALL, "LAP MARKED", Graphics.TEXT_JUSTIFY_CENTER);
+        }
+        
+        // Draw "Light=Lap" indicator at bottom
+        if (!mShowLapFeedback && !isPaused && data["isRecording"]) {
+            dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(width/2, height - 20, Graphics.FONT_TINY, "Light=Lap", Graphics.TEXT_JUSTIFY_CENTER);
         }
     }
 }

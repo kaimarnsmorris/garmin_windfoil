@@ -22,6 +22,8 @@ class VMGView extends WatchUi.View {
     private var mDataChanged;
     private var mTackDisplayText;
     private var mTackColorId;
+    private var mShowLapFeedback;
+    private var mLapFeedbackTimer;
     
     // Constructor
     function initialize(model, windTracker) {
@@ -45,6 +47,8 @@ class VMGView extends WatchUi.View {
         mDataChanged = false;
         mTackDisplayText = "Stb";
         mTackColorId = 1; // 1 = green, 2 = red
+        mShowLapFeedback = false;
+        mLapFeedbackTimer = 0;
         
         // Get initial values from wind tracker
         updateFromWindTracker();
@@ -53,6 +57,13 @@ class VMGView extends WatchUi.View {
     // Force a refresh of the view
     function forceRefresh() {
         mForcedUpdate = true;
+        WatchUi.requestUpdate();
+    }
+    
+    // Display lap feedback for a short time
+    function showLapFeedback() {
+        mShowLapFeedback = true;
+        mLapFeedbackTimer = System.getTimer();
         WatchUi.requestUpdate();
     }
     
@@ -159,6 +170,15 @@ class VMGView extends WatchUi.View {
             }
         }
         
+        // Check if lap feedback should be turned off
+        if (mShowLapFeedback) {
+            var currentTime = System.getTimer();
+            if (currentTime - mLapFeedbackTimer > 2000) { // 2 seconds feedback
+                mShowLapFeedback = false;
+                WatchUi.requestUpdate();
+            }
+        }
+        
         return mDataChanged;
     }
     
@@ -230,5 +250,20 @@ class VMGView extends WatchUi.View {
         dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_TRANSPARENT);
         dc.drawText(width/2, height - 40, Graphics.FONT_TINY, "Wind: " + mWindDirection.format("%d") + "°", Graphics.TEXT_JUSTIFY_CENTER);
         dc.drawText(width/2, height - 60, Graphics.FONT_TINY, mWindMode + " wind mode", Graphics.TEXT_JUSTIFY_CENTER);
+        
+        // Draw lap feedback if active
+        if (mShowLapFeedback) {
+            // Draw LAP MARKER notice at the top of the screen
+            dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_BLACK);
+            dc.fillRectangle(0, 0, width, 25);
+            dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(width/2, 2, Graphics.FONT_SMALL, "LAP MARKED", Graphics.TEXT_JUSTIFY_CENTER);
+        }
+        
+        // Draw "Light=Lap" indicator at bottom
+        if (!mShowLapFeedback) {
+            dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(width/2, height - 20, Graphics.FONT_TINY, "Light=Lap", Graphics.TEXT_JUSTIFY_CENTER);
+        }
     }
 }
