@@ -1,0 +1,334 @@
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [WatchUi,1,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [Graphics,2,13,21]; ]
+using Toybox.Graphics;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc"; @line = 5; @symbol_classdef = [AboutView,5,6,15]; @symbol_extends<0> = [WatchUi,5,24,31]; @symbol_extends<1> = [View,5,32,36]; ]
+class AboutView extends WatchUi.View {
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc"; @line = 6; @symbol_functiondef = [initialize,6,13,23]; ]
+    function initialize() as Void {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_AboutView_mc_6_26_8_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc" 7 8 ]
+        symbol [ View %tmp.2 7 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 7 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_AboutView_mc_6_26_8_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc"; @line = 10; @symbol_functiondef = [onLayout,10,13,21]; @symbol_param<0> = [dc,10,22,24]; ]
+    function onLayout(dc) {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc"; @line = 14; @symbol_functiondef = [onUpdate,14,13,21]; @symbol_param<0> = [dc,14,22,24]; ]
+    function onUpdate(dc) {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_AboutView_mc_14_26_36_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc" 16 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 16 8 10 ];
+        symbol [ setColor %tmp.2 16 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ Graphics %tmp.3 16 20 28 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.4 16 29 40 ];
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        symbol [ Graphics %tmp.5 16 42 50 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.6 16 51 62 ];
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc" 17 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 17 8 10 ];
+        symbol [ clear %tmp.8 17 11 16 ];
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc" 20 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_AboutView_mc_14_26_36_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_AboutView_mc_14_26_36_4_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 20 12 17 ];
+        %tmp.9 = lgetv %dc;
+        symbol [ dc %tmp.9 20 20 22 ];
+        symbol [ getWidth %tmp.10 20 23 31 ];
+        %tmp.10 = getv function %tmp.9 :getWidth;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        lputv %width.1 %tmp.11;
+        symbol [ width %width.1 20 12 17 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc" 21 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_AboutView_mc_14_26_36_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_AboutView_mc_14_26_36_4_stop" ]
+        %height.2 = local;
+        symbol [ height %height.2 21 12 18 ];
+        %tmp.12 = lgetv %dc;
+        symbol [ dc %tmp.12 21 21 23 ];
+        symbol [ getHeight %tmp.13 21 24 33 ];
+        %tmp.13 = getv function %tmp.12 :getHeight;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        lputv %height.2 %tmp.14;
+        symbol [ height %height.2 21 12 18 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc" 24 8 ]
+        %tmp.15 = lgetv %dc;
+        symbol [ dc %tmp.15 24 8 10 ];
+        symbol [ setColor %tmp.16 24 11 19 ];
+        %tmp.16 = getv function %tmp.15 :setColor;
+        symbol [ Graphics %tmp.17 24 20 28 ];
+        %tmp.17 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.18 24 29 40 ];
+        %tmp.18 = getv %tmp.17 :COLOR_WHITE;
+        symbol [ Graphics %tmp.19 24 42 50 ];
+        %tmp.19 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.20 24 51 68 ];
+        %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
+        invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc" 25 8 ]
+        %tmp.21 = lgetv %dc;
+        symbol [ dc %tmp.21 25 8 10 ];
+        symbol [ drawText %tmp.22 25 11 19 ];
+        %tmp.22 = getv function %tmp.21 :drawText;
+        %tmp.23 = lgetv %width.1;
+        symbol [ width %tmp.23 25 20 25 ];
+        %tmp.24 = 2;
+        %tmp.25 = div %tmp.23 %tmp.24;
+        %tmp.26 = lgetv %height.2;
+        symbol [ height %tmp.26 25 29 35 ];
+        %tmp.27 = 4;
+        %tmp.28 = div %tmp.26 %tmp.27;
+        %tmp.29 = 20;
+        %tmp.30 = sub %tmp.28 %tmp.29;
+        symbol [ Graphics %tmp.31 25 44 52 ];
+        %tmp.31 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.32 25 53 64 ];
+        %tmp.32 = getv %tmp.31 :FONT_MEDIUM;
+        %tmp.33 = "FOIL TRACKER";
+        symbol [ Graphics %tmp.34 25 82 90 ];
+        %tmp.34 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.35 25 91 110 ];
+        %tmp.35 = getv %tmp.34 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.21 %tmp.22(%tmp.25, %tmp.30, %tmp.32, %tmp.33, %tmp.35);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc" 26 8 ]
+        %tmp.36 = lgetv %dc;
+        symbol [ dc %tmp.36 26 8 10 ];
+        symbol [ drawText %tmp.37 26 11 19 ];
+        %tmp.37 = getv function %tmp.36 :drawText;
+        %tmp.38 = lgetv %width.1;
+        symbol [ width %tmp.38 26 20 25 ];
+        %tmp.39 = 2;
+        %tmp.40 = div %tmp.38 %tmp.39;
+        %tmp.41 = lgetv %height.2;
+        symbol [ height %tmp.41 26 29 35 ];
+        %tmp.42 = 4;
+        %tmp.43 = div %tmp.41 %tmp.42;
+        %tmp.44 = 15;
+        %tmp.45 = add %tmp.43 %tmp.44;
+        symbol [ Graphics %tmp.46 26 44 52 ];
+        %tmp.46 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.47 26 53 63 ];
+        %tmp.47 = getv %tmp.46 :FONT_SMALL;
+        %tmp.48 = "Version 1.0";
+        symbol [ Graphics %tmp.49 26 80 88 ];
+        %tmp.49 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.50 26 89 108 ];
+        %tmp.50 = getv %tmp.49 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.36 %tmp.37(%tmp.40, %tmp.45, %tmp.47, %tmp.48, %tmp.50);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc" 28 8 ]
+        %tmp.51 = lgetv %dc;
+        symbol [ dc %tmp.51 28 8 10 ];
+        symbol [ setColor %tmp.52 28 11 19 ];
+        %tmp.52 = getv function %tmp.51 :setColor;
+        symbol [ Graphics %tmp.53 28 20 28 ];
+        %tmp.53 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.54 28 29 42 ];
+        %tmp.54 = getv %tmp.53 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.55 28 44 52 ];
+        %tmp.55 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.56 28 53 70 ];
+        %tmp.56 = getv %tmp.55 :COLOR_TRANSPARENT;
+        invoke %tmp.51 %tmp.52(%tmp.54, %tmp.56);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc" 29 8 ]
+        %tmp.57 = lgetv %dc;
+        symbol [ dc %tmp.57 29 8 10 ];
+        symbol [ drawText %tmp.58 29 11 19 ];
+        %tmp.58 = getv function %tmp.57 :drawText;
+        %tmp.59 = lgetv %width.1;
+        symbol [ width %tmp.59 29 20 25 ];
+        %tmp.60 = 2;
+        %tmp.61 = div %tmp.59 %tmp.60;
+        %tmp.62 = lgetv %height.2;
+        symbol [ height %tmp.62 29 29 35 ];
+        %tmp.63 = 2;
+        %tmp.64 = div %tmp.62 %tmp.63;
+        symbol [ Graphics %tmp.65 29 39 47 ];
+        %tmp.65 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.66 29 48 57 ];
+        %tmp.66 = getv %tmp.65 :FONT_TINY;
+        %tmp.67 = "Tracks:";
+        symbol [ Graphics %tmp.68 29 70 78 ];
+        %tmp.68 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.69 29 79 98 ];
+        %tmp.69 = getv %tmp.68 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.57 %tmp.58(%tmp.61, %tmp.64, %tmp.66, %tmp.67, %tmp.69);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc" 30 8 ]
+        %tmp.70 = lgetv %dc;
+        symbol [ dc %tmp.70 30 8 10 ];
+        symbol [ drawText %tmp.71 30 11 19 ];
+        %tmp.71 = getv function %tmp.70 :drawText;
+        %tmp.72 = lgetv %width.1;
+        symbol [ width %tmp.72 30 20 25 ];
+        %tmp.73 = 2;
+        %tmp.74 = div %tmp.72 %tmp.73;
+        %tmp.75 = lgetv %height.2;
+        symbol [ height %tmp.75 30 29 35 ];
+        %tmp.76 = 2;
+        %tmp.77 = div %tmp.75 %tmp.76;
+        %tmp.78 = 20;
+        %tmp.79 = add %tmp.77 %tmp.78;
+        symbol [ Graphics %tmp.80 30 44 52 ];
+        %tmp.80 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.81 30 53 62 ];
+        %tmp.81 = getv %tmp.80 :FONT_TINY;
+        %tmp.82 = "1. Max Speed";
+        symbol [ Graphics %tmp.83 30 80 88 ];
+        %tmp.83 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.84 30 89 108 ];
+        %tmp.84 = getv %tmp.83 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.70 %tmp.71(%tmp.74, %tmp.79, %tmp.81, %tmp.82, %tmp.84);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc" 31 8 ]
+        %tmp.85 = lgetv %dc;
+        symbol [ dc %tmp.85 31 8 10 ];
+        symbol [ drawText %tmp.86 31 11 19 ];
+        %tmp.86 = getv function %tmp.85 :drawText;
+        %tmp.87 = lgetv %width.1;
+        symbol [ width %tmp.87 31 20 25 ];
+        %tmp.88 = 2;
+        %tmp.89 = div %tmp.87 %tmp.88;
+        %tmp.90 = lgetv %height.2;
+        symbol [ height %tmp.90 31 29 35 ];
+        %tmp.91 = 2;
+        %tmp.92 = div %tmp.90 %tmp.91;
+        %tmp.93 = 40;
+        %tmp.94 = add %tmp.92 %tmp.93;
+        symbol [ Graphics %tmp.95 31 44 52 ];
+        %tmp.95 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.96 31 53 62 ];
+        %tmp.96 = getv %tmp.95 :FONT_TINY;
+        %tmp.97 = "2. Max 3s Speed";
+        symbol [ Graphics %tmp.98 31 83 91 ];
+        %tmp.98 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.99 31 92 111 ];
+        %tmp.99 = getv %tmp.98 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.85 %tmp.86(%tmp.89, %tmp.94, %tmp.96, %tmp.97, %tmp.99);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc" 32 8 ]
+        %tmp.100 = lgetv %dc;
+        symbol [ dc %tmp.100 32 8 10 ];
+        symbol [ drawText %tmp.101 32 11 19 ];
+        %tmp.101 = getv function %tmp.100 :drawText;
+        %tmp.102 = lgetv %width.1;
+        symbol [ width %tmp.102 32 20 25 ];
+        %tmp.103 = 2;
+        %tmp.104 = div %tmp.102 %tmp.103;
+        %tmp.105 = lgetv %height.2;
+        symbol [ height %tmp.105 32 29 35 ];
+        %tmp.106 = 2;
+        %tmp.107 = div %tmp.105 %tmp.106;
+        %tmp.108 = 60;
+        %tmp.109 = add %tmp.107 %tmp.108;
+        symbol [ Graphics %tmp.110 32 44 52 ];
+        %tmp.110 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.111 32 53 62 ];
+        %tmp.111 = getv %tmp.110 :FONT_TINY;
+        %tmp.112 = "3. Time on Foil %";
+        symbol [ Graphics %tmp.113 32 85 93 ];
+        %tmp.113 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.114 32 94 113 ];
+        %tmp.114 = getv %tmp.113 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.100 %tmp.101(%tmp.104, %tmp.109, %tmp.111, %tmp.112, %tmp.114);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc" 34 8 ]
+        %tmp.115 = lgetv %dc;
+        symbol [ dc %tmp.115 34 8 10 ];
+        symbol [ setColor %tmp.116 34 11 19 ];
+        %tmp.116 = getv function %tmp.115 :setColor;
+        symbol [ Graphics %tmp.117 34 20 28 ];
+        %tmp.117 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.118 34 29 40 ];
+        %tmp.118 = getv %tmp.117 :COLOR_WHITE;
+        symbol [ Graphics %tmp.119 34 42 50 ];
+        %tmp.119 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.120 34 51 68 ];
+        %tmp.120 = getv %tmp.119 :COLOR_TRANSPARENT;
+        invoke %tmp.115 %tmp.116(%tmp.118, %tmp.120);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc" 35 8 ]
+        %tmp.121 = lgetv %dc;
+        symbol [ dc %tmp.121 35 8 10 ];
+        symbol [ drawText %tmp.122 35 11 19 ];
+        %tmp.122 = getv function %tmp.121 :drawText;
+        %tmp.123 = lgetv %width.1;
+        symbol [ width %tmp.123 35 20 25 ];
+        %tmp.124 = 2;
+        %tmp.125 = div %tmp.123 %tmp.124;
+        %tmp.126 = 3;
+        %tmp.127 = lgetv %height.2;
+        symbol [ height %tmp.127 35 31 37 ];
+        %tmp.128 = mul %tmp.126 %tmp.127;
+        %tmp.129 = 4;
+        %tmp.130 = div %tmp.128 %tmp.129;
+        %tmp.131 = 20;
+        %tmp.132 = add %tmp.130 %tmp.131;
+        symbol [ Graphics %tmp.133 35 46 54 ];
+        %tmp.133 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.134 35 55 64 ];
+        %tmp.134 = getv %tmp.133 :FONT_TINY;
+        %tmp.135 = "© 2025";
+        symbol [ Graphics %tmp.136 35 76 84 ];
+        %tmp.136 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.137 35 85 104 ];
+        %tmp.137 = getv %tmp.136 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.121 %tmp.122(%tmp.125, %tmp.132, %tmp.134, %tmp.135, %tmp.137);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_AboutView_mc_14_26_36_4_stop:
+    }
+}
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc"; @line = 40; @symbol_classdef = [AboutDelegate,40,6,19]; @symbol_extends<0> = [WatchUi,40,28,35]; @symbol_extends<1> = [BehaviorDelegate,40,36,52]; ]
+class AboutDelegate extends WatchUi.BehaviorDelegate {
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc"; @line = 40; ]
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc"; @line = 40; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc"; @line = 41; @symbol_functiondef = [initialize,41,13,23]; ]
+    function initialize() as Void {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_AboutView_mc_41_26_43_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc" 42 8 ]
+        symbol [ BehaviorDelegate %tmp.2 42 8 24 ];
+        %tmp.2 = getv ? :BehaviorDelegate;
+        symbol [ initialize %tmp.3 42 25 35 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_AboutView_mc_41_26_43_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc"; @line = 45; @symbol_functiondef = [onBack,45,13,19]; ]
+    function onBack() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_AboutView_mc_45_22_49_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc" 47 8 ]
+        symbol [ WatchUi %tmp.1 47 8 15 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.2 47 16 23 ];
+        %tmp.2 = getv function %tmp.1 :popView;
+        symbol [ WatchUi %tmp.3 47 24 31 ];
+        %tmp.3 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.4 47 32 42 ];
+        %tmp.4 = getv %tmp.3 :SLIDE_DOWN;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc" 48 8 ]
+        %tmp.5 = true;
+        ret %tmp.5;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_AboutView_mc_45_22_49_4_stop:
+    }
+}
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\AboutView.mc"; @line = 1; ]
+<init> {
+}

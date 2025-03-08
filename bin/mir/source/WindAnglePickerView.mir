@@ -1,0 +1,1521 @@
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [WatchUi,3,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Graphics,4,13,21]; ]
+using Toybox.Graphics;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [System,5,13,19]; ]
+using Toybox.System;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 6; @symbol_usingdef<0> = [Toybox,6,6,12]; @symbol_usingdef<1> = [Math,6,13,17]; ]
+using Toybox.Math;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 9; @symbol_classdef = [WindAnglePickerView,9,6,25]; @symbol_extends<0> = [WatchUi,9,34,41]; @symbol_extends<1> = [View,9,42,46]; ]
+class WindAnglePickerView extends WatchUi.View {
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 9; ]
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 9; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 10; @position = 16; @symbol_vardef = [mModel,10,16,22]; ]
+    private
+    var mModel;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 11; @position = 15; @symbol_vardef = [mWindAngle,11,15,25]; ]
+    public
+    var mWindAngle;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 13; @symbol_functiondef = [initialize,13,13,23]; @symbol_param<0> = [model,13,24,29]; ]
+    function initialize(model) as Void {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_13_31_17_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 14 8 ]
+        symbol [ View %tmp.2 14 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 14 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 15 8 ]
+        %tmp.4 = lgetv %model;
+        symbol [ model %tmp.4 15 17 22 ];
+        symbol [ mModel ? 15 8 14 ];
+        putv self :mModel %tmp.4;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 16 8 ]
+        %tmp.5 = 0;
+        symbol [ mWindAngle ? 16 8 18 ];
+        putv self :mWindAngle %tmp.5;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_13_31_17_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 19; @symbol_functiondef = [onUpdate,19,13,21]; @symbol_param<0> = [dc,19,22,24]; ]
+    function onUpdate(dc) {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 21 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 21 8 10 ];
+        symbol [ setColor %tmp.2 21 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ Graphics %tmp.3 21 20 28 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.4 21 29 40 ];
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        symbol [ Graphics %tmp.5 21 42 50 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.6 21 51 62 ];
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 22 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 22 8 10 ];
+        symbol [ clear %tmp.8 22 11 16 ];
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 25 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 25 12 17 ];
+        %tmp.9 = lgetv %dc;
+        symbol [ dc %tmp.9 25 20 22 ];
+        symbol [ getWidth %tmp.10 25 23 31 ];
+        %tmp.10 = getv function %tmp.9 :getWidth;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        lputv %width.1 %tmp.11;
+        symbol [ width %width.1 25 12 17 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 26 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_stop" ]
+        %height.2 = local;
+        symbol [ height %height.2 26 12 18 ];
+        %tmp.12 = lgetv %dc;
+        symbol [ dc %tmp.12 26 21 23 ];
+        symbol [ getHeight %tmp.13 26 24 33 ];
+        %tmp.13 = getv function %tmp.12 :getHeight;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        lputv %height.2 %tmp.14;
+        symbol [ height %height.2 26 12 18 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 29 8 ]
+        %tmp.15 = lgetv %dc;
+        symbol [ dc %tmp.15 29 8 10 ];
+        symbol [ setColor %tmp.16 29 11 19 ];
+        %tmp.16 = getv function %tmp.15 :setColor;
+        symbol [ Graphics %tmp.17 29 20 28 ];
+        %tmp.17 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.18 29 29 40 ];
+        %tmp.18 = getv %tmp.17 :COLOR_WHITE;
+        symbol [ Graphics %tmp.19 29 42 50 ];
+        %tmp.19 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.20 29 51 68 ];
+        %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
+        invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 30 8 ]
+        %tmp.21 = lgetv %dc;
+        symbol [ dc %tmp.21 30 8 10 ];
+        symbol [ drawText %tmp.22 30 11 19 ];
+        %tmp.22 = getv function %tmp.21 :drawText;
+        %tmp.23 = lgetv %width.1;
+        symbol [ width %tmp.23 30 20 25 ];
+        %tmp.24 = 2;
+        %tmp.25 = div %tmp.23 %tmp.24;
+        %tmp.26 = 5;
+        symbol [ Graphics %tmp.27 30 32 40 ];
+        %tmp.27 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.28 30 41 50 ];
+        %tmp.28 = getv %tmp.27 :FONT_TINY;
+        %tmp.29 = "Wind Angle";
+        symbol [ Graphics %tmp.30 30 66 74 ];
+        %tmp.30 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.31 30 75 94 ];
+        %tmp.31 = getv %tmp.30 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.21 %tmp.22(%tmp.25, %tmp.26, %tmp.28, %tmp.29, %tmp.31);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 33 8 ]
+        %tmp.32 = lgetv %dc;
+        symbol [ dc %tmp.32 33 8 10 ];
+        symbol [ setColor %tmp.33 33 11 19 ];
+        %tmp.33 = getv function %tmp.32 :setColor;
+        symbol [ Graphics %tmp.34 33 20 28 ];
+        %tmp.34 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_GRAY %tmp.35 33 29 42 ];
+        %tmp.35 = getv %tmp.34 :COLOR_DK_GRAY;
+        symbol [ Graphics %tmp.36 33 44 52 ];
+        %tmp.36 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.37 33 53 70 ];
+        %tmp.37 = getv %tmp.36 :COLOR_TRANSPARENT;
+        invoke %tmp.32 %tmp.33(%tmp.35, %tmp.37);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 34 8 ]
+        %tmp.38 = lgetv %dc;
+        symbol [ dc %tmp.38 34 8 10 ];
+        symbol [ drawLine %tmp.39 34 11 19 ];
+        %tmp.39 = getv function %tmp.38 :drawLine;
+        %tmp.40 = 10;
+        %tmp.41 = 25;
+        %tmp.42 = lgetv %width.1;
+        symbol [ width %tmp.42 34 28 33 ];
+        %tmp.43 = 10;
+        %tmp.44 = sub %tmp.42 %tmp.43;
+        %tmp.45 = 25;
+        invoke %tmp.38 %tmp.39(%tmp.40, %tmp.41, %tmp.44, %tmp.45);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 37 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_stop" ]
+        %fontHeight.3 = local;
+        symbol [ fontHeight %fontHeight.3 37 12 22 ];
+        %tmp.46 = lgetv %dc;
+        symbol [ dc %tmp.46 37 25 27 ];
+        symbol [ getFontHeight %tmp.47 37 28 41 ];
+        %tmp.47 = getv function %tmp.46 :getFontHeight;
+        symbol [ Graphics %tmp.48 37 42 50 ];
+        %tmp.48 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.49 37 51 61 ];
+        %tmp.49 = getv %tmp.48 :FONT_SMALL;
+        %tmp.50 = invoke %tmp.46 %tmp.47(%tmp.49);
+        %tmp.51 = 2;
+        %tmp.52 = mul %tmp.50 %tmp.51;
+        %tmp.53 = 3;
+        %tmp.54 = div %tmp.52 %tmp.53;
+        lputv %fontHeight.3 %tmp.54;
+        symbol [ fontHeight %fontHeight.3 37 12 22 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 38 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_stop" ]
+        %centerX.4 = local;
+        symbol [ centerX %centerX.4 38 12 19 ];
+        %tmp.55 = lgetv %width.1;
+        symbol [ width %tmp.55 38 22 27 ];
+        %tmp.56 = 2;
+        %tmp.57 = div %tmp.55 %tmp.56;
+        lputv %centerX.4 %tmp.57;
+        symbol [ centerX %centerX.4 38 12 19 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 39 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_stop" ]
+        %centerY.5 = local;
+        symbol [ centerY %centerY.5 39 12 19 ];
+        %tmp.58 = lgetv %height.2;
+        symbol [ height %tmp.58 39 22 28 ];
+        %tmp.59 = 2;
+        %tmp.60 = div %tmp.58 %tmp.59;
+        %tmp.61 = lgetv %fontHeight.3;
+        symbol [ fontHeight %tmp.61 39 33 43 ];
+        %tmp.62 = add %tmp.60 %tmp.61;
+        lputv %centerY.5 %tmp.62;
+        symbol [ centerY %centerY.5 39 12 19 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 42 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_stop" ]
+        %radius.6 = local;
+        symbol [ radius %radius.6 42 12 18 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 43 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_43_8_47_8_if_stmt:
+        %tmp.63 = lgetv %width.1;
+        symbol [ width %tmp.63 43 12 17 ];
+        %tmp.64 = lgetv %height.2;
+        symbol [ height %tmp.64 43 20 26 ];
+        %tmp.65 = lt %tmp.63 %tmp.64;
+        bf %tmp.65 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_43_8_47_8_if_else_false;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_43_8_47_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_43_28_45_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 44 12 ]
+        %tmp.66 = lgetv %width.1;
+        symbol [ width %tmp.66 44 21 26 ];
+        %tmp.67 = 3;
+        %tmp.68 = div %tmp.66 %tmp.67;
+        lputv %radius.6 %tmp.68;
+        symbol [ radius %radius.6 44 12 18 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_43_28_45_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_43_8_47_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_43_8_47_8_if_else_false:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_45_15_47_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 46 12 ]
+        %tmp.69 = lgetv %height.2;
+        symbol [ height %tmp.69 46 21 27 ];
+        %tmp.70 = 3;
+        %tmp.71 = div %tmp.69 %tmp.70;
+        lputv %radius.6 %tmp.71;
+        symbol [ radius %radius.6 46 12 18 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_45_15_47_8_stop:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_43_8_47_8_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 50 8 ]
+        %tmp.72 = lgetv %dc;
+        symbol [ dc %tmp.72 50 8 10 ];
+        symbol [ setColor %tmp.73 50 11 19 ];
+        %tmp.73 = getv function %tmp.72 :setColor;
+        symbol [ Graphics %tmp.74 50 20 28 ];
+        %tmp.74 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_GRAY %tmp.75 50 29 42 ];
+        %tmp.75 = getv %tmp.74 :COLOR_DK_GRAY;
+        symbol [ Graphics %tmp.76 50 44 52 ];
+        %tmp.76 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.77 50 53 70 ];
+        %tmp.77 = getv %tmp.76 :COLOR_TRANSPARENT;
+        invoke %tmp.72 %tmp.73(%tmp.75, %tmp.77);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 51 8 ]
+        %tmp.78 = lgetv %dc;
+        symbol [ dc %tmp.78 51 8 10 ];
+        symbol [ drawCircle %tmp.79 51 11 21 ];
+        %tmp.79 = getv function %tmp.78 :drawCircle;
+        %tmp.80 = lgetv %centerX.4;
+        symbol [ centerX %tmp.80 51 22 29 ];
+        %tmp.81 = lgetv %centerY.5;
+        symbol [ centerY %tmp.81 51 31 38 ];
+        %tmp.82 = lgetv %radius.6;
+        symbol [ radius %tmp.82 51 40 46 ];
+        invoke %tmp.78 %tmp.79(%tmp.80, %tmp.81, %tmp.82);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 54 8 ]
+        %tmp.83 = lgetv %dc;
+        symbol [ dc %tmp.83 54 8 10 ];
+        symbol [ setColor %tmp.84 54 11 19 ];
+        %tmp.84 = getv function %tmp.83 :setColor;
+        symbol [ Graphics %tmp.85 54 20 28 ];
+        %tmp.85 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.86 54 29 40 ];
+        %tmp.86 = getv %tmp.85 :COLOR_WHITE;
+        symbol [ Graphics %tmp.87 54 42 50 ];
+        %tmp.87 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.88 54 51 68 ];
+        %tmp.88 = getv %tmp.87 :COLOR_TRANSPARENT;
+        invoke %tmp.83 %tmp.84(%tmp.86, %tmp.88);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 57 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_stop" ]
+        %northRadians.7 = local;
+        symbol [ northRadians %northRadians.7 57 12 24 ];
+        symbol [ Math %tmp.89 57 27 31 ];
+        %tmp.89 = getm $.Toybox.Math;
+        symbol [ toRadians %tmp.90 57 32 41 ];
+        %tmp.90 = getv function %tmp.89 :toRadians;
+        %tmp.91 = 0;
+        %tmp.92 = invoke %tmp.89 %tmp.90(%tmp.91);
+        lputv %northRadians.7 %tmp.92;
+        symbol [ northRadians %northRadians.7 57 12 24 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 58 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_stop" ]
+        %northX.8 = local;
+        symbol [ northX %northX.8 58 12 18 ];
+        %tmp.93 = lgetv %centerX.4;
+        symbol [ centerX %tmp.93 58 21 28 ];
+        %tmp.94 = lgetv %radius.6;
+        symbol [ radius %tmp.94 58 32 38 ];
+        %tmp.95 = 15;
+        %tmp.96 = add %tmp.94 %tmp.95;
+        symbol [ Math %tmp.97 58 47 51 ];
+        %tmp.97 = getm $.Toybox.Math;
+        symbol [ sin %tmp.98 58 52 55 ];
+        %tmp.98 = getv function %tmp.97 :sin;
+        %tmp.99 = lgetv %northRadians.7;
+        symbol [ northRadians %tmp.99 58 56 68 ];
+        %tmp.100 = invoke %tmp.97 %tmp.98(%tmp.99);
+        %tmp.101 = mul %tmp.96 %tmp.100;
+        %tmp.102 = add %tmp.93 %tmp.101;
+        lputv %northX.8 %tmp.102;
+        symbol [ northX %northX.8 58 12 18 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 59 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_stop" ]
+        %northY.9 = local;
+        symbol [ northY %northY.9 59 12 18 ];
+        %tmp.103 = lgetv %centerY.5;
+        symbol [ centerY %tmp.103 59 21 28 ];
+        %tmp.104 = lgetv %radius.6;
+        symbol [ radius %tmp.104 59 32 38 ];
+        %tmp.105 = 15;
+        %tmp.106 = add %tmp.104 %tmp.105;
+        symbol [ Math %tmp.107 59 47 51 ];
+        %tmp.107 = getm $.Toybox.Math;
+        symbol [ cos %tmp.108 59 52 55 ];
+        %tmp.108 = getv function %tmp.107 :cos;
+        %tmp.109 = lgetv %northRadians.7;
+        symbol [ northRadians %tmp.109 59 56 68 ];
+        %tmp.110 = invoke %tmp.107 %tmp.108(%tmp.109);
+        %tmp.111 = mul %tmp.106 %tmp.110;
+        %tmp.112 = sub %tmp.103 %tmp.111;
+        %tmp.113 = 14;
+        %tmp.114 = sub %tmp.112 %tmp.113;
+        lputv %northY.9 %tmp.114;
+        symbol [ northY %northY.9 59 12 18 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 60 8 ]
+        %tmp.115 = lgetv %dc;
+        symbol [ dc %tmp.115 60 8 10 ];
+        symbol [ drawText %tmp.116 60 11 19 ];
+        %tmp.116 = getv function %tmp.115 :drawText;
+        %tmp.117 = lgetv %northX.8;
+        symbol [ northX %tmp.117 60 20 26 ];
+        %tmp.118 = lgetv %northY.9;
+        symbol [ northY %tmp.118 60 28 34 ];
+        symbol [ Graphics %tmp.119 60 36 44 ];
+        %tmp.119 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.120 60 45 55 ];
+        %tmp.120 = getv %tmp.119 :FONT_SMALL;
+        %tmp.121 = "N";
+        symbol [ Graphics %tmp.122 60 62 70 ];
+        %tmp.122 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.123 60 71 90 ];
+        %tmp.123 = getv %tmp.122 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.115 %tmp.116(%tmp.117, %tmp.118, %tmp.120, %tmp.121, %tmp.123);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 63 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_stop" ]
+        %eastRadians.10 = local;
+        symbol [ eastRadians %eastRadians.10 63 12 23 ];
+        symbol [ Math %tmp.124 63 26 30 ];
+        %tmp.124 = getm $.Toybox.Math;
+        symbol [ toRadians %tmp.125 63 31 40 ];
+        %tmp.125 = getv function %tmp.124 :toRadians;
+        %tmp.126 = 90;
+        %tmp.127 = invoke %tmp.124 %tmp.125(%tmp.126);
+        lputv %eastRadians.10 %tmp.127;
+        symbol [ eastRadians %eastRadians.10 63 12 23 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 64 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_stop" ]
+        %eastX.11 = local;
+        symbol [ eastX %eastX.11 64 12 17 ];
+        %tmp.128 = lgetv %centerX.4;
+        symbol [ centerX %tmp.128 64 20 27 ];
+        %tmp.129 = lgetv %radius.6;
+        symbol [ radius %tmp.129 64 31 37 ];
+        %tmp.130 = 15;
+        %tmp.131 = add %tmp.129 %tmp.130;
+        symbol [ Math %tmp.132 64 46 50 ];
+        %tmp.132 = getm $.Toybox.Math;
+        symbol [ sin %tmp.133 64 51 54 ];
+        %tmp.133 = getv function %tmp.132 :sin;
+        %tmp.134 = lgetv %eastRadians.10;
+        symbol [ eastRadians %tmp.134 64 55 66 ];
+        %tmp.135 = invoke %tmp.132 %tmp.133(%tmp.134);
+        %tmp.136 = mul %tmp.131 %tmp.135;
+        %tmp.137 = add %tmp.128 %tmp.136;
+        lputv %eastX.11 %tmp.137;
+        symbol [ eastX %eastX.11 64 12 17 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 65 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_stop" ]
+        %eastY.12 = local;
+        symbol [ eastY %eastY.12 65 12 17 ];
+        %tmp.138 = lgetv %centerY.5;
+        symbol [ centerY %tmp.138 65 20 27 ];
+        %tmp.139 = lgetv %radius.6;
+        symbol [ radius %tmp.139 65 31 37 ];
+        %tmp.140 = 15;
+        %tmp.141 = add %tmp.139 %tmp.140;
+        symbol [ Math %tmp.142 65 46 50 ];
+        %tmp.142 = getm $.Toybox.Math;
+        symbol [ cos %tmp.143 65 51 54 ];
+        %tmp.143 = getv function %tmp.142 :cos;
+        %tmp.144 = lgetv %eastRadians.10;
+        symbol [ eastRadians %tmp.144 65 55 66 ];
+        %tmp.145 = invoke %tmp.142 %tmp.143(%tmp.144);
+        %tmp.146 = mul %tmp.141 %tmp.145;
+        %tmp.147 = sub %tmp.138 %tmp.146;
+        %tmp.148 = 8;
+        %tmp.149 = sub %tmp.147 %tmp.148;
+        lputv %eastY.12 %tmp.149;
+        symbol [ eastY %eastY.12 65 12 17 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 66 8 ]
+        %tmp.150 = lgetv %dc;
+        symbol [ dc %tmp.150 66 8 10 ];
+        symbol [ drawText %tmp.151 66 11 19 ];
+        %tmp.151 = getv function %tmp.150 :drawText;
+        %tmp.152 = lgetv %eastX.11;
+        symbol [ eastX %tmp.152 66 20 25 ];
+        %tmp.153 = lgetv %eastY.12;
+        symbol [ eastY %tmp.153 66 27 32 ];
+        symbol [ Graphics %tmp.154 66 34 42 ];
+        %tmp.154 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.155 66 43 53 ];
+        %tmp.155 = getv %tmp.154 :FONT_SMALL;
+        %tmp.156 = "E";
+        symbol [ Graphics %tmp.157 66 60 68 ];
+        %tmp.157 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.158 66 69 88 ];
+        %tmp.158 = getv %tmp.157 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.150 %tmp.151(%tmp.152, %tmp.153, %tmp.155, %tmp.156, %tmp.158);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 69 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_stop" ]
+        %southRadians.13 = local;
+        symbol [ southRadians %southRadians.13 69 12 24 ];
+        symbol [ Math %tmp.159 69 27 31 ];
+        %tmp.159 = getm $.Toybox.Math;
+        symbol [ toRadians %tmp.160 69 32 41 ];
+        %tmp.160 = getv function %tmp.159 :toRadians;
+        %tmp.161 = 180;
+        %tmp.162 = invoke %tmp.159 %tmp.160(%tmp.161);
+        lputv %southRadians.13 %tmp.162;
+        symbol [ southRadians %southRadians.13 69 12 24 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 70 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_stop" ]
+        %southX.14 = local;
+        symbol [ southX %southX.14 70 12 18 ];
+        %tmp.163 = lgetv %centerX.4;
+        symbol [ centerX %tmp.163 70 21 28 ];
+        %tmp.164 = lgetv %radius.6;
+        symbol [ radius %tmp.164 70 32 38 ];
+        %tmp.165 = 15;
+        %tmp.166 = add %tmp.164 %tmp.165;
+        symbol [ Math %tmp.167 70 47 51 ];
+        %tmp.167 = getm $.Toybox.Math;
+        symbol [ sin %tmp.168 70 52 55 ];
+        %tmp.168 = getv function %tmp.167 :sin;
+        %tmp.169 = lgetv %southRadians.13;
+        symbol [ southRadians %tmp.169 70 56 68 ];
+        %tmp.170 = invoke %tmp.167 %tmp.168(%tmp.169);
+        %tmp.171 = mul %tmp.166 %tmp.170;
+        %tmp.172 = add %tmp.163 %tmp.171;
+        lputv %southX.14 %tmp.172;
+        symbol [ southX %southX.14 70 12 18 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 71 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_stop" ]
+        %southY.15 = local;
+        symbol [ southY %southY.15 71 12 18 ];
+        %tmp.173 = lgetv %centerY.5;
+        symbol [ centerY %tmp.173 71 21 28 ];
+        %tmp.174 = lgetv %radius.6;
+        symbol [ radius %tmp.174 71 32 38 ];
+        %tmp.175 = 15;
+        %tmp.176 = add %tmp.174 %tmp.175;
+        symbol [ Math %tmp.177 71 47 51 ];
+        %tmp.177 = getm $.Toybox.Math;
+        symbol [ cos %tmp.178 71 52 55 ];
+        %tmp.178 = getv function %tmp.177 :cos;
+        %tmp.179 = lgetv %southRadians.13;
+        symbol [ southRadians %tmp.179 71 56 68 ];
+        %tmp.180 = invoke %tmp.177 %tmp.178(%tmp.179);
+        %tmp.181 = mul %tmp.176 %tmp.180;
+        %tmp.182 = sub %tmp.173 %tmp.181;
+        %tmp.183 = 17;
+        %tmp.184 = sub %tmp.182 %tmp.183;
+        lputv %southY.15 %tmp.184;
+        symbol [ southY %southY.15 71 12 18 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 72 8 ]
+        %tmp.185 = lgetv %dc;
+        symbol [ dc %tmp.185 72 8 10 ];
+        symbol [ drawText %tmp.186 72 11 19 ];
+        %tmp.186 = getv function %tmp.185 :drawText;
+        %tmp.187 = lgetv %southX.14;
+        symbol [ southX %tmp.187 72 20 26 ];
+        %tmp.188 = lgetv %southY.15;
+        symbol [ southY %tmp.188 72 28 34 ];
+        symbol [ Graphics %tmp.189 72 36 44 ];
+        %tmp.189 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.190 72 45 55 ];
+        %tmp.190 = getv %tmp.189 :FONT_SMALL;
+        %tmp.191 = "S";
+        symbol [ Graphics %tmp.192 72 62 70 ];
+        %tmp.192 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.193 72 71 90 ];
+        %tmp.193 = getv %tmp.192 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.185 %tmp.186(%tmp.187, %tmp.188, %tmp.190, %tmp.191, %tmp.193);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 75 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_stop" ]
+        %westRadians.16 = local;
+        symbol [ westRadians %westRadians.16 75 12 23 ];
+        symbol [ Math %tmp.194 75 26 30 ];
+        %tmp.194 = getm $.Toybox.Math;
+        symbol [ toRadians %tmp.195 75 31 40 ];
+        %tmp.195 = getv function %tmp.194 :toRadians;
+        %tmp.196 = 270;
+        %tmp.197 = invoke %tmp.194 %tmp.195(%tmp.196);
+        lputv %westRadians.16 %tmp.197;
+        symbol [ westRadians %westRadians.16 75 12 23 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 76 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_stop" ]
+        %westX.17 = local;
+        symbol [ westX %westX.17 76 12 17 ];
+        %tmp.198 = lgetv %centerX.4;
+        symbol [ centerX %tmp.198 76 20 27 ];
+        %tmp.199 = lgetv %radius.6;
+        symbol [ radius %tmp.199 76 31 37 ];
+        %tmp.200 = 15;
+        %tmp.201 = add %tmp.199 %tmp.200;
+        symbol [ Math %tmp.202 76 46 50 ];
+        %tmp.202 = getm $.Toybox.Math;
+        symbol [ sin %tmp.203 76 51 54 ];
+        %tmp.203 = getv function %tmp.202 :sin;
+        %tmp.204 = lgetv %westRadians.16;
+        symbol [ westRadians %tmp.204 76 55 66 ];
+        %tmp.205 = invoke %tmp.202 %tmp.203(%tmp.204);
+        %tmp.206 = mul %tmp.201 %tmp.205;
+        %tmp.207 = add %tmp.198 %tmp.206;
+        lputv %westX.17 %tmp.207;
+        symbol [ westX %westX.17 76 12 17 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 77 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_stop" ]
+        %westY.18 = local;
+        symbol [ westY %westY.18 77 12 17 ];
+        %tmp.208 = lgetv %centerY.5;
+        symbol [ centerY %tmp.208 77 20 27 ];
+        %tmp.209 = lgetv %radius.6;
+        symbol [ radius %tmp.209 77 31 37 ];
+        %tmp.210 = 15;
+        %tmp.211 = add %tmp.209 %tmp.210;
+        symbol [ Math %tmp.212 77 46 50 ];
+        %tmp.212 = getm $.Toybox.Math;
+        symbol [ cos %tmp.213 77 51 54 ];
+        %tmp.213 = getv function %tmp.212 :cos;
+        %tmp.214 = lgetv %westRadians.16;
+        symbol [ westRadians %tmp.214 77 55 66 ];
+        %tmp.215 = invoke %tmp.212 %tmp.213(%tmp.214);
+        %tmp.216 = mul %tmp.211 %tmp.215;
+        %tmp.217 = sub %tmp.208 %tmp.216;
+        %tmp.218 = 13;
+        %tmp.219 = sub %tmp.217 %tmp.218;
+        lputv %westY.18 %tmp.219;
+        symbol [ westY %westY.18 77 12 17 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 78 8 ]
+        %tmp.220 = lgetv %dc;
+        symbol [ dc %tmp.220 78 8 10 ];
+        symbol [ drawText %tmp.221 78 11 19 ];
+        %tmp.221 = getv function %tmp.220 :drawText;
+        %tmp.222 = lgetv %westX.17;
+        symbol [ westX %tmp.222 78 20 25 ];
+        %tmp.223 = lgetv %westY.18;
+        symbol [ westY %tmp.223 78 27 32 ];
+        symbol [ Graphics %tmp.224 78 34 42 ];
+        %tmp.224 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.225 78 43 52 ];
+        %tmp.225 = getv %tmp.224 :FONT_TINY;
+        %tmp.226 = "W";
+        symbol [ Graphics %tmp.227 78 59 67 ];
+        %tmp.227 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.228 78 68 87 ];
+        %tmp.228 = getv %tmp.227 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.220 %tmp.221(%tmp.222, %tmp.223, %tmp.225, %tmp.226, %tmp.228);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 81 8 ]
+        %tmp.229 = self;
+        symbol [ drawWindArrow %tmp.230 81 8 21 ];
+        %tmp.230 = getv function %tmp.229 :drawWindArrow;
+        %tmp.231 = lgetv %dc;
+        symbol [ dc %tmp.231 81 22 24 ];
+        %tmp.232 = lgetv %centerX.4;
+        symbol [ centerX %tmp.232 81 26 33 ];
+        %tmp.233 = lgetv %centerY.5;
+        symbol [ centerY %tmp.233 81 35 42 ];
+        %tmp.234 = lgetv %radius.6;
+        symbol [ radius %tmp.234 81 44 50 ];
+        symbol [ mWindAngle %tmp.236 81 52 62 ];
+        %tmp.236 = getv ? :mWindAngle;
+        invoke %tmp.229 %tmp.230(%tmp.231, %tmp.232, %tmp.233, %tmp.234, %tmp.236);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 84 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_stop" ]
+        %directionName.19 = local;
+        symbol [ directionName %directionName.19 84 12 25 ];
+        %tmp.237 = self;
+        symbol [ getDirectionName %tmp.238 84 28 44 ];
+        %tmp.238 = getv function %tmp.237 :getDirectionName;
+        symbol [ mWindAngle %tmp.240 84 45 55 ];
+        %tmp.240 = getv ? :mWindAngle;
+        %tmp.241 = invoke %tmp.237 %tmp.238(%tmp.240);
+        lputv %directionName.19 %tmp.241;
+        symbol [ directionName %directionName.19 84 12 25 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 88 8 ]
+        %tmp.242 = lgetv %dc;
+        symbol [ dc %tmp.242 88 8 10 ];
+        symbol [ setColor %tmp.243 88 11 19 ];
+        %tmp.243 = getv function %tmp.242 :setColor;
+        symbol [ Graphics %tmp.244 88 20 28 ];
+        %tmp.244 = getm $.Toybox.Graphics;
+        symbol [ COLOR_YELLOW %tmp.245 88 29 41 ];
+        %tmp.245 = getv %tmp.244 :COLOR_YELLOW;
+        symbol [ Graphics %tmp.246 88 43 51 ];
+        %tmp.246 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.247 88 52 69 ];
+        %tmp.247 = getv %tmp.246 :COLOR_TRANSPARENT;
+        invoke %tmp.242 %tmp.243(%tmp.245, %tmp.247);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 89 8 ]
+        %tmp.248 = lgetv %dc;
+        symbol [ dc %tmp.248 89 8 10 ];
+        symbol [ drawText %tmp.249 89 11 19 ];
+        %tmp.249 = getv function %tmp.248 :drawText;
+        %tmp.250 = lgetv %centerX.4;
+        symbol [ centerX %tmp.250 89 20 27 ];
+        %tmp.251 = lgetv %centerY.5;
+        symbol [ centerY %tmp.251 89 29 36 ];
+        %tmp.252 = lgetv %radius.6;
+        symbol [ radius %tmp.252 89 40 46 ];
+        %tmp.253 = 0.67;
+        %tmp.254 = mul %tmp.252 %tmp.253;
+        %tmp.255 = add %tmp.251 %tmp.254;
+        %tmp.256 = 20;
+        %tmp.257 = sub %tmp.255 %tmp.256;
+        symbol [ Graphics %tmp.258 89 61 69 ];
+        %tmp.258 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.259 89 70 79 ];
+        %tmp.259 = getv %tmp.258 :FONT_TINY;
+        symbol [ mWindAngle %tmp.261 89 81 91 ];
+        %tmp.261 = getv ? :mWindAngle;
+        symbol [ format %tmp.262 89 92 98 ];
+        %tmp.262 = getv function %tmp.261 :format;
+        %tmp.263 = "%d";
+        %tmp.264 = invoke %tmp.261 %tmp.262(%tmp.263);
+        %tmp.265 = "°";
+        %tmp.266 = add %tmp.264 %tmp.265;
+        symbol [ Graphics %tmp.267 89 112 120 ];
+        %tmp.267 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.268 89 121 140 ];
+        %tmp.268 = getv %tmp.267 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.248 %tmp.249(%tmp.250, %tmp.257, %tmp.259, %tmp.266, %tmp.268);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 92 8 ]
+        %tmp.269 = lgetv %dc;
+        symbol [ dc %tmp.269 92 8 10 ];
+        symbol [ drawText %tmp.270 92 11 19 ];
+        %tmp.270 = getv function %tmp.269 :drawText;
+        %tmp.271 = lgetv %centerX.4;
+        symbol [ centerX %tmp.271 92 20 27 ];
+        %tmp.272 = lgetv %centerY.5;
+        symbol [ centerY %tmp.272 92 29 36 ];
+        %tmp.273 = lgetv %radius.6;
+        symbol [ radius %tmp.273 92 40 46 ];
+        %tmp.274 = 0.67;
+        %tmp.275 = mul %tmp.273 %tmp.274;
+        %tmp.276 = add %tmp.272 %tmp.275;
+        %tmp.277 = 5;
+        %tmp.278 = add %tmp.276 %tmp.277;
+        symbol [ Graphics %tmp.279 92 60 68 ];
+        %tmp.279 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.280 92 69 78 ];
+        %tmp.280 = getv %tmp.279 :FONT_TINY;
+        %tmp.281 = lgetv %directionName.19;
+        symbol [ directionName %tmp.281 92 80 93 ];
+        symbol [ Graphics %tmp.282 92 95 103 ];
+        %tmp.282 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.283 92 104 123 ];
+        %tmp.283 = getv %tmp.282 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.269 %tmp.270(%tmp.271, %tmp.278, %tmp.280, %tmp.281, %tmp.283);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_19_26_93_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 96; @symbol_functiondef = [drawWindArrow,96,13,26]; @symbol_param<0> = [dc,96,27,29]; @symbol_param<1> = [centerX,96,31,38]; @symbol_param<2> = [centerY,96,40,47]; @symbol_param<3> = [arrowLength,96,49,60]; @symbol_param<4> = [angle,96,62,67]; ]
+    function drawWindArrow(dc, centerX, centerY, arrowLength, angle) {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 98 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_stop" ]
+        %radians.1 = local;
+        symbol [ radians %radians.1 98 12 19 ];
+        symbol [ Math %tmp.1 98 22 26 ];
+        %tmp.1 = getm $.Toybox.Math;
+        symbol [ toRadians %tmp.2 98 27 36 ];
+        %tmp.2 = getv function %tmp.1 :toRadians;
+        %tmp.3 = lgetv %angle;
+        symbol [ angle %tmp.3 98 37 42 ];
+        %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+        lputv %radians.1 %tmp.4;
+        symbol [ radians %radians.1 98 12 19 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 102 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_stop" ]
+        %startX.2 = local;
+        symbol [ startX %startX.2 102 12 18 ];
+        %tmp.5 = lgetv %centerX;
+        symbol [ centerX %tmp.5 102 21 28 ];
+        lputv %startX.2 %tmp.5;
+        symbol [ startX %startX.2 102 12 18 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 103 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_stop" ]
+        %startY.3 = local;
+        symbol [ startY %startY.3 103 12 18 ];
+        %tmp.6 = lgetv %centerY;
+        symbol [ centerY %tmp.6 103 21 28 ];
+        lputv %startY.3 %tmp.6;
+        symbol [ startY %startY.3 103 12 18 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 106 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_stop" ]
+        %endRadius.4 = local;
+        symbol [ endRadius %endRadius.4 106 12 21 ];
+        %tmp.7 = lgetv %arrowLength;
+        symbol [ arrowLength %tmp.7 106 24 35 ];
+        %tmp.8 = 0.4;
+        %tmp.9 = mul %tmp.7 %tmp.8;
+        lputv %endRadius.4 %tmp.9;
+        symbol [ endRadius %endRadius.4 106 12 21 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 107 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_stop" ]
+        %endX.5 = local;
+        symbol [ endX %endX.5 107 12 16 ];
+        %tmp.10 = lgetv %centerX;
+        symbol [ centerX %tmp.10 107 19 26 ];
+        %tmp.11 = lgetv %endRadius.4;
+        symbol [ endRadius %tmp.11 107 29 38 ];
+        symbol [ Math %tmp.12 107 41 45 ];
+        %tmp.12 = getm $.Toybox.Math;
+        symbol [ sin %tmp.13 107 46 49 ];
+        %tmp.13 = getv function %tmp.12 :sin;
+        %tmp.14 = lgetv %radians.1;
+        symbol [ radians %tmp.14 107 50 57 ];
+        %tmp.15 = invoke %tmp.12 %tmp.13(%tmp.14);
+        %tmp.16 = mul %tmp.11 %tmp.15;
+        %tmp.17 = add %tmp.10 %tmp.16;
+        lputv %endX.5 %tmp.17;
+        symbol [ endX %endX.5 107 12 16 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 108 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_stop" ]
+        %endY.6 = local;
+        symbol [ endY %endY.6 108 12 16 ];
+        %tmp.18 = lgetv %centerY;
+        symbol [ centerY %tmp.18 108 19 26 ];
+        %tmp.19 = lgetv %endRadius.4;
+        symbol [ endRadius %tmp.19 108 29 38 ];
+        symbol [ Math %tmp.20 108 41 45 ];
+        %tmp.20 = getm $.Toybox.Math;
+        symbol [ cos %tmp.21 108 46 49 ];
+        %tmp.21 = getv function %tmp.20 :cos;
+        %tmp.22 = lgetv %radians.1;
+        symbol [ radians %tmp.22 108 50 57 ];
+        %tmp.23 = invoke %tmp.20 %tmp.21(%tmp.22);
+        %tmp.24 = mul %tmp.19 %tmp.23;
+        %tmp.25 = sub %tmp.18 %tmp.24;
+        lputv %endY.6 %tmp.25;
+        symbol [ endY %endY.6 108 12 16 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 111 8 ]
+        %tmp.26 = lgetv %dc;
+        symbol [ dc %tmp.26 111 8 10 ];
+        symbol [ setColor %tmp.27 111 11 19 ];
+        %tmp.27 = getv function %tmp.26 :setColor;
+        %tmp.28 = 0x006400;
+        symbol [ Graphics %tmp.29 111 30 38 ];
+        %tmp.29 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.30 111 39 56 ];
+        %tmp.30 = getv %tmp.29 :COLOR_TRANSPARENT;
+        invoke %tmp.26 %tmp.27(%tmp.28, %tmp.30);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 112 8 ]
+        %tmp.31 = lgetv %dc;
+        symbol [ dc %tmp.31 112 8 10 ];
+        symbol [ setPenWidth %tmp.32 112 11 22 ];
+        %tmp.32 = getv function %tmp.31 :setPenWidth;
+        %tmp.33 = 3;
+        invoke %tmp.31 %tmp.32(%tmp.33);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 113 8 ]
+        %tmp.34 = lgetv %dc;
+        symbol [ dc %tmp.34 113 8 10 ];
+        symbol [ drawLine %tmp.35 113 11 19 ];
+        %tmp.35 = getv function %tmp.34 :drawLine;
+        %tmp.36 = lgetv %startX.2;
+        symbol [ startX %tmp.36 113 20 26 ];
+        %tmp.37 = lgetv %startY.3;
+        symbol [ startY %tmp.37 113 28 34 ];
+        %tmp.38 = lgetv %endX.5;
+        symbol [ endX %tmp.38 113 36 40 ];
+        %tmp.39 = lgetv %endY.6;
+        symbol [ endY %tmp.39 113 42 46 ];
+        invoke %tmp.34 %tmp.35(%tmp.36, %tmp.37, %tmp.38, %tmp.39);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 114 8 ]
+        %tmp.40 = lgetv %dc;
+        symbol [ dc %tmp.40 114 8 10 ];
+        symbol [ setPenWidth %tmp.41 114 11 22 ];
+        %tmp.41 = getv function %tmp.40 :setPenWidth;
+        %tmp.42 = 1;
+        invoke %tmp.40 %tmp.41(%tmp.42);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 117 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_stop" ]
+        %headSize.7 = local;
+        symbol [ headSize %headSize.7 117 12 20 ];
+        %tmp.43 = 10;
+        lputv %headSize.7 %tmp.43;
+        symbol [ headSize %headSize.7 117 12 20 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 118 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_stop" ]
+        %headAngle1.8 = local;
+        symbol [ headAngle1 %headAngle1.8 118 12 22 ];
+        symbol [ Math %tmp.44 118 25 29 ];
+        %tmp.44 = getm $.Toybox.Math;
+        symbol [ toRadians %tmp.45 118 30 39 ];
+        %tmp.45 = getv function %tmp.44 :toRadians;
+        %tmp.46 = lgetv %angle;
+        symbol [ angle %tmp.46 118 40 45 ];
+        %tmp.47 = 150;
+        %tmp.48 = add %tmp.46 %tmp.47;
+        %tmp.49 = invoke %tmp.44 %tmp.45(%tmp.48);
+        lputv %headAngle1.8 %tmp.49;
+        symbol [ headAngle1 %headAngle1.8 118 12 22 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 119 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_stop" ]
+        %headAngle2.9 = local;
+        symbol [ headAngle2 %headAngle2.9 119 12 22 ];
+        symbol [ Math %tmp.50 119 25 29 ];
+        %tmp.50 = getm $.Toybox.Math;
+        symbol [ toRadians %tmp.51 119 30 39 ];
+        %tmp.51 = getv function %tmp.50 :toRadians;
+        %tmp.52 = lgetv %angle;
+        symbol [ angle %tmp.52 119 40 45 ];
+        %tmp.53 = 150;
+        %tmp.54 = sub %tmp.52 %tmp.53;
+        %tmp.55 = invoke %tmp.50 %tmp.51(%tmp.54);
+        lputv %headAngle2.9 %tmp.55;
+        symbol [ headAngle2 %headAngle2.9 119 12 22 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 121 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_stop" ]
+        %head1X.10 = local;
+        symbol [ head1X %head1X.10 121 12 18 ];
+        %tmp.56 = lgetv %endX.5;
+        symbol [ endX %tmp.56 121 21 25 ];
+        %tmp.57 = lgetv %headSize.7;
+        symbol [ headSize %tmp.57 121 28 36 ];
+        symbol [ Math %tmp.58 121 39 43 ];
+        %tmp.58 = getm $.Toybox.Math;
+        symbol [ sin %tmp.59 121 44 47 ];
+        %tmp.59 = getv function %tmp.58 :sin;
+        %tmp.60 = lgetv %headAngle1.8;
+        symbol [ headAngle1 %tmp.60 121 48 58 ];
+        %tmp.61 = invoke %tmp.58 %tmp.59(%tmp.60);
+        %tmp.62 = mul %tmp.57 %tmp.61;
+        %tmp.63 = add %tmp.56 %tmp.62;
+        lputv %head1X.10 %tmp.63;
+        symbol [ head1X %head1X.10 121 12 18 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 122 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_stop" ]
+        %head1Y.11 = local;
+        symbol [ head1Y %head1Y.11 122 12 18 ];
+        %tmp.64 = lgetv %endY.6;
+        symbol [ endY %tmp.64 122 21 25 ];
+        %tmp.65 = lgetv %headSize.7;
+        symbol [ headSize %tmp.65 122 28 36 ];
+        symbol [ Math %tmp.66 122 39 43 ];
+        %tmp.66 = getm $.Toybox.Math;
+        symbol [ cos %tmp.67 122 44 47 ];
+        %tmp.67 = getv function %tmp.66 :cos;
+        %tmp.68 = lgetv %headAngle1.8;
+        symbol [ headAngle1 %tmp.68 122 48 58 ];
+        %tmp.69 = invoke %tmp.66 %tmp.67(%tmp.68);
+        %tmp.70 = mul %tmp.65 %tmp.69;
+        %tmp.71 = sub %tmp.64 %tmp.70;
+        lputv %head1Y.11 %tmp.71;
+        symbol [ head1Y %head1Y.11 122 12 18 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 123 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_stop" ]
+        %head2X.12 = local;
+        symbol [ head2X %head2X.12 123 12 18 ];
+        %tmp.72 = lgetv %endX.5;
+        symbol [ endX %tmp.72 123 21 25 ];
+        %tmp.73 = lgetv %headSize.7;
+        symbol [ headSize %tmp.73 123 28 36 ];
+        symbol [ Math %tmp.74 123 39 43 ];
+        %tmp.74 = getm $.Toybox.Math;
+        symbol [ sin %tmp.75 123 44 47 ];
+        %tmp.75 = getv function %tmp.74 :sin;
+        %tmp.76 = lgetv %headAngle2.9;
+        symbol [ headAngle2 %tmp.76 123 48 58 ];
+        %tmp.77 = invoke %tmp.74 %tmp.75(%tmp.76);
+        %tmp.78 = mul %tmp.73 %tmp.77;
+        %tmp.79 = add %tmp.72 %tmp.78;
+        lputv %head2X.12 %tmp.79;
+        symbol [ head2X %head2X.12 123 12 18 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 124 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_stop" ]
+        %head2Y.13 = local;
+        symbol [ head2Y %head2Y.13 124 12 18 ];
+        %tmp.80 = lgetv %endY.6;
+        symbol [ endY %tmp.80 124 21 25 ];
+        %tmp.81 = lgetv %headSize.7;
+        symbol [ headSize %tmp.81 124 28 36 ];
+        symbol [ Math %tmp.82 124 39 43 ];
+        %tmp.82 = getm $.Toybox.Math;
+        symbol [ cos %tmp.83 124 44 47 ];
+        %tmp.83 = getv function %tmp.82 :cos;
+        %tmp.84 = lgetv %headAngle2.9;
+        symbol [ headAngle2 %tmp.84 124 48 58 ];
+        %tmp.85 = invoke %tmp.82 %tmp.83(%tmp.84);
+        %tmp.86 = mul %tmp.81 %tmp.85;
+        %tmp.87 = sub %tmp.80 %tmp.86;
+        lputv %head2Y.13 %tmp.87;
+        symbol [ head2Y %head2Y.13 124 12 18 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 126 8 ]
+        %tmp.88 = lgetv %dc;
+        symbol [ dc %tmp.88 126 8 10 ];
+        symbol [ drawLine %tmp.89 126 11 19 ];
+        %tmp.89 = getv function %tmp.88 :drawLine;
+        %tmp.90 = lgetv %endX.5;
+        symbol [ endX %tmp.90 126 20 24 ];
+        %tmp.91 = lgetv %endY.6;
+        symbol [ endY %tmp.91 126 26 30 ];
+        %tmp.92 = lgetv %head1X.10;
+        symbol [ head1X %tmp.92 126 32 38 ];
+        %tmp.93 = lgetv %head1Y.11;
+        symbol [ head1Y %tmp.93 126 40 46 ];
+        invoke %tmp.88 %tmp.89(%tmp.90, %tmp.91, %tmp.92, %tmp.93);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 127 8 ]
+        %tmp.94 = lgetv %dc;
+        symbol [ dc %tmp.94 127 8 10 ];
+        symbol [ drawLine %tmp.95 127 11 19 ];
+        %tmp.95 = getv function %tmp.94 :drawLine;
+        %tmp.96 = lgetv %endX.5;
+        symbol [ endX %tmp.96 127 20 24 ];
+        %tmp.97 = lgetv %endY.6;
+        symbol [ endY %tmp.97 127 26 30 ];
+        %tmp.98 = lgetv %head2X.12;
+        symbol [ head2X %tmp.98 127 32 38 ];
+        %tmp.99 = lgetv %head2Y.13;
+        symbol [ head2Y %tmp.99 127 40 46 ];
+        invoke %tmp.94 %tmp.95(%tmp.96, %tmp.97, %tmp.98, %tmp.99);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_96_69_128_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 131; @symbol_functiondef = [getDirectionName,131,13,29]; @symbol_param<0> = [angle,131,30,35]; ]
+    function getDirectionName(angle) {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_131_37_143_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 132 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_131_37_143_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_131_37_143_4_stop" ]
+        %directions.1 = local;
+        symbol [ directions %directions.1 132 12 22 ];
+        %tmp.1 = newa 16;
+        %tmp.2 = "N";
+        %tmp.3 = dup %tmp.1;
+        %tmp.4 = aputv %tmp.3 0 %tmp.2;
+        %tmp.5 = "NNE";
+        %tmp.6 = dup %tmp.4;
+        %tmp.7 = aputv %tmp.6 1 %tmp.5;
+        %tmp.8 = "NE";
+        %tmp.9 = dup %tmp.7;
+        %tmp.10 = aputv %tmp.9 2 %tmp.8;
+        %tmp.11 = "ENE";
+        %tmp.12 = dup %tmp.10;
+        %tmp.13 = aputv %tmp.12 3 %tmp.11;
+        %tmp.14 = "E";
+        %tmp.15 = dup %tmp.13;
+        %tmp.16 = aputv %tmp.15 4 %tmp.14;
+        %tmp.17 = "ESE";
+        %tmp.18 = dup %tmp.16;
+        %tmp.19 = aputv %tmp.18 5 %tmp.17;
+        %tmp.20 = "SE";
+        %tmp.21 = dup %tmp.19;
+        %tmp.22 = aputv %tmp.21 6 %tmp.20;
+        %tmp.23 = "SSE";
+        %tmp.24 = dup %tmp.22;
+        %tmp.25 = aputv %tmp.24 7 %tmp.23;
+        %tmp.26 = "S";
+        %tmp.27 = dup %tmp.25;
+        %tmp.28 = aputv %tmp.27 8 %tmp.26;
+        %tmp.29 = "SSW";
+        %tmp.30 = dup %tmp.28;
+        %tmp.31 = aputv %tmp.30 9 %tmp.29;
+        %tmp.32 = "SW";
+        %tmp.33 = dup %tmp.31;
+        %tmp.34 = aputv %tmp.33 10 %tmp.32;
+        %tmp.35 = "WSW";
+        %tmp.36 = dup %tmp.34;
+        %tmp.37 = aputv %tmp.36 11 %tmp.35;
+        %tmp.38 = "W";
+        %tmp.39 = dup %tmp.37;
+        %tmp.40 = aputv %tmp.39 12 %tmp.38;
+        %tmp.41 = "WNW";
+        %tmp.42 = dup %tmp.40;
+        %tmp.43 = aputv %tmp.42 13 %tmp.41;
+        %tmp.44 = "NW";
+        %tmp.45 = dup %tmp.43;
+        %tmp.46 = aputv %tmp.45 14 %tmp.44;
+        %tmp.47 = "NNW";
+        %tmp.48 = dup %tmp.46;
+        %tmp.49 = aputv %tmp.48 15 %tmp.47;
+        lputv %directions.1 %tmp.49;
+        symbol [ directions %directions.1 132 12 22 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 141 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_131_37_143_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_131_37_143_4_stop" ]
+        %index.2 = local;
+        symbol [ index %index.2 141 12 17 ];
+        %tmp.50 = lgetv %angle;
+        symbol [ angle %tmp.50 141 21 26 ];
+        %tmp.51 = 22.5;
+        %tmp.52 = div %tmp.50 %tmp.51;
+        symbol [ toNumber %tmp.53 141 35 43 ];
+        %tmp.53 = getv function %tmp.52 :toNumber;
+        %tmp.54 = invoke %tmp.52 %tmp.53();
+        %tmp.55 = 16;
+        %tmp.56 = mod %tmp.54 %tmp.55;
+        lputv %index.2 %tmp.56;
+        symbol [ index %index.2 141 12 17 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 142 8 ]
+        %tmp.57 = lgetv %directions.1;
+        symbol [ directions %tmp.57 142 15 25 ];
+        %tmp.58 = lgetv %index.2;
+        symbol [ index %tmp.58 142 26 31 ];
+        %tmp.59 = agetv %tmp.57 %tmp.58;
+        ret %tmp.59;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_131_37_143_4_stop:
+    }
+}
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 147; @symbol_classdef = [WindAnglePickerDelegate,147,6,29]; @symbol_extends<0> = [WatchUi,147,38,45]; @symbol_extends<1> = [BehaviorDelegate,147,46,62]; ]
+class WindAnglePickerDelegate extends WatchUi.BehaviorDelegate {
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 147; ]
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 147; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 148; @position = 16; @symbol_vardef = [mModel,148,16,22]; ]
+    private
+    var mModel;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 149; @position = 16; @symbol_vardef = [mPickerView,149,16,27]; ]
+    private
+    var mPickerView;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 150; @position = 16; @symbol_vardef = [mApp,150,16,20]; ]
+    private
+    var mApp;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 152; @symbol_functiondef = [initialize,152,13,23]; @symbol_param<0> = [model,152,24,29]; @symbol_param<1> = [app,152,31,34]; ]
+    function initialize(model, app) as Void {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_152_36_157_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 153 8 ]
+        symbol [ BehaviorDelegate %tmp.2 153 8 24 ];
+        %tmp.2 = getv ? :BehaviorDelegate;
+        symbol [ initialize %tmp.3 153 25 35 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 154 8 ]
+        %tmp.4 = lgetv %model;
+        symbol [ model %tmp.4 154 17 22 ];
+        symbol [ mModel ? 154 8 14 ];
+        putv self :mModel %tmp.4;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 155 8 ]
+        %tmp.5 = null;
+        symbol [ mPickerView ? 155 8 19 ];
+        putv self :mPickerView %tmp.5;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 156 8 ]
+        %tmp.6 = lgetv %app;
+        symbol [ app %tmp.6 156 15 18 ];
+        symbol [ mApp ? 156 8 12 ];
+        putv self :mApp %tmp.6;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_152_36_157_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 159; @symbol_functiondef = [setPickerView,159,13,26]; @symbol_param<0> = [view,159,27,31]; ]
+    function setPickerView(view) {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_159_33_161_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 160 8 ]
+        %tmp.1 = lgetv %view;
+        symbol [ view %tmp.1 160 22 26 ];
+        symbol [ mPickerView ? 160 8 19 ];
+        putv self :mPickerView %tmp.1;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_159_33_161_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 164; @symbol_functiondef = [onPreviousPage,164,13,27]; ]
+    function onPreviousPage() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_164_30_175_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 165 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_165_8_173_8_if_stmt:
+        symbol [ mPickerView %tmp.2 165 12 23 ];
+        %tmp.2 = getv ? :mPickerView;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_165_8_173_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_165_8_173_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_165_33_173_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 167 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_165_33_173_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_165_33_173_8_stop" ]
+        %newAngle.1 = local;
+        symbol [ newAngle %newAngle.1 167 16 24 ];
+        symbol [ mPickerView %tmp.6 167 27 38 ];
+        %tmp.6 = getv ? :mPickerView;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ mWindAngle %tmp.8 167 39 49 ];
+        %tmp.8 = getv %tmp.7 :mWindAngle;
+        %tmp.9 = 22.5;
+        %tmp.10 = sub %tmp.8 %tmp.9;
+        lputv %newAngle.1 %tmp.10;
+        symbol [ newAngle %newAngle.1 167 16 24 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 168 12 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_168_12_170_12_if_stmt:
+        %tmp.11 = lgetv %newAngle.1;
+        symbol [ newAngle %tmp.11 168 16 24 ];
+        %tmp.12 = 0;
+        %tmp.13 = lt %tmp.11 %tmp.12;
+        bf %tmp.13 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_168_12_170_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_168_12_170_12_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_168_30_170_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 169 16 ]
+        %tmp.14 = lgetv %newAngle.1;
+        symbol [ newAngle %tmp.14 169 16 24 ];
+        %tmp.15 = 360;
+        %tmp.16 = add %tmp.14 %tmp.15;
+        lputv %newAngle.1 %tmp.16;
+        symbol [ newAngle %newAngle.1 169 16 24 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_168_30_170_12_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_168_12_170_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_168_12_170_12_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 171 12 ]
+        symbol [ mPickerView %tmp.17 171 12 23 ];
+        %tmp.17 = getv self :mPickerView;
+        %tmp.18 = as %tmp.17 { (!Null) };
+        %tmp.19 = lgetv %newAngle.1;
+        symbol [ newAngle %tmp.19 171 37 45 ];
+        symbol [ mWindAngle ? 171 24 34 ];
+        putv %tmp.18 :mWindAngle %tmp.19;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 172 12 ]
+        symbol [ WatchUi %tmp.20 172 12 19 ];
+        %tmp.20 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.21 172 20 33 ];
+        %tmp.21 = getv function %tmp.20 :requestUpdate;
+        invoke %tmp.20 %tmp.21();
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_165_33_173_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_165_8_173_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_165_8_173_8_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 174 8 ]
+        %tmp.22 = true;
+        ret %tmp.22;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_164_30_175_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 178; @symbol_functiondef = [onNextPage,178,13,23]; ]
+    function onNextPage() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_178_26_189_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 179 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_179_8_187_8_if_stmt:
+        symbol [ mPickerView %tmp.2 179 12 23 ];
+        %tmp.2 = getv ? :mPickerView;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_179_8_187_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_179_8_187_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_179_33_187_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 181 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_179_33_187_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_179_33_187_8_stop" ]
+        %newAngle.1 = local;
+        symbol [ newAngle %newAngle.1 181 16 24 ];
+        symbol [ mPickerView %tmp.6 181 27 38 ];
+        %tmp.6 = getv ? :mPickerView;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ mWindAngle %tmp.8 181 39 49 ];
+        %tmp.8 = getv %tmp.7 :mWindAngle;
+        %tmp.9 = 22.5;
+        %tmp.10 = add %tmp.8 %tmp.9;
+        lputv %newAngle.1 %tmp.10;
+        symbol [ newAngle %newAngle.1 181 16 24 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 182 12 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_182_12_184_12_if_stmt:
+        %tmp.11 = lgetv %newAngle.1;
+        symbol [ newAngle %tmp.11 182 16 24 ];
+        %tmp.12 = 360;
+        %tmp.13 = gte %tmp.11 %tmp.12;
+        bf %tmp.13 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_182_12_184_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_182_12_184_12_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_182_33_184_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 183 16 ]
+        %tmp.14 = lgetv %newAngle.1;
+        symbol [ newAngle %tmp.14 183 16 24 ];
+        %tmp.15 = 360;
+        %tmp.16 = sub %tmp.14 %tmp.15;
+        lputv %newAngle.1 %tmp.16;
+        symbol [ newAngle %newAngle.1 183 16 24 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_182_33_184_12_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_182_12_184_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_182_12_184_12_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 185 12 ]
+        symbol [ mPickerView %tmp.17 185 12 23 ];
+        %tmp.17 = getv self :mPickerView;
+        %tmp.18 = as %tmp.17 { (!Null) };
+        %tmp.19 = lgetv %newAngle.1;
+        symbol [ newAngle %tmp.19 185 37 45 ];
+        symbol [ mWindAngle ? 185 24 34 ];
+        putv %tmp.18 :mWindAngle %tmp.19;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 186 12 ]
+        symbol [ WatchUi %tmp.20 186 12 19 ];
+        %tmp.20 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.21 186 20 33 ];
+        %tmp.21 = getv function %tmp.20 :requestUpdate;
+        invoke %tmp.20 %tmp.21();
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_179_33_187_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_179_8_187_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_179_8_187_8_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 188 8 ]
+        %tmp.22 = true;
+        ret %tmp.22;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_178_26_189_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 192; @symbol_functiondef = [onSelect,192,13,21]; ]
+    function onSelect() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_192_24_235_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 193 8 ]
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_193_8_232_8_beginTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_193_8_232_8_endTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_193_8_232_8_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_193_8_232_8_finally;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_193_8_232_8_beginTry:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_193_12_225_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 195 12 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_195_12_224_12_if_stmt:
+        symbol [ mPickerView %tmp.2 195 16 27 ];
+        %tmp.2 = getv ? :mPickerView;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_195_12_224_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_195_12_224_12_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_195_37_224_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 196 16 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_195_37_224_12_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_195_37_224_12_stop" ]
+        %windAngle.1 = local;
+        symbol [ windAngle %windAngle.1 196 20 29 ];
+        symbol [ mPickerView %tmp.6 196 32 43 ];
+        %tmp.6 = getv ? :mPickerView;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ mWindAngle %tmp.8 196 44 54 ];
+        %tmp.8 = getv %tmp.7 :mWindAngle;
+        lputv %windAngle.1 %tmp.8;
+        symbol [ windAngle %windAngle.1 196 20 29 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 199 16 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_199_16_206_16_if_stmt:
+        symbol [ mModel %tmp.10 199 20 26 ];
+        %tmp.10 = getv ? :mModel;
+        %tmp.11 = null;
+        %tmp.12 = ne %tmp.10 %tmp.11;
+        bf %tmp.12 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_199_16_206_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_199_16_206_16_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_199_36_206_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 201 20 ]
+        symbol [ mModel %tmp.13 201 20 26 ];
+        %tmp.13 = getv self :mModel;
+        %tmp.14 = as %tmp.13 { (!Null) };
+        symbol [ getData %tmp.15 201 27 34 ];
+        %tmp.15 = getv function %tmp.14 :getData;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        %tmp.17 = lgetv %windAngle.1;
+        symbol [ windAngle %tmp.17 201 59 68 ];
+        %tmp.18 = "initialWindAngle";
+        aputv %tmp.16 %tmp.18 %tmp.17;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 202 20 ]
+        symbol [ System %tmp.19 202 20 26 ];
+        %tmp.19 = getm $.Toybox.System;
+        symbol [ println %tmp.20 202 27 34 ];
+        %tmp.20 = getv function %tmp.19 :println;
+        %tmp.21 = "Selected wind angle: ";
+        %tmp.22 = lgetv %windAngle.1;
+        symbol [ windAngle %tmp.22 202 61 70 ];
+        %tmp.23 = add %tmp.21 %tmp.22;
+        invoke %tmp.19 %tmp.20(%tmp.23);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 205 20 ]
+        symbol [ mModel %tmp.24 205 20 26 ];
+        %tmp.24 = getv self :mModel;
+        symbol [ getData %tmp.25 205 27 34 ];
+        %tmp.25 = getv function %tmp.24 :getData;
+        %tmp.26 = invoke %tmp.24 %tmp.25();
+        %tmp.27 = lgetv %windAngle.1;
+        symbol [ windAngle %tmp.27 205 62 71 ];
+        %tmp.28 = "manualWindDirection";
+        aputv %tmp.26 %tmp.28 %tmp.27;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_199_36_206_16_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_199_16_206_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_199_16_206_16_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 209 16 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_195_37_224_12_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_195_37_224_12_stop" ]
+        %windTracker.2 = local;
+        symbol [ windTracker %windTracker.2 209 20 31 ];
+        symbol [ mApp %tmp.30 209 34 38 ];
+        %tmp.30 = getv ? :mApp;
+        symbol [ getWindTracker %tmp.31 209 39 53 ];
+        %tmp.31 = getv function %tmp.30 :getWindTracker;
+        %tmp.32 = invoke %tmp.30 %tmp.31();
+        lputv %windTracker.2 %tmp.32;
+        symbol [ windTracker %windTracker.2 209 20 31 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 210 16 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_210_16_212_16_if_stmt:
+        %tmp.33 = lgetv %windTracker.2;
+        symbol [ windTracker %tmp.33 210 20 31 ];
+        %tmp.34 = null;
+        %tmp.35 = ne %tmp.33 %tmp.34;
+        bf %tmp.35 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_210_16_212_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_210_16_212_16_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_210_41_212_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 211 20 ]
+        %tmp.36 = lgetv %windTracker.2;
+        symbol [ windTracker %tmp.36 211 20 31 ];
+        %tmp.37 = as %tmp.36 { (!Null) };
+        symbol [ setInitialWindDirection %tmp.38 211 32 55 ];
+        %tmp.38 = getv function %tmp.37 :setInitialWindDirection;
+        %tmp.39 = lgetv %windAngle.1;
+        symbol [ windAngle %tmp.39 211 56 65 ];
+        invoke %tmp.37 %tmp.38(%tmp.39);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_210_41_212_16_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_210_16_212_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_210_16_212_16_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 215 16 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_215_16_223_16_if_stmt:
+        symbol [ mApp %tmp.41 215 20 24 ];
+        %tmp.41 = getv ? :mApp;
+        %tmp.42 = null;
+        %tmp.43 = ne %tmp.41 %tmp.42;
+        bf %tmp.43 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_215_16_223_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_215_16_223_16_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_215_34_223_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 217 20 ]
+        symbol [ mApp %tmp.45 217 20 24 ];
+        %tmp.45 = getv ? :mApp;
+        %tmp.46 = as %tmp.45 { (!Null) };
+        symbol [ startActivitySession %tmp.47 217 25 45 ];
+        %tmp.47 = getv function %tmp.46 :startActivitySession;
+        invoke %tmp.46 %tmp.47();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 220 20 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_215_34_223_16_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_215_34_223_16_stop" ]
+        %view.3 = local;
+        symbol [ view %view.3 220 24 28 ];
+        symbol [ FoilTrackerView %tmp.51 220 35 50 ];
+        %tmp.51 = getv ? :FoilTrackerView;
+        symbol [ mModel %tmp.53 220 51 57 ];
+        %tmp.53 = getv ? :mModel;
+        %tmp.48 = newc %tmp.51 (%tmp.53);
+        lputv %view.3 %tmp.48;
+        symbol [ view %view.3 220 24 28 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 221 20 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_215_34_223_16_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_215_34_223_16_stop" ]
+        %delegate.4 = local;
+        symbol [ delegate %delegate.4 221 24 32 ];
+        symbol [ FoilTrackerDelegate %tmp.57 221 39 58 ];
+        %tmp.57 = getv ? :FoilTrackerDelegate;
+        %tmp.58 = lgetv %view.3;
+        symbol [ view %tmp.58 221 59 63 ];
+        symbol [ mModel %tmp.60 221 65 71 ];
+        %tmp.60 = getv ? :mModel;
+        symbol [ mApp %tmp.62 221 73 77 ];
+        %tmp.62 = getv ? :mApp;
+        symbol [ getWindTracker %tmp.63 221 78 92 ];
+        %tmp.63 = getv function %tmp.62 :getWindTracker;
+        %tmp.64 = invoke %tmp.62 %tmp.63();
+        %tmp.54 = newc %tmp.57 (%tmp.58, %tmp.60, %tmp.64);
+        lputv %delegate.4 %tmp.54;
+        symbol [ delegate %delegate.4 221 24 32 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 222 20 ]
+        symbol [ WatchUi %tmp.65 222 20 27 ];
+        %tmp.65 = getm $.Toybox.WatchUi;
+        symbol [ switchToView %tmp.66 222 28 40 ];
+        %tmp.66 = getv function %tmp.65 :switchToView;
+        %tmp.67 = lgetv %view.3;
+        symbol [ view %tmp.67 222 41 45 ];
+        %tmp.68 = lgetv %delegate.4;
+        symbol [ delegate %tmp.68 222 47 55 ];
+        symbol [ WatchUi %tmp.69 222 57 64 ];
+        %tmp.69 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.70 222 65 80 ];
+        %tmp.70 = getv %tmp.69 :SLIDE_IMMEDIATE;
+        invoke %tmp.65 %tmp.66(%tmp.67, %tmp.68, %tmp.70);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_215_34_223_16_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_215_16_223_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_215_16_223_16_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_195_37_224_12_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_195_12_224_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_195_12_224_12_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_193_12_225_8_stop:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_193_8_232_8_endTry:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_193_8_232_8_finally;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_193_8_232_8_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_193_8_232_8_catch:
+        %tmp.71 = exception;
+        push %tmp.71;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 225 10 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_193_8_232_8_catch" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_225_10_232_8_end" ]
+        %e.5 = local;
+        symbol [ e %e.5 225 17 18 ];
+        %tmp.72 = dup %tmp.71;
+        lputv %e.5 %tmp.72;
+        symbol [ e %e.5 225 17 18 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_225_20_232_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 226 12 ]
+        symbol [ System %tmp.73 226 12 18 ];
+        %tmp.73 = getm $.Toybox.System;
+        symbol [ println %tmp.74 226 19 26 ];
+        %tmp.74 = getv function %tmp.73 :println;
+        %tmp.75 = "Error in wind angle selection: ";
+        %tmp.76 = lgetv %e.5;
+        symbol [ e %tmp.76 226 63 64 ];
+        symbol [ getErrorMessage %tmp.77 226 65 80 ];
+        %tmp.77 = getv function %tmp.76 :getErrorMessage;
+        %tmp.78 = invoke %tmp.76 %tmp.77();
+        %tmp.79 = add %tmp.75 %tmp.78;
+        invoke %tmp.73 %tmp.74(%tmp.79);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 229 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_225_20_232_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_225_20_232_8_stop" ]
+        %view.6 = local;
+        symbol [ view %view.6 229 16 20 ];
+        symbol [ FoilTrackerView %tmp.83 229 27 42 ];
+        %tmp.83 = getv ? :FoilTrackerView;
+        symbol [ mModel %tmp.85 229 43 49 ];
+        %tmp.85 = getv ? :mModel;
+        %tmp.80 = newc %tmp.83 (%tmp.85);
+        lputv %view.6 %tmp.80;
+        symbol [ view %view.6 229 16 20 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 230 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_225_20_232_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_225_20_232_8_stop" ]
+        %delegate.7 = local;
+        symbol [ delegate %delegate.7 230 16 24 ];
+        symbol [ FoilTrackerDelegate %tmp.89 230 31 50 ];
+        %tmp.89 = getv ? :FoilTrackerDelegate;
+        %tmp.90 = lgetv %view.6;
+        symbol [ view %tmp.90 230 51 55 ];
+        symbol [ mModel %tmp.92 230 57 63 ];
+        %tmp.92 = getv ? :mModel;
+        symbol [ mApp %tmp.94 230 65 69 ];
+        %tmp.94 = getv ? :mApp;
+        symbol [ getWindTracker %tmp.95 230 70 84 ];
+        %tmp.95 = getv function %tmp.94 :getWindTracker;
+        %tmp.96 = invoke %tmp.94 %tmp.95();
+        %tmp.86 = newc %tmp.89 (%tmp.90, %tmp.92, %tmp.96);
+        lputv %delegate.7 %tmp.86;
+        symbol [ delegate %delegate.7 230 16 24 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 231 12 ]
+        symbol [ WatchUi %tmp.97 231 12 19 ];
+        %tmp.97 = getm $.Toybox.WatchUi;
+        symbol [ switchToView %tmp.98 231 20 32 ];
+        %tmp.98 = getv function %tmp.97 :switchToView;
+        %tmp.99 = lgetv %view.6;
+        symbol [ view %tmp.99 231 33 37 ];
+        %tmp.100 = lgetv %delegate.7;
+        symbol [ delegate %tmp.100 231 39 47 ];
+        symbol [ WatchUi %tmp.101 231 49 56 ];
+        %tmp.101 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.102 231 57 72 ];
+        %tmp.102 = getv %tmp.101 :SLIDE_IMMEDIATE;
+        invoke %tmp.97 %tmp.98(%tmp.99, %tmp.100, %tmp.102);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_225_20_232_8_stop:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_193_8_232_8_finally;
+        pop;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_193_8_232_8_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_225_10_232_8_end:
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_193_8_232_8_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_225_10_232_8_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_225_10_232_8_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_193_8_232_8_finally;
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_193_8_232_8_finally;
+        throw %tmp.71;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_193_8_232_8_finally:
+        jsrret;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_193_8_232_8_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 234 8 ]
+        %tmp.103 = true;
+        ret %tmp.103;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_192_24_235_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 238; @symbol_functiondef = [onBack,238,13,19]; ]
+    function onBack() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_238_22_247_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 240 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_238_22_247_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_238_22_247_4_stop" ]
+        %app.1 = local;
+        symbol [ app %app.1 240 12 15 ];
+        symbol [ Application %tmp.2 240 18 29 ];
+        %tmp.2 = getv ? :Application;
+        symbol [ getApp %tmp.3 240 30 36 ];
+        %tmp.3 = getv function %tmp.2 :getApp;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %app.1 %tmp.4;
+        symbol [ app %app.1 240 12 15 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 241 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_238_22_247_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_238_22_247_4_stop" ]
+        %windView.2 = local;
+        symbol [ windView %windView.2 241 12 20 ];
+        symbol [ WindStrengthPickerView %tmp.8 241 27 49 ];
+        %tmp.8 = getv ? :WindStrengthPickerView;
+        symbol [ mModel %tmp.10 241 50 56 ];
+        %tmp.10 = getv ? :mModel;
+        %tmp.5 = newc %tmp.8 (%tmp.10);
+        lputv %windView.2 %tmp.5;
+        symbol [ windView %windView.2 241 12 20 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 242 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_238_22_247_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_238_22_247_4_stop" ]
+        %windDelegate.3 = local;
+        symbol [ windDelegate %windDelegate.3 242 12 24 ];
+        symbol [ StartupWindStrengthDelegate %tmp.14 242 31 58 ];
+        %tmp.14 = getv ? :StartupWindStrengthDelegate;
+        symbol [ mModel %tmp.16 242 59 65 ];
+        %tmp.16 = getv ? :mModel;
+        %tmp.17 = lgetv %app.1;
+        symbol [ app %tmp.17 242 67 70 ];
+        %tmp.11 = newc %tmp.14 (%tmp.16, %tmp.17);
+        lputv %windDelegate.3 %tmp.11;
+        symbol [ windDelegate %windDelegate.3 242 12 24 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 243 8 ]
+        %tmp.18 = lgetv %windDelegate.3;
+        symbol [ windDelegate %tmp.18 243 8 20 ];
+        symbol [ setPickerView %tmp.19 243 21 34 ];
+        %tmp.19 = getv function %tmp.18 :setPickerView;
+        %tmp.20 = lgetv %windView.2;
+        symbol [ windView %tmp.20 243 35 43 ];
+        invoke %tmp.18 %tmp.19(%tmp.20);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 245 8 ]
+        symbol [ WatchUi %tmp.21 245 8 15 ];
+        %tmp.21 = getm $.Toybox.WatchUi;
+        symbol [ switchToView %tmp.22 245 16 28 ];
+        %tmp.22 = getv function %tmp.21 :switchToView;
+        %tmp.23 = lgetv %windView.2;
+        symbol [ windView %tmp.23 245 29 37 ];
+        %tmp.24 = lgetv %windDelegate.3;
+        symbol [ windDelegate %tmp.24 245 39 51 ];
+        symbol [ WatchUi %tmp.25 245 53 60 ];
+        %tmp.25 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.26 245 61 71 ];
+        %tmp.26 = getv %tmp.25 :SLIDE_DOWN;
+        invoke %tmp.21 %tmp.22(%tmp.23, %tmp.24, %tmp.26);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc" 246 8 ]
+        %tmp.27 = true;
+        ret %tmp.27;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindAnglePickerView_mc_238_22_247_4_stop:
+    }
+}
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindAnglePickerView.mc"; @line = 3; ]
+<init> {
+}

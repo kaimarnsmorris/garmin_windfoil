@@ -1,0 +1,66 @@
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuView.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [WatchUi,1,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuView.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [System,2,13,19]; ]
+using Toybox.System;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuView.mc"; @line = 5; @symbol_classdef = [FoilTrackerMenuView,5,6,25]; @symbol_extends<0> = [WatchUi,5,34,41]; @symbol_extends<1> = [Menu,5,42,46]; ]
+class FoilTrackerMenuView extends WatchUi.Menu {
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuView.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuView.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuView.mc"; @line = 6; @symbol_functiondef = [initialize,6,13,23]; ]
+    function initialize() as Void {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuView_mc_6_26_15_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuView.mc" 7 8 ]
+        symbol [ Menu %tmp.2 7 8 12 ];
+        %tmp.2 = getv ? :Menu;
+        symbol [ initialize %tmp.3 7 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuView.mc" 8 8 ]
+        %tmp.4 = self;
+        symbol [ setTitle %tmp.5 8 8 16 ];
+        %tmp.5 = getv function %tmp.4 :setTitle;
+        %tmp.6 = "Foil Tracker Menu";
+        invoke %tmp.4 %tmp.5(%tmp.6);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuView.mc" 11 8 ]
+        %tmp.7 = self;
+        symbol [ addItem %tmp.8 11 8 15 ];
+        %tmp.8 = getv function %tmp.7 :addItem;
+        %tmp.9 = "Reset Stats";
+        %tmp.11 = const :menuItemReset;
+        symbol [ menuItemReset %tmp.11 11 32 45 const ];
+        invoke %tmp.7 %tmp.8(%tmp.9, %tmp.11);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuView.mc" 12 8 ]
+        %tmp.12 = self;
+        symbol [ addItem %tmp.13 12 8 15 ];
+        %tmp.13 = getv function %tmp.12 :addItem;
+        %tmp.14 = "History";
+        %tmp.16 = const :menuItemHistory;
+        symbol [ menuItemHistory %tmp.16 12 28 43 const ];
+        invoke %tmp.12 %tmp.13(%tmp.14, %tmp.16);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuView.mc" 13 8 ]
+        %tmp.17 = self;
+        symbol [ addItem %tmp.18 13 8 15 ];
+        %tmp.18 = getv function %tmp.17 :addItem;
+        %tmp.19 = "Settings";
+        %tmp.21 = const :menuItemSettings;
+        symbol [ menuItemSettings %tmp.21 13 29 45 const ];
+        invoke %tmp.17 %tmp.18(%tmp.19, %tmp.21);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuView.mc" 14 8 ]
+        %tmp.22 = self;
+        symbol [ addItem %tmp.23 14 8 15 ];
+        %tmp.23 = getv function %tmp.22 :addItem;
+        %tmp.24 = "About";
+        %tmp.26 = const :menuItemAbout;
+        symbol [ menuItemAbout %tmp.26 14 26 39 const ];
+        invoke %tmp.22 %tmp.23(%tmp.24, %tmp.26);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuView_mc_6_26_15_4_stop:
+    }
+}
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuView.mc"; @line = 1; ]
+<init> {
+}

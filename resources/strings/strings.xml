@@ -1,0 +1,31 @@
+<strings>
+    <string id="AppName">Foil Tracker</string>
+    <string id="AppVersion">1.0.0</string>
+    
+    <!-- Menu strings -->
+    <string id="MenuTitle">WindFoil  Menu</string>
+    <string id="AppName">Windfoil Training</string>
+    <string id="MenuItemReset">Reset Stats</string>
+    <string id="MenuItemHistory">History</string>
+    <string id="MenuItemSettings">Settings</string>
+    <string id="MenuItemAbout">About</string>
+    
+    <!-- Setting strings -->
+    <string id="ThresholdTitle">Foiling Threshold</string>
+    <string id="ThresholdDesc">Speed (knots) to count as foiling</string>
+    <string id="BackgroundColorTitle">Background Color</string>
+    <string id="ColorBlack">Black</string>
+    <string id="ColorBlue">Blue</string>
+    <string id="ColorGreen">Green</string>
+    
+    <!-- Confirmation strings -->
+    <string id="ConfirmExit">End Session?</string>
+    <string id="ConfirmYes">Yes</string>
+    <string id="ConfirmNo">No</string>
+    
+    <!-- Stats strings -->
+    <string id="MaxSpeed">Max</string>
+    <string id="Max3sSpeed">Max 3s</string>
+    <string id="PercentOnFoil">% on Foil</string>
+    <string id="Knots">Kts</string>
+</strings>

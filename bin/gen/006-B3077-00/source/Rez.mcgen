@@ -1,0 +1,55 @@
+import Toybox.Lang;
+using Toybox.WatchUi;
+using Toybox.WatchUi as Ui;
+using Toybox.Graphics;
+using Toybox.Graphics as Gfx;
+
+module Rez {
+    module Drawables {
+        (:initialized) var LauncherIcon as ResourceId;
+    } // Drawables
+
+    module Layouts {
+        function MainLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+            var rez_cmp_local_text_title = new WatchUi.Text({:identifier=>"title", :color=>Graphics.COLOR_WHITE, :locX=>(240 * 0.5), :locY=>15, :text=>$.Rez.Strings.AppName, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_MEDIUM});
+
+            return [rez_cmp_local_text_title] as Array<WatchUi.Drawable>;
+        }
+    } // Layouts
+
+    module Menus {
+        class MainMenu extends WatchUi.Menu {
+            function initialize() {
+                Menu.initialize();
+                Menu.setTitle((WatchUi.loadResource($.Rez.Strings.MenuTitle) as String));
+                addItem((WatchUi.loadResource($.Rez.Strings.MenuItemReset) as String), :reset);
+                addItem((WatchUi.loadResource($.Rez.Strings.MenuItemHistory) as String), :history);
+                addItem((WatchUi.loadResource($.Rez.Strings.MenuItemSettings) as String), :settings);
+                addItem((WatchUi.loadResource($.Rez.Strings.MenuItemAbout) as String), :about);
+            }
+        }
+    } // Menus
+
+    module Strings {
+        (:initialized) var ConfirmYes as ResourceId;
+        (:initialized) var ColorBlue as ResourceId;
+        (:initialized) var MaxSpeed as ResourceId;
+        (:initialized) var MenuItemAbout as ResourceId;
+        (:initialized) var BackgroundColorTitle as ResourceId;
+        (:initialized) var ConfirmNo as ResourceId;
+        (:initialized) var MenuTitle as ResourceId;
+        (:initialized) var ColorBlack as ResourceId;
+        (:initialized) var PercentOnFoil as ResourceId;
+        (:initialized) var AppName as ResourceId;
+        (:initialized) var ThresholdDesc as ResourceId;
+        (:initialized) var AppVersion as ResourceId;
+        (:initialized) var Max3sSpeed as ResourceId;
+        (:initialized) var MenuItemHistory as ResourceId;
+        (:initialized) var MenuItemReset as ResourceId;
+        (:initialized) var ConfirmExit as ResourceId;
+        (:initialized) var ThresholdTitle as ResourceId;
+        (:initialized) var MenuItemSettings as ResourceId;
+        (:initialized) var ColorGreen as ResourceId;
+        (:initialized) var Knots as ResourceId;
+    } // Strings
+} // Rez

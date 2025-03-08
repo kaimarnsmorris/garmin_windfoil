@@ -1,0 +1,1824 @@
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Application,1,13,24]; ]
+using Toybox.Application;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [System,3,13,19]; ]
+using Toybox.System;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Activity,4,13,21]; ]
+using Toybox.Activity;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [ActivityRecording,5,13,30]; ]
+using Toybox.ActivityRecording;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 6; @symbol_usingdef<0> = [Toybox,6,6,12]; @symbol_usingdef<1> = [Position,6,13,21]; ]
+using Toybox.Position;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 7; @symbol_usingdef<0> = [Toybox,7,6,12]; @symbol_usingdef<1> = [Timer,7,13,18]; ]
+using Toybox.Timer;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 8; @symbol_usingdef<0> = [Toybox,8,6,12]; @symbol_usingdef<1> = [Lang,8,13,17]; ]
+using Toybox.Lang;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 9; @symbol_usingdef<0> = [Toybox,9,6,12]; @symbol_usingdef<1> = [FitContributor,9,13,27]; ]
+using Toybox.FitContributor;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 12; @symbol_classdef = [FoilTrackerApp,12,6,20]; @symbol_extends<0> = [Application,12,29,40]; @symbol_extends<1> = [AppBase,12,41,48]; ]
+class FoilTrackerApp extends Application.AppBase {
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 12; ]
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 12; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 14; @position = 16; @symbol_vardef = [mView,14,16,21]; ]
+    private
+    var mView;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 15; @position = 16; @symbol_vardef = [mModel,15,16,22]; ]
+    private
+    var mModel;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 16; @position = 16; @symbol_vardef = [mSession,16,16,24]; ]
+    private
+    var mSession;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 17; @position = 16; @symbol_vardef = [mPositionEnabled,17,16,32]; ]
+    private
+    var mPositionEnabled;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 18; @position = 16; @symbol_vardef = [mTimer,18,16,22]; ]
+    private
+    var mTimer;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 19; @position = 16; @symbol_vardef = [mTimerRunning,19,16,29]; ]
+    private
+    var mTimerRunning;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 20; @position = 16; @symbol_vardef = [mWindTracker,20,16,28]; ]
+    private
+    var mWindTracker;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 23; @position = 16; @symbol_vardef = [mWorkoutNameField,23,16,33]; ]
+    private
+    var mWorkoutNameField;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 24; @position = 16; @symbol_vardef = [mWindStrengthField,24,16,34]; ]
+    private
+    var mWindStrengthField;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 25; @position = 16; @symbol_vardef = [mWindDirectionField,25,16,35]; ]
+    private
+    var mWindDirectionField;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 28; @symbol_functiondef = [initialize,28,13,23]; ]
+    function initialize() as Void {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_28_26_41_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 29 8 ]
+        symbol [ AppBase %tmp.2 29 8 15 ];
+        %tmp.2 = getv ? :AppBase;
+        symbol [ initialize %tmp.3 29 16 26 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 30 8 ]
+        %tmp.4 = null;
+        symbol [ mModel ? 30 8 14 ];
+        putv self :mModel %tmp.4;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 31 8 ]
+        %tmp.5 = null;
+        symbol [ mSession ? 31 8 16 ];
+        putv self :mSession %tmp.5;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 32 8 ]
+        %tmp.6 = false;
+        symbol [ mPositionEnabled ? 32 8 24 ];
+        putv self :mPositionEnabled %tmp.6;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 33 8 ]
+        %tmp.7 = null;
+        symbol [ mTimer ? 33 8 14 ];
+        putv self :mTimer %tmp.7;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 34 8 ]
+        %tmp.8 = false;
+        symbol [ mTimerRunning ? 34 8 21 ];
+        putv self :mTimerRunning %tmp.8;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 35 8 ]
+        symbol [ WindTracker %tmp.12 35 27 38 ];
+        %tmp.12 = getv ? :WindTracker;
+        %tmp.9 = newc %tmp.12 ();
+        symbol [ mWindTracker ? 35 8 20 ];
+        putv self :mWindTracker %tmp.9;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 38 8 ]
+        %tmp.13 = null;
+        symbol [ mWorkoutNameField ? 38 8 25 ];
+        putv self :mWorkoutNameField %tmp.13;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 39 8 ]
+        %tmp.14 = null;
+        symbol [ mWindStrengthField ? 39 8 26 ];
+        putv self :mWindStrengthField %tmp.14;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 40 8 ]
+        %tmp.15 = null;
+        symbol [ mWindDirectionField ? 40 8 27 ];
+        putv self :mWindDirectionField %tmp.15;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_28_26_41_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 44; @symbol_functiondef = [onStart,44,13,20]; @symbol_param<0> = [state,44,21,26]; ]
+    function onStart(state) {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_44_28_69_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 45 8 ]
+        symbol [ System %tmp.1 45 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 45 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "App starting";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 47 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_47_8_49_8_if_stmt:
+        symbol [ mModel %tmp.5 47 12 18 ];
+        %tmp.5 = getv ? :mModel;
+        %tmp.6 = null;
+        %tmp.7 = eq %tmp.5 %tmp.6;
+        bf %tmp.7 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_47_8_49_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_47_8_49_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_47_28_49_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 48 12 ]
+        symbol [ FoilTrackerModel %tmp.11 48 25 41 ];
+        %tmp.11 = getv ? :FoilTrackerModel;
+        %tmp.8 = newc %tmp.11 ();
+        symbol [ mModel ? 48 12 18 ];
+        putv self :mModel %tmp.8;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_47_28_49_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_47_8_49_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_47_8_49_8_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 50 8 ]
+        symbol [ System %tmp.12 50 8 14 ];
+        %tmp.12 = getm $.Toybox.System;
+        symbol [ println %tmp.13 50 15 22 ];
+        %tmp.13 = getv function %tmp.12 :println;
+        %tmp.14 = "Model initialized";
+        invoke %tmp.12 %tmp.13(%tmp.14);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 53 8 ]
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_53_8_61_8_beginTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_53_8_61_8_endTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_53_8_61_8_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_53_8_61_8_finally;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_53_8_61_8_beginTry:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_53_12_58_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 55 12 ]
+        %tmp.15 = true;
+        symbol [ mPositionEnabled ? 55 12 28 ];
+        putv self :mPositionEnabled %tmp.15;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 56 12 ]
+        symbol [ Position %tmp.16 56 12 20 ];
+        %tmp.16 = getm $.Toybox.Position;
+        symbol [ enableLocationEvents %tmp.17 56 21 41 ];
+        %tmp.17 = getv function %tmp.16 :enableLocationEvents;
+        symbol [ Position %tmp.18 56 42 50 ];
+        %tmp.18 = getm $.Toybox.Position;
+        symbol [ LOCATION_CONTINUOUS %tmp.19 56 51 70 ];
+        %tmp.19 = getv %tmp.18 :LOCATION_CONTINUOUS;
+        symbol [ Method %tmp.23 56 76 82 ];
+        %tmp.23 = getv ? :Method;
+        %tmp.24 = self;
+        symbol [ self %tmp.24 56 83 87 ];
+        %tmp.26 = const :onPositionCallback;
+        symbol [ onPositionCallback %tmp.26 56 90 108 const ];
+        %tmp.20 = newc %tmp.23 (%tmp.24, %tmp.26);
+        invoke %tmp.16 %tmp.17(%tmp.19, %tmp.20);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 57 12 ]
+        symbol [ System %tmp.27 57 12 18 ];
+        %tmp.27 = getm $.Toybox.System;
+        symbol [ println %tmp.28 57 19 26 ];
+        %tmp.28 = getv function %tmp.27 :println;
+        %tmp.29 = "Position tracking enabled";
+        invoke %tmp.27 %tmp.28(%tmp.29);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_53_12_58_8_stop:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_53_8_61_8_endTry:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_53_8_61_8_finally;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_53_8_61_8_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_53_8_61_8_catch:
+        %tmp.30 = exception;
+        push %tmp.30;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 58 10 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_53_8_61_8_catch" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_58_10_61_8_end" ]
+        %e.1 = local;
+        symbol [ e %e.1 58 17 18 ];
+        %tmp.31 = dup %tmp.30;
+        lputv %e.1 %tmp.31;
+        symbol [ e %e.1 58 17 18 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_58_20_61_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 59 12 ]
+        %tmp.32 = false;
+        symbol [ mPositionEnabled ? 59 12 28 ];
+        putv self :mPositionEnabled %tmp.32;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 60 12 ]
+        symbol [ System %tmp.33 60 12 18 ];
+        %tmp.33 = getm $.Toybox.System;
+        symbol [ println %tmp.34 60 19 26 ];
+        %tmp.34 = getv function %tmp.33 :println;
+        %tmp.35 = "Error enabling position tracking: ";
+        %tmp.36 = lgetv %e.1;
+        symbol [ e %tmp.36 60 66 67 ];
+        symbol [ getErrorMessage %tmp.37 60 68 83 ];
+        %tmp.37 = getv function %tmp.36 :getErrorMessage;
+        %tmp.38 = invoke %tmp.36 %tmp.37();
+        %tmp.39 = add %tmp.35 %tmp.38;
+        invoke %tmp.33 %tmp.34(%tmp.39);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_58_20_61_8_stop:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_53_8_61_8_finally;
+        pop;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_53_8_61_8_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_58_10_61_8_end:
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_53_8_61_8_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_58_10_61_8_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_58_10_61_8_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_53_8_61_8_finally;
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_53_8_61_8_finally;
+        throw %tmp.30;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_53_8_61_8_finally:
+        jsrret;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_53_8_61_8_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 67 8 ]
+        %tmp.40 = self;
+        symbol [ startSimpleTimer %tmp.41 67 8 24 ];
+        %tmp.41 = getv function %tmp.40 :startSimpleTimer;
+        invoke %tmp.40 %tmp.41();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 68 8 ]
+        symbol [ System %tmp.42 68 8 14 ];
+        %tmp.42 = getm $.Toybox.System;
+        symbol [ println %tmp.43 68 15 22 ];
+        %tmp.43 = getv function %tmp.42 :println;
+        %tmp.44 = "Timer started";
+        invoke %tmp.42 %tmp.43(%tmp.44);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_44_28_69_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 72; @symbol_functiondef = [onPositionCallback,72,13,31]; @symbol_param<0> = [posInfo,72,32,39]; @symbol_param<0>_type<0> = [Position,72,43,51]; @symbol_param<0>_type<1> = [Info,72,52,56]; ]
+    function onPositionCallback(posInfo as Position.Info) as Void {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_72_66_91_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 74 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_74_8_90_8_if_stmt:
+        %tmp.1 = lgetv %posInfo;
+        symbol [ posInfo %tmp.1 74 12 19 ];
+        %tmp.2 = null;
+        %tmp.3 = ne %tmp.1 %tmp.2;
+        bf %tmp.3 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_74_8_90_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_74_8_90_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_74_29_90_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 76 12 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_76_12_78_12_if_stmt:
+        symbol [ mWindTracker %tmp.5 76 16 28 ];
+        %tmp.5 = getv ? :mWindTracker;
+        %tmp.6 = null;
+        %tmp.7 = ne %tmp.5 %tmp.6;
+        bf %tmp.7 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_76_12_78_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_76_12_78_12_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_76_38_78_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 77 16 ]
+        symbol [ mWindTracker %tmp.9 77 16 28 ];
+        %tmp.9 = getv ? :mWindTracker;
+        %tmp.10 = as %tmp.9 { (!Null) };
+        symbol [ processPositionData %tmp.11 77 29 48 ];
+        %tmp.11 = getv function %tmp.10 :processPositionData;
+        %tmp.12 = lgetv %posInfo;
+        symbol [ posInfo %tmp.12 77 49 56 ];
+        %tmp.13 = as %tmp.12 { (!Null) };
+        invoke %tmp.10 %tmp.11(%tmp.13);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_76_38_78_12_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_76_12_78_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_76_12_78_12_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 81 12 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_81_12_86_12_if_stmt:
+        symbol [ mModel %tmp.15 81 16 22 ];
+        %tmp.15 = getv ? :mModel;
+        %tmp.16 = null;
+        %tmp.17 = ne %tmp.15 %tmp.16;
+        bf %tmp.17 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_81_12_86_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_81_12_86_12_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_81_32_86_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 82 16 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_81_32_86_12_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_81_32_86_12_stop" ]
+        %data.1 = local;
+        symbol [ data %data.1 82 20 24 ];
+        symbol [ mModel %tmp.19 82 27 33 ];
+        %tmp.19 = getv ? :mModel;
+        %tmp.20 = as %tmp.19 { (!Null) };
+        symbol [ getData %tmp.21 82 34 41 ];
+        %tmp.21 = getv function %tmp.20 :getData;
+        %tmp.22 = invoke %tmp.20 %tmp.21();
+        lputv %data.1 %tmp.22;
+        symbol [ data %data.1 82 20 24 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 83 16 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_83_16_85_16_if_stmt:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_83_20_83_98_begin:
+        %tmp.23 = lgetv %data.1;
+        symbol [ data %tmp.23 83 20 24 ];
+        %tmp.24 = "isRecording";
+        %tmp.25 = agetv %tmp.23 %tmp.24;
+        bf %tmp.25 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_83_16_85_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_83_43_83_98_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_83_45_83_97_begin:
+        %tmp.26 = lgetv %data.1;
+        symbol [ data %tmp.26 83 45 49 ];
+        symbol [ hasKey %tmp.27 83 50 56 ];
+        %tmp.27 = getv function %tmp.26 :hasKey;
+        %tmp.28 = "sessionPaused";
+        %tmp.29 = invoke %tmp.26 %tmp.27(%tmp.28);
+        %tmp.30 = dup %tmp.29;
+        bf %tmp.30 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_83_77_83_97_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_83_77_83_97_true:
+        %tmp.31 = lgetv %data.1;
+        symbol [ data %tmp.31 83 77 81 ];
+        %tmp.32 = "sessionPaused";
+        %tmp.33 = agetv %tmp.31 %tmp.32;
+        %tmp.34 = and %tmp.29 %tmp.33;
+        push %tmp.34;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_83_77_83_97_end:
+        %tmp.35 = phi [%tmp.30 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_83_45_83_97_begin] [%tmp.34 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_83_77_83_97_true] [%tmp.35 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_83_77_83_97_end];
+        %tmp.36 = not %tmp.35;
+        push %tmp.36;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_83_43_83_98_end:
+        %tmp.37 = phi [%tmp.25 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_83_20_83_98_begin] [%tmp.36 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_83_43_83_98_true] [%tmp.37 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_83_43_83_98_end];
+        bf %tmp.37 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_83_16_85_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_83_16_85_16_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_83_101_85_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 84 20 ]
+        symbol [ mModel %tmp.39 84 20 26 ];
+        %tmp.39 = getv ? :mModel;
+        symbol [ processLocationData %tmp.40 84 27 46 ];
+        %tmp.40 = getv function %tmp.39 :processLocationData;
+        %tmp.41 = lgetv %posInfo;
+        symbol [ posInfo %tmp.41 84 47 54 ];
+        %tmp.42 = as %tmp.41 { (!Null) };
+        invoke %tmp.39 %tmp.40(%tmp.42);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_83_101_85_16_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_83_16_85_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_83_16_85_16_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_81_32_86_12_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_81_12_86_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_81_12_86_12_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 89 12 ]
+        symbol [ WatchUi %tmp.43 89 12 19 ];
+        %tmp.43 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.44 89 20 33 ];
+        %tmp.44 = getv function %tmp.43 :requestUpdate;
+        invoke %tmp.43 %tmp.44();
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_74_29_90_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_74_8_90_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_74_8_90_8_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_72_66_91_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 94; @symbol_functiondef = [startActivitySession,94,13,33]; ]
+    function startActivitySession() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_94_36_141_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 95 8 ]
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_8_140_8_beginTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_8_140_8_endTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_8_140_8_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_8_140_8_finally;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_8_140_8_beginTry:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_12_138_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 97 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_12_138_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_12_138_8_stop" ]
+        %sessionName.1 = local;
+        symbol [ sessionName %sessionName.1 97 16 27 ];
+        %tmp.1 = "Windfoil";
+        lputv %sessionName.1 %tmp.1;
+        symbol [ sessionName %sessionName.1 97 16 27 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 98 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_12_138_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_12_138_8_stop" ]
+        %windStrength.2 = local;
+        symbol [ windStrength %windStrength.2 98 16 28 ];
+        %tmp.2 = null;
+        lputv %windStrength.2 %tmp.2;
+        symbol [ windStrength %windStrength.2 98 16 28 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 99 12 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_99_12_103_12_if_stmt:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_99_16_99_72_begin:
+        symbol [ mModel %tmp.4 99 16 22 ];
+        %tmp.4 = getv ? :mModel;
+        %tmp.5 = null;
+        %tmp.6 = ne %tmp.4 %tmp.5;
+        bf %tmp.6 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_99_12_103_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_99_34_99_72_true:
+        symbol [ mModel %tmp.8 99 34 40 ];
+        %tmp.8 = getv ? :mModel;
+        %tmp.9 = as %tmp.8 { (!Null) };
+        symbol [ getData %tmp.10 99 41 48 ];
+        %tmp.10 = getv function %tmp.9 :getData;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        symbol [ hasKey %tmp.12 99 51 57 ];
+        %tmp.12 = getv function %tmp.11 :hasKey;
+        %tmp.13 = "windStrength";
+        %tmp.14 = invoke %tmp.11 %tmp.12(%tmp.13);
+        push %tmp.14;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_99_34_99_72_end:
+        %tmp.15 = phi [%tmp.6 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_99_16_99_72_begin] [%tmp.14 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_99_34_99_72_true] [%tmp.15 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_99_34_99_72_end];
+        bf %tmp.15 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_99_12_103_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_99_12_103_12_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_99_75_103_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 100 16 ]
+        symbol [ mModel %tmp.17 100 31 37 ];
+        %tmp.17 = getv ? :mModel;
+        symbol [ getData %tmp.18 100 38 45 ];
+        %tmp.18 = getv function %tmp.17 :getData;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        %tmp.20 = "windStrength";
+        %tmp.21 = agetv %tmp.19 %tmp.20;
+        lputv %windStrength.2 %tmp.21;
+        symbol [ windStrength %windStrength.2 100 16 28 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 101 16 ]
+        %tmp.22 = "Windfoil ";
+        %tmp.23 = lgetv %windStrength.2;
+        symbol [ windStrength %tmp.23 101 44 56 ];
+        %tmp.24 = add %tmp.22 %tmp.23;
+        lputv %sessionName.1 %tmp.24;
+        symbol [ sessionName %sessionName.1 101 16 27 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 102 16 ]
+        symbol [ System %tmp.25 102 16 22 ];
+        %tmp.25 = getm $.Toybox.System;
+        symbol [ println %tmp.26 102 23 30 ];
+        %tmp.26 = getv function %tmp.25 :println;
+        %tmp.27 = "Creating session with name: ";
+        %tmp.28 = lgetv %sessionName.1;
+        symbol [ sessionName %tmp.28 102 64 75 ];
+        %tmp.29 = add %tmp.27 %tmp.28;
+        invoke %tmp.25 %tmp.26(%tmp.29);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_99_75_103_12_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_99_12_103_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_99_12_103_12_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 106 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_12_138_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_12_138_8_stop" ]
+        %sessionOptions.3 = local;
+        symbol [ sessionOptions %sessionOptions.3 106 16 30 ];
+        %tmp.30 = newd 3;
+        %tmp.32 = const :name;
+        symbol [ name %tmp.32 107 17 21 const ];
+        %tmp.33 = lgetv %sessionName.1;
+        symbol [ sessionName %tmp.33 107 25 36 ];
+        %tmp.34 = dup %tmp.30;
+        %tmp.35 = aputv %tmp.34 %tmp.32 %tmp.33;
+        %tmp.37 = const :sport;
+        symbol [ sport %tmp.37 108 17 22 const ];
+        symbol [ Activity %tmp.38 108 26 34 ];
+        %tmp.38 = getm $.Toybox.Activity;
+        symbol [ SPORT_GENERIC %tmp.39 108 35 48 ];
+        %tmp.39 = getv %tmp.38 :SPORT_GENERIC;
+        %tmp.40 = dup %tmp.35;
+        %tmp.41 = aputv %tmp.40 %tmp.37 %tmp.39;
+        %tmp.43 = const :subSport;
+        symbol [ subSport %tmp.43 109 17 25 const ];
+        symbol [ Activity %tmp.44 109 29 37 ];
+        %tmp.44 = getm $.Toybox.Activity;
+        symbol [ SUB_SPORT_GENERIC %tmp.45 109 38 55 ];
+        %tmp.45 = getv %tmp.44 :SUB_SPORT_GENERIC;
+        %tmp.46 = dup %tmp.41;
+        %tmp.47 = aputv %tmp.46 %tmp.43 %tmp.45;
+        lputv %sessionOptions.3 %tmp.47;
+        symbol [ sessionOptions %sessionOptions.3 106 16 30 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 113 12 ]
+        symbol [ ActivityRecording %tmp.48 113 23 40 ];
+        %tmp.48 = getm $.Toybox.ActivityRecording;
+        symbol [ createSession %tmp.49 113 41 54 ];
+        %tmp.49 = getv function %tmp.48 :createSession;
+        %tmp.50 = lgetv %sessionOptions.3;
+        symbol [ sessionOptions %tmp.50 113 55 69 ];
+        %tmp.51 = invoke %tmp.48 %tmp.49(%tmp.50);
+        symbol [ mSession ? 113 12 20 ];
+        putv self :mSession %tmp.51;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 116 12 ]
+        %tmp.52 = self;
+        symbol [ createFitContributorFields %tmp.53 116 12 38 ];
+        %tmp.53 = getv function %tmp.52 :createFitContributorFields;
+        %tmp.54 = lgetv %sessionName.1;
+        symbol [ sessionName %tmp.54 116 39 50 ];
+        %tmp.55 = lgetv %windStrength.2;
+        symbol [ windStrength %tmp.55 116 52 64 ];
+        invoke %tmp.52 %tmp.53(%tmp.54, %tmp.55);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 119 12 ]
+        symbol [ mSession %tmp.57 119 12 20 ];
+        %tmp.57 = getv ? :mSession;
+        symbol [ start %tmp.58 119 21 26 ];
+        %tmp.58 = getv function %tmp.57 :start;
+        invoke %tmp.57 %tmp.58();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 120 12 ]
+        symbol [ System %tmp.59 120 12 18 ];
+        %tmp.59 = getm $.Toybox.System;
+        symbol [ println %tmp.60 120 19 26 ];
+        %tmp.60 = getv function %tmp.59 :println;
+        %tmp.61 = "Activity recording started as: ";
+        %tmp.62 = lgetv %sessionName.1;
+        symbol [ sessionName %tmp.62 120 63 74 ];
+        %tmp.63 = add %tmp.61 %tmp.62;
+        invoke %tmp.59 %tmp.60(%tmp.63);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 123 12 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_123_12_137_12_if_stmt:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_123_16_123_76_begin:
+        symbol [ mModel %tmp.65 123 16 22 ];
+        %tmp.65 = getv ? :mModel;
+        %tmp.66 = null;
+        %tmp.67 = ne %tmp.65 %tmp.66;
+        bf %tmp.67 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_123_12_137_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_123_34_123_76_true:
+        symbol [ mModel %tmp.69 123 34 40 ];
+        %tmp.69 = getv ? :mModel;
+        %tmp.70 = as %tmp.69 { (!Null) };
+        symbol [ getData %tmp.71 123 41 48 ];
+        %tmp.71 = getv function %tmp.70 :getData;
+        %tmp.72 = invoke %tmp.70 %tmp.71();
+        symbol [ hasKey %tmp.73 123 51 57 ];
+        %tmp.73 = getv function %tmp.72 :hasKey;
+        %tmp.74 = "initialWindAngle";
+        %tmp.75 = invoke %tmp.72 %tmp.73(%tmp.74);
+        push %tmp.75;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_123_34_123_76_end:
+        %tmp.76 = phi [%tmp.67 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_123_16_123_76_begin] [%tmp.75 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_123_34_123_76_true] [%tmp.76 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_123_34_123_76_end];
+        bf %tmp.76 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_123_12_137_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_123_12_137_12_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_123_79_137_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 124 16 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_123_79_137_12_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_123_79_137_12_stop" ]
+        %windAngle.4 = local;
+        symbol [ windAngle %windAngle.4 124 20 29 ];
+        symbol [ mModel %tmp.78 124 32 38 ];
+        %tmp.78 = getv ? :mModel;
+        symbol [ getData %tmp.79 124 39 46 ];
+        %tmp.79 = getv function %tmp.78 :getData;
+        %tmp.80 = invoke %tmp.78 %tmp.79();
+        %tmp.81 = "initialWindAngle";
+        %tmp.82 = agetv %tmp.80 %tmp.81;
+        lputv %windAngle.4 %tmp.82;
+        symbol [ windAngle %windAngle.4 124 20 29 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 125 16 ]
+        symbol [ System %tmp.83 125 16 22 ];
+        %tmp.83 = getm $.Toybox.System;
+        symbol [ println %tmp.84 125 23 30 ];
+        %tmp.84 = getv function %tmp.83 :println;
+        %tmp.85 = "Setting initial wind angle: ";
+        %tmp.86 = lgetv %windAngle.4;
+        symbol [ windAngle %tmp.86 125 64 73 ];
+        %tmp.87 = add %tmp.85 %tmp.86;
+        invoke %tmp.83 %tmp.84(%tmp.87);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 128 16 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_128_16_136_16_if_stmt:
+        symbol [ mWindTracker %tmp.89 128 20 32 ];
+        %tmp.89 = getv ? :mWindTracker;
+        %tmp.90 = null;
+        %tmp.91 = ne %tmp.89 %tmp.90;
+        bf %tmp.91 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_128_16_136_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_128_16_136_16_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_128_42_136_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 129 20 ]
+        symbol [ mWindTracker %tmp.93 129 20 32 ];
+        %tmp.93 = getv ? :mWindTracker;
+        %tmp.94 = as %tmp.93 { (!Null) };
+        symbol [ setInitialWindDirection %tmp.95 129 33 56 ];
+        %tmp.95 = getv function %tmp.94 :setInitialWindDirection;
+        %tmp.96 = lgetv %windAngle.4;
+        symbol [ windAngle %tmp.96 129 57 66 ];
+        invoke %tmp.94 %tmp.95(%tmp.96);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 130 20 ]
+        symbol [ System %tmp.97 130 20 26 ];
+        %tmp.97 = getm $.Toybox.System;
+        symbol [ println %tmp.98 130 27 34 ];
+        %tmp.98 = getv function %tmp.97 :println;
+        %tmp.99 = "WindTracker initialized with direction: ";
+        %tmp.100 = lgetv %windAngle.4;
+        symbol [ windAngle %tmp.100 130 80 89 ];
+        %tmp.101 = add %tmp.99 %tmp.100;
+        invoke %tmp.97 %tmp.98(%tmp.101);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 133 20 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_133_20_135_20_if_stmt:
+        symbol [ mWindDirectionField %tmp.103 133 24 43 ];
+        %tmp.103 = getv ? :mWindDirectionField;
+        %tmp.104 = null;
+        %tmp.105 = ne %tmp.103 %tmp.104;
+        bf %tmp.105 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_133_20_135_20_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_133_20_135_20_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_133_53_135_20_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 134 24 ]
+        symbol [ mWindDirectionField %tmp.107 134 24 43 ];
+        %tmp.107 = getv ? :mWindDirectionField;
+        %tmp.108 = as %tmp.107 { (!Null) };
+        symbol [ setData %tmp.109 134 44 51 ];
+        %tmp.109 = getv function %tmp.108 :setData;
+        %tmp.110 = lgetv %windAngle.4;
+        symbol [ windAngle %tmp.110 134 52 61 ];
+        invoke %tmp.108 %tmp.109(%tmp.110);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_133_53_135_20_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_133_20_135_20_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_133_20_135_20_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_128_42_136_16_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_128_16_136_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_128_16_136_16_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_123_79_137_12_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_123_12_137_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_123_12_137_12_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_12_138_8_stop:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_8_140_8_endTry:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_8_140_8_finally;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_8_140_8_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_8_140_8_catch:
+        %tmp.111 = exception;
+        push %tmp.111;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 138 10 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_8_140_8_catch" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_138_10_140_8_end" ]
+        %e.5 = local;
+        symbol [ e %e.5 138 17 18 ];
+        %tmp.112 = dup %tmp.111;
+        lputv %e.5 %tmp.112;
+        symbol [ e %e.5 138 17 18 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_138_20_140_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 139 12 ]
+        symbol [ System %tmp.113 139 12 18 ];
+        %tmp.113 = getm $.Toybox.System;
+        symbol [ println %tmp.114 139 19 26 ];
+        %tmp.114 = getv function %tmp.113 :println;
+        %tmp.115 = "Error with activity recording: ";
+        %tmp.116 = lgetv %e.5;
+        symbol [ e %tmp.116 139 63 64 ];
+        symbol [ getErrorMessage %tmp.117 139 65 80 ];
+        %tmp.117 = getv function %tmp.116 :getErrorMessage;
+        %tmp.118 = invoke %tmp.116 %tmp.117();
+        %tmp.119 = add %tmp.115 %tmp.118;
+        invoke %tmp.113 %tmp.114(%tmp.119);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_138_20_140_8_stop:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_8_140_8_finally;
+        pop;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_8_140_8_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_138_10_140_8_end:
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_8_140_8_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_138_10_140_8_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_138_10_140_8_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_8_140_8_finally;
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_8_140_8_finally;
+        throw %tmp.111;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_8_140_8_finally:
+        jsrret;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_95_8_140_8_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_94_36_141_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 145; @symbol_functiondef = [createFitContributorFields,145,13,39]; @symbol_param<0> = [sessionName,145,40,51]; @symbol_param<1> = [windStrength,145,53,65]; ]
+    function createFitContributorFields(sessionName, windStrength) {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_145_67_208_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 146 8 ]
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_146_8_207_8_beginTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_146_8_207_8_endTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_146_8_207_8_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_146_8_207_8_finally;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_146_8_207_8_beginTry:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_146_12_205_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 148 12 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_148_12_151_12_if_stmt:
+        symbol [ mSession %tmp.2 148 16 24 ];
+        %tmp.2 = getv ? :mSession;
+        %tmp.3 = null;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_148_12_151_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_148_12_151_12_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_148_34_151_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 149 16 ]
+        symbol [ System %tmp.5 149 16 22 ];
+        %tmp.5 = getm $.Toybox.System;
+        symbol [ println %tmp.6 149 23 30 ];
+        %tmp.6 = getv function %tmp.5 :println;
+        %tmp.7 = "Session is null, can't create FitContributor fields";
+        invoke %tmp.5 %tmp.6(%tmp.7);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 150 16 ]
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_146_8_207_8_finally;
+        ret ?;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_148_34_151_12_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_148_12_151_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_148_12_151_12_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 154 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_146_12_205_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_146_12_205_8_stop" ]
+        %windRangeCode.1 = local;
+        symbol [ windRangeCode %windRangeCode.1 154 16 29 ];
+        %tmp.8 = 0;
+        lputv %windRangeCode.1 %tmp.8;
+        symbol [ windRangeCode %windRangeCode.1 154 16 29 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 155 12 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_155_12_171_12_if_stmt:
+        %tmp.9 = lgetv %windStrength;
+        symbol [ windStrength %tmp.9 155 16 28 ];
+        %tmp.10 = null;
+        %tmp.11 = ne %tmp.9 %tmp.10;
+        bf %tmp.11 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_155_12_171_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_155_12_171_12_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_155_38_171_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 156 16 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_156_16_170_16_if_stmt:
+        %tmp.12 = lgetv %windStrength;
+        symbol [ windStrength %tmp.12 156 20 32 ];
+        %tmp.13 = as %tmp.12 { (!Null) };
+        symbol [ find %tmp.14 156 33 37 ];
+        %tmp.14 = getv function %tmp.13 :find;
+        %tmp.15 = "7-10";
+        %tmp.16 = invoke %tmp.13 %tmp.14(%tmp.15);
+        %tmp.17 = 0;
+        %tmp.18 = gte %tmp.16 %tmp.17;
+        bf %tmp.18 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_156_16_170_16_if_false;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_156_16_170_16_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_156_52_158_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 157 20 ]
+        %tmp.19 = 7;
+        lputv %windRangeCode.1 %tmp.19;
+        symbol [ windRangeCode %windRangeCode.1 157 20 33 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_156_52_158_16_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_156_16_170_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_156_16_170_16_if_false:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 158 23 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_158_23_170_16_if_stmt:
+        %tmp.20 = lgetv %windStrength;
+        symbol [ windStrength %tmp.20 158 27 39 ];
+        %tmp.21 = as %tmp.20 { (!Null) };
+        symbol [ find %tmp.22 158 40 44 ];
+        %tmp.22 = getv function %tmp.21 :find;
+        %tmp.23 = "10-13";
+        %tmp.24 = invoke %tmp.21 %tmp.22(%tmp.23);
+        %tmp.25 = 0;
+        %tmp.26 = gte %tmp.24 %tmp.25;
+        bf %tmp.26 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_158_23_170_16_if_false;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_158_23_170_16_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_158_60_160_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 159 20 ]
+        %tmp.27 = 10;
+        lputv %windRangeCode.1 %tmp.27;
+        symbol [ windRangeCode %windRangeCode.1 159 20 33 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_158_60_160_16_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_158_23_170_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_158_23_170_16_if_false:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 160 23 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_160_23_170_16_if_stmt:
+        %tmp.28 = lgetv %windStrength;
+        symbol [ windStrength %tmp.28 160 27 39 ];
+        %tmp.29 = as %tmp.28 { (!Null) };
+        symbol [ find %tmp.30 160 40 44 ];
+        %tmp.30 = getv function %tmp.29 :find;
+        %tmp.31 = "13-16";
+        %tmp.32 = invoke %tmp.29 %tmp.30(%tmp.31);
+        %tmp.33 = 0;
+        %tmp.34 = gte %tmp.32 %tmp.33;
+        bf %tmp.34 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_160_23_170_16_if_false;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_160_23_170_16_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_160_60_162_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 161 20 ]
+        %tmp.35 = 13;
+        lputv %windRangeCode.1 %tmp.35;
+        symbol [ windRangeCode %windRangeCode.1 161 20 33 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_160_60_162_16_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_160_23_170_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_160_23_170_16_if_false:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 162 23 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_162_23_170_16_if_stmt:
+        %tmp.36 = lgetv %windStrength;
+        symbol [ windStrength %tmp.36 162 27 39 ];
+        %tmp.37 = as %tmp.36 { (!Null) };
+        symbol [ find %tmp.38 162 40 44 ];
+        %tmp.38 = getv function %tmp.37 :find;
+        %tmp.39 = "16-19";
+        %tmp.40 = invoke %tmp.37 %tmp.38(%tmp.39);
+        %tmp.41 = 0;
+        %tmp.42 = gte %tmp.40 %tmp.41;
+        bf %tmp.42 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_162_23_170_16_if_false;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_162_23_170_16_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_162_60_164_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 163 20 ]
+        %tmp.43 = 16;
+        lputv %windRangeCode.1 %tmp.43;
+        symbol [ windRangeCode %windRangeCode.1 163 20 33 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_162_60_164_16_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_162_23_170_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_162_23_170_16_if_false:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 164 23 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_164_23_170_16_if_stmt:
+        %tmp.44 = lgetv %windStrength;
+        symbol [ windStrength %tmp.44 164 27 39 ];
+        %tmp.45 = as %tmp.44 { (!Null) };
+        symbol [ find %tmp.46 164 40 44 ];
+        %tmp.46 = getv function %tmp.45 :find;
+        %tmp.47 = "19-22";
+        %tmp.48 = invoke %tmp.45 %tmp.46(%tmp.47);
+        %tmp.49 = 0;
+        %tmp.50 = gte %tmp.48 %tmp.49;
+        bf %tmp.50 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_164_23_170_16_if_false;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_164_23_170_16_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_164_60_166_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 165 20 ]
+        %tmp.51 = 19;
+        lputv %windRangeCode.1 %tmp.51;
+        symbol [ windRangeCode %windRangeCode.1 165 20 33 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_164_60_166_16_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_164_23_170_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_164_23_170_16_if_false:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 166 23 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_166_23_170_16_if_stmt:
+        %tmp.52 = lgetv %windStrength;
+        symbol [ windStrength %tmp.52 166 27 39 ];
+        %tmp.53 = as %tmp.52 { (!Null) };
+        symbol [ find %tmp.54 166 40 44 ];
+        %tmp.54 = getv function %tmp.53 :find;
+        %tmp.55 = "22-25";
+        %tmp.56 = invoke %tmp.53 %tmp.54(%tmp.55);
+        %tmp.57 = 0;
+        %tmp.58 = gte %tmp.56 %tmp.57;
+        bf %tmp.58 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_166_23_170_16_if_false;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_166_23_170_16_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_166_60_168_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 167 20 ]
+        %tmp.59 = 22;
+        lputv %windRangeCode.1 %tmp.59;
+        symbol [ windRangeCode %windRangeCode.1 167 20 33 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_166_60_168_16_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_166_23_170_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_166_23_170_16_if_false:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 168 23 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_168_23_170_16_if_stmt:
+        %tmp.60 = lgetv %windStrength;
+        symbol [ windStrength %tmp.60 168 27 39 ];
+        %tmp.61 = as %tmp.60 { (!Null) };
+        symbol [ find %tmp.62 168 40 44 ];
+        %tmp.62 = getv function %tmp.61 :find;
+        %tmp.63 = "25+";
+        %tmp.64 = invoke %tmp.61 %tmp.62(%tmp.63);
+        %tmp.65 = 0;
+        %tmp.66 = gte %tmp.64 %tmp.65;
+        bf %tmp.66 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_168_23_170_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_168_23_170_16_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_168_58_170_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 169 20 ]
+        %tmp.67 = 25;
+        lputv %windRangeCode.1 %tmp.67;
+        symbol [ windRangeCode %windRangeCode.1 169 20 33 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_168_58_170_16_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_168_23_170_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_168_23_170_16_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_166_23_170_16_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_164_23_170_16_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_162_23_170_16_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_160_23_170_16_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_158_23_170_16_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_156_16_170_16_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_155_38_171_12_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_155_12_171_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_155_12_171_12_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 174 12 ]
+        symbol [ mSession %tmp.69 174 33 41 ];
+        %tmp.69 = getv ? :mSession;
+        symbol [ createField %tmp.70 174 42 53 ];
+        %tmp.70 = getv function %tmp.69 :createField;
+        %tmp.71 = "windLow";
+        %tmp.72 = 1;
+        symbol [ FitContributor %tmp.73 177 16 30 ];
+        %tmp.73 = getm $.Toybox.FitContributor;
+        symbol [ DATA_TYPE_UINT8 %tmp.74 177 31 46 ];
+        %tmp.74 = getv %tmp.73 :DATA_TYPE_UINT8;
+        %tmp.75 = newd 1;
+        %tmp.77 = const :mesgType;
+        symbol [ mesgType %tmp.77 178 19 27 const ];
+        symbol [ FitContributor %tmp.78 178 31 45 ];
+        %tmp.78 = getm $.Toybox.FitContributor;
+        symbol [ MESG_TYPE_SESSION %tmp.79 178 46 63 ];
+        %tmp.79 = getv %tmp.78 :MESG_TYPE_SESSION;
+        %tmp.80 = dup %tmp.75;
+        %tmp.81 = aputv %tmp.80 %tmp.77 %tmp.79;
+        %tmp.82 = invoke %tmp.69 %tmp.70(%tmp.71, %tmp.72, %tmp.74, %tmp.81);
+        symbol [ mWindStrengthField ? 174 12 30 ];
+        putv self :mWindStrengthField %tmp.82;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 182 12 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_182_12_185_12_if_stmt:
+        symbol [ mWindStrengthField %tmp.84 182 16 34 ];
+        %tmp.84 = getv ? :mWindStrengthField;
+        %tmp.85 = null;
+        %tmp.86 = ne %tmp.84 %tmp.85;
+        bf %tmp.86 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_182_12_185_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_182_12_185_12_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_182_44_185_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 183 16 ]
+        symbol [ mWindStrengthField %tmp.88 183 16 34 ];
+        %tmp.88 = getv ? :mWindStrengthField;
+        %tmp.89 = as %tmp.88 { (!Null) };
+        symbol [ setData %tmp.90 183 35 42 ];
+        %tmp.90 = getv function %tmp.89 :setData;
+        %tmp.91 = lgetv %windRangeCode.1;
+        symbol [ windRangeCode %tmp.91 183 43 56 ];
+        invoke %tmp.89 %tmp.90(%tmp.91);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 184 16 ]
+        symbol [ System %tmp.92 184 16 22 ];
+        %tmp.92 = getm $.Toybox.System;
+        symbol [ println %tmp.93 184 23 30 ];
+        %tmp.93 = getv function %tmp.92 :println;
+        %tmp.94 = "Created wind range field: ";
+        %tmp.95 = lgetv %windRangeCode.1;
+        symbol [ windRangeCode %tmp.95 184 62 75 ];
+        %tmp.96 = add %tmp.94 %tmp.95;
+        invoke %tmp.92 %tmp.93(%tmp.96);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_182_44_185_12_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_182_12_185_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_182_12_185_12_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 188 12 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_188_12_204_12_if_stmt:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_188_16_188_76_begin:
+        symbol [ mModel %tmp.98 188 16 22 ];
+        %tmp.98 = getv ? :mModel;
+        %tmp.99 = null;
+        %tmp.100 = ne %tmp.98 %tmp.99;
+        bf %tmp.100 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_188_12_204_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_188_34_188_76_true:
+        symbol [ mModel %tmp.102 188 34 40 ];
+        %tmp.102 = getv ? :mModel;
+        %tmp.103 = as %tmp.102 { (!Null) };
+        symbol [ getData %tmp.104 188 41 48 ];
+        %tmp.104 = getv function %tmp.103 :getData;
+        %tmp.105 = invoke %tmp.103 %tmp.104();
+        symbol [ hasKey %tmp.106 188 51 57 ];
+        %tmp.106 = getv function %tmp.105 :hasKey;
+        %tmp.107 = "initialWindAngle";
+        %tmp.108 = invoke %tmp.105 %tmp.106(%tmp.107);
+        push %tmp.108;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_188_34_188_76_end:
+        %tmp.109 = phi [%tmp.100 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_188_16_188_76_begin] [%tmp.108 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_188_34_188_76_true] [%tmp.109 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_188_34_188_76_end];
+        bf %tmp.109 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_188_12_204_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_188_12_204_12_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_188_79_204_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 189 16 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_188_79_204_12_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_188_79_204_12_stop" ]
+        %windAngle.2 = local;
+        symbol [ windAngle %windAngle.2 189 20 29 ];
+        symbol [ mModel %tmp.111 189 32 38 ];
+        %tmp.111 = getv ? :mModel;
+        symbol [ getData %tmp.112 189 39 46 ];
+        %tmp.112 = getv function %tmp.111 :getData;
+        %tmp.113 = invoke %tmp.111 %tmp.112();
+        %tmp.114 = "initialWindAngle";
+        %tmp.115 = agetv %tmp.113 %tmp.114;
+        lputv %windAngle.2 %tmp.115;
+        symbol [ windAngle %windAngle.2 189 20 29 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 192 16 ]
+        symbol [ mSession %tmp.117 192 38 46 ];
+        %tmp.117 = getv ? :mSession;
+        symbol [ createField %tmp.118 192 47 58 ];
+        %tmp.118 = getv function %tmp.117 :createField;
+        %tmp.119 = "windDir";
+        %tmp.120 = 2;
+        symbol [ FitContributor %tmp.121 195 20 34 ];
+        %tmp.121 = getm $.Toybox.FitContributor;
+        symbol [ DATA_TYPE_UINT16 %tmp.122 195 35 51 ];
+        %tmp.122 = getv %tmp.121 :DATA_TYPE_UINT16;
+        %tmp.123 = newd 1;
+        %tmp.125 = const :mesgType;
+        symbol [ mesgType %tmp.125 196 23 31 const ];
+        symbol [ FitContributor %tmp.126 196 35 49 ];
+        %tmp.126 = getm $.Toybox.FitContributor;
+        symbol [ MESG_TYPE_SESSION %tmp.127 196 50 67 ];
+        %tmp.127 = getv %tmp.126 :MESG_TYPE_SESSION;
+        %tmp.128 = dup %tmp.123;
+        %tmp.129 = aputv %tmp.128 %tmp.125 %tmp.127;
+        %tmp.130 = invoke %tmp.117 %tmp.118(%tmp.119, %tmp.120, %tmp.122, %tmp.129);
+        symbol [ mWindDirectionField ? 192 16 35 ];
+        putv self :mWindDirectionField %tmp.130;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 200 16 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_200_16_203_16_if_stmt:
+        symbol [ mWindDirectionField %tmp.132 200 20 39 ];
+        %tmp.132 = getv ? :mWindDirectionField;
+        %tmp.133 = null;
+        %tmp.134 = ne %tmp.132 %tmp.133;
+        bf %tmp.134 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_200_16_203_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_200_16_203_16_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_200_49_203_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 201 20 ]
+        symbol [ mWindDirectionField %tmp.136 201 20 39 ];
+        %tmp.136 = getv ? :mWindDirectionField;
+        %tmp.137 = as %tmp.136 { (!Null) };
+        symbol [ setData %tmp.138 201 40 47 ];
+        %tmp.138 = getv function %tmp.137 :setData;
+        %tmp.139 = lgetv %windAngle.2;
+        symbol [ windAngle %tmp.139 201 48 57 ];
+        symbol [ toNumber %tmp.140 201 58 66 ];
+        %tmp.140 = getv function %tmp.139 :toNumber;
+        %tmp.141 = invoke %tmp.139 %tmp.140();
+        invoke %tmp.137 %tmp.138(%tmp.141);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 202 20 ]
+        symbol [ System %tmp.142 202 20 26 ];
+        %tmp.142 = getm $.Toybox.System;
+        symbol [ println %tmp.143 202 27 34 ];
+        %tmp.143 = getv function %tmp.142 :println;
+        %tmp.144 = "Created wind direction field: ";
+        %tmp.145 = lgetv %windAngle.2;
+        symbol [ windAngle %tmp.145 202 70 79 ];
+        %tmp.146 = add %tmp.144 %tmp.145;
+        invoke %tmp.142 %tmp.143(%tmp.146);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_200_49_203_16_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_200_16_203_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_200_16_203_16_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_188_79_204_12_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_188_12_204_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_188_12_204_12_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_146_12_205_8_stop:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_146_8_207_8_endTry:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_146_8_207_8_finally;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_146_8_207_8_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_146_8_207_8_catch:
+        %tmp.147 = exception;
+        push %tmp.147;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 205 10 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_146_8_207_8_catch" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_205_10_207_8_end" ]
+        %e.3 = local;
+        symbol [ e %e.3 205 17 18 ];
+        %tmp.148 = dup %tmp.147;
+        lputv %e.3 %tmp.148;
+        symbol [ e %e.3 205 17 18 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_205_20_207_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 206 12 ]
+        symbol [ System %tmp.149 206 12 18 ];
+        %tmp.149 = getm $.Toybox.System;
+        symbol [ println %tmp.150 206 19 26 ];
+        %tmp.150 = getv function %tmp.149 :println;
+        %tmp.151 = "Error creating FitContributor fields: ";
+        %tmp.152 = lgetv %e.3;
+        symbol [ e %tmp.152 206 70 71 ];
+        symbol [ getErrorMessage %tmp.153 206 72 87 ];
+        %tmp.153 = getv function %tmp.152 :getErrorMessage;
+        %tmp.154 = invoke %tmp.152 %tmp.153();
+        %tmp.155 = add %tmp.151 %tmp.154;
+        invoke %tmp.149 %tmp.150(%tmp.155);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_205_20_207_8_stop:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_146_8_207_8_finally;
+        pop;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_146_8_207_8_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_205_10_207_8_end:
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_146_8_207_8_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_205_10_207_8_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_205_10_207_8_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_146_8_207_8_finally;
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_146_8_207_8_finally;
+        throw %tmp.147;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_146_8_207_8_finally:
+        jsrret;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_146_8_207_8_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_145_67_208_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 211; @symbol_functiondef = [updateSessionWithWindData,211,13,38]; @symbol_param<0> = [windStrength,211,39,51]; ]
+    function updateSessionWithWindData(windStrength) {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_211_53_235_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 212 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_212_8_234_8_if_stmt:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_212_12_212_53_begin:
+        symbol [ mSession %tmp.2 212 12 20 ];
+        %tmp.2 = getv ? :mSession;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_212_8_234_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_212_32_212_53_true:
+        symbol [ mSession %tmp.6 212 32 40 ];
+        %tmp.6 = getv ? :mSession;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ isRecording %tmp.8 212 41 52 ];
+        %tmp.8 = getv function %tmp.7 :isRecording;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        push %tmp.9;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_212_32_212_53_end:
+        %tmp.10 = phi [%tmp.4 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_212_12_212_53_begin] [%tmp.9 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_212_32_212_53_true] [%tmp.10 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_212_32_212_53_end];
+        bf %tmp.10 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_212_8_234_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_212_8_234_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_212_56_234_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 213 12 ]
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_213_12_233_12_beginTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_213_12_233_12_endTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_213_12_233_12_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_213_12_233_12_finally;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_213_12_233_12_beginTry:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_213_16_231_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 215 16 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_215_16_218_16_if_stmt:
+        symbol [ mModel %tmp.12 215 20 26 ];
+        %tmp.12 = getv ? :mModel;
+        %tmp.13 = null;
+        %tmp.14 = ne %tmp.12 %tmp.13;
+        bf %tmp.14 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_215_16_218_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_215_16_218_16_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_215_36_218_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 216 20 ]
+        symbol [ mModel %tmp.15 216 20 26 ];
+        %tmp.15 = getv self :mModel;
+        %tmp.16 = as %tmp.15 { (!Null) };
+        symbol [ getData %tmp.17 216 27 34 ];
+        %tmp.17 = getv function %tmp.16 :getData;
+        %tmp.18 = invoke %tmp.16 %tmp.17();
+        %tmp.19 = lgetv %windStrength;
+        symbol [ windStrength %tmp.19 216 55 67 ];
+        %tmp.20 = "windStrength";
+        aputv %tmp.18 %tmp.20 %tmp.19;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 217 20 ]
+        symbol [ System %tmp.21 217 20 26 ];
+        %tmp.21 = getm $.Toybox.System;
+        symbol [ println %tmp.22 217 27 34 ];
+        %tmp.22 = getv function %tmp.21 :println;
+        %tmp.23 = "Wind strength stored in model: ";
+        %tmp.24 = lgetv %windStrength;
+        symbol [ windStrength %tmp.24 217 71 83 ];
+        %tmp.25 = add %tmp.23 %tmp.24;
+        invoke %tmp.21 %tmp.22(%tmp.25);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_215_36_218_16_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_215_16_218_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_215_16_218_16_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 221 16 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_221_16_224_16_if_stmt:
+        symbol [ mWindStrengthField %tmp.27 221 20 38 ];
+        %tmp.27 = getv ? :mWindStrengthField;
+        %tmp.28 = null;
+        %tmp.29 = ne %tmp.27 %tmp.28;
+        bf %tmp.29 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_221_16_224_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_221_16_224_16_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_221_48_224_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 222 20 ]
+        symbol [ mWindStrengthField %tmp.31 222 20 38 ];
+        %tmp.31 = getv ? :mWindStrengthField;
+        %tmp.32 = as %tmp.31 { (!Null) };
+        symbol [ setData %tmp.33 222 39 46 ];
+        %tmp.33 = getv function %tmp.32 :setData;
+        %tmp.34 = lgetv %windStrength;
+        symbol [ windStrength %tmp.34 222 47 59 ];
+        invoke %tmp.32 %tmp.33(%tmp.34);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 223 20 ]
+        symbol [ System %tmp.35 223 20 26 ];
+        %tmp.35 = getm $.Toybox.System;
+        symbol [ println %tmp.36 223 27 34 ];
+        %tmp.36 = getv function %tmp.35 :println;
+        %tmp.37 = "Updated wind strength field: ";
+        %tmp.38 = lgetv %windStrength;
+        symbol [ windStrength %tmp.38 223 69 81 ];
+        %tmp.39 = add %tmp.37 %tmp.38;
+        invoke %tmp.35 %tmp.36(%tmp.39);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_221_48_224_16_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_221_16_224_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_221_16_224_16_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 228 16 ]
+        symbol [ mSession %tmp.41 228 16 24 ];
+        %tmp.41 = getv ? :mSession;
+        symbol [ addLap %tmp.42 228 25 31 ];
+        %tmp.42 = getv function %tmp.41 :addLap;
+        invoke %tmp.41 %tmp.42();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 229 16 ]
+        symbol [ System %tmp.43 229 16 22 ];
+        %tmp.43 = getm $.Toybox.System;
+        symbol [ println %tmp.44 229 23 30 ];
+        %tmp.44 = getv function %tmp.43 :println;
+        %tmp.45 = "Added lap marker for wind strength: ";
+        %tmp.46 = lgetv %windStrength;
+        symbol [ windStrength %tmp.46 229 72 84 ];
+        %tmp.47 = add %tmp.45 %tmp.46;
+        invoke %tmp.43 %tmp.44(%tmp.47);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_213_16_231_12_stop:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_213_12_233_12_endTry:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_213_12_233_12_finally;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_213_12_233_12_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_213_12_233_12_catch:
+        %tmp.48 = exception;
+        push %tmp.48;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 231 14 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_213_12_233_12_catch" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_231_14_233_12_end" ]
+        %e.1 = local;
+        symbol [ e %e.1 231 21 22 ];
+        %tmp.49 = dup %tmp.48;
+        lputv %e.1 %tmp.49;
+        symbol [ e %e.1 231 21 22 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_231_24_233_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 232 16 ]
+        symbol [ System %tmp.50 232 16 22 ];
+        %tmp.50 = getm $.Toybox.System;
+        symbol [ println %tmp.51 232 23 30 ];
+        %tmp.51 = getv function %tmp.50 :println;
+        %tmp.52 = "Error adding wind data: ";
+        %tmp.53 = lgetv %e.1;
+        symbol [ e %tmp.53 232 60 61 ];
+        symbol [ getErrorMessage %tmp.54 232 62 77 ];
+        %tmp.54 = getv function %tmp.53 :getErrorMessage;
+        %tmp.55 = invoke %tmp.53 %tmp.54();
+        %tmp.56 = add %tmp.52 %tmp.55;
+        invoke %tmp.50 %tmp.51(%tmp.56);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_231_24_233_12_stop:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_213_12_233_12_finally;
+        pop;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_213_12_233_12_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_231_14_233_12_end:
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_213_12_233_12_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_231_14_233_12_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_231_14_233_12_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_213_12_233_12_finally;
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_213_12_233_12_finally;
+        throw %tmp.48;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_213_12_233_12_finally:
+        jsrret;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_213_12_233_12_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_212_56_234_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_212_8_234_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_212_8_234_8_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_211_53_235_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 238; @symbol_functiondef = [getWindTracker,238,13,27]; ]
+    function getWindTracker() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_238_30_240_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 239 8 ]
+        symbol [ mWindTracker %tmp.2 239 15 27 ];
+        %tmp.2 = getv ? :mWindTracker;
+        ret %tmp.2;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_238_30_240_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 243; @symbol_functiondef = [startSimpleTimer,243,13,29]; ]
+    function startSimpleTimer() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_243_32_252_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 244 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_244_8_246_8_if_stmt:
+        symbol [ mTimer %tmp.2 244 12 18 ];
+        %tmp.2 = getv ? :mTimer;
+        %tmp.3 = null;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_244_8_246_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_244_8_246_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_244_28_246_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 245 12 ]
+        symbol [ Timer %tmp.7 245 25 30 ];
+        %tmp.7 = getm $.Toybox.Timer;
+        symbol [ Timer %tmp.8 245 31 36 ];
+        %tmp.8 = getv function ? %tmp.7 :Timer;
+        %tmp.5 = newc %tmp.8 ();
+        symbol [ mTimer ? 245 12 18 ];
+        putv self :mTimer %tmp.5;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_244_28_246_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_244_8_246_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_244_8_246_8_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 249 8 ]
+        symbol [ mTimer %tmp.10 249 8 14 ];
+        %tmp.10 = getv ? :mTimer;
+        symbol [ start %tmp.11 249 15 20 ];
+        %tmp.11 = getv function %tmp.10 :start;
+        %tmp.12 = self;
+        symbol [ method %tmp.13 249 21 27 ];
+        %tmp.13 = getv function %tmp.12 :method;
+        %tmp.15 = const :onTimerTick;
+        symbol [ onTimerTick %tmp.15 249 29 40 const ];
+        %tmp.16 = invoke %tmp.12 %tmp.13(%tmp.15);
+        %tmp.17 = 1000;
+        %tmp.18 = true;
+        invoke %tmp.10 %tmp.11(%tmp.16, %tmp.17, %tmp.18);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 250 8 ]
+        %tmp.19 = true;
+        symbol [ mTimerRunning ? 250 8 21 ];
+        putv self :mTimerRunning %tmp.19;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 251 8 ]
+        symbol [ System %tmp.20 251 8 14 ];
+        %tmp.20 = getm $.Toybox.System;
+        symbol [ println %tmp.21 251 15 22 ];
+        %tmp.21 = getv function %tmp.20 :println;
+        %tmp.22 = "Simple timer running";
+        invoke %tmp.20 %tmp.21(%tmp.22);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_243_32_252_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 255; @symbol_functiondef = [onTimerTick,255,13,24]; ]
+    function onTimerTick() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_255_27_261_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 256 8 ]
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_256_8_260_8_beginTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_256_8_260_8_endTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_256_8_260_8_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_256_8_260_8_finally;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_256_8_260_8_beginTry:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_256_12_258_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 257 12 ]
+        %tmp.1 = self;
+        symbol [ processData %tmp.2 257 12 23 ];
+        %tmp.2 = getv function %tmp.1 :processData;
+        invoke %tmp.1 %tmp.2();
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_256_12_258_8_stop:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_256_8_260_8_endTry:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_256_8_260_8_finally;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_256_8_260_8_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_256_8_260_8_catch:
+        %tmp.3 = exception;
+        push %tmp.3;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 258 10 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_256_8_260_8_catch" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_258_10_260_8_end" ]
+        %e.1 = local;
+        symbol [ e %e.1 258 17 18 ];
+        %tmp.4 = dup %tmp.3;
+        lputv %e.1 %tmp.4;
+        symbol [ e %e.1 258 17 18 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_258_20_260_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 259 12 ]
+        symbol [ System %tmp.5 259 12 18 ];
+        %tmp.5 = getm $.Toybox.System;
+        symbol [ println %tmp.6 259 19 26 ];
+        %tmp.6 = getv function %tmp.5 :println;
+        %tmp.7 = "Error in timer processing: ";
+        %tmp.8 = lgetv %e.1;
+        symbol [ e %tmp.8 259 59 60 ];
+        symbol [ getErrorMessage %tmp.9 259 61 76 ];
+        %tmp.9 = getv function %tmp.8 :getErrorMessage;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        %tmp.11 = add %tmp.7 %tmp.10;
+        invoke %tmp.5 %tmp.6(%tmp.11);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_258_20_260_8_stop:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_256_8_260_8_finally;
+        pop;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_256_8_260_8_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_258_10_260_8_end:
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_256_8_260_8_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_258_10_260_8_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_258_10_260_8_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_256_8_260_8_finally;
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_256_8_260_8_finally;
+        throw %tmp.3;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_256_8_260_8_finally:
+        jsrret;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_256_8_260_8_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_255_27_261_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 264; @symbol_functiondef = [processData,264,13,24]; ]
+    function processData() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_264_27_298_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 265 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_265_8_297_8_if_stmt:
+        symbol [ mModel %tmp.2 265 12 18 ];
+        %tmp.2 = getv ? :mModel;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_265_8_297_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_265_8_297_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_265_28_297_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 266 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_265_28_297_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_265_28_297_8_stop" ]
+        %data.1 = local;
+        symbol [ data %data.1 266 16 20 ];
+        symbol [ mModel %tmp.6 266 23 29 ];
+        %tmp.6 = getv ? :mModel;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ getData %tmp.8 266 30 37 ];
+        %tmp.8 = getv function %tmp.7 :getData;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        lputv %data.1 %tmp.9;
+        symbol [ data %data.1 266 16 20 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 269 12 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_269_12_293_12_if_stmt:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_269_16_269_94_begin:
+        %tmp.10 = lgetv %data.1;
+        symbol [ data %tmp.10 269 16 20 ];
+        %tmp.11 = "isRecording";
+        %tmp.12 = agetv %tmp.10 %tmp.11;
+        bf %tmp.12 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_269_12_293_12_if_else_false;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_269_39_269_94_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_269_41_269_93_begin:
+        %tmp.13 = lgetv %data.1;
+        symbol [ data %tmp.13 269 41 45 ];
+        symbol [ hasKey %tmp.14 269 46 52 ];
+        %tmp.14 = getv function %tmp.13 :hasKey;
+        %tmp.15 = "sessionPaused";
+        %tmp.16 = invoke %tmp.13 %tmp.14(%tmp.15);
+        %tmp.17 = dup %tmp.16;
+        bf %tmp.17 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_269_73_269_93_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_269_73_269_93_true:
+        %tmp.18 = lgetv %data.1;
+        symbol [ data %tmp.18 269 73 77 ];
+        %tmp.19 = "sessionPaused";
+        %tmp.20 = agetv %tmp.18 %tmp.19;
+        %tmp.21 = and %tmp.16 %tmp.20;
+        push %tmp.21;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_269_73_269_93_end:
+        %tmp.22 = phi [%tmp.17 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_269_41_269_93_begin] [%tmp.21 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_269_73_269_93_true] [%tmp.22 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_269_73_269_93_end];
+        %tmp.23 = not %tmp.22;
+        push %tmp.23;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_269_39_269_94_end:
+        %tmp.24 = phi [%tmp.12 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_269_16_269_94_begin] [%tmp.23 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_269_39_269_94_true] [%tmp.24 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_269_39_269_94_end];
+        bf %tmp.24 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_269_12_293_12_if_else_false;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_269_12_293_12_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_269_97_288_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 271 16 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_271_16_284_16_if_stmt:
+        symbol [ mPositionEnabled %tmp.26 271 21 37 ];
+        %tmp.26 = getv ? :mPositionEnabled;
+        %tmp.27 = not %tmp.26;
+        bf %tmp.27 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_271_16_284_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_271_16_284_16_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_271_39_284_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 272 20 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_271_39_284_16_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_271_39_284_16_stop" ]
+        %mockSpeed.2 = local;
+        symbol [ mockSpeed %mockSpeed.2 272 24 33 ];
+        symbol [ System %tmp.28 272 37 43 ];
+        %tmp.28 = getm $.Toybox.System;
+        symbol [ getTimer %tmp.29 272 44 52 ];
+        %tmp.29 = getv function %tmp.28 :getTimer;
+        %tmp.30 = invoke %tmp.28 %tmp.29();
+        %tmp.31 = 20000;
+        %tmp.32 = mod %tmp.30 %tmp.31;
+        %tmp.33 = 1000.0;
+        %tmp.34 = div %tmp.32 %tmp.33;
+        lputv %mockSpeed.2 %tmp.34;
+        symbol [ mockSpeed %mockSpeed.2 272 24 33 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 273 20 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_271_39_284_16_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_271_39_284_16_stop" ]
+        %mockHeading.3 = local;
+        symbol [ mockHeading %mockHeading.3 273 24 35 ];
+        symbol [ System %tmp.35 273 39 45 ];
+        %tmp.35 = getm $.Toybox.System;
+        symbol [ getTimer %tmp.36 273 46 54 ];
+        %tmp.36 = getv function %tmp.35 :getTimer;
+        %tmp.37 = invoke %tmp.35 %tmp.36();
+        %tmp.38 = 1000;
+        %tmp.39 = div %tmp.37 %tmp.38;
+        %tmp.40 = 360;
+        %tmp.41 = mod %tmp.39 %tmp.40;
+        lputv %mockHeading.3 %tmp.41;
+        symbol [ mockHeading %mockHeading.3 273 24 35 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 274 20 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_271_39_284_16_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_271_39_284_16_stop" ]
+        %info.4 = local;
+        symbol [ info %info.4 274 24 28 ];
+        %tmp.42 = newd 4;
+        %tmp.44 = const :speed;
+        symbol [ speed %tmp.44 275 25 30 const ];
+        %tmp.45 = lgetv %mockSpeed.2;
+        symbol [ mockSpeed %tmp.45 275 34 43 ];
+        %tmp.46 = dup %tmp.42;
+        %tmp.47 = aputv %tmp.46 %tmp.44 %tmp.45;
+        %tmp.49 = const :heading;
+        symbol [ heading %tmp.49 276 25 32 const ];
+        %tmp.50 = lgetv %mockHeading.3;
+        symbol [ mockHeading %tmp.50 276 36 47 ];
+        %tmp.51 = dup %tmp.47;
+        %tmp.52 = aputv %tmp.51 %tmp.49 %tmp.50;
+        %tmp.54 = const :altitude;
+        symbol [ altitude %tmp.54 277 25 33 const ];
+        %tmp.55 = 100;
+        %tmp.56 = dup %tmp.52;
+        %tmp.57 = aputv %tmp.56 %tmp.54 %tmp.55;
+        %tmp.59 = const :accuracy;
+        symbol [ accuracy %tmp.59 278 25 33 const ];
+        %tmp.60 = 10;
+        %tmp.61 = dup %tmp.57;
+        %tmp.62 = aputv %tmp.61 %tmp.59 %tmp.60;
+        lputv %info.4 %tmp.62;
+        symbol [ info %info.4 274 24 28 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 280 20 ]
+        symbol [ mModel %tmp.64 280 20 26 ];
+        %tmp.64 = getv ? :mModel;
+        symbol [ processLocationData %tmp.65 280 27 46 ];
+        %tmp.65 = getv function %tmp.64 :processLocationData;
+        %tmp.66 = lgetv %info.4;
+        symbol [ info %tmp.66 280 47 51 ];
+        invoke %tmp.64 %tmp.65(%tmp.66);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 283 20 ]
+        symbol [ mWindTracker %tmp.68 283 20 32 ];
+        %tmp.68 = getv ? :mWindTracker;
+        symbol [ processPositionData %tmp.69 283 33 52 ];
+        %tmp.69 = getv function %tmp.68 :processPositionData;
+        %tmp.70 = lgetv %info.4;
+        symbol [ info %tmp.70 283 53 57 ];
+        invoke %tmp.68 %tmp.69(%tmp.70);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_271_39_284_16_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_271_16_284_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_271_16_284_16_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 287 16 ]
+        symbol [ mModel %tmp.72 287 16 22 ];
+        %tmp.72 = getv ? :mModel;
+        symbol [ updateData %tmp.73 287 23 33 ];
+        %tmp.73 = getv function %tmp.72 :updateData;
+        invoke %tmp.72 %tmp.73();
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_269_97_288_12_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_269_12_293_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_269_12_293_12_if_else_false:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_288_19_293_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 290 16 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_290_16_292_16_if_stmt:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_290_20_290_72_begin:
+        %tmp.74 = lgetv %data.1;
+        symbol [ data %tmp.74 290 20 24 ];
+        symbol [ hasKey %tmp.75 290 25 31 ];
+        %tmp.75 = getv function %tmp.74 :hasKey;
+        %tmp.76 = "sessionPaused";
+        %tmp.77 = invoke %tmp.74 %tmp.75(%tmp.76);
+        bf %tmp.77 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_290_16_292_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_290_52_290_72_true:
+        %tmp.78 = lgetv %data.1;
+        symbol [ data %tmp.78 290 52 56 ];
+        %tmp.79 = "sessionPaused";
+        %tmp.80 = agetv %tmp.78 %tmp.79;
+        push %tmp.80;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_290_52_290_72_end:
+        %tmp.81 = phi [%tmp.77 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_290_20_290_72_begin] [%tmp.80 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_290_52_290_72_true] [%tmp.81 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_290_52_290_72_end];
+        bf %tmp.81 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_290_16_292_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_290_16_292_16_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_290_75_292_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 291 20 ]
+        symbol [ mModel %tmp.83 291 20 26 ];
+        %tmp.83 = getv ? :mModel;
+        symbol [ updateTimeDisplay %tmp.84 291 27 44 ];
+        %tmp.84 = getv function %tmp.83 :updateTimeDisplay;
+        invoke %tmp.83 %tmp.84();
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_290_75_292_16_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_290_16_292_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_290_16_292_16_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_288_19_293_12_stop:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_269_12_293_12_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 296 12 ]
+        symbol [ WatchUi %tmp.85 296 12 19 ];
+        %tmp.85 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.86 296 20 33 ];
+        %tmp.86 = getv function %tmp.85 :requestUpdate;
+        invoke %tmp.85 %tmp.86();
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_265_28_297_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_265_8_297_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_265_8_297_8_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_264_27_298_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 301; @symbol_functiondef = [onStop,301,13,19]; @symbol_param<0> = [state,301,20,25]; ]
+    function onStop(state) {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_301_27_344_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 302 8 ]
+        symbol [ System %tmp.1 302 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 302 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "App stopping - saving activity data";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 305 8 ]
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_305_8_312_8_beginTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_305_8_312_8_endTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_305_8_312_8_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_305_8_312_8_finally;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_305_8_312_8_beginTry:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_305_12_309_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 306 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_305_12_309_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_305_12_309_8_stop" ]
+        %storage.1 = local;
+        symbol [ storage %storage.1 306 16 23 ];
+        symbol [ Application %tmp.4 306 26 37 ];
+        %tmp.4 = getm $.Toybox.Application;
+        symbol [ Storage %tmp.5 306 38 45 ];
+        %tmp.5 = getv %tmp.4 :Storage;
+        lputv %storage.1 %tmp.5;
+        symbol [ storage %storage.1 306 16 23 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 307 12 ]
+        %tmp.6 = lgetv %storage.1;
+        symbol [ storage %tmp.6 307 12 19 ];
+        symbol [ setValue %tmp.7 307 20 28 ];
+        %tmp.7 = getv function %tmp.6 :setValue;
+        %tmp.8 = "appStopTime";
+        symbol [ Time %tmp.10 307 44 48 ];
+        %tmp.10 = getv ? :Time;
+        symbol [ now %tmp.11 307 49 52 ];
+        %tmp.11 = getv function %tmp.10 :now;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        symbol [ value %tmp.13 307 55 60 ];
+        %tmp.13 = getv function %tmp.12 :value;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        invoke %tmp.6 %tmp.7(%tmp.8, %tmp.14);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 308 12 ]
+        symbol [ System %tmp.15 308 12 18 ];
+        %tmp.15 = getm $.Toybox.System;
+        symbol [ println %tmp.16 308 19 26 ];
+        %tmp.16 = getv function %tmp.15 :println;
+        %tmp.17 = "Emergency timestamp saved";
+        invoke %tmp.15 %tmp.16(%tmp.17);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_305_12_309_8_stop:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_305_8_312_8_endTry:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_305_8_312_8_finally;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_305_8_312_8_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_305_8_312_8_catch:
+        %tmp.18 = exception;
+        push %tmp.18;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 310 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_305_8_312_8_catch" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_310_8_312_8_end" ]
+        %e.2 = local;
+        symbol [ e %e.2 310 15 16 ];
+        %tmp.19 = dup %tmp.18;
+        lputv %e.2 %tmp.19;
+        symbol [ e %e.2 310 15 16 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_310_18_312_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 311 12 ]
+        symbol [ System %tmp.20 311 12 18 ];
+        %tmp.20 = getm $.Toybox.System;
+        symbol [ println %tmp.21 311 19 26 ];
+        %tmp.21 = getv function %tmp.20 :println;
+        %tmp.22 = "Even timestamp save failed";
+        invoke %tmp.20 %tmp.21(%tmp.22);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_310_18_312_8_stop:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_305_8_312_8_finally;
+        pop;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_305_8_312_8_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_310_8_312_8_end:
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_305_8_312_8_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_310_8_312_8_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_310_8_312_8_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_305_8_312_8_finally;
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_305_8_312_8_finally;
+        throw %tmp.18;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_305_8_312_8_finally:
+        jsrret;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_305_8_312_8_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 315 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_315_8_343_8_if_stmt:
+        symbol [ mModel %tmp.24 315 12 18 ];
+        %tmp.24 = getv ? :mModel;
+        %tmp.25 = null;
+        %tmp.26 = ne %tmp.24 %tmp.25;
+        bf %tmp.26 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_315_8_343_8_if_else_false;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_315_8_343_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_315_28_340_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 316 12 ]
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_316_12_339_12_beginTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_316_12_339_12_endTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_316_12_339_12_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_316_12_339_12_finally;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_316_12_339_12_beginTry:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_316_16_323_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 317 16 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_316_16_323_12_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_316_16_323_12_stop" ]
+        %saveResult.3 = local;
+        symbol [ saveResult %saveResult.3 317 20 30 ];
+        symbol [ mModel %tmp.28 317 33 39 ];
+        %tmp.28 = getv ? :mModel;
+        %tmp.29 = as %tmp.28 { (!Null) };
+        symbol [ saveActivityData %tmp.30 317 40 56 ];
+        %tmp.30 = getv function %tmp.29 :saveActivityData;
+        %tmp.31 = invoke %tmp.29 %tmp.30();
+        lputv %saveResult.3 %tmp.31;
+        symbol [ saveResult %saveResult.3 317 20 30 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 318 16 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_318_16_322_16_if_stmt:
+        %tmp.32 = lgetv %saveResult.3;
+        symbol [ saveResult %tmp.32 318 20 30 ];
+        bf %tmp.32 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_318_16_322_16_if_else_false;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_318_16_322_16_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_318_32_320_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 319 20 ]
+        symbol [ System %tmp.33 319 20 26 ];
+        %tmp.33 = getm $.Toybox.System;
+        symbol [ println %tmp.34 319 27 34 ];
+        %tmp.34 = getv function %tmp.33 :println;
+        %tmp.35 = "Activity data saved successfully";
+        invoke %tmp.33 %tmp.34(%tmp.35);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_318_32_320_16_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_318_16_322_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_318_16_322_16_if_else_false:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_320_23_322_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 321 20 ]
+        symbol [ System %tmp.36 321 20 26 ];
+        %tmp.36 = getm $.Toybox.System;
+        symbol [ println %tmp.37 321 27 34 ];
+        %tmp.37 = getv function %tmp.36 :println;
+        %tmp.38 = "Activity save reported failure";
+        invoke %tmp.36 %tmp.37(%tmp.38);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_320_23_322_16_stop:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_318_16_322_16_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_316_16_323_12_stop:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_316_12_339_12_endTry:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_316_12_339_12_finally;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_316_12_339_12_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_316_12_339_12_catch:
+        %tmp.39 = exception;
+        push %tmp.39;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 324 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_316_12_339_12_catch" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_324_12_339_12_end" ]
+        %e.4 = local;
+        symbol [ e %e.4 324 19 20 ];
+        %tmp.40 = dup %tmp.39;
+        lputv %e.4 %tmp.40;
+        symbol [ e %e.4 324 19 20 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_324_22_339_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 325 16 ]
+        symbol [ System %tmp.41 325 16 22 ];
+        %tmp.41 = getm $.Toybox.System;
+        symbol [ println %tmp.42 325 23 30 ];
+        %tmp.42 = getv function %tmp.41 :println;
+        %tmp.43 = "Error in onStop when saving: ";
+        %tmp.44 = lgetv %e.4;
+        symbol [ e %tmp.44 325 65 66 ];
+        symbol [ getErrorMessage %tmp.45 325 67 82 ];
+        %tmp.45 = getv function %tmp.44 :getErrorMessage;
+        %tmp.46 = invoke %tmp.44 %tmp.45();
+        %tmp.47 = add %tmp.43 %tmp.46;
+        invoke %tmp.41 %tmp.42(%tmp.47);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 328 16 ]
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_328_16_338_16_beginTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_328_16_338_16_endTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_328_16_338_16_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_328_16_338_16_finally;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_328_16_338_16_beginTry:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_328_20_336_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 329 20 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_328_20_336_16_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_328_20_336_16_stop" ]
+        %storage.5 = local;
+        symbol [ storage %storage.5 329 24 31 ];
+        symbol [ Application %tmp.48 329 34 45 ];
+        %tmp.48 = getm $.Toybox.Application;
+        symbol [ Storage %tmp.49 329 46 53 ];
+        %tmp.49 = getv %tmp.48 :Storage;
+        lputv %storage.5 %tmp.49;
+        symbol [ storage %storage.5 329 24 31 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 330 20 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_328_20_336_16_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_328_20_336_16_stop" ]
+        %finalBackup.6 = local;
+        symbol [ finalBackup %finalBackup.6 330 24 35 ];
+        %tmp.50 = newd 2;
+        %tmp.51 = "date";
+        symbol [ Time %tmp.53 331 34 38 ];
+        %tmp.53 = getv ? :Time;
+        symbol [ now %tmp.54 331 39 42 ];
+        %tmp.54 = getv function %tmp.53 :now;
+        %tmp.55 = invoke %tmp.53 %tmp.54();
+        symbol [ value %tmp.56 331 45 50 ];
+        %tmp.56 = getv function %tmp.55 :value;
+        %tmp.57 = invoke %tmp.55 %tmp.56();
+        %tmp.58 = dup %tmp.50;
+        %tmp.59 = aputv %tmp.58 %tmp.51 %tmp.57;
+        %tmp.60 = "onStopEmergency";
+        %tmp.61 = true;
+        %tmp.62 = dup %tmp.59;
+        %tmp.63 = aputv %tmp.62 %tmp.60 %tmp.61;
+        lputv %finalBackup.6 %tmp.63;
+        symbol [ finalBackup %finalBackup.6 330 24 35 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 334 20 ]
+        %tmp.64 = lgetv %storage.5;
+        symbol [ storage %tmp.64 334 20 27 ];
+        symbol [ setValue %tmp.65 334 28 36 ];
+        %tmp.65 = getv function %tmp.64 :setValue;
+        %tmp.66 = "onStop_emergency";
+        %tmp.67 = lgetv %finalBackup.6;
+        symbol [ finalBackup %tmp.67 334 57 68 ];
+        invoke %tmp.64 %tmp.65(%tmp.66, %tmp.67);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 335 20 ]
+        symbol [ System %tmp.68 335 20 26 ];
+        %tmp.68 = getm $.Toybox.System;
+        symbol [ println %tmp.69 335 27 34 ];
+        %tmp.69 = getv function %tmp.68 :println;
+        %tmp.70 = "OnStop emergency save succeeded";
+        invoke %tmp.68 %tmp.69(%tmp.70);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_328_20_336_16_stop:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_328_16_338_16_endTry:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_328_16_338_16_finally;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_328_16_338_16_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_328_16_338_16_catch:
+        %tmp.71 = exception;
+        push %tmp.71;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 336 18 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_328_16_338_16_catch" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_336_18_338_16_end" ]
+        %e2.7 = local;
+        symbol [ e2 %e2.7 336 25 27 ];
+        %tmp.72 = dup %tmp.71;
+        lputv %e2.7 %tmp.72;
+        symbol [ e2 %e2.7 336 25 27 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_336_29_338_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 337 20 ]
+        symbol [ System %tmp.73 337 20 26 ];
+        %tmp.73 = getm $.Toybox.System;
+        symbol [ println %tmp.74 337 27 34 ];
+        %tmp.74 = getv function %tmp.73 :println;
+        %tmp.75 = "All save attempts failed";
+        invoke %tmp.73 %tmp.74(%tmp.75);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_336_29_338_16_stop:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_328_16_338_16_finally;
+        pop;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_328_16_338_16_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_336_18_338_16_end:
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_328_16_338_16_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_336_18_338_16_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_336_18_338_16_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_328_16_338_16_finally;
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_328_16_338_16_finally;
+        throw %tmp.71;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_328_16_338_16_finally:
+        jsrret;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_328_16_338_16_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_324_22_339_12_stop:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_316_12_339_12_finally;
+        pop;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_316_12_339_12_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_324_12_339_12_end:
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_316_12_339_12_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_324_12_339_12_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_324_12_339_12_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_316_12_339_12_finally;
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_316_12_339_12_finally;
+        throw %tmp.39;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_316_12_339_12_finally:
+        jsrret;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_316_12_339_12_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_315_28_340_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_315_8_343_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_315_8_343_8_if_else_false:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_341_13_343_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 342 12 ]
+        symbol [ System %tmp.76 342 12 18 ];
+        %tmp.76 = getm $.Toybox.System;
+        symbol [ println %tmp.77 342 19 26 ];
+        %tmp.77 = getv function %tmp.76 :println;
+        %tmp.78 = "Model not available in onStop";
+        invoke %tmp.76 %tmp.77(%tmp.78);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_341_13_343_8_stop:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_315_8_343_8_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_301_27_344_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 347; @symbol_functiondef = [getInitialView,347,13,27]; ]
+    function getInitialView() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_347_30_360_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 349 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_349_8_351_8_if_stmt:
+        symbol [ mModel %tmp.2 349 12 18 ];
+        %tmp.2 = getv ? :mModel;
+        %tmp.3 = null;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_349_8_351_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_349_8_351_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_349_28_351_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 350 12 ]
+        symbol [ FoilTrackerModel %tmp.8 350 25 41 ];
+        %tmp.8 = getv ? :FoilTrackerModel;
+        %tmp.5 = newc %tmp.8 ();
+        symbol [ mModel ? 350 12 18 ];
+        putv self :mModel %tmp.5;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_349_28_351_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_349_8_351_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_349_8_351_8_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 354 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_347_30_360_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_347_30_360_4_stop" ]
+        %windView.1 = local;
+        symbol [ windView %windView.1 354 12 20 ];
+        symbol [ WindStrengthPickerView %tmp.12 354 27 49 ];
+        %tmp.12 = getv ? :WindStrengthPickerView;
+        symbol [ mModel %tmp.14 354 50 56 ];
+        %tmp.14 = getv ? :mModel;
+        %tmp.9 = newc %tmp.12 (%tmp.14);
+        lputv %windView.1 %tmp.9;
+        symbol [ windView %windView.1 354 12 20 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 355 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_347_30_360_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_347_30_360_4_stop" ]
+        %windDelegate.2 = local;
+        symbol [ windDelegate %windDelegate.2 355 12 24 ];
+        symbol [ StartupWindStrengthDelegate %tmp.18 355 31 58 ];
+        %tmp.18 = getv ? :StartupWindStrengthDelegate;
+        symbol [ mModel %tmp.20 355 59 65 ];
+        %tmp.20 = getv ? :mModel;
+        %tmp.21 = self;
+        symbol [ self %tmp.21 355 67 71 ];
+        %tmp.15 = newc %tmp.18 (%tmp.20, %tmp.21);
+        lputv %windDelegate.2 %tmp.15;
+        symbol [ windDelegate %windDelegate.2 355 12 24 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 356 8 ]
+        %tmp.22 = lgetv %windDelegate.2;
+        symbol [ windDelegate %tmp.22 356 8 20 ];
+        symbol [ setPickerView %tmp.23 356 21 34 ];
+        %tmp.23 = getv function %tmp.22 :setPickerView;
+        %tmp.24 = lgetv %windView.1;
+        symbol [ windView %tmp.24 356 35 43 ];
+        invoke %tmp.22 %tmp.23(%tmp.24);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc" 359 8 ]
+        %tmp.25 = newa 2;
+        %tmp.26 = lgetv %windView.1;
+        symbol [ windView %tmp.26 359 16 24 ];
+        %tmp.27 = dup %tmp.25;
+        %tmp.28 = aputv %tmp.27 0 %tmp.26;
+        %tmp.29 = lgetv %windDelegate.2;
+        symbol [ windDelegate %tmp.29 359 26 38 ];
+        %tmp.30 = dup %tmp.28;
+        %tmp.31 = aputv %tmp.30 1 %tmp.29;
+        ret %tmp.31;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerApp_mc_347_30_360_4_stop:
+    }
+}
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerApp.mc"; @line = 1; ]
+<init> {
+}

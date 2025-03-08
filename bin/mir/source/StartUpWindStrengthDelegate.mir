@@ -1,0 +1,397 @@
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [WatchUi,3,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [System,4,13,19]; ]
+using Toybox.System;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc"; @line = 7; @symbol_classdef = [StartupWindStrengthDelegate,7,6,33]; @symbol_extends<0> = [WatchUi,7,42,49]; @symbol_extends<1> = [BehaviorDelegate,7,50,66]; ]
+class StartupWindStrengthDelegate extends WatchUi.BehaviorDelegate {
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc"; @line = 7; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc"; @line = 8; @position = 16; @symbol_vardef = [mModel,8,16,22]; ]
+    private
+    var mModel;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc"; @line = 9; @position = 16; @symbol_vardef = [mPickerView,9,16,27]; ]
+    private
+    var mPickerView;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc"; @line = 10; @position = 16; @symbol_vardef = [mApp,10,16,20]; ]
+    private
+    var mApp;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc"; @line = 12; @symbol_functiondef = [initialize,12,13,23]; @symbol_param<0> = [model,12,24,29]; @symbol_param<1> = [app,12,31,34]; ]
+    function initialize(model, app) as Void {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_12_36_17_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 13 8 ]
+        symbol [ BehaviorDelegate %tmp.2 13 8 24 ];
+        %tmp.2 = getv ? :BehaviorDelegate;
+        symbol [ initialize %tmp.3 13 25 35 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 14 8 ]
+        %tmp.4 = lgetv %model;
+        symbol [ model %tmp.4 14 17 22 ];
+        symbol [ mModel ? 14 8 14 ];
+        putv self :mModel %tmp.4;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 15 8 ]
+        %tmp.5 = null;
+        symbol [ mPickerView ? 15 8 19 ];
+        putv self :mPickerView %tmp.5;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 16 8 ]
+        %tmp.6 = lgetv %app;
+        symbol [ app %tmp.6 16 15 18 ];
+        symbol [ mApp ? 16 8 12 ];
+        putv self :mApp %tmp.6;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_12_36_17_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc"; @line = 19; @symbol_functiondef = [setPickerView,19,13,26]; @symbol_param<0> = [view,19,27,31]; ]
+    function setPickerView(view) {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_19_33_21_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 20 8 ]
+        %tmp.1 = lgetv %view;
+        symbol [ view %tmp.1 20 22 26 ];
+        symbol [ mPickerView ? 20 8 19 ];
+        putv self :mPickerView %tmp.1;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_19_33_21_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc"; @line = 23; @symbol_functiondef = [onNextPage,23,13,23]; ]
+    function onNextPage() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_23_26_32_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 24 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_24_8_30_8_if_stmt:
+        symbol [ mPickerView %tmp.2 24 12 23 ];
+        %tmp.2 = getv ? :mPickerView;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_24_8_30_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_24_8_30_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_24_33_30_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 25 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_24_33_30_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_24_33_30_8_stop" ]
+        %options.1 = local;
+        symbol [ options %options.1 25 16 23 ];
+        symbol [ mModel %tmp.6 25 26 32 ];
+        %tmp.6 = getv ? :mModel;
+        symbol [ getWindStrengthOptions %tmp.7 25 33 55 ];
+        %tmp.7 = getv function %tmp.6 :getWindStrengthOptions;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        lputv %options.1 %tmp.8;
+        symbol [ options %options.1 25 16 23 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 26 12 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_26_12_29_12_if_stmt:
+        symbol [ mPickerView %tmp.10 26 16 27 ];
+        %tmp.10 = getv ? :mPickerView;
+        symbol [ mSelectedIndex %tmp.11 26 28 42 ];
+        %tmp.11 = getv %tmp.10 :mSelectedIndex;
+        %tmp.12 = lgetv %options.1;
+        symbol [ options %tmp.12 26 45 52 ];
+        symbol [ size %tmp.13 26 53 57 ];
+        %tmp.13 = getv function %tmp.12 :size;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        %tmp.15 = 1;
+        %tmp.16 = sub %tmp.14 %tmp.15;
+        %tmp.17 = lt %tmp.11 %tmp.16;
+        bf %tmp.17 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_26_12_29_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_26_12_29_12_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_26_65_29_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 27 16 ]
+        symbol [ mPickerView %tmp.18 27 16 27 ];
+        %tmp.18 = getv self :mPickerView;
+        symbol [ mPickerView %tmp.21 27 16 27 ];
+        %tmp.21 = getv ? :mPickerView;
+        symbol [ mSelectedIndex %tmp.22 27 28 42 ];
+        %tmp.22 = getv %tmp.21 :mSelectedIndex;
+        %tmp.23 = add %tmp.22 1;
+        symbol [ mSelectedIndex ? 27 28 42 ];
+        putv %tmp.18 :mSelectedIndex dup %tmp.23;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 28 16 ]
+        symbol [ WatchUi %tmp.24 28 16 23 ];
+        %tmp.24 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.25 28 24 37 ];
+        %tmp.25 = getv function %tmp.24 :requestUpdate;
+        invoke %tmp.24 %tmp.25();
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_26_65_29_12_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_26_12_29_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_26_12_29_12_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_24_33_30_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_24_8_30_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_24_8_30_8_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 31 8 ]
+        %tmp.26 = true;
+        ret %tmp.26;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_23_26_32_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc"; @line = 34; @symbol_functiondef = [onPreviousPage,34,13,27]; ]
+    function onPreviousPage() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_34_30_42_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 35 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_35_8_40_8_if_stmt:
+        symbol [ mPickerView %tmp.2 35 12 23 ];
+        %tmp.2 = getv ? :mPickerView;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_35_8_40_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_35_8_40_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_35_33_40_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 36 12 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_36_12_39_12_if_stmt:
+        symbol [ mPickerView %tmp.6 36 16 27 ];
+        %tmp.6 = getv ? :mPickerView;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ mSelectedIndex %tmp.8 36 28 42 ];
+        %tmp.8 = getv %tmp.7 :mSelectedIndex;
+        %tmp.9 = 0;
+        %tmp.10 = gt %tmp.8 %tmp.9;
+        bf %tmp.10 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_36_12_39_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_36_12_39_12_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_36_48_39_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 37 16 ]
+        symbol [ mPickerView %tmp.11 37 16 27 ];
+        %tmp.11 = getv self :mPickerView;
+        %tmp.12 = as %tmp.11 { (!Null) };
+        symbol [ mPickerView %tmp.15 37 16 27 ];
+        %tmp.15 = getv ? :mPickerView;
+        %tmp.16 = as %tmp.15 { (!Null) };
+        symbol [ mSelectedIndex %tmp.17 37 28 42 ];
+        %tmp.17 = getv %tmp.16 :mSelectedIndex;
+        %tmp.18 = sub %tmp.17 1;
+        symbol [ mSelectedIndex ? 37 28 42 ];
+        putv %tmp.12 :mSelectedIndex dup %tmp.18;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 38 16 ]
+        symbol [ WatchUi %tmp.19 38 16 23 ];
+        %tmp.19 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.20 38 24 37 ];
+        %tmp.20 = getv function %tmp.19 :requestUpdate;
+        invoke %tmp.19 %tmp.20();
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_36_48_39_12_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_36_12_39_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_36_12_39_12_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_35_33_40_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_35_8_40_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_35_8_40_8_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 41 8 ]
+        %tmp.21 = true;
+        ret %tmp.21;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_34_30_42_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc"; @line = 44; @symbol_functiondef = [onSelect,44,13,21]; ]
+    function onSelect() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_44_24_75_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 45 8 ]
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_45_8_72_8_beginTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_45_8_72_8_endTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_45_8_72_8_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_45_8_72_8_finally;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_45_8_72_8_beginTry:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_45_12_65_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 47 12 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_47_12_57_12_if_stmt:
+        symbol [ mPickerView %tmp.2 47 16 27 ];
+        %tmp.2 = getv ? :mPickerView;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_47_12_57_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_47_12_57_12_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_47_37_57_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 48 16 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_47_37_57_12_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_47_37_57_12_stop" ]
+        %selectedIndex.1 = local;
+        symbol [ selectedIndex %selectedIndex.1 48 20 33 ];
+        symbol [ mPickerView %tmp.6 48 36 47 ];
+        %tmp.6 = getv ? :mPickerView;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ mSelectedIndex %tmp.8 48 48 62 ];
+        %tmp.8 = getv %tmp.7 :mSelectedIndex;
+        lputv %selectedIndex.1 %tmp.8;
+        symbol [ selectedIndex %selectedIndex.1 48 20 33 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 51 16 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_51_16_56_16_if_stmt:
+        symbol [ mModel %tmp.10 51 20 26 ];
+        %tmp.10 = getv ? :mModel;
+        %tmp.11 = null;
+        %tmp.12 = ne %tmp.10 %tmp.11;
+        bf %tmp.12 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_51_16_56_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_51_16_56_16_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_51_36_56_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 52 20 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_51_36_56_16_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_51_36_56_16_stop" ]
+        %windStrength.2 = local;
+        symbol [ windStrength %windStrength.2 52 24 36 ];
+        symbol [ mModel %tmp.14 52 39 45 ];
+        %tmp.14 = getv ? :mModel;
+        %tmp.15 = as %tmp.14 { (!Null) };
+        symbol [ getWindStrengthOptions %tmp.16 52 46 68 ];
+        %tmp.16 = getv function %tmp.15 :getWindStrengthOptions;
+        %tmp.17 = invoke %tmp.15 %tmp.16();
+        %tmp.18 = lgetv %selectedIndex.1;
+        symbol [ selectedIndex %tmp.18 52 71 84 ];
+        %tmp.19 = agetv %tmp.17 %tmp.18;
+        lputv %windStrength.2 %tmp.19;
+        symbol [ windStrength %windStrength.2 52 24 36 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 53 20 ]
+        symbol [ mModel %tmp.21 53 20 26 ];
+        %tmp.21 = getv ? :mModel;
+        symbol [ setWindStrength %tmp.22 53 27 42 ];
+        %tmp.22 = getv function %tmp.21 :setWindStrength;
+        %tmp.23 = lgetv %selectedIndex.1;
+        symbol [ selectedIndex %tmp.23 53 43 56 ];
+        invoke %tmp.21 %tmp.22(%tmp.23);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 55 20 ]
+        symbol [ System %tmp.24 55 20 26 ];
+        %tmp.24 = getm $.Toybox.System;
+        symbol [ println %tmp.25 55 27 34 ];
+        %tmp.25 = getv function %tmp.24 :println;
+        %tmp.26 = "Selected wind strength at startup: ";
+        %tmp.27 = lgetv %windStrength.2;
+        symbol [ windStrength %tmp.27 55 75 87 ];
+        %tmp.28 = add %tmp.26 %tmp.27;
+        invoke %tmp.24 %tmp.25(%tmp.28);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_51_36_56_16_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_51_16_56_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_51_16_56_16_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_47_37_57_12_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_47_12_57_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_47_12_57_12_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 60 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_45_12_65_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_45_12_65_8_stop" ]
+        %windAngleView.3 = local;
+        symbol [ windAngleView %windAngleView.3 60 16 29 ];
+        symbol [ WindAnglePickerView %tmp.32 60 36 55 ];
+        %tmp.32 = getv ? :WindAnglePickerView;
+        symbol [ mModel %tmp.34 60 56 62 ];
+        %tmp.34 = getv ? :mModel;
+        %tmp.29 = newc %tmp.32 (%tmp.34);
+        lputv %windAngleView.3 %tmp.29;
+        symbol [ windAngleView %windAngleView.3 60 16 29 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 61 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_45_12_65_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_45_12_65_8_stop" ]
+        %windAngleDelegate.4 = local;
+        symbol [ windAngleDelegate %windAngleDelegate.4 61 16 33 ];
+        symbol [ WindAnglePickerDelegate %tmp.38 61 40 63 ];
+        %tmp.38 = getv ? :WindAnglePickerDelegate;
+        symbol [ mModel %tmp.40 61 64 70 ];
+        %tmp.40 = getv ? :mModel;
+        symbol [ mApp %tmp.42 61 72 76 ];
+        %tmp.42 = getv ? :mApp;
+        %tmp.35 = newc %tmp.38 (%tmp.40, %tmp.42);
+        lputv %windAngleDelegate.4 %tmp.35;
+        symbol [ windAngleDelegate %windAngleDelegate.4 61 16 33 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 62 12 ]
+        %tmp.43 = lgetv %windAngleDelegate.4;
+        symbol [ windAngleDelegate %tmp.43 62 12 29 ];
+        symbol [ setPickerView %tmp.44 62 30 43 ];
+        %tmp.44 = getv function %tmp.43 :setPickerView;
+        %tmp.45 = lgetv %windAngleView.3;
+        symbol [ windAngleView %tmp.45 62 44 57 ];
+        invoke %tmp.43 %tmp.44(%tmp.45);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 64 12 ]
+        symbol [ WatchUi %tmp.46 64 12 19 ];
+        %tmp.46 = getm $.Toybox.WatchUi;
+        symbol [ switchToView %tmp.47 64 20 32 ];
+        %tmp.47 = getv function %tmp.46 :switchToView;
+        %tmp.48 = lgetv %windAngleView.3;
+        symbol [ windAngleView %tmp.48 64 33 46 ];
+        %tmp.49 = lgetv %windAngleDelegate.4;
+        symbol [ windAngleDelegate %tmp.49 64 48 65 ];
+        symbol [ WatchUi %tmp.50 64 67 74 ];
+        %tmp.50 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_LEFT %tmp.51 64 75 85 ];
+        %tmp.51 = getv %tmp.50 :SLIDE_LEFT;
+        invoke %tmp.46 %tmp.47(%tmp.48, %tmp.49, %tmp.51);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_45_12_65_8_stop:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_45_8_72_8_endTry:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_45_8_72_8_finally;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_45_8_72_8_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_45_8_72_8_catch:
+        %tmp.52 = exception;
+        push %tmp.52;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 65 10 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_45_8_72_8_catch" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_65_10_72_8_end" ]
+        %e.5 = local;
+        symbol [ e %e.5 65 17 18 ];
+        %tmp.53 = dup %tmp.52;
+        lputv %e.5 %tmp.53;
+        symbol [ e %e.5 65 17 18 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_65_20_72_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 66 12 ]
+        symbol [ System %tmp.54 66 12 18 ];
+        %tmp.54 = getm $.Toybox.System;
+        symbol [ println %tmp.55 66 19 26 ];
+        %tmp.55 = getv function %tmp.54 :println;
+        %tmp.56 = "Error in wind strength selection: ";
+        %tmp.57 = lgetv %e.5;
+        symbol [ e %tmp.57 66 66 67 ];
+        symbol [ getErrorMessage %tmp.58 66 68 83 ];
+        %tmp.58 = getv function %tmp.57 :getErrorMessage;
+        %tmp.59 = invoke %tmp.57 %tmp.58();
+        %tmp.60 = add %tmp.56 %tmp.59;
+        invoke %tmp.54 %tmp.55(%tmp.60);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 69 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_65_20_72_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_65_20_72_8_stop" ]
+        %view.6 = local;
+        symbol [ view %view.6 69 16 20 ];
+        symbol [ FoilTrackerView %tmp.64 69 27 42 ];
+        %tmp.64 = getv ? :FoilTrackerView;
+        symbol [ mModel %tmp.66 69 43 49 ];
+        %tmp.66 = getv ? :mModel;
+        %tmp.61 = newc %tmp.64 (%tmp.66);
+        lputv %view.6 %tmp.61;
+        symbol [ view %view.6 69 16 20 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 70 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_65_20_72_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_65_20_72_8_stop" ]
+        %delegate.7 = local;
+        symbol [ delegate %delegate.7 70 16 24 ];
+        symbol [ FoilTrackerDelegate %tmp.70 70 31 50 ];
+        %tmp.70 = getv ? :FoilTrackerDelegate;
+        %tmp.71 = lgetv %view.6;
+        symbol [ view %tmp.71 70 51 55 ];
+        symbol [ mModel %tmp.73 70 57 63 ];
+        %tmp.73 = getv ? :mModel;
+        symbol [ mApp %tmp.75 70 65 69 ];
+        %tmp.75 = getv ? :mApp;
+        symbol [ getWindTracker %tmp.76 70 70 84 ];
+        %tmp.76 = getv function %tmp.75 :getWindTracker;
+        %tmp.77 = invoke %tmp.75 %tmp.76();
+        %tmp.67 = newc %tmp.70 (%tmp.71, %tmp.73, %tmp.77);
+        lputv %delegate.7 %tmp.67;
+        symbol [ delegate %delegate.7 70 16 24 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 71 12 ]
+        symbol [ WatchUi %tmp.78 71 12 19 ];
+        %tmp.78 = getm $.Toybox.WatchUi;
+        symbol [ switchToView %tmp.79 71 20 32 ];
+        %tmp.79 = getv function %tmp.78 :switchToView;
+        %tmp.80 = lgetv %view.6;
+        symbol [ view %tmp.80 71 33 37 ];
+        %tmp.81 = lgetv %delegate.7;
+        symbol [ delegate %tmp.81 71 39 47 ];
+        symbol [ WatchUi %tmp.82 71 49 56 ];
+        %tmp.82 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.83 71 57 72 ];
+        %tmp.83 = getv %tmp.82 :SLIDE_IMMEDIATE;
+        invoke %tmp.78 %tmp.79(%tmp.80, %tmp.81, %tmp.83);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_65_20_72_8_stop:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_45_8_72_8_finally;
+        pop;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_45_8_72_8_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_65_10_72_8_end:
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_45_8_72_8_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_65_10_72_8_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_65_10_72_8_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_45_8_72_8_finally;
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_45_8_72_8_finally;
+        throw %tmp.52;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_45_8_72_8_finally:
+        jsrret;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_45_8_72_8_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 74 8 ]
+        %tmp.84 = true;
+        ret %tmp.84;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_44_24_75_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc"; @line = 78; @symbol_functiondef = [onBack,78,13,19]; ]
+    function onBack() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_78_22_82_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc" 81 8 ]
+        %tmp.1 = false;
+        ret %tmp.1;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_StartUpWindStrengthDelegate_mc_78_22_82_4_stop:
+    }
+}
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\StartUpWindStrengthDelegate.mc"; @line = 3; ]
+<init> {
+}

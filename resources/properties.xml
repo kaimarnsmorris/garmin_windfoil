@@ -1,0 +1,4 @@
+<properties>
+    <property id="BackgroundColor" type="number">0</property>
+    <property id="FoilingThreshold" type="float">7.0</property>
+</properties>

@@ -1,0 +1,8 @@
+<menus>
+    <menu id="MainMenu" title="@Strings.MenuTitle">
+        <menu-item id="reset" label="@Strings.MenuItemReset" />
+        <menu-item id="history" label="@Strings.MenuItemHistory" />
+        <menu-item id="settings" label="@Strings.MenuItemSettings" />
+        <menu-item id="about" label="@Strings.MenuItemAbout" />
+    </menu>
+</menus>

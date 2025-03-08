@@ -1,0 +1,263 @@
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [WatchUi,1,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [System,2,13,19]; ]
+using Toybox.System;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [Application,3,13,24]; ]
+using Toybox.Application;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc"; @line = 6; @symbol_classdef = [VMGDelegate,6,6,17]; @symbol_extends<0> = [WatchUi,6,26,33]; @symbol_extends<1> = [BehaviorDelegate,6,34,50]; ]
+class VMGDelegate extends WatchUi.BehaviorDelegate {
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc"; @line = 6; ]
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc"; @line = 7; @position = 16; @symbol_vardef = [mView,7,16,21]; ]
+    private
+    var mView;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc"; @line = 8; @position = 16; @symbol_vardef = [mModel,8,16,22]; ]
+    private
+    var mModel;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc"; @line = 9; @position = 16; @symbol_vardef = [mApp,9,16,20]; ]
+    private
+    var mApp;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc"; @line = 10; @position = 16; @symbol_vardef = [mWindTracker,10,16,28]; ]
+    private
+    var mWindTracker;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc"; @line = 13; @symbol_functiondef = [initialize,13,13,23]; @symbol_param<0> = [view,13,24,28]; @symbol_param<1> = [model,13,30,35]; @symbol_param<2> = [app,13,37,40]; ]
+    function initialize(view, model, app) as Void {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_13_42_19_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 14 8 ]
+        symbol [ BehaviorDelegate %tmp.2 14 8 24 ];
+        %tmp.2 = getv ? :BehaviorDelegate;
+        symbol [ initialize %tmp.3 14 25 35 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 15 8 ]
+        %tmp.4 = lgetv %view;
+        symbol [ view %tmp.4 15 16 20 ];
+        symbol [ mView ? 15 8 13 ];
+        putv self :mView %tmp.4;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 16 8 ]
+        %tmp.5 = lgetv %model;
+        symbol [ model %tmp.5 16 17 22 ];
+        symbol [ mModel ? 16 8 14 ];
+        putv self :mModel %tmp.5;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 17 8 ]
+        %tmp.6 = lgetv %app;
+        symbol [ app %tmp.6 17 15 18 ];
+        symbol [ mApp ? 17 8 12 ];
+        putv self :mApp %tmp.6;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 18 8 ]
+        %tmp.7 = lgetv %app;
+        symbol [ app %tmp.7 18 23 26 ];
+        symbol [ getWindTracker %tmp.8 18 27 41 ];
+        %tmp.8 = getv function %tmp.7 :getWindTracker;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        symbol [ mWindTracker ? 18 8 20 ];
+        putv self :mWindTracker %tmp.9;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_13_42_19_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc"; @line = 22; @symbol_functiondef = [onMenu,22,13,19]; ]
+    function onMenu() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_22_22_26_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 24 8 ]
+        symbol [ WatchUi %tmp.1 24 8 15 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.2 24 16 24 ];
+        %tmp.2 = getv function %tmp.1 :pushView;
+        symbol [ FoilTrackerMenuView %tmp.6 24 29 48 ];
+        %tmp.6 = getv ? :FoilTrackerMenuView;
+        %tmp.3 = newc %tmp.6 ();
+        symbol [ FoilTrackerMenuDelegate %tmp.10 24 56 79 ];
+        %tmp.10 = getv ? :FoilTrackerMenuDelegate;
+        symbol [ mModel %tmp.12 24 80 86 ];
+        %tmp.12 = getv ? :mModel;
+        %tmp.7 = newc %tmp.10 (%tmp.12);
+        symbol [ WatchUi %tmp.13 24 89 96 ];
+        %tmp.13 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_UP %tmp.14 24 97 105 ];
+        %tmp.14 = getv %tmp.13 :SLIDE_UP;
+        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.7, %tmp.14);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 25 8 ]
+        %tmp.15 = true;
+        ret %tmp.15;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_22_22_26_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc"; @line = 29; @symbol_functiondef = [onSelect,29,13,21]; ]
+    function onSelect() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_29_24_42_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 30 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_30_8_40_8_if_stmt:
+        symbol [ mWindTracker %tmp.2 30 12 24 ];
+        %tmp.2 = getv ? :mWindTracker;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_30_8_40_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_30_8_40_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_30_34_40_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 32 12 ]
+        symbol [ mWindTracker %tmp.6 32 12 24 ];
+        %tmp.6 = getv ? :mWindTracker;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ unlockWindDirection %tmp.8 32 25 44 ];
+        %tmp.8 = getv function %tmp.7 :unlockWindDirection;
+        invoke %tmp.7 %tmp.8();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 33 12 ]
+        symbol [ mWindTracker %tmp.10 33 12 24 ];
+        %tmp.10 = getv ? :mWindTracker;
+        symbol [ resetToManualDirection %tmp.11 33 25 47 ];
+        %tmp.11 = getv function %tmp.10 :resetToManualDirection;
+        invoke %tmp.10 %tmp.11();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 36 12 ]
+        symbol [ System %tmp.12 36 12 18 ];
+        %tmp.12 = getm $.Toybox.System;
+        symbol [ println %tmp.13 36 19 26 ];
+        %tmp.13 = getv function %tmp.12 :println;
+        %tmp.14 = "Wind direction reset to manual input";
+        invoke %tmp.12 %tmp.13(%tmp.14);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 39 12 ]
+        symbol [ WatchUi %tmp.15 39 12 19 ];
+        %tmp.15 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.16 39 20 33 ];
+        %tmp.16 = getv function %tmp.15 :requestUpdate;
+        invoke %tmp.15 %tmp.16();
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_30_34_40_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_30_8_40_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_30_8_40_8_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 41 8 ]
+        %tmp.17 = true;
+        ret %tmp.17;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_29_24_42_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc"; @line = 45; @symbol_functiondef = [onBack,45,13,19]; ]
+    function onBack() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_45_22_57_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 46 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_46_8_55_8_if_stmt:
+        symbol [ mWindTracker %tmp.2 46 12 24 ];
+        %tmp.2 = getv ? :mWindTracker;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_46_8_55_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_46_8_55_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_46_34_55_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 48 12 ]
+        symbol [ mWindTracker %tmp.6 48 12 24 ];
+        %tmp.6 = getv ? :mWindTracker;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ lockWindDirection %tmp.8 48 25 42 ];
+        %tmp.8 = getv function %tmp.7 :lockWindDirection;
+        invoke %tmp.7 %tmp.8();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 51 12 ]
+        symbol [ System %tmp.9 51 12 18 ];
+        %tmp.9 = getm $.Toybox.System;
+        symbol [ println %tmp.10 51 19 26 ];
+        %tmp.10 = getv function %tmp.9 :println;
+        %tmp.11 = "Wind direction locked";
+        invoke %tmp.9 %tmp.10(%tmp.11);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 54 12 ]
+        symbol [ WatchUi %tmp.12 54 12 19 ];
+        %tmp.12 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.13 54 20 33 ];
+        %tmp.13 = getv function %tmp.12 :requestUpdate;
+        invoke %tmp.12 %tmp.13();
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_46_34_55_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_46_8_55_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_46_8_55_8_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 56 8 ]
+        %tmp.14 = true;
+        ret %tmp.14;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_45_22_57_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc"; @line = 60; @symbol_functiondef = [onPreviousPage,60,13,27]; ]
+    function onPreviousPage() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_60_30_66_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 62 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_60_30_66_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_60_30_66_4_stop" ]
+        %view.1 = local;
+        symbol [ view %view.1 62 12 16 ];
+        symbol [ FoilTrackerView %tmp.4 62 23 38 ];
+        %tmp.4 = getv ? :FoilTrackerView;
+        symbol [ mModel %tmp.6 62 39 45 ];
+        %tmp.6 = getv ? :mModel;
+        %tmp.1 = newc %tmp.4 (%tmp.6);
+        lputv %view.1 %tmp.1;
+        symbol [ view %view.1 62 12 16 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 63 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_60_30_66_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_60_30_66_4_stop" ]
+        %delegate.2 = local;
+        symbol [ delegate %delegate.2 63 12 20 ];
+        symbol [ FoilTrackerDelegate %tmp.10 63 27 46 ];
+        %tmp.10 = getv ? :FoilTrackerDelegate;
+        %tmp.11 = lgetv %view.1;
+        symbol [ view %tmp.11 63 47 51 ];
+        symbol [ mModel %tmp.13 63 53 59 ];
+        %tmp.13 = getv ? :mModel;
+        symbol [ mApp %tmp.15 63 61 65 ];
+        %tmp.15 = getv ? :mApp;
+        symbol [ getWindTracker %tmp.16 63 66 80 ];
+        %tmp.16 = getv function %tmp.15 :getWindTracker;
+        %tmp.17 = invoke %tmp.15 %tmp.16();
+        %tmp.7 = newc %tmp.10 (%tmp.11, %tmp.13, %tmp.17);
+        lputv %delegate.2 %tmp.7;
+        symbol [ delegate %delegate.2 63 12 20 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 64 8 ]
+        symbol [ WatchUi %tmp.18 64 8 15 ];
+        %tmp.18 = getm $.Toybox.WatchUi;
+        symbol [ switchToView %tmp.19 64 16 28 ];
+        %tmp.19 = getv function %tmp.18 :switchToView;
+        %tmp.20 = lgetv %view.1;
+        symbol [ view %tmp.20 64 29 33 ];
+        %tmp.21 = lgetv %delegate.2;
+        symbol [ delegate %tmp.21 64 35 43 ];
+        symbol [ WatchUi %tmp.22 64 45 52 ];
+        %tmp.22 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_UP %tmp.23 64 53 61 ];
+        %tmp.23 = getv %tmp.22 :SLIDE_UP;
+        invoke %tmp.18 %tmp.19(%tmp.20, %tmp.21, %tmp.23);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 65 8 ]
+        %tmp.24 = true;
+        ret %tmp.24;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_60_30_66_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc"; @line = 69; @symbol_functiondef = [onNextPage,69,13,23]; ]
+    function onNextPage() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_69_26_73_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 71 8 ]
+        symbol [ WatchUi %tmp.1 71 8 15 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.2 71 16 29 ];
+        %tmp.2 = getv function %tmp.1 :requestUpdate;
+        invoke %tmp.1 %tmp.2();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 72 8 ]
+        %tmp.3 = true;
+        ret %tmp.3;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_69_26_73_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc"; @line = 76; @symbol_functiondef = [onShow,76,13,19]; ]
+    function onShow() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_76_22_81_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 78 8 ]
+        symbol [ System %tmp.1 78 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 78 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "VMGDelegate.onShow() - Forcing UI update";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 79 8 ]
+        symbol [ WatchUi %tmp.4 79 8 15 ];
+        %tmp.4 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.5 79 16 29 ];
+        %tmp.5 = getv function %tmp.4 :requestUpdate;
+        invoke %tmp.4 %tmp.5();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc" 80 8 ]
+        %tmp.6 = true;
+        ret %tmp.6;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_VMGDelegate_mc_76_22_81_4_stop:
+    }
+}
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\VMGDelegate.mc"; @line = 1; ]
+<init> {
+}

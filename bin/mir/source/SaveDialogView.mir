@@ -1,0 +1,907 @@
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [WatchUi,1,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [Graphics,2,13,21]; ]
+using Toybox.Graphics;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [System,3,13,19]; ]
+using Toybox.System;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Application,4,13,24]; ]
+using Toybox.Application;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc"; @line = 7; @symbol_classdef = [SaveDialogView,7,6,20]; @symbol_extends<0> = [WatchUi,7,29,36]; @symbol_extends<1> = [View,7,37,41]; ]
+class SaveDialogView extends WatchUi.View {
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc"; @line = 7; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc"; @line = 8; @position = 16; @symbol_vardef = [mModel,8,16,22]; ]
+    private
+    var mModel;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc"; @line = 10; @symbol_functiondef = [initialize,10,13,23]; @symbol_param<0> = [model,10,24,29]; ]
+    function initialize(model) as Void {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_10_31_13_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 11 8 ]
+        symbol [ View %tmp.2 11 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 11 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 12 8 ]
+        %tmp.4 = lgetv %model;
+        symbol [ model %tmp.4 12 17 22 ];
+        symbol [ mModel ? 12 8 14 ];
+        putv self :mModel %tmp.4;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_10_31_13_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc"; @line = 15; @symbol_functiondef = [onUpdate,15,13,21]; @symbol_param<0> = [dc,15,22,24]; ]
+    function onUpdate(dc) {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_15_26_57_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 17 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 17 8 10 ];
+        symbol [ setColor %tmp.2 17 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ Graphics %tmp.3 17 20 28 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.4 17 29 40 ];
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        symbol [ Graphics %tmp.5 17 42 50 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.6 17 51 62 ];
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 18 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 18 8 10 ];
+        symbol [ clear %tmp.8 18 11 16 ];
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 21 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_15_26_57_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_15_26_57_4_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 21 12 17 ];
+        %tmp.9 = lgetv %dc;
+        symbol [ dc %tmp.9 21 20 22 ];
+        symbol [ getWidth %tmp.10 21 23 31 ];
+        %tmp.10 = getv function %tmp.9 :getWidth;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        lputv %width.1 %tmp.11;
+        symbol [ width %width.1 21 12 17 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 22 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_15_26_57_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_15_26_57_4_stop" ]
+        %height.2 = local;
+        symbol [ height %height.2 22 12 18 ];
+        %tmp.12 = lgetv %dc;
+        symbol [ dc %tmp.12 22 21 23 ];
+        symbol [ getHeight %tmp.13 22 24 33 ];
+        %tmp.13 = getv function %tmp.12 :getHeight;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        lputv %height.2 %tmp.14;
+        symbol [ height %height.2 22 12 18 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 25 8 ]
+        %tmp.15 = lgetv %dc;
+        symbol [ dc %tmp.15 25 8 10 ];
+        symbol [ setColor %tmp.16 25 11 19 ];
+        %tmp.16 = getv function %tmp.15 :setColor;
+        symbol [ Graphics %tmp.17 25 20 28 ];
+        %tmp.17 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.18 25 29 40 ];
+        %tmp.18 = getv %tmp.17 :COLOR_WHITE;
+        symbol [ Graphics %tmp.19 25 42 50 ];
+        %tmp.19 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.20 25 51 68 ];
+        %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
+        invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 26 8 ]
+        %tmp.21 = lgetv %dc;
+        symbol [ dc %tmp.21 26 8 10 ];
+        symbol [ drawText %tmp.22 26 11 19 ];
+        %tmp.22 = getv function %tmp.21 :drawText;
+        %tmp.23 = lgetv %width.1;
+        symbol [ width %tmp.23 26 20 25 ];
+        %tmp.24 = 2;
+        %tmp.25 = div %tmp.23 %tmp.24;
+        %tmp.26 = lgetv %height.2;
+        symbol [ height %tmp.26 26 29 35 ];
+        %tmp.27 = 4;
+        %tmp.28 = div %tmp.26 %tmp.27;
+        %tmp.29 = 20;
+        %tmp.30 = sub %tmp.28 %tmp.29;
+        symbol [ Graphics %tmp.31 26 44 52 ];
+        %tmp.31 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.32 26 53 64 ];
+        %tmp.32 = getv %tmp.31 :FONT_MEDIUM;
+        %tmp.33 = "Save?";
+        symbol [ Graphics %tmp.34 26 75 83 ];
+        %tmp.34 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.35 26 84 103 ];
+        %tmp.35 = getv %tmp.34 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.21 %tmp.22(%tmp.25, %tmp.30, %tmp.32, %tmp.33, %tmp.35);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 29 8 ]
+        %tmp.36 = lgetv %dc;
+        symbol [ dc %tmp.36 29 8 10 ];
+        symbol [ setColor %tmp.37 29 11 19 ];
+        %tmp.37 = getv function %tmp.36 :setColor;
+        symbol [ Graphics %tmp.38 29 20 28 ];
+        %tmp.38 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.39 29 29 42 ];
+        %tmp.39 = getv %tmp.38 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.40 29 44 52 ];
+        %tmp.40 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.41 29 53 70 ];
+        %tmp.41 = getv %tmp.40 :COLOR_TRANSPARENT;
+        invoke %tmp.36 %tmp.37(%tmp.39, %tmp.41);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 30 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_15_26_57_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_15_26_57_4_stop" ]
+        %yPos.3 = local;
+        symbol [ yPos %yPos.3 30 12 16 ];
+        %tmp.42 = lgetv %height.2;
+        symbol [ height %tmp.42 30 19 25 ];
+        %tmp.43 = 2;
+        %tmp.44 = div %tmp.42 %tmp.43;
+        %tmp.45 = 20;
+        %tmp.46 = sub %tmp.44 %tmp.45;
+        lputv %yPos.3 %tmp.46;
+        symbol [ yPos %yPos.3 30 12 16 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 33 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_33_8_44_8_if_stmt:
+        symbol [ mModel %tmp.48 33 12 18 ];
+        %tmp.48 = getv ? :mModel;
+        %tmp.49 = null;
+        %tmp.50 = ne %tmp.48 %tmp.49;
+        bf %tmp.50 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_33_8_44_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_33_8_44_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_33_28_44_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 34 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_33_28_44_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_33_28_44_8_stop" ]
+        %data.4 = local;
+        symbol [ data %data.4 34 16 20 ];
+        symbol [ mModel %tmp.52 34 23 29 ];
+        %tmp.52 = getv ? :mModel;
+        %tmp.53 = as %tmp.52 { (!Null) };
+        symbol [ getData %tmp.54 34 30 37 ];
+        %tmp.54 = getv function %tmp.53 :getData;
+        %tmp.55 = invoke %tmp.53 %tmp.54();
+        lputv %data.4 %tmp.55;
+        symbol [ data %data.4 34 16 20 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 35 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_33_28_44_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_33_28_44_8_stop" ]
+        %maxSpeed.5 = local;
+        symbol [ maxSpeed %maxSpeed.5 35 16 24 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_35_27_35_87_begin:
+        %tmp.56 = lgetv %data.4;
+        symbol [ data %tmp.56 35 27 31 ];
+        symbol [ hasKey %tmp.57 35 32 38 ];
+        %tmp.57 = getv function %tmp.56 :hasKey;
+        %tmp.58 = "maxSpeed";
+        %tmp.59 = invoke %tmp.56 %tmp.57(%tmp.58);
+        bf %tmp.59 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_35_27_35_87_false;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_35_27_35_87_true:
+        %tmp.60 = lgetv %data.4;
+        symbol [ data %tmp.60 35 53 57 ];
+        %tmp.61 = "maxSpeed";
+        %tmp.62 = agetv %tmp.60 %tmp.61;
+        symbol [ format %tmp.63 35 70 76 ];
+        %tmp.63 = getv function %tmp.62 :format;
+        %tmp.64 = "%.1f";
+        %tmp.65 = invoke %tmp.62 %tmp.63(%tmp.64);
+        push %tmp.65;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_35_27_35_87_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_35_27_35_87_false:
+        %tmp.66 = "0.0";
+        push %tmp.66;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_35_27_35_87_end:
+        %tmp.67 = phi [%tmp.59 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_35_27_35_87_begin] [%tmp.65 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_35_27_35_87_true] [%tmp.66 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_35_27_35_87_false] [%tmp.67 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_35_27_35_87_end];
+        lputv %maxSpeed.5 %tmp.67;
+        symbol [ maxSpeed %maxSpeed.5 35 16 24 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 36 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_33_28_44_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_33_28_44_8_stop" ]
+        %max3sSpeed.6 = local;
+        symbol [ max3sSpeed %max3sSpeed.6 36 16 26 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_36_29_36_93_begin:
+        %tmp.68 = lgetv %data.4;
+        symbol [ data %tmp.68 36 29 33 ];
+        symbol [ hasKey %tmp.69 36 34 40 ];
+        %tmp.69 = getv function %tmp.68 :hasKey;
+        %tmp.70 = "max3sSpeed";
+        %tmp.71 = invoke %tmp.68 %tmp.69(%tmp.70);
+        bf %tmp.71 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_36_29_36_93_false;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_36_29_36_93_true:
+        %tmp.72 = lgetv %data.4;
+        symbol [ data %tmp.72 36 57 61 ];
+        %tmp.73 = "max3sSpeed";
+        %tmp.74 = agetv %tmp.72 %tmp.73;
+        symbol [ format %tmp.75 36 76 82 ];
+        %tmp.75 = getv function %tmp.74 :format;
+        %tmp.76 = "%.1f";
+        %tmp.77 = invoke %tmp.74 %tmp.75(%tmp.76);
+        push %tmp.77;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_36_29_36_93_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_36_29_36_93_false:
+        %tmp.78 = "0.0";
+        push %tmp.78;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_36_29_36_93_end:
+        %tmp.79 = phi [%tmp.71 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_36_29_36_93_begin] [%tmp.77 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_36_29_36_93_true] [%tmp.78 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_36_29_36_93_false] [%tmp.79 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_36_29_36_93_end];
+        lputv %max3sSpeed.6 %tmp.79;
+        symbol [ max3sSpeed %max3sSpeed.6 36 16 26 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 37 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_33_28_44_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_33_28_44_8_stop" ]
+        %percentOnFoil.7 = local;
+        symbol [ percentOnFoil %percentOnFoil.7 37 16 29 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_37_32_37_102_begin:
+        %tmp.80 = lgetv %data.4;
+        symbol [ data %tmp.80 37 32 36 ];
+        symbol [ hasKey %tmp.81 37 37 43 ];
+        %tmp.81 = getv function %tmp.80 :hasKey;
+        %tmp.82 = "percentOnFoil";
+        %tmp.83 = invoke %tmp.80 %tmp.81(%tmp.82);
+        bf %tmp.83 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_37_32_37_102_false;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_37_32_37_102_true:
+        %tmp.84 = lgetv %data.4;
+        symbol [ data %tmp.84 37 63 67 ];
+        %tmp.85 = "percentOnFoil";
+        %tmp.86 = agetv %tmp.84 %tmp.85;
+        symbol [ format %tmp.87 37 85 91 ];
+        %tmp.87 = getv function %tmp.86 :format;
+        %tmp.88 = "%.0f";
+        %tmp.89 = invoke %tmp.86 %tmp.87(%tmp.88);
+        push %tmp.89;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_37_32_37_102_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_37_32_37_102_false:
+        %tmp.90 = "0";
+        push %tmp.90;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_37_32_37_102_end:
+        %tmp.91 = phi [%tmp.83 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_37_32_37_102_begin] [%tmp.89 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_37_32_37_102_true] [%tmp.90 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_37_32_37_102_false] [%tmp.91 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_37_32_37_102_end];
+        lputv %percentOnFoil.7 %tmp.91;
+        symbol [ percentOnFoil %percentOnFoil.7 37 16 29 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 39 12 ]
+        %tmp.92 = lgetv %dc;
+        symbol [ dc %tmp.92 39 12 14 ];
+        symbol [ drawText %tmp.93 39 15 23 ];
+        %tmp.93 = getv function %tmp.92 :drawText;
+        %tmp.94 = lgetv %width.1;
+        symbol [ width %tmp.94 39 24 29 ];
+        %tmp.95 = 2;
+        %tmp.96 = div %tmp.94 %tmp.95;
+        %tmp.97 = lgetv %yPos.3;
+        symbol [ yPos %tmp.97 39 33 37 ];
+        symbol [ Graphics %tmp.98 39 39 47 ];
+        %tmp.98 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.99 39 48 58 ];
+        %tmp.99 = getv %tmp.98 :FONT_SMALL;
+        %tmp.100 = "Max: ";
+        %tmp.101 = lgetv %maxSpeed.5;
+        symbol [ maxSpeed %tmp.101 39 70 78 ];
+        %tmp.102 = add %tmp.100 %tmp.101;
+        %tmp.103 = " kt";
+        %tmp.104 = add %tmp.102 %tmp.103;
+        symbol [ Graphics %tmp.105 39 88 96 ];
+        %tmp.105 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.106 39 97 116 ];
+        %tmp.106 = getv %tmp.105 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.92 %tmp.93(%tmp.96, %tmp.97, %tmp.99, %tmp.104, %tmp.106);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 40 12 ]
+        %tmp.107 = lgetv %yPos.3;
+        symbol [ yPos %tmp.107 40 12 16 ];
+        %tmp.108 = 25;
+        %tmp.109 = add %tmp.107 %tmp.108;
+        lputv %yPos.3 %tmp.109;
+        symbol [ yPos %yPos.3 40 12 16 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 41 12 ]
+        %tmp.110 = lgetv %dc;
+        symbol [ dc %tmp.110 41 12 14 ];
+        symbol [ drawText %tmp.111 41 15 23 ];
+        %tmp.111 = getv function %tmp.110 :drawText;
+        %tmp.112 = lgetv %width.1;
+        symbol [ width %tmp.112 41 24 29 ];
+        %tmp.113 = 2;
+        %tmp.114 = div %tmp.112 %tmp.113;
+        %tmp.115 = lgetv %yPos.3;
+        symbol [ yPos %tmp.115 41 33 37 ];
+        symbol [ Graphics %tmp.116 41 39 47 ];
+        %tmp.116 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.117 41 48 58 ];
+        %tmp.117 = getv %tmp.116 :FONT_SMALL;
+        %tmp.118 = "Max 3s: ";
+        %tmp.119 = lgetv %max3sSpeed.6;
+        symbol [ max3sSpeed %tmp.119 41 73 83 ];
+        %tmp.120 = add %tmp.118 %tmp.119;
+        %tmp.121 = " kt";
+        %tmp.122 = add %tmp.120 %tmp.121;
+        symbol [ Graphics %tmp.123 41 93 101 ];
+        %tmp.123 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.124 41 102 121 ];
+        %tmp.124 = getv %tmp.123 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.110 %tmp.111(%tmp.114, %tmp.115, %tmp.117, %tmp.122, %tmp.124);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 42 12 ]
+        %tmp.125 = lgetv %yPos.3;
+        symbol [ yPos %tmp.125 42 12 16 ];
+        %tmp.126 = 25;
+        %tmp.127 = add %tmp.125 %tmp.126;
+        lputv %yPos.3 %tmp.127;
+        symbol [ yPos %yPos.3 42 12 16 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 43 12 ]
+        %tmp.128 = lgetv %dc;
+        symbol [ dc %tmp.128 43 12 14 ];
+        symbol [ drawText %tmp.129 43 15 23 ];
+        %tmp.129 = getv function %tmp.128 :drawText;
+        %tmp.130 = lgetv %width.1;
+        symbol [ width %tmp.130 43 24 29 ];
+        %tmp.131 = 2;
+        %tmp.132 = div %tmp.130 %tmp.131;
+        %tmp.133 = lgetv %yPos.3;
+        symbol [ yPos %tmp.133 43 33 37 ];
+        symbol [ Graphics %tmp.134 43 39 47 ];
+        %tmp.134 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.135 43 48 58 ];
+        %tmp.135 = getv %tmp.134 :FONT_SMALL;
+        %tmp.136 = "On Foil: ";
+        %tmp.137 = lgetv %percentOnFoil.7;
+        symbol [ percentOnFoil %tmp.137 43 74 87 ];
+        %tmp.138 = add %tmp.136 %tmp.137;
+        %tmp.139 = "%";
+        %tmp.140 = add %tmp.138 %tmp.139;
+        symbol [ Graphics %tmp.141 43 95 103 ];
+        %tmp.141 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.142 43 104 123 ];
+        %tmp.142 = getv %tmp.141 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.128 %tmp.129(%tmp.132, %tmp.133, %tmp.135, %tmp.140, %tmp.142);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_33_28_44_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_33_8_44_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_33_8_44_8_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 49 8 ]
+        %tmp.143 = lgetv %dc;
+        symbol [ dc %tmp.143 49 8 10 ];
+        symbol [ setColor %tmp.144 49 11 19 ];
+        %tmp.144 = getv function %tmp.143 :setColor;
+        symbol [ Graphics %tmp.145 49 20 28 ];
+        %tmp.145 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLUE %tmp.146 49 29 39 ];
+        %tmp.146 = getv %tmp.145 :COLOR_BLUE;
+        symbol [ Graphics %tmp.147 49 41 49 ];
+        %tmp.147 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.148 49 50 67 ];
+        %tmp.148 = getv %tmp.147 :COLOR_TRANSPARENT;
+        invoke %tmp.143 %tmp.144(%tmp.146, %tmp.148);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 50 8 ]
+        %tmp.149 = lgetv %dc;
+        symbol [ dc %tmp.149 50 8 10 ];
+        symbol [ drawText %tmp.150 50 11 19 ];
+        %tmp.150 = getv function %tmp.149 :drawText;
+        %tmp.151 = 3;
+        %tmp.152 = lgetv %width.1;
+        symbol [ width %tmp.152 50 22 27 ];
+        %tmp.153 = mul %tmp.151 %tmp.152;
+        %tmp.154 = 4;
+        %tmp.155 = div %tmp.153 %tmp.154;
+        %tmp.156 = lgetv %height.2;
+        symbol [ height %tmp.156 50 31 37 ];
+        %tmp.157 = 4;
+        %tmp.158 = div %tmp.156 %tmp.157;
+        symbol [ Graphics %tmp.159 50 41 49 ];
+        %tmp.159 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.160 50 50 60 ];
+        %tmp.160 = getv %tmp.159 :FONT_SMALL;
+        %tmp.161 = "Confirm";
+        symbol [ Graphics %tmp.162 50 73 81 ];
+        %tmp.162 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.163 50 82 101 ];
+        %tmp.163 = getv %tmp.162 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.149 %tmp.150(%tmp.155, %tmp.158, %tmp.160, %tmp.161, %tmp.163);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 51 8 ]
+        %tmp.164 = lgetv %dc;
+        symbol [ dc %tmp.164 51 8 10 ];
+        symbol [ drawText %tmp.165 51 11 19 ];
+        %tmp.165 = getv function %tmp.164 :drawText;
+        %tmp.166 = 3;
+        %tmp.167 = lgetv %width.1;
+        symbol [ width %tmp.167 51 22 27 ];
+        %tmp.168 = mul %tmp.166 %tmp.167;
+        %tmp.169 = 4;
+        %tmp.170 = div %tmp.168 %tmp.169;
+        %tmp.171 = lgetv %height.2;
+        symbol [ height %tmp.171 51 31 37 ];
+        %tmp.172 = 4;
+        %tmp.173 = div %tmp.171 %tmp.172;
+        %tmp.174 = 20;
+        %tmp.175 = add %tmp.173 %tmp.174;
+        symbol [ Graphics %tmp.176 51 46 54 ];
+        %tmp.176 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.177 51 55 64 ];
+        %tmp.177 = getv %tmp.176 :FONT_TINY;
+        %tmp.178 = "(Select)";
+        symbol [ Graphics %tmp.179 51 78 86 ];
+        %tmp.179 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.180 51 87 106 ];
+        %tmp.180 = getv %tmp.179 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.164 %tmp.165(%tmp.170, %tmp.175, %tmp.177, %tmp.178, %tmp.180);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 54 8 ]
+        %tmp.181 = lgetv %dc;
+        symbol [ dc %tmp.181 54 8 10 ];
+        symbol [ setColor %tmp.182 54 11 19 ];
+        %tmp.182 = getv function %tmp.181 :setColor;
+        symbol [ Graphics %tmp.183 54 20 28 ];
+        %tmp.183 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_GRAY %tmp.184 54 29 42 ];
+        %tmp.184 = getv %tmp.183 :COLOR_DK_GRAY;
+        symbol [ Graphics %tmp.185 54 44 52 ];
+        %tmp.185 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.186 54 53 70 ];
+        %tmp.186 = getv %tmp.185 :COLOR_TRANSPARENT;
+        invoke %tmp.181 %tmp.182(%tmp.184, %tmp.186);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 55 8 ]
+        %tmp.187 = lgetv %dc;
+        symbol [ dc %tmp.187 55 8 10 ];
+        symbol [ drawText %tmp.188 55 11 19 ];
+        %tmp.188 = getv function %tmp.187 :drawText;
+        %tmp.189 = lgetv %width.1;
+        symbol [ width %tmp.189 55 20 25 ];
+        %tmp.190 = 4;
+        %tmp.191 = div %tmp.189 %tmp.190;
+        %tmp.192 = 3;
+        %tmp.193 = lgetv %height.2;
+        symbol [ height %tmp.193 55 31 37 ];
+        %tmp.194 = mul %tmp.192 %tmp.193;
+        %tmp.195 = 4;
+        %tmp.196 = div %tmp.194 %tmp.195;
+        symbol [ Graphics %tmp.197 55 41 49 ];
+        %tmp.197 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.198 55 50 59 ];
+        %tmp.198 = getv %tmp.197 :FONT_TINY;
+        %tmp.199 = "discard";
+        symbol [ Graphics %tmp.200 55 72 80 ];
+        %tmp.200 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.201 55 81 100 ];
+        %tmp.201 = getv %tmp.200 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.187 %tmp.188(%tmp.191, %tmp.196, %tmp.198, %tmp.199, %tmp.201);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 56 8 ]
+        %tmp.202 = lgetv %dc;
+        symbol [ dc %tmp.202 56 8 10 ];
+        symbol [ drawText %tmp.203 56 11 19 ];
+        %tmp.203 = getv function %tmp.202 :drawText;
+        %tmp.204 = lgetv %width.1;
+        symbol [ width %tmp.204 56 20 25 ];
+        %tmp.205 = 4;
+        %tmp.206 = div %tmp.204 %tmp.205;
+        %tmp.207 = 3;
+        %tmp.208 = lgetv %height.2;
+        symbol [ height %tmp.208 56 31 37 ];
+        %tmp.209 = mul %tmp.207 %tmp.208;
+        %tmp.210 = 4;
+        %tmp.211 = div %tmp.209 %tmp.210;
+        %tmp.212 = 15;
+        %tmp.213 = add %tmp.211 %tmp.212;
+        symbol [ Graphics %tmp.214 56 46 54 ];
+        %tmp.214 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.215 56 55 64 ];
+        %tmp.215 = getv %tmp.214 :FONT_TINY;
+        %tmp.216 = "(down)";
+        symbol [ Graphics %tmp.217 56 76 84 ];
+        %tmp.217 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.218 56 85 104 ];
+        %tmp.218 = getv %tmp.217 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.202 %tmp.203(%tmp.206, %tmp.213, %tmp.215, %tmp.216, %tmp.218);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_15_26_57_4_stop:
+    }
+}
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc"; @line = 61; @symbol_classdef = [SaveDialogDelegate,61,6,24]; @symbol_extends<0> = [WatchUi,61,33,40]; @symbol_extends<1> = [BehaviorDelegate,61,41,57]; ]
+class SaveDialogDelegate extends WatchUi.BehaviorDelegate {
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc"; @line = 61; ]
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc"; @line = 61; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc"; @line = 62; @position = 16; @symbol_vardef = [mModel,62,16,22]; ]
+    private
+    var mModel;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc"; @line = 63; @position = 16; @symbol_vardef = [mApp,63,16,20]; ]
+    private
+    var mApp;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc"; @line = 65; @symbol_functiondef = [initialize,65,13,23]; @symbol_param<0> = [model,65,24,29]; @symbol_param<1> = [app,65,31,34]; ]
+    function initialize(model, app) as Void {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_65_36_69_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 66 8 ]
+        symbol [ BehaviorDelegate %tmp.2 66 8 24 ];
+        %tmp.2 = getv ? :BehaviorDelegate;
+        symbol [ initialize %tmp.3 66 25 35 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 67 8 ]
+        %tmp.4 = lgetv %model;
+        symbol [ model %tmp.4 67 17 22 ];
+        symbol [ mModel ? 67 8 14 ];
+        putv self :mModel %tmp.4;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 68 8 ]
+        %tmp.5 = lgetv %app;
+        symbol [ app %tmp.5 68 15 18 ];
+        symbol [ mApp ? 68 8 12 ];
+        putv self :mApp %tmp.5;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_65_36_69_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc"; @line = 72; @symbol_functiondef = [onBack,72,13,19]; ]
+    function onBack() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_72_22_76_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 74 8 ]
+        symbol [ WatchUi %tmp.1 74 8 15 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.2 74 16 23 ];
+        %tmp.2 = getv function %tmp.1 :popView;
+        symbol [ WatchUi %tmp.3 74 24 31 ];
+        %tmp.3 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_RIGHT %tmp.4 74 32 43 ];
+        %tmp.4 = getv %tmp.3 :SLIDE_RIGHT;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 75 8 ]
+        %tmp.5 = true;
+        ret %tmp.5;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_72_22_76_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc"; @line = 79; @symbol_functiondef = [onSelect,79,13,21]; ]
+    function onSelect() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_79_24_82_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 80 8 ]
+        %tmp.1 = self;
+        symbol [ saveActivity %tmp.2 80 8 20 ];
+        %tmp.2 = getv function %tmp.1 :saveActivity;
+        invoke %tmp.1 %tmp.2();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 81 8 ]
+        %tmp.3 = true;
+        ret %tmp.3;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_79_24_82_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc"; @line = 85; @symbol_functiondef = [onNextPage,85,13,23]; ]
+    function onNextPage() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_85_26_88_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 86 8 ]
+        %tmp.1 = self;
+        symbol [ discardActivity %tmp.2 86 8 23 ];
+        %tmp.2 = getv function %tmp.1 :discardActivity;
+        invoke %tmp.1 %tmp.2();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 87 8 ]
+        %tmp.3 = true;
+        ret %tmp.3;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_85_26_88_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc"; @line = 91; @symbol_functiondef = [saveActivity,91,13,25]; ]
+    function saveActivity() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_91_28_116_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 92 8 ]
+        symbol [ System %tmp.1 92 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 92 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "Saving activity";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 95 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_95_8_101_8_if_stmt:
+        symbol [ mModel %tmp.5 95 12 18 ];
+        %tmp.5 = getv ? :mModel;
+        %tmp.6 = null;
+        %tmp.7 = ne %tmp.5 %tmp.6;
+        bf %tmp.7 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_95_8_101_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_95_8_101_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_95_28_101_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 96 12 ]
+        symbol [ mModel %tmp.9 96 12 18 ];
+        %tmp.9 = getv ? :mModel;
+        %tmp.10 = as %tmp.9 { (!Null) };
+        symbol [ saveActivityData %tmp.11 96 19 35 ];
+        %tmp.11 = getv function %tmp.10 :saveActivityData;
+        invoke %tmp.10 %tmp.11();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 99 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_95_28_101_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_95_28_101_8_stop" ]
+        %data.1 = local;
+        symbol [ data %data.1 99 16 20 ];
+        symbol [ mModel %tmp.13 99 23 29 ];
+        %tmp.13 = getv ? :mModel;
+        symbol [ getData %tmp.14 99 30 37 ];
+        %tmp.14 = getv function %tmp.13 :getData;
+        %tmp.15 = invoke %tmp.13 %tmp.14();
+        lputv %data.1 %tmp.15;
+        symbol [ data %data.1 99 16 20 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 100 12 ]
+        %tmp.16 = lgetv %data.1;
+        symbol [ data %tmp.16 100 12 16 ];
+        %tmp.17 = true;
+        %tmp.18 = "sessionComplete";
+        aputv %tmp.16 %tmp.18 %tmp.17;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_95_28_101_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_95_8_101_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_95_8_101_8_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 104 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_8_112_8_if_stmt:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_12_104_101_begin:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_12_104_67_begin:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_12_104_38_begin:
+        symbol [ mApp %tmp.20 104 12 16 ];
+        %tmp.20 = getv ? :mApp;
+        %tmp.21 = null;
+        %tmp.22 = ne %tmp.20 %tmp.21;
+        bf %tmp.22 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_8_112_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_28_104_38_true:
+        symbol [ mApp %tmp.24 104 28 32 ];
+        %tmp.24 = getv ? :mApp;
+        %tmp.25 = as %tmp.24 { (!Null) };
+        %tmp.27 = const :mSession;
+        symbol [ mSession %tmp.27 104 38 46 const ];
+        %tmp.28 = canhazplz %tmp.25 %tmp.27;
+        push %tmp.28;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_28_104_38_end:
+        %tmp.29 = phi [%tmp.22 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_12_104_38_begin] [%tmp.28 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_28_104_38_true] [%tmp.29 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_28_104_38_end];
+        bf %tmp.29 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_8_112_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_50_104_67_true:
+        symbol [ mApp %tmp.31 104 50 54 ];
+        %tmp.31 = getv ? :mApp;
+        %tmp.32 = as %tmp.31 { (interface { var mSession; }) && (!Null) };
+        symbol [ mSession %tmp.33 104 55 63 ];
+        %tmp.33 = getv %tmp.32 :mSession;
+        %tmp.34 = null;
+        %tmp.35 = ne %tmp.33 %tmp.34;
+        push %tmp.35;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_50_104_67_end:
+        %tmp.36 = phi [%tmp.29 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_12_104_67_begin] [%tmp.35 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_50_104_67_true] [%tmp.36 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_50_104_67_end];
+        bf %tmp.36 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_8_112_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_75_104_101_true:
+        symbol [ mApp %tmp.38 104 75 79 ];
+        %tmp.38 = getv ? :mApp;
+        %tmp.39 = as %tmp.38 { (interface { var mSession; }) && (!Null) };
+        symbol [ mSession %tmp.40 104 80 88 ];
+        %tmp.40 = getv %tmp.39 :mSession;
+        symbol [ isRecording %tmp.41 104 89 100 ];
+        %tmp.41 = getv function %tmp.40 :isRecording;
+        %tmp.42 = invoke %tmp.40 %tmp.41();
+        push %tmp.42;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_75_104_101_end:
+        %tmp.43 = phi [%tmp.36 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_12_104_101_begin] [%tmp.42 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_75_104_101_true] [%tmp.43 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_75_104_101_end];
+        bf %tmp.43 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_8_112_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_8_112_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_104_112_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 105 12 ]
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_105_12_111_12_beginTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_105_12_111_12_endTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_105_12_111_12_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_105_12_111_12_finally;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_105_12_111_12_beginTry:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_105_16_109_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 106 16 ]
+        symbol [ mApp %tmp.45 106 16 20 ];
+        %tmp.45 = getv ? :mApp;
+        symbol [ mSession %tmp.46 106 21 29 ];
+        %tmp.46 = getv %tmp.45 :mSession;
+        symbol [ stop %tmp.47 106 30 34 ];
+        %tmp.47 = getv function %tmp.46 :stop;
+        invoke %tmp.46 %tmp.47();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 107 16 ]
+        symbol [ mApp %tmp.49 107 16 20 ];
+        %tmp.49 = getv ? :mApp;
+        symbol [ mSession %tmp.50 107 21 29 ];
+        %tmp.50 = getv %tmp.49 :mSession;
+        symbol [ save %tmp.51 107 30 34 ];
+        %tmp.51 = getv function %tmp.50 :save;
+        invoke %tmp.50 %tmp.51();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 108 16 ]
+        symbol [ System %tmp.52 108 16 22 ];
+        %tmp.52 = getm $.Toybox.System;
+        symbol [ println %tmp.53 108 23 30 ];
+        %tmp.53 = getv function %tmp.52 :println;
+        %tmp.54 = "Activity recording saved";
+        invoke %tmp.52 %tmp.53(%tmp.54);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_105_16_109_12_stop:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_105_12_111_12_endTry:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_105_12_111_12_finally;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_105_12_111_12_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_105_12_111_12_catch:
+        %tmp.55 = exception;
+        push %tmp.55;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 109 14 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_105_12_111_12_catch" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_109_14_111_12_end" ]
+        %e.2 = local;
+        symbol [ e %e.2 109 21 22 ];
+        %tmp.56 = dup %tmp.55;
+        lputv %e.2 %tmp.56;
+        symbol [ e %e.2 109 21 22 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_109_24_111_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 110 16 ]
+        symbol [ System %tmp.57 110 16 22 ];
+        %tmp.57 = getm $.Toybox.System;
+        symbol [ println %tmp.58 110 23 30 ];
+        %tmp.58 = getv function %tmp.57 :println;
+        %tmp.59 = "Error saving activity: ";
+        %tmp.60 = lgetv %e.2;
+        symbol [ e %tmp.60 110 59 60 ];
+        symbol [ getErrorMessage %tmp.61 110 61 76 ];
+        %tmp.61 = getv function %tmp.60 :getErrorMessage;
+        %tmp.62 = invoke %tmp.60 %tmp.61();
+        %tmp.63 = add %tmp.59 %tmp.62;
+        invoke %tmp.57 %tmp.58(%tmp.63);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_109_24_111_12_stop:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_105_12_111_12_finally;
+        pop;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_105_12_111_12_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_109_14_111_12_end:
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_105_12_111_12_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_109_14_111_12_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_109_14_111_12_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_105_12_111_12_finally;
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_105_12_111_12_finally;
+        throw %tmp.55;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_105_12_111_12_finally:
+        jsrret;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_105_12_111_12_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_104_112_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_8_112_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_104_8_112_8_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 115 8 ]
+        symbol [ System %tmp.64 115 8 14 ];
+        %tmp.64 = getm $.Toybox.System;
+        symbol [ exit %tmp.65 115 15 19 ];
+        %tmp.65 = getv function %tmp.64 :exit;
+        invoke %tmp.64 %tmp.65();
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_91_28_116_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc"; @line = 119; @symbol_functiondef = [discardActivity,119,13,28]; ]
+    function discardActivity() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_119_31_141_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 120 8 ]
+        symbol [ System %tmp.1 120 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 120 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "Discarding activity";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 123 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_123_8_126_8_if_stmt:
+        symbol [ mModel %tmp.5 123 12 18 ];
+        %tmp.5 = getv ? :mModel;
+        %tmp.6 = null;
+        %tmp.7 = ne %tmp.5 %tmp.6;
+        bf %tmp.7 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_123_8_126_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_123_8_126_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_123_28_126_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 124 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_123_28_126_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_123_28_126_8_stop" ]
+        %data.1 = local;
+        symbol [ data %data.1 124 16 20 ];
+        symbol [ mModel %tmp.9 124 23 29 ];
+        %tmp.9 = getv ? :mModel;
+        %tmp.10 = as %tmp.9 { (!Null) };
+        symbol [ getData %tmp.11 124 30 37 ];
+        %tmp.11 = getv function %tmp.10 :getData;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        lputv %data.1 %tmp.12;
+        symbol [ data %data.1 124 16 20 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 125 12 ]
+        %tmp.13 = lgetv %data.1;
+        symbol [ data %tmp.13 125 12 16 ];
+        %tmp.14 = true;
+        %tmp.15 = "sessionComplete";
+        aputv %tmp.13 %tmp.15 %tmp.14;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_123_28_126_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_123_8_126_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_123_8_126_8_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 129 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_8_137_8_if_stmt:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_12_129_101_begin:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_12_129_67_begin:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_12_129_38_begin:
+        symbol [ mApp %tmp.17 129 12 16 ];
+        %tmp.17 = getv ? :mApp;
+        %tmp.18 = null;
+        %tmp.19 = ne %tmp.17 %tmp.18;
+        bf %tmp.19 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_8_137_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_28_129_38_true:
+        symbol [ mApp %tmp.21 129 28 32 ];
+        %tmp.21 = getv ? :mApp;
+        %tmp.22 = as %tmp.21 { (!Null) };
+        %tmp.24 = const :mSession;
+        symbol [ mSession %tmp.24 129 38 46 const ];
+        %tmp.25 = canhazplz %tmp.22 %tmp.24;
+        push %tmp.25;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_28_129_38_end:
+        %tmp.26 = phi [%tmp.19 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_12_129_38_begin] [%tmp.25 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_28_129_38_true] [%tmp.26 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_28_129_38_end];
+        bf %tmp.26 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_8_137_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_50_129_67_true:
+        symbol [ mApp %tmp.28 129 50 54 ];
+        %tmp.28 = getv ? :mApp;
+        %tmp.29 = as %tmp.28 { (interface { var mSession; }) && (!Null) };
+        symbol [ mSession %tmp.30 129 55 63 ];
+        %tmp.30 = getv %tmp.29 :mSession;
+        %tmp.31 = null;
+        %tmp.32 = ne %tmp.30 %tmp.31;
+        push %tmp.32;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_50_129_67_end:
+        %tmp.33 = phi [%tmp.26 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_12_129_67_begin] [%tmp.32 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_50_129_67_true] [%tmp.33 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_50_129_67_end];
+        bf %tmp.33 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_8_137_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_75_129_101_true:
+        symbol [ mApp %tmp.35 129 75 79 ];
+        %tmp.35 = getv ? :mApp;
+        %tmp.36 = as %tmp.35 { (interface { var mSession; }) && (!Null) };
+        symbol [ mSession %tmp.37 129 80 88 ];
+        %tmp.37 = getv %tmp.36 :mSession;
+        symbol [ isRecording %tmp.38 129 89 100 ];
+        %tmp.38 = getv function %tmp.37 :isRecording;
+        %tmp.39 = invoke %tmp.37 %tmp.38();
+        push %tmp.39;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_75_129_101_end:
+        %tmp.40 = phi [%tmp.33 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_12_129_101_begin] [%tmp.39 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_75_129_101_true] [%tmp.40 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_75_129_101_end];
+        bf %tmp.40 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_8_137_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_8_137_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_104_137_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 130 12 ]
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_130_12_136_12_beginTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_130_12_136_12_endTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_130_12_136_12_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_130_12_136_12_finally;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_130_12_136_12_beginTry:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_130_16_134_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 131 16 ]
+        symbol [ mApp %tmp.42 131 16 20 ];
+        %tmp.42 = getv ? :mApp;
+        symbol [ mSession %tmp.43 131 21 29 ];
+        %tmp.43 = getv %tmp.42 :mSession;
+        symbol [ stop %tmp.44 131 30 34 ];
+        %tmp.44 = getv function %tmp.43 :stop;
+        invoke %tmp.43 %tmp.44();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 132 16 ]
+        symbol [ mApp %tmp.46 132 16 20 ];
+        %tmp.46 = getv ? :mApp;
+        symbol [ mSession %tmp.47 132 21 29 ];
+        %tmp.47 = getv %tmp.46 :mSession;
+        symbol [ discard %tmp.48 132 30 37 ];
+        %tmp.48 = getv function %tmp.47 :discard;
+        invoke %tmp.47 %tmp.48();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 133 16 ]
+        symbol [ System %tmp.49 133 16 22 ];
+        %tmp.49 = getm $.Toybox.System;
+        symbol [ println %tmp.50 133 23 30 ];
+        %tmp.50 = getv function %tmp.49 :println;
+        %tmp.51 = "Activity recording discarded";
+        invoke %tmp.49 %tmp.50(%tmp.51);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_130_16_134_12_stop:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_130_12_136_12_endTry:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_130_12_136_12_finally;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_130_12_136_12_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_130_12_136_12_catch:
+        %tmp.52 = exception;
+        push %tmp.52;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 134 14 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_130_12_136_12_catch" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_134_14_136_12_end" ]
+        %e.2 = local;
+        symbol [ e %e.2 134 21 22 ];
+        %tmp.53 = dup %tmp.52;
+        lputv %e.2 %tmp.53;
+        symbol [ e %e.2 134 21 22 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_134_24_136_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 135 16 ]
+        symbol [ System %tmp.54 135 16 22 ];
+        %tmp.54 = getm $.Toybox.System;
+        symbol [ println %tmp.55 135 23 30 ];
+        %tmp.55 = getv function %tmp.54 :println;
+        %tmp.56 = "Error discarding activity: ";
+        %tmp.57 = lgetv %e.2;
+        symbol [ e %tmp.57 135 63 64 ];
+        symbol [ getErrorMessage %tmp.58 135 65 80 ];
+        %tmp.58 = getv function %tmp.57 :getErrorMessage;
+        %tmp.59 = invoke %tmp.57 %tmp.58();
+        %tmp.60 = add %tmp.56 %tmp.59;
+        invoke %tmp.54 %tmp.55(%tmp.60);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_134_24_136_12_stop:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_130_12_136_12_finally;
+        pop;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_130_12_136_12_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_134_14_136_12_end:
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_130_12_136_12_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_134_14_136_12_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_134_14_136_12_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_130_12_136_12_finally;
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_130_12_136_12_finally;
+        throw %tmp.52;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_130_12_136_12_finally:
+        jsrret;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_130_12_136_12_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_104_137_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_8_137_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_129_8_137_8_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc" 140 8 ]
+        symbol [ System %tmp.61 140 8 14 ];
+        %tmp.61 = getm $.Toybox.System;
+        symbol [ exit %tmp.62 140 15 19 ];
+        %tmp.62 = getv function %tmp.61 :exit;
+        invoke %tmp.61 %tmp.62();
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SaveDialogView_mc_119_31_141_4_stop:
+    }
+}
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SaveDialogView.mc"; @line = 1; ]
+<init> {
+}

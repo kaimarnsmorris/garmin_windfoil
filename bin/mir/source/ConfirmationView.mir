@@ -1,0 +1,326 @@
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [WatchUi,1,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [Graphics,2,13,21]; ]
+using Toybox.Graphics;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [System,3,13,19]; ]
+using Toybox.System;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Application,4,13,24]; ]
+using Toybox.Application;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc"; @line = 7; @symbol_classdef = [ConfirmationView,7,6,22]; @symbol_extends<0> = [WatchUi,7,31,38]; @symbol_extends<1> = [View,7,39,43]; ]
+class ConfirmationView extends WatchUi.View {
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc"; @line = 7; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc"; @line = 8; @position = 16; @symbol_vardef = [mPrompt,8,16,23]; ]
+    private
+    var mPrompt;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc"; @line = 10; @symbol_functiondef = [initialize,10,13,23]; @symbol_param<0> = [prompt,10,24,30]; ]
+    function initialize(prompt) as Void {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_10_32_13_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc" 11 8 ]
+        symbol [ View %tmp.2 11 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 11 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc" 12 8 ]
+        %tmp.4 = lgetv %prompt;
+        symbol [ prompt %tmp.4 12 18 24 ];
+        symbol [ mPrompt ? 12 8 15 ];
+        putv self :mPrompt %tmp.4;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_10_32_13_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc"; @line = 15; @symbol_functiondef = [onLayout,15,13,21]; @symbol_param<0> = [dc,15,22,24]; ]
+    function onLayout(dc) {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc"; @line = 19; @symbol_functiondef = [onUpdate,19,13,21]; @symbol_param<0> = [dc,19,22,24]; ]
+    function onUpdate(dc) {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_19_26_33_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc" 21 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 21 8 10 ];
+        symbol [ setColor %tmp.2 21 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ Graphics %tmp.3 21 20 28 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.4 21 29 40 ];
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        symbol [ Graphics %tmp.5 21 42 50 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.6 21 51 62 ];
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc" 22 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 22 8 10 ];
+        symbol [ clear %tmp.8 22 11 16 ];
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc" 25 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_19_26_33_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_19_26_33_4_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 25 12 17 ];
+        %tmp.9 = lgetv %dc;
+        symbol [ dc %tmp.9 25 20 22 ];
+        symbol [ getWidth %tmp.10 25 23 31 ];
+        %tmp.10 = getv function %tmp.9 :getWidth;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        lputv %width.1 %tmp.11;
+        symbol [ width %width.1 25 12 17 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc" 26 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_19_26_33_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_19_26_33_4_stop" ]
+        %height.2 = local;
+        symbol [ height %height.2 26 12 18 ];
+        %tmp.12 = lgetv %dc;
+        symbol [ dc %tmp.12 26 21 23 ];
+        symbol [ getHeight %tmp.13 26 24 33 ];
+        %tmp.13 = getv function %tmp.12 :getHeight;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        lputv %height.2 %tmp.14;
+        symbol [ height %height.2 26 12 18 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc" 29 8 ]
+        %tmp.15 = lgetv %dc;
+        symbol [ dc %tmp.15 29 8 10 ];
+        symbol [ setColor %tmp.16 29 11 19 ];
+        %tmp.16 = getv function %tmp.15 :setColor;
+        symbol [ Graphics %tmp.17 29 20 28 ];
+        %tmp.17 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.18 29 29 40 ];
+        %tmp.18 = getv %tmp.17 :COLOR_WHITE;
+        symbol [ Graphics %tmp.19 29 42 50 ];
+        %tmp.19 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.20 29 51 68 ];
+        %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
+        invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc" 30 8 ]
+        %tmp.21 = lgetv %dc;
+        symbol [ dc %tmp.21 30 8 10 ];
+        symbol [ drawText %tmp.22 30 11 19 ];
+        %tmp.22 = getv function %tmp.21 :drawText;
+        %tmp.23 = lgetv %width.1;
+        symbol [ width %tmp.23 30 20 25 ];
+        %tmp.24 = 2;
+        %tmp.25 = div %tmp.23 %tmp.24;
+        %tmp.26 = lgetv %height.2;
+        symbol [ height %tmp.26 30 29 35 ];
+        %tmp.27 = 2;
+        %tmp.28 = div %tmp.26 %tmp.27;
+        %tmp.29 = 30;
+        %tmp.30 = sub %tmp.28 %tmp.29;
+        symbol [ Graphics %tmp.31 30 44 52 ];
+        %tmp.31 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.32 30 53 64 ];
+        %tmp.32 = getv %tmp.31 :FONT_MEDIUM;
+        symbol [ mPrompt %tmp.34 30 66 73 ];
+        %tmp.34 = getv ? :mPrompt;
+        symbol [ Graphics %tmp.35 30 75 83 ];
+        %tmp.35 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.36 30 84 103 ];
+        %tmp.36 = getv %tmp.35 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.21 %tmp.22(%tmp.25, %tmp.30, %tmp.32, %tmp.34, %tmp.36);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc" 31 8 ]
+        %tmp.37 = lgetv %dc;
+        symbol [ dc %tmp.37 31 8 10 ];
+        symbol [ drawText %tmp.38 31 11 19 ];
+        %tmp.38 = getv function %tmp.37 :drawText;
+        %tmp.39 = lgetv %width.1;
+        symbol [ width %tmp.39 31 20 25 ];
+        %tmp.40 = 2;
+        %tmp.41 = div %tmp.39 %tmp.40;
+        %tmp.42 = lgetv %height.2;
+        symbol [ height %tmp.42 31 29 35 ];
+        %tmp.43 = 2;
+        %tmp.44 = div %tmp.42 %tmp.43;
+        %tmp.45 = 10;
+        %tmp.46 = add %tmp.44 %tmp.45;
+        symbol [ Graphics %tmp.47 31 44 52 ];
+        %tmp.47 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.48 31 53 63 ];
+        %tmp.48 = getv %tmp.47 :FONT_SMALL;
+        %tmp.49 = "Press SELECT to confirm";
+        symbol [ Graphics %tmp.50 31 92 100 ];
+        %tmp.50 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.51 31 101 120 ];
+        %tmp.51 = getv %tmp.50 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.37 %tmp.38(%tmp.41, %tmp.46, %tmp.48, %tmp.49, %tmp.51);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc" 32 8 ]
+        %tmp.52 = lgetv %dc;
+        symbol [ dc %tmp.52 32 8 10 ];
+        symbol [ drawText %tmp.53 32 11 19 ];
+        %tmp.53 = getv function %tmp.52 :drawText;
+        %tmp.54 = lgetv %width.1;
+        symbol [ width %tmp.54 32 20 25 ];
+        %tmp.55 = 2;
+        %tmp.56 = div %tmp.54 %tmp.55;
+        %tmp.57 = lgetv %height.2;
+        symbol [ height %tmp.57 32 29 35 ];
+        %tmp.58 = 2;
+        %tmp.59 = div %tmp.57 %tmp.58;
+        %tmp.60 = 35;
+        %tmp.61 = add %tmp.59 %tmp.60;
+        symbol [ Graphics %tmp.62 32 44 52 ];
+        %tmp.62 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.63 32 53 63 ];
+        %tmp.63 = getv %tmp.62 :FONT_SMALL;
+        %tmp.64 = "Press BACK to cancel";
+        symbol [ Graphics %tmp.65 32 89 97 ];
+        %tmp.65 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.66 32 98 117 ];
+        %tmp.66 = getv %tmp.65 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.52 %tmp.53(%tmp.56, %tmp.61, %tmp.63, %tmp.64, %tmp.66);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_19_26_33_4_stop:
+    }
+}
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc"; @line = 37; @symbol_classdef = [ConfirmationDelegate,37,6,26]; @symbol_extends<0> = [WatchUi,37,35,42]; @symbol_extends<1> = [BehaviorDelegate,37,43,59]; ]
+class ConfirmationDelegate extends WatchUi.BehaviorDelegate {
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc"; @line = 37; ]
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc"; @line = 37; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc"; @line = 38; @position = 16; @symbol_vardef = [mModel,38,16,22]; ]
+    private
+    var mModel;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc"; @line = 39; @position = 16; @symbol_vardef = [mApp,39,16,20]; ]
+    private
+    var mApp;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc"; @line = 41; @symbol_functiondef = [initialize,41,13,23]; @symbol_param<0> = [model,41,24,29]; ]
+    function initialize(model) as Void {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_41_31_45_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc" 42 8 ]
+        symbol [ BehaviorDelegate %tmp.2 42 8 24 ];
+        %tmp.2 = getv ? :BehaviorDelegate;
+        symbol [ initialize %tmp.3 42 25 35 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc" 43 8 ]
+        %tmp.4 = lgetv %model;
+        symbol [ model %tmp.4 43 17 22 ];
+        symbol [ mModel ? 43 8 14 ];
+        putv self :mModel %tmp.4;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc" 44 8 ]
+        symbol [ Application %tmp.5 44 15 26 ];
+        %tmp.5 = getm $.Toybox.Application;
+        symbol [ getApp %tmp.6 44 27 33 ];
+        %tmp.6 = getv function %tmp.5 :getApp;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        symbol [ mApp ? 44 8 12 ];
+        putv self :mApp %tmp.7;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_41_31_45_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc"; @line = 47; @symbol_functiondef = [onSelect,47,13,21]; ]
+    function onSelect() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_47_24_64_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc" 49 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_49_8_54_8_if_stmt:
+        symbol [ mModel %tmp.2 49 12 18 ];
+        %tmp.2 = getv ? :mModel;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_49_8_54_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_49_8_54_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_49_28_54_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc" 50 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_49_28_54_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_49_28_54_8_stop" ]
+        %data.1 = local;
+        symbol [ data %data.1 50 16 20 ];
+        symbol [ mModel %tmp.6 50 23 29 ];
+        %tmp.6 = getv ? :mModel;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ getData %tmp.8 50 30 37 ];
+        %tmp.8 = getv function %tmp.7 :getData;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        lputv %data.1 %tmp.9;
+        symbol [ data %data.1 50 16 20 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc" 51 12 ]
+        %tmp.10 = lgetv %data.1;
+        symbol [ data %tmp.10 51 12 16 ];
+        %tmp.11 = false;
+        %tmp.12 = "isRecording";
+        aputv %tmp.10 %tmp.12 %tmp.11;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc" 52 12 ]
+        %tmp.13 = lgetv %data.1;
+        symbol [ data %tmp.13 52 12 16 ];
+        %tmp.14 = false;
+        %tmp.15 = "sessionPaused";
+        aputv %tmp.13 %tmp.15 %tmp.14;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc" 53 12 ]
+        %tmp.16 = lgetv %data.1;
+        symbol [ data %tmp.16 53 12 16 ];
+        %tmp.17 = false;
+        %tmp.18 = "sessionComplete";
+        aputv %tmp.16 %tmp.18 %tmp.17;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_49_28_54_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_49_8_54_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_49_8_54_8_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc" 57 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_47_24_64_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_47_24_64_4_stop" ]
+        %saveView.2 = local;
+        symbol [ saveView %saveView.2 57 12 20 ];
+        symbol [ SaveDialogView %tmp.22 57 27 41 ];
+        %tmp.22 = getv ? :SaveDialogView;
+        symbol [ mModel %tmp.24 57 42 48 ];
+        %tmp.24 = getv ? :mModel;
+        %tmp.19 = newc %tmp.22 (%tmp.24);
+        lputv %saveView.2 %tmp.19;
+        symbol [ saveView %saveView.2 57 12 20 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc" 58 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_47_24_64_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_47_24_64_4_stop" ]
+        %saveDelegate.3 = local;
+        symbol [ saveDelegate %saveDelegate.3 58 12 24 ];
+        symbol [ SaveDialogDelegate %tmp.28 58 31 49 ];
+        %tmp.28 = getv ? :SaveDialogDelegate;
+        symbol [ mModel %tmp.30 58 50 56 ];
+        %tmp.30 = getv ? :mModel;
+        symbol [ mApp %tmp.32 58 58 62 ];
+        %tmp.32 = getv ? :mApp;
+        %tmp.25 = newc %tmp.28 (%tmp.30, %tmp.32);
+        lputv %saveDelegate.3 %tmp.25;
+        symbol [ saveDelegate %saveDelegate.3 58 12 24 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc" 61 8 ]
+        symbol [ WatchUi %tmp.33 61 8 15 ];
+        %tmp.33 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.34 61 16 24 ];
+        %tmp.34 = getv function %tmp.33 :pushView;
+        %tmp.35 = lgetv %saveView.2;
+        symbol [ saveView %tmp.35 61 25 33 ];
+        %tmp.36 = lgetv %saveDelegate.3;
+        symbol [ saveDelegate %tmp.36 61 35 47 ];
+        symbol [ WatchUi %tmp.37 61 49 56 ];
+        %tmp.37 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_LEFT %tmp.38 61 57 67 ];
+        %tmp.38 = getv %tmp.37 :SLIDE_LEFT;
+        invoke %tmp.33 %tmp.34(%tmp.35, %tmp.36, %tmp.38);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc" 63 8 ]
+        %tmp.39 = true;
+        ret %tmp.39;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_47_24_64_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc"; @line = 66; @symbol_functiondef = [onBack,66,13,19]; ]
+    function onBack() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_66_22_70_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc" 68 8 ]
+        symbol [ WatchUi %tmp.1 68 8 15 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.2 68 16 23 ];
+        %tmp.2 = getv function %tmp.1 :popView;
+        symbol [ WatchUi %tmp.3 68 24 31 ];
+        %tmp.3 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.4 68 32 47 ];
+        %tmp.4 = getv %tmp.3 :SLIDE_IMMEDIATE;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc" 69 8 ]
+        %tmp.5 = true;
+        ret %tmp.5;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_ConfirmationView_mc_66_22_70_4_stop:
+    }
+}
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\ConfirmationView.mc"; @line = 1; ]
+<init> {
+}

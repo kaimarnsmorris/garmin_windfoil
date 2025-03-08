@@ -1,0 +1,1248 @@
+[ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [WatchUi,4,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [Graphics,5,13,21]; ]
+using Toybox.Graphics;
+[ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 6; @symbol_usingdef<0> = [Toybox,6,6,12]; @symbol_usingdef<1> = [System,6,13,19]; ]
+using Toybox.System;
+[ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 7; @symbol_usingdef<0> = [Toybox,7,6,12]; @symbol_usingdef<1> = [Math,7,13,17]; ]
+using Toybox.Math;
+[ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 10; @symbol_classdef = [WindAnglePickerView,10,6,25]; @symbol_extends<0> = [WatchUi,10,34,41]; @symbol_extends<1> = [View,10,42,46]; ]
+class WindAnglePickerView extends WatchUi.View {
+    [ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 10; ]
+    <init> {
+    }
+    [ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 10; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 11; @position = 16; @symbol_vardef = [mModel,11,16,22]; ]
+    private
+    var mModel;
+    [ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 12; @position = 15; @symbol_vardef = [mWindAngle,12,15,25]; ]
+    public
+    var mWindAngle;
+    [ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 13; @position = 18; @symbol_constdef = [ANGLE_STEP,13,18,28]; ]
+    private
+    const ANGLE_STEP = 22.5;
+    [ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 15; @symbol_functiondef = [initialize,15,13,23]; @symbol_param<0> = [model,15,24,29]; ]
+    function initialize(model) as Void {
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_15_31_19_4_start:
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 16 8 ]
+        symbol [ View %tmp.2 16 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 16 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 17 8 ]
+        %tmp.4 = lgetv %model;
+        symbol [ model %tmp.4 17 17 22 ];
+        symbol [ mModel ? 17 8 14 ];
+        putv self :mModel %tmp.4;
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 18 8 ]
+        %tmp.5 = 0;
+        symbol [ mWindAngle ? 18 8 18 ];
+        putv self :mWindAngle %tmp.5;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_15_31_19_4_stop:
+    }
+    [ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 21; @symbol_functiondef = [onUpdate,21,13,21]; @symbol_param<0> = [dc,21,22,24]; ]
+    function onUpdate(dc) {
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_21_26_64_4_start:
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 23 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 23 8 10 ];
+        symbol [ setColor %tmp.2 23 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ Graphics %tmp.3 23 20 28 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.4 23 29 40 ];
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        symbol [ Graphics %tmp.5 23 42 50 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.6 23 51 62 ];
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 24 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 24 8 10 ];
+        symbol [ clear %tmp.8 24 11 16 ];
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 27 8 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_21_26_64_4_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_21_26_64_4_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 27 12 17 ];
+        %tmp.9 = lgetv %dc;
+        symbol [ dc %tmp.9 27 20 22 ];
+        symbol [ getWidth %tmp.10 27 23 31 ];
+        %tmp.10 = getv function %tmp.9 :getWidth;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        lputv %width.1 %tmp.11;
+        symbol [ width %width.1 27 12 17 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 28 8 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_21_26_64_4_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_21_26_64_4_stop" ]
+        %height.2 = local;
+        symbol [ height %height.2 28 12 18 ];
+        %tmp.12 = lgetv %dc;
+        symbol [ dc %tmp.12 28 21 23 ];
+        symbol [ getHeight %tmp.13 28 24 33 ];
+        %tmp.13 = getv function %tmp.12 :getHeight;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        lputv %height.2 %tmp.14;
+        symbol [ height %height.2 28 12 18 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 31 8 ]
+        %tmp.15 = lgetv %dc;
+        symbol [ dc %tmp.15 31 8 10 ];
+        symbol [ setColor %tmp.16 31 11 19 ];
+        %tmp.16 = getv function %tmp.15 :setColor;
+        symbol [ Graphics %tmp.17 31 20 28 ];
+        %tmp.17 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.18 31 29 40 ];
+        %tmp.18 = getv %tmp.17 :COLOR_WHITE;
+        symbol [ Graphics %tmp.19 31 42 50 ];
+        %tmp.19 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.20 31 51 68 ];
+        %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
+        invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 32 8 ]
+        %tmp.21 = lgetv %dc;
+        symbol [ dc %tmp.21 32 8 10 ];
+        symbol [ drawText %tmp.22 32 11 19 ];
+        %tmp.22 = getv function %tmp.21 :drawText;
+        %tmp.23 = lgetv %width.1;
+        symbol [ width %tmp.23 32 20 25 ];
+        %tmp.24 = 2;
+        %tmp.25 = div %tmp.23 %tmp.24;
+        %tmp.26 = 5;
+        symbol [ Graphics %tmp.27 32 32 40 ];
+        %tmp.27 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.28 32 41 51 ];
+        %tmp.28 = getv %tmp.27 :FONT_SMALL;
+        %tmp.29 = "WIND ANGLE";
+        symbol [ Graphics %tmp.30 32 67 75 ];
+        %tmp.30 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.31 32 76 95 ];
+        %tmp.31 = getv %tmp.30 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.21 %tmp.22(%tmp.25, %tmp.26, %tmp.28, %tmp.29, %tmp.31);
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 35 8 ]
+        %tmp.32 = lgetv %dc;
+        symbol [ dc %tmp.32 35 8 10 ];
+        symbol [ setColor %tmp.33 35 11 19 ];
+        %tmp.33 = getv function %tmp.32 :setColor;
+        symbol [ Graphics %tmp.34 35 20 28 ];
+        %tmp.34 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_GRAY %tmp.35 35 29 42 ];
+        %tmp.35 = getv %tmp.34 :COLOR_DK_GRAY;
+        symbol [ Graphics %tmp.36 35 44 52 ];
+        %tmp.36 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.37 35 53 70 ];
+        %tmp.37 = getv %tmp.36 :COLOR_TRANSPARENT;
+        invoke %tmp.32 %tmp.33(%tmp.35, %tmp.37);
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 36 8 ]
+        %tmp.38 = lgetv %dc;
+        symbol [ dc %tmp.38 36 8 10 ];
+        symbol [ drawLine %tmp.39 36 11 19 ];
+        %tmp.39 = getv function %tmp.38 :drawLine;
+        %tmp.40 = 10;
+        %tmp.41 = 30;
+        %tmp.42 = lgetv %width.1;
+        symbol [ width %tmp.42 36 28 33 ];
+        %tmp.43 = 10;
+        %tmp.44 = sub %tmp.42 %tmp.43;
+        %tmp.45 = 30;
+        invoke %tmp.38 %tmp.39(%tmp.40, %tmp.41, %tmp.44, %tmp.45);
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 39 8 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_21_26_64_4_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_21_26_64_4_stop" ]
+        %centerX.3 = local;
+        symbol [ centerX %centerX.3 39 12 19 ];
+        %tmp.46 = lgetv %width.1;
+        symbol [ width %tmp.46 39 22 27 ];
+        %tmp.47 = 2;
+        %tmp.48 = div %tmp.46 %tmp.47;
+        lputv %centerX.3 %tmp.48;
+        symbol [ centerX %centerX.3 39 12 19 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 40 8 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_21_26_64_4_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_21_26_64_4_stop" ]
+        %centerY.4 = local;
+        symbol [ centerY %centerY.4 40 12 19 ];
+        %tmp.49 = lgetv %height.2;
+        symbol [ height %tmp.49 40 22 28 ];
+        %tmp.50 = 2;
+        %tmp.51 = div %tmp.49 %tmp.50;
+        lputv %centerY.4 %tmp.51;
+        symbol [ centerY %centerY.4 40 12 19 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 41 8 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_21_26_64_4_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_21_26_64_4_stop" ]
+        %radius.5 = local;
+        symbol [ radius %radius.5 41 12 18 ];
+        symbol [ Math %tmp.52 41 21 25 ];
+        %tmp.52 = getm $.Toybox.Math;
+        symbol [ min %tmp.53 41 26 29 ];
+        %tmp.53 = getv function %tmp.52 :min;
+        %tmp.54 = lgetv %width.1;
+        symbol [ width %tmp.54 41 30 35 ];
+        %tmp.55 = lgetv %height.2;
+        symbol [ height %tmp.55 41 37 43 ];
+        %tmp.56 = invoke %tmp.52 %tmp.53(%tmp.54, %tmp.55);
+        %tmp.57 = 3;
+        %tmp.58 = div %tmp.56 %tmp.57;
+        lputv %radius.5 %tmp.58;
+        symbol [ radius %radius.5 41 12 18 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 44 8 ]
+        %tmp.59 = lgetv %dc;
+        symbol [ dc %tmp.59 44 8 10 ];
+        symbol [ setColor %tmp.60 44 11 19 ];
+        %tmp.60 = getv function %tmp.59 :setColor;
+        symbol [ Graphics %tmp.61 44 20 28 ];
+        %tmp.61 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_GRAY %tmp.62 44 29 42 ];
+        %tmp.62 = getv %tmp.61 :COLOR_DK_GRAY;
+        symbol [ Graphics %tmp.63 44 44 52 ];
+        %tmp.63 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.64 44 53 70 ];
+        %tmp.64 = getv %tmp.63 :COLOR_TRANSPARENT;
+        invoke %tmp.59 %tmp.60(%tmp.62, %tmp.64);
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 45 8 ]
+        %tmp.65 = lgetv %dc;
+        symbol [ dc %tmp.65 45 8 10 ];
+        symbol [ drawCircle %tmp.66 45 11 21 ];
+        %tmp.66 = getv function %tmp.65 :drawCircle;
+        %tmp.67 = lgetv %centerX.3;
+        symbol [ centerX %tmp.67 45 22 29 ];
+        %tmp.68 = lgetv %centerY.4;
+        symbol [ centerY %tmp.68 45 31 38 ];
+        %tmp.69 = lgetv %radius.5;
+        symbol [ radius %tmp.69 45 40 46 ];
+        invoke %tmp.65 %tmp.66(%tmp.67, %tmp.68, %tmp.69);
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 48 8 ]
+        %tmp.70 = lgetv %dc;
+        symbol [ dc %tmp.70 48 8 10 ];
+        symbol [ setColor %tmp.71 48 11 19 ];
+        %tmp.71 = getv function %tmp.70 :setColor;
+        symbol [ Graphics %tmp.72 48 20 28 ];
+        %tmp.72 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.73 48 29 40 ];
+        %tmp.73 = getv %tmp.72 :COLOR_WHITE;
+        symbol [ Graphics %tmp.74 48 42 50 ];
+        %tmp.74 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.75 48 51 68 ];
+        %tmp.75 = getv %tmp.74 :COLOR_TRANSPARENT;
+        invoke %tmp.70 %tmp.71(%tmp.73, %tmp.75);
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 49 8 ]
+        %tmp.76 = self;
+        symbol [ drawCardinalPoint %tmp.77 49 8 25 ];
+        %tmp.77 = getv function %tmp.76 :drawCardinalPoint;
+        %tmp.78 = lgetv %dc;
+        symbol [ dc %tmp.78 49 26 28 ];
+        %tmp.79 = lgetv %centerX.3;
+        symbol [ centerX %tmp.79 49 30 37 ];
+        %tmp.80 = lgetv %centerY.4;
+        symbol [ centerY %tmp.80 49 39 46 ];
+        %tmp.81 = lgetv %radius.5;
+        symbol [ radius %tmp.81 49 48 54 ];
+        %tmp.82 = 0;
+        %tmp.83 = "N";
+        invoke %tmp.76 %tmp.77(%tmp.78, %tmp.79, %tmp.80, %tmp.81, %tmp.82, %tmp.83);
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 50 8 ]
+        %tmp.84 = self;
+        symbol [ drawCardinalPoint %tmp.85 50 8 25 ];
+        %tmp.85 = getv function %tmp.84 :drawCardinalPoint;
+        %tmp.86 = lgetv %dc;
+        symbol [ dc %tmp.86 50 26 28 ];
+        %tmp.87 = lgetv %centerX.3;
+        symbol [ centerX %tmp.87 50 30 37 ];
+        %tmp.88 = lgetv %centerY.4;
+        symbol [ centerY %tmp.88 50 39 46 ];
+        %tmp.89 = lgetv %radius.5;
+        symbol [ radius %tmp.89 50 48 54 ];
+        %tmp.90 = 90;
+        %tmp.91 = "E";
+        invoke %tmp.84 %tmp.85(%tmp.86, %tmp.87, %tmp.88, %tmp.89, %tmp.90, %tmp.91);
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 51 8 ]
+        %tmp.92 = self;
+        symbol [ drawCardinalPoint %tmp.93 51 8 25 ];
+        %tmp.93 = getv function %tmp.92 :drawCardinalPoint;
+        %tmp.94 = lgetv %dc;
+        symbol [ dc %tmp.94 51 26 28 ];
+        %tmp.95 = lgetv %centerX.3;
+        symbol [ centerX %tmp.95 51 30 37 ];
+        %tmp.96 = lgetv %centerY.4;
+        symbol [ centerY %tmp.96 51 39 46 ];
+        %tmp.97 = lgetv %radius.5;
+        symbol [ radius %tmp.97 51 48 54 ];
+        %tmp.98 = 180;
+        %tmp.99 = "S";
+        invoke %tmp.92 %tmp.93(%tmp.94, %tmp.95, %tmp.96, %tmp.97, %tmp.98, %tmp.99);
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 52 8 ]
+        %tmp.100 = self;
+        symbol [ drawCardinalPoint %tmp.101 52 8 25 ];
+        %tmp.101 = getv function %tmp.100 :drawCardinalPoint;
+        %tmp.102 = lgetv %dc;
+        symbol [ dc %tmp.102 52 26 28 ];
+        %tmp.103 = lgetv %centerX.3;
+        symbol [ centerX %tmp.103 52 30 37 ];
+        %tmp.104 = lgetv %centerY.4;
+        symbol [ centerY %tmp.104 52 39 46 ];
+        %tmp.105 = lgetv %radius.5;
+        symbol [ radius %tmp.105 52 48 54 ];
+        %tmp.106 = 270;
+        %tmp.107 = "W";
+        invoke %tmp.100 %tmp.101(%tmp.102, %tmp.103, %tmp.104, %tmp.105, %tmp.106, %tmp.107);
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 55 8 ]
+        %tmp.108 = self;
+        symbol [ drawWindArrow %tmp.109 55 8 21 ];
+        %tmp.109 = getv function %tmp.108 :drawWindArrow;
+        %tmp.110 = lgetv %dc;
+        symbol [ dc %tmp.110 55 22 24 ];
+        %tmp.111 = lgetv %centerX.3;
+        symbol [ centerX %tmp.111 55 26 33 ];
+        %tmp.112 = lgetv %centerY.4;
+        symbol [ centerY %tmp.112 55 35 42 ];
+        %tmp.113 = lgetv %radius.5;
+        symbol [ radius %tmp.113 55 44 50 ];
+        %tmp.114 = 0.8;
+        %tmp.115 = mul %tmp.113 %tmp.114;
+        symbol [ mWindAngle %tmp.117 55 58 68 ];
+        %tmp.117 = getv ? :mWindAngle;
+        invoke %tmp.108 %tmp.109(%tmp.110, %tmp.111, %tmp.112, %tmp.115, %tmp.117);
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 58 8 ]
+        %tmp.118 = lgetv %dc;
+        symbol [ dc %tmp.118 58 8 10 ];
+        symbol [ setColor %tmp.119 58 11 19 ];
+        %tmp.119 = getv function %tmp.118 :setColor;
+        symbol [ Graphics %tmp.120 58 20 28 ];
+        %tmp.120 = getm $.Toybox.Graphics;
+        symbol [ COLOR_YELLOW %tmp.121 58 29 41 ];
+        %tmp.121 = getv %tmp.120 :COLOR_YELLOW;
+        symbol [ Graphics %tmp.122 58 43 51 ];
+        %tmp.122 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.123 58 52 69 ];
+        %tmp.123 = getv %tmp.122 :COLOR_TRANSPARENT;
+        invoke %tmp.118 %tmp.119(%tmp.121, %tmp.123);
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 59 8 ]
+        %tmp.124 = lgetv %dc;
+        symbol [ dc %tmp.124 59 8 10 ];
+        symbol [ drawText %tmp.125 59 11 19 ];
+        %tmp.125 = getv function %tmp.124 :drawText;
+        %tmp.126 = lgetv %centerX.3;
+        symbol [ centerX %tmp.126 59 20 27 ];
+        %tmp.127 = lgetv %centerY.4;
+        symbol [ centerY %tmp.127 59 29 36 ];
+        %tmp.128 = lgetv %radius.5;
+        symbol [ radius %tmp.128 59 39 45 ];
+        %tmp.129 = add %tmp.127 %tmp.128;
+        %tmp.130 = 20;
+        %tmp.131 = add %tmp.129 %tmp.130;
+        symbol [ Graphics %tmp.132 59 52 60 ];
+        %tmp.132 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.133 59 61 72 ];
+        %tmp.133 = getv %tmp.132 :FONT_MEDIUM;
+        symbol [ mWindAngle %tmp.135 59 74 84 ];
+        %tmp.135 = getv ? :mWindAngle;
+        symbol [ format %tmp.136 59 85 91 ];
+        %tmp.136 = getv function %tmp.135 :format;
+        %tmp.137 = "%d";
+        %tmp.138 = invoke %tmp.135 %tmp.136(%tmp.137);
+        %tmp.139 = "°";
+        %tmp.140 = add %tmp.138 %tmp.139;
+        symbol [ Graphics %tmp.141 59 105 113 ];
+        %tmp.141 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.142 59 114 133 ];
+        %tmp.142 = getv %tmp.141 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.124 %tmp.125(%tmp.126, %tmp.131, %tmp.133, %tmp.140, %tmp.142);
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 62 8 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_21_26_64_4_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_21_26_64_4_stop" ]
+        %directionName.6 = local;
+        symbol [ directionName %directionName.6 62 12 25 ];
+        %tmp.143 = self;
+        symbol [ getDirectionName %tmp.144 62 28 44 ];
+        %tmp.144 = getv function %tmp.143 :getDirectionName;
+        symbol [ mWindAngle %tmp.146 62 45 55 ];
+        %tmp.146 = getv ? :mWindAngle;
+        %tmp.147 = invoke %tmp.143 %tmp.144(%tmp.146);
+        lputv %directionName.6 %tmp.147;
+        symbol [ directionName %directionName.6 62 12 25 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 63 8 ]
+        %tmp.148 = lgetv %dc;
+        symbol [ dc %tmp.148 63 8 10 ];
+        symbol [ drawText %tmp.149 63 11 19 ];
+        %tmp.149 = getv function %tmp.148 :drawText;
+        %tmp.150 = lgetv %centerX.3;
+        symbol [ centerX %tmp.150 63 20 27 ];
+        %tmp.151 = lgetv %centerY.4;
+        symbol [ centerY %tmp.151 63 29 36 ];
+        %tmp.152 = lgetv %radius.5;
+        symbol [ radius %tmp.152 63 39 45 ];
+        %tmp.153 = add %tmp.151 %tmp.152;
+        %tmp.154 = 45;
+        %tmp.155 = add %tmp.153 %tmp.154;
+        symbol [ Graphics %tmp.156 63 52 60 ];
+        %tmp.156 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.157 63 61 71 ];
+        %tmp.157 = getv %tmp.156 :FONT_SMALL;
+        %tmp.158 = lgetv %directionName.6;
+        symbol [ directionName %tmp.158 63 73 86 ];
+        symbol [ Graphics %tmp.159 63 88 96 ];
+        %tmp.159 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.160 63 97 116 ];
+        %tmp.160 = getv %tmp.159 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.148 %tmp.149(%tmp.150, %tmp.155, %tmp.157, %tmp.158, %tmp.160);
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_21_26_64_4_stop:
+    }
+    [ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 67; @symbol_functiondef = [drawCardinalPoint,67,13,30]; @symbol_param<0> = [dc,67,31,33]; @symbol_param<1> = [centerX,67,35,42]; @symbol_param<2> = [centerY,67,44,51]; @symbol_param<3> = [radius,67,53,59]; @symbol_param<4> = [angle,67,61,66]; @symbol_param<5> = [label,67,68,73]; ]
+    function drawCardinalPoint(dc, centerX, centerY, radius, angle, label) {
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_67_75_73_4_start:
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 68 8 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_67_75_73_4_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_67_75_73_4_stop" ]
+        %radians.1 = local;
+        symbol [ radians %radians.1 68 12 19 ];
+        symbol [ Math %tmp.1 68 22 26 ];
+        %tmp.1 = getm $.Toybox.Math;
+        symbol [ toRadians %tmp.2 68 27 36 ];
+        %tmp.2 = getv function %tmp.1 :toRadians;
+        %tmp.3 = lgetv %angle;
+        symbol [ angle %tmp.3 68 37 42 ];
+        %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+        lputv %radians.1 %tmp.4;
+        symbol [ radians %radians.1 68 12 19 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 69 8 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_67_75_73_4_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_67_75_73_4_stop" ]
+        %x.2 = local;
+        symbol [ x %x.2 69 12 13 ];
+        %tmp.5 = lgetv %centerX;
+        symbol [ centerX %tmp.5 69 16 23 ];
+        %tmp.6 = lgetv %radius;
+        symbol [ radius %tmp.6 69 27 33 ];
+        %tmp.7 = 15;
+        %tmp.8 = add %tmp.6 %tmp.7;
+        symbol [ Math %tmp.9 69 42 46 ];
+        %tmp.9 = getm $.Toybox.Math;
+        symbol [ sin %tmp.10 69 47 50 ];
+        %tmp.10 = getv function %tmp.9 :sin;
+        %tmp.11 = lgetv %radians.1;
+        symbol [ radians %tmp.11 69 51 58 ];
+        %tmp.12 = invoke %tmp.9 %tmp.10(%tmp.11);
+        %tmp.13 = mul %tmp.8 %tmp.12;
+        %tmp.14 = add %tmp.5 %tmp.13;
+        lputv %x.2 %tmp.14;
+        symbol [ x %x.2 69 12 13 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 70 8 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_67_75_73_4_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_67_75_73_4_stop" ]
+        %y.3 = local;
+        symbol [ y %y.3 70 12 13 ];
+        %tmp.15 = lgetv %centerY;
+        symbol [ centerY %tmp.15 70 16 23 ];
+        %tmp.16 = lgetv %radius;
+        symbol [ radius %tmp.16 70 27 33 ];
+        %tmp.17 = 15;
+        %tmp.18 = add %tmp.16 %tmp.17;
+        symbol [ Math %tmp.19 70 42 46 ];
+        %tmp.19 = getm $.Toybox.Math;
+        symbol [ cos %tmp.20 70 47 50 ];
+        %tmp.20 = getv function %tmp.19 :cos;
+        %tmp.21 = lgetv %radians.1;
+        symbol [ radians %tmp.21 70 51 58 ];
+        %tmp.22 = invoke %tmp.19 %tmp.20(%tmp.21);
+        %tmp.23 = mul %tmp.18 %tmp.22;
+        %tmp.24 = sub %tmp.15 %tmp.23;
+        lputv %y.3 %tmp.24;
+        symbol [ y %y.3 70 12 13 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 72 8 ]
+        %tmp.25 = lgetv %dc;
+        symbol [ dc %tmp.25 72 8 10 ];
+        symbol [ drawText %tmp.26 72 11 19 ];
+        %tmp.26 = getv function %tmp.25 :drawText;
+        %tmp.27 = lgetv %x.2;
+        symbol [ x %tmp.27 72 20 21 ];
+        %tmp.28 = lgetv %y.3;
+        symbol [ y %tmp.28 72 23 24 ];
+        symbol [ Graphics %tmp.29 72 26 34 ];
+        %tmp.29 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.30 72 35 45 ];
+        %tmp.30 = getv %tmp.29 :FONT_SMALL;
+        %tmp.31 = lgetv %label;
+        symbol [ label %tmp.31 72 47 52 ];
+        symbol [ Graphics %tmp.32 72 54 62 ];
+        %tmp.32 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.33 72 63 82 ];
+        %tmp.33 = getv %tmp.32 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.25 %tmp.26(%tmp.27, %tmp.28, %tmp.30, %tmp.31, %tmp.33);
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_67_75_73_4_stop:
+    }
+    [ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 76; @symbol_functiondef = [drawWindArrow,76,13,26]; @symbol_param<0> = [dc,76,27,29]; @symbol_param<1> = [centerX,76,31,38]; @symbol_param<2> = [centerY,76,40,47]; @symbol_param<3> = [length,76,49,55]; @symbol_param<4> = [angle,76,57,62]; ]
+    function drawWindArrow(dc, centerX, centerY, length, angle) {
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_76_64_102_4_start:
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 78 8 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_76_64_102_4_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_76_64_102_4_stop" ]
+        %radians.1 = local;
+        symbol [ radians %radians.1 78 12 19 ];
+        symbol [ Math %tmp.1 78 22 26 ];
+        %tmp.1 = getm $.Toybox.Math;
+        symbol [ toRadians %tmp.2 78 27 36 ];
+        %tmp.2 = getv function %tmp.1 :toRadians;
+        %tmp.3 = lgetv %angle;
+        symbol [ angle %tmp.3 78 37 42 ];
+        %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+        lputv %radians.1 %tmp.4;
+        symbol [ radians %radians.1 78 12 19 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 81 8 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_76_64_102_4_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_76_64_102_4_stop" ]
+        %endX.2 = local;
+        symbol [ endX %endX.2 81 12 16 ];
+        %tmp.5 = lgetv %centerX;
+        symbol [ centerX %tmp.5 81 19 26 ];
+        %tmp.6 = lgetv %length;
+        symbol [ length %tmp.6 81 29 35 ];
+        symbol [ Math %tmp.7 81 38 42 ];
+        %tmp.7 = getm $.Toybox.Math;
+        symbol [ sin %tmp.8 81 43 46 ];
+        %tmp.8 = getv function %tmp.7 :sin;
+        %tmp.9 = lgetv %radians.1;
+        symbol [ radians %tmp.9 81 47 54 ];
+        %tmp.10 = invoke %tmp.7 %tmp.8(%tmp.9);
+        %tmp.11 = mul %tmp.6 %tmp.10;
+        %tmp.12 = add %tmp.5 %tmp.11;
+        lputv %endX.2 %tmp.12;
+        symbol [ endX %endX.2 81 12 16 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 82 8 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_76_64_102_4_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_76_64_102_4_stop" ]
+        %endY.3 = local;
+        symbol [ endY %endY.3 82 12 16 ];
+        %tmp.13 = lgetv %centerY;
+        symbol [ centerY %tmp.13 82 19 26 ];
+        %tmp.14 = lgetv %length;
+        symbol [ length %tmp.14 82 29 35 ];
+        symbol [ Math %tmp.15 82 38 42 ];
+        %tmp.15 = getm $.Toybox.Math;
+        symbol [ cos %tmp.16 82 43 46 ];
+        %tmp.16 = getv function %tmp.15 :cos;
+        %tmp.17 = lgetv %radians.1;
+        symbol [ radians %tmp.17 82 47 54 ];
+        %tmp.18 = invoke %tmp.15 %tmp.16(%tmp.17);
+        %tmp.19 = mul %tmp.14 %tmp.18;
+        %tmp.20 = sub %tmp.13 %tmp.19;
+        lputv %endY.3 %tmp.20;
+        symbol [ endY %endY.3 82 12 16 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 85 8 ]
+        %tmp.21 = lgetv %dc;
+        symbol [ dc %tmp.21 85 8 10 ];
+        symbol [ setColor %tmp.22 85 11 19 ];
+        %tmp.22 = getv function %tmp.21 :setColor;
+        symbol [ Graphics %tmp.23 85 20 28 ];
+        %tmp.23 = getm $.Toybox.Graphics;
+        symbol [ COLOR_YELLOW %tmp.24 85 29 41 ];
+        %tmp.24 = getv %tmp.23 :COLOR_YELLOW;
+        symbol [ Graphics %tmp.25 85 43 51 ];
+        %tmp.25 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.26 85 52 69 ];
+        %tmp.26 = getv %tmp.25 :COLOR_TRANSPARENT;
+        invoke %tmp.21 %tmp.22(%tmp.24, %tmp.26);
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 86 8 ]
+        %tmp.27 = lgetv %dc;
+        symbol [ dc %tmp.27 86 8 10 ];
+        symbol [ setPenWidth %tmp.28 86 11 22 ];
+        %tmp.28 = getv function %tmp.27 :setPenWidth;
+        %tmp.29 = 3;
+        invoke %tmp.27 %tmp.28(%tmp.29);
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 87 8 ]
+        %tmp.30 = lgetv %dc;
+        symbol [ dc %tmp.30 87 8 10 ];
+        symbol [ drawLine %tmp.31 87 11 19 ];
+        %tmp.31 = getv function %tmp.30 :drawLine;
+        %tmp.32 = lgetv %centerX;
+        symbol [ centerX %tmp.32 87 20 27 ];
+        %tmp.33 = lgetv %centerY;
+        symbol [ centerY %tmp.33 87 29 36 ];
+        %tmp.34 = lgetv %endX.2;
+        symbol [ endX %tmp.34 87 38 42 ];
+        %tmp.35 = lgetv %endY.3;
+        symbol [ endY %tmp.35 87 44 48 ];
+        invoke %tmp.30 %tmp.31(%tmp.32, %tmp.33, %tmp.34, %tmp.35);
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 88 8 ]
+        %tmp.36 = lgetv %dc;
+        symbol [ dc %tmp.36 88 8 10 ];
+        symbol [ setPenWidth %tmp.37 88 11 22 ];
+        %tmp.37 = getv function %tmp.36 :setPenWidth;
+        %tmp.38 = 1;
+        invoke %tmp.36 %tmp.37(%tmp.38);
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 91 8 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_76_64_102_4_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_76_64_102_4_stop" ]
+        %headSize.4 = local;
+        symbol [ headSize %headSize.4 91 12 20 ];
+        %tmp.39 = 10;
+        lputv %headSize.4 %tmp.39;
+        symbol [ headSize %headSize.4 91 12 20 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 92 8 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_76_64_102_4_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_76_64_102_4_stop" ]
+        %headAngle1.5 = local;
+        symbol [ headAngle1 %headAngle1.5 92 12 22 ];
+        symbol [ Math %tmp.40 92 25 29 ];
+        %tmp.40 = getm $.Toybox.Math;
+        symbol [ toRadians %tmp.41 92 30 39 ];
+        %tmp.41 = getv function %tmp.40 :toRadians;
+        %tmp.42 = lgetv %angle;
+        symbol [ angle %tmp.42 92 40 45 ];
+        %tmp.43 = 150;
+        %tmp.44 = add %tmp.42 %tmp.43;
+        %tmp.45 = invoke %tmp.40 %tmp.41(%tmp.44);
+        lputv %headAngle1.5 %tmp.45;
+        symbol [ headAngle1 %headAngle1.5 92 12 22 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 93 8 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_76_64_102_4_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_76_64_102_4_stop" ]
+        %headAngle2.6 = local;
+        symbol [ headAngle2 %headAngle2.6 93 12 22 ];
+        symbol [ Math %tmp.46 93 25 29 ];
+        %tmp.46 = getm $.Toybox.Math;
+        symbol [ toRadians %tmp.47 93 30 39 ];
+        %tmp.47 = getv function %tmp.46 :toRadians;
+        %tmp.48 = lgetv %angle;
+        symbol [ angle %tmp.48 93 40 45 ];
+        %tmp.49 = 150;
+        %tmp.50 = sub %tmp.48 %tmp.49;
+        %tmp.51 = invoke %tmp.46 %tmp.47(%tmp.50);
+        lputv %headAngle2.6 %tmp.51;
+        symbol [ headAngle2 %headAngle2.6 93 12 22 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 95 8 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_76_64_102_4_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_76_64_102_4_stop" ]
+        %head1X.7 = local;
+        symbol [ head1X %head1X.7 95 12 18 ];
+        %tmp.52 = lgetv %endX.2;
+        symbol [ endX %tmp.52 95 21 25 ];
+        %tmp.53 = lgetv %headSize.4;
+        symbol [ headSize %tmp.53 95 28 36 ];
+        symbol [ Math %tmp.54 95 39 43 ];
+        %tmp.54 = getm $.Toybox.Math;
+        symbol [ sin %tmp.55 95 44 47 ];
+        %tmp.55 = getv function %tmp.54 :sin;
+        %tmp.56 = lgetv %headAngle1.5;
+        symbol [ headAngle1 %tmp.56 95 48 58 ];
+        %tmp.57 = invoke %tmp.54 %tmp.55(%tmp.56);
+        %tmp.58 = mul %tmp.53 %tmp.57;
+        %tmp.59 = add %tmp.52 %tmp.58;
+        lputv %head1X.7 %tmp.59;
+        symbol [ head1X %head1X.7 95 12 18 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 96 8 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_76_64_102_4_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_76_64_102_4_stop" ]
+        %head1Y.8 = local;
+        symbol [ head1Y %head1Y.8 96 12 18 ];
+        %tmp.60 = lgetv %endY.3;
+        symbol [ endY %tmp.60 96 21 25 ];
+        %tmp.61 = lgetv %headSize.4;
+        symbol [ headSize %tmp.61 96 28 36 ];
+        symbol [ Math %tmp.62 96 39 43 ];
+        %tmp.62 = getm $.Toybox.Math;
+        symbol [ cos %tmp.63 96 44 47 ];
+        %tmp.63 = getv function %tmp.62 :cos;
+        %tmp.64 = lgetv %headAngle1.5;
+        symbol [ headAngle1 %tmp.64 96 48 58 ];
+        %tmp.65 = invoke %tmp.62 %tmp.63(%tmp.64);
+        %tmp.66 = mul %tmp.61 %tmp.65;
+        %tmp.67 = sub %tmp.60 %tmp.66;
+        lputv %head1Y.8 %tmp.67;
+        symbol [ head1Y %head1Y.8 96 12 18 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 97 8 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_76_64_102_4_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_76_64_102_4_stop" ]
+        %head2X.9 = local;
+        symbol [ head2X %head2X.9 97 12 18 ];
+        %tmp.68 = lgetv %endX.2;
+        symbol [ endX %tmp.68 97 21 25 ];
+        %tmp.69 = lgetv %headSize.4;
+        symbol [ headSize %tmp.69 97 28 36 ];
+        symbol [ Math %tmp.70 97 39 43 ];
+        %tmp.70 = getm $.Toybox.Math;
+        symbol [ sin %tmp.71 97 44 47 ];
+        %tmp.71 = getv function %tmp.70 :sin;
+        %tmp.72 = lgetv %headAngle2.6;
+        symbol [ headAngle2 %tmp.72 97 48 58 ];
+        %tmp.73 = invoke %tmp.70 %tmp.71(%tmp.72);
+        %tmp.74 = mul %tmp.69 %tmp.73;
+        %tmp.75 = add %tmp.68 %tmp.74;
+        lputv %head2X.9 %tmp.75;
+        symbol [ head2X %head2X.9 97 12 18 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 98 8 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_76_64_102_4_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_76_64_102_4_stop" ]
+        %head2Y.10 = local;
+        symbol [ head2Y %head2Y.10 98 12 18 ];
+        %tmp.76 = lgetv %endY.3;
+        symbol [ endY %tmp.76 98 21 25 ];
+        %tmp.77 = lgetv %headSize.4;
+        symbol [ headSize %tmp.77 98 28 36 ];
+        symbol [ Math %tmp.78 98 39 43 ];
+        %tmp.78 = getm $.Toybox.Math;
+        symbol [ cos %tmp.79 98 44 47 ];
+        %tmp.79 = getv function %tmp.78 :cos;
+        %tmp.80 = lgetv %headAngle2.6;
+        symbol [ headAngle2 %tmp.80 98 48 58 ];
+        %tmp.81 = invoke %tmp.78 %tmp.79(%tmp.80);
+        %tmp.82 = mul %tmp.77 %tmp.81;
+        %tmp.83 = sub %tmp.76 %tmp.82;
+        lputv %head2Y.10 %tmp.83;
+        symbol [ head2Y %head2Y.10 98 12 18 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 100 8 ]
+        %tmp.84 = lgetv %dc;
+        symbol [ dc %tmp.84 100 8 10 ];
+        symbol [ drawLine %tmp.85 100 11 19 ];
+        %tmp.85 = getv function %tmp.84 :drawLine;
+        %tmp.86 = lgetv %endX.2;
+        symbol [ endX %tmp.86 100 20 24 ];
+        %tmp.87 = lgetv %endY.3;
+        symbol [ endY %tmp.87 100 26 30 ];
+        %tmp.88 = lgetv %head1X.7;
+        symbol [ head1X %tmp.88 100 32 38 ];
+        %tmp.89 = lgetv %head1Y.8;
+        symbol [ head1Y %tmp.89 100 40 46 ];
+        invoke %tmp.84 %tmp.85(%tmp.86, %tmp.87, %tmp.88, %tmp.89);
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 101 8 ]
+        %tmp.90 = lgetv %dc;
+        symbol [ dc %tmp.90 101 8 10 ];
+        symbol [ drawLine %tmp.91 101 11 19 ];
+        %tmp.91 = getv function %tmp.90 :drawLine;
+        %tmp.92 = lgetv %endX.2;
+        symbol [ endX %tmp.92 101 20 24 ];
+        %tmp.93 = lgetv %endY.3;
+        symbol [ endY %tmp.93 101 26 30 ];
+        %tmp.94 = lgetv %head2X.9;
+        symbol [ head2X %tmp.94 101 32 38 ];
+        %tmp.95 = lgetv %head2Y.10;
+        symbol [ head2Y %tmp.95 101 40 46 ];
+        invoke %tmp.90 %tmp.91(%tmp.92, %tmp.93, %tmp.94, %tmp.95);
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_76_64_102_4_stop:
+    }
+    [ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 105; @symbol_functiondef = [getDirectionName,105,13,29]; @symbol_param<0> = [angle,105,30,35]; ]
+    function getDirectionName(angle) {
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_105_37_117_4_start:
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 106 8 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_105_37_117_4_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_105_37_117_4_stop" ]
+        %directions.1 = local;
+        symbol [ directions %directions.1 106 12 22 ];
+        %tmp.1 = newa 16;
+        %tmp.2 = "N";
+        %tmp.3 = dup %tmp.1;
+        %tmp.4 = aputv %tmp.3 0 %tmp.2;
+        %tmp.5 = "NNE";
+        %tmp.6 = dup %tmp.4;
+        %tmp.7 = aputv %tmp.6 1 %tmp.5;
+        %tmp.8 = "NE";
+        %tmp.9 = dup %tmp.7;
+        %tmp.10 = aputv %tmp.9 2 %tmp.8;
+        %tmp.11 = "ENE";
+        %tmp.12 = dup %tmp.10;
+        %tmp.13 = aputv %tmp.12 3 %tmp.11;
+        %tmp.14 = "E";
+        %tmp.15 = dup %tmp.13;
+        %tmp.16 = aputv %tmp.15 4 %tmp.14;
+        %tmp.17 = "ESE";
+        %tmp.18 = dup %tmp.16;
+        %tmp.19 = aputv %tmp.18 5 %tmp.17;
+        %tmp.20 = "SE";
+        %tmp.21 = dup %tmp.19;
+        %tmp.22 = aputv %tmp.21 6 %tmp.20;
+        %tmp.23 = "SSE";
+        %tmp.24 = dup %tmp.22;
+        %tmp.25 = aputv %tmp.24 7 %tmp.23;
+        %tmp.26 = "S";
+        %tmp.27 = dup %tmp.25;
+        %tmp.28 = aputv %tmp.27 8 %tmp.26;
+        %tmp.29 = "SSW";
+        %tmp.30 = dup %tmp.28;
+        %tmp.31 = aputv %tmp.30 9 %tmp.29;
+        %tmp.32 = "SW";
+        %tmp.33 = dup %tmp.31;
+        %tmp.34 = aputv %tmp.33 10 %tmp.32;
+        %tmp.35 = "WSW";
+        %tmp.36 = dup %tmp.34;
+        %tmp.37 = aputv %tmp.36 11 %tmp.35;
+        %tmp.38 = "W";
+        %tmp.39 = dup %tmp.37;
+        %tmp.40 = aputv %tmp.39 12 %tmp.38;
+        %tmp.41 = "WNW";
+        %tmp.42 = dup %tmp.40;
+        %tmp.43 = aputv %tmp.42 13 %tmp.41;
+        %tmp.44 = "NW";
+        %tmp.45 = dup %tmp.43;
+        %tmp.46 = aputv %tmp.45 14 %tmp.44;
+        %tmp.47 = "NNW";
+        %tmp.48 = dup %tmp.46;
+        %tmp.49 = aputv %tmp.48 15 %tmp.47;
+        lputv %directions.1 %tmp.49;
+        symbol [ directions %directions.1 106 12 22 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 115 8 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_105_37_117_4_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_105_37_117_4_stop" ]
+        %index.2 = local;
+        symbol [ index %index.2 115 12 17 ];
+        symbol [ Math %tmp.50 115 20 24 ];
+        %tmp.50 = getm $.Toybox.Math;
+        symbol [ round %tmp.51 115 25 30 ];
+        %tmp.51 = getv function %tmp.50 :round;
+        %tmp.52 = lgetv %angle;
+        symbol [ angle %tmp.52 115 31 36 ];
+        %tmp.53 = 22.5;
+        %tmp.54 = div %tmp.52 %tmp.53;
+        %tmp.55 = invoke %tmp.50 %tmp.51(%tmp.54);
+        %tmp.56 = 16;
+        %tmp.57 = mod %tmp.55 %tmp.56;
+        lputv %index.2 %tmp.57;
+        symbol [ index %index.2 115 12 17 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 116 8 ]
+        %tmp.58 = lgetv %directions.1;
+        symbol [ directions %tmp.58 116 15 25 ];
+        %tmp.59 = lgetv %index.2;
+        symbol [ index %tmp.59 116 26 31 ];
+        %tmp.60 = agetv %tmp.58 %tmp.59;
+        ret %tmp.60;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_105_37_117_4_stop:
+    }
+}
+[ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 121; @symbol_classdef = [WindAnglePickerDelegate,121,6,29]; @symbol_extends<0> = [WatchUi,121,38,45]; @symbol_extends<1> = [BehaviorDelegate,121,46,62]; ]
+class WindAnglePickerDelegate extends WatchUi.BehaviorDelegate {
+    [ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 121; ]
+    <init> {
+    }
+    [ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 121; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 122; @position = 16; @symbol_vardef = [mModel,122,16,22]; ]
+    private
+    var mModel;
+    [ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 123; @position = 16; @symbol_vardef = [mPickerView,123,16,27]; ]
+    private
+    var mPickerView;
+    [ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 124; @position = 16; @symbol_vardef = [mApp,124,16,20]; ]
+    private
+    var mApp;
+    [ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 126; @symbol_functiondef = [initialize,126,13,23]; @symbol_param<0> = [model,126,24,29]; @symbol_param<1> = [app,126,31,34]; ]
+    function initialize(model, app) as Void {
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_126_36_131_4_start:
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 127 8 ]
+        symbol [ BehaviorDelegate %tmp.2 127 8 24 ];
+        %tmp.2 = getv ? :BehaviorDelegate;
+        symbol [ initialize %tmp.3 127 25 35 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 128 8 ]
+        %tmp.4 = lgetv %model;
+        symbol [ model %tmp.4 128 17 22 ];
+        symbol [ mModel ? 128 8 14 ];
+        putv self :mModel %tmp.4;
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 129 8 ]
+        %tmp.5 = null;
+        symbol [ mPickerView ? 129 8 19 ];
+        putv self :mPickerView %tmp.5;
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 130 8 ]
+        %tmp.6 = lgetv %app;
+        symbol [ app %tmp.6 130 15 18 ];
+        symbol [ mApp ? 130 8 12 ];
+        putv self :mApp %tmp.6;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_126_36_131_4_stop:
+    }
+    [ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 133; @symbol_functiondef = [setPickerView,133,13,26]; @symbol_param<0> = [view,133,27,31]; ]
+    function setPickerView(view) {
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_133_33_135_4_start:
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 134 8 ]
+        %tmp.1 = lgetv %view;
+        symbol [ view %tmp.1 134 22 26 ];
+        symbol [ mPickerView ? 134 8 19 ];
+        putv self :mPickerView %tmp.1;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_133_33_135_4_stop:
+    }
+    [ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 138; @symbol_functiondef = [onPreviousPage,138,13,27]; ]
+    function onPreviousPage() {
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_138_30_148_4_start:
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 139 8 ]
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_139_8_146_8_if_stmt:
+        symbol [ mPickerView %tmp.2 139 12 23 ];
+        %tmp.2 = getv ? :mPickerView;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_139_8_146_8_if_end;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_139_8_146_8_if_true:
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_139_33_146_8_start:
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 141 12 ]
+        symbol [ mPickerView %tmp.5 141 12 23 ];
+        %tmp.5 = getv self :mPickerView;
+        %tmp.6 = as %tmp.5 { (!Null) };
+        symbol [ mPickerView %tmp.8 141 38 49 ];
+        %tmp.8 = getv ? :mPickerView;
+        %tmp.9 = as %tmp.8 { (!Null) };
+        symbol [ mWindAngle %tmp.10 141 50 60 ];
+        %tmp.10 = getv %tmp.9 :mWindAngle;
+        %tmp.11 = 22.5;
+        %tmp.12 = sub %tmp.10 %tmp.11;
+        %tmp.13 = 360;
+        %tmp.14 = mod %tmp.12 %tmp.13;
+        symbol [ mWindAngle ? 141 24 34 ];
+        putv %tmp.6 :mWindAngle %tmp.14;
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 142 12 ]
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_142_12_144_12_if_stmt:
+        symbol [ mPickerView %tmp.16 142 16 27 ];
+        %tmp.16 = getv ? :mPickerView;
+        %tmp.17 = as %tmp.16 { (!Null) };
+        symbol [ mWindAngle %tmp.18 142 28 38 ];
+        %tmp.18 = getv %tmp.17 :mWindAngle;
+        %tmp.19 = 0;
+        %tmp.20 = lt %tmp.18 %tmp.19;
+        bf %tmp.20 @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_142_12_144_12_if_end;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_142_12_144_12_if_true:
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_142_44_144_12_start:
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 143 16 ]
+        symbol [ mPickerView %tmp.21 143 16 27 ];
+        %tmp.21 = getv self :mPickerView;
+        %tmp.22 = as %tmp.21 { (!Null) };
+        symbol [ mPickerView %tmp.23 143 16 27 ];
+        %tmp.23 = getv self :mPickerView;
+        %tmp.24 = as %tmp.23 { (!Null) };
+        symbol [ mWindAngle %tmp.25 143 28 38 ];
+        %tmp.25 = getv %tmp.24 :mWindAngle;
+        %tmp.26 = 360;
+        %tmp.27 = add %tmp.25 %tmp.26;
+        symbol [ mWindAngle ? 143 28 38 ];
+        putv %tmp.22 :mWindAngle dup %tmp.27;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_142_44_144_12_stop:
+        goto @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_142_12_144_12_if_end;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_142_12_144_12_if_end:
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 145 12 ]
+        symbol [ WatchUi %tmp.28 145 12 19 ];
+        %tmp.28 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.29 145 20 33 ];
+        %tmp.29 = getv function %tmp.28 :requestUpdate;
+        invoke %tmp.28 %tmp.29();
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_139_33_146_8_stop:
+        goto @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_139_8_146_8_if_end;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_139_8_146_8_if_end:
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 147 8 ]
+        %tmp.30 = true;
+        ret %tmp.30;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_138_30_148_4_stop:
+    }
+    [ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 151; @symbol_functiondef = [onNextPage,151,13,23]; ]
+    function onNextPage() {
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_151_26_158_4_start:
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 152 8 ]
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_152_8_156_8_if_stmt:
+        symbol [ mPickerView %tmp.2 152 12 23 ];
+        %tmp.2 = getv ? :mPickerView;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_152_8_156_8_if_end;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_152_8_156_8_if_true:
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_152_33_156_8_start:
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 154 12 ]
+        symbol [ mPickerView %tmp.5 154 12 23 ];
+        %tmp.5 = getv self :mPickerView;
+        %tmp.6 = as %tmp.5 { (!Null) };
+        symbol [ mPickerView %tmp.8 154 38 49 ];
+        %tmp.8 = getv ? :mPickerView;
+        %tmp.9 = as %tmp.8 { (!Null) };
+        symbol [ mWindAngle %tmp.10 154 50 60 ];
+        %tmp.10 = getv %tmp.9 :mWindAngle;
+        %tmp.11 = 22.5;
+        %tmp.12 = add %tmp.10 %tmp.11;
+        %tmp.13 = 360;
+        %tmp.14 = mod %tmp.12 %tmp.13;
+        symbol [ mWindAngle ? 154 24 34 ];
+        putv %tmp.6 :mWindAngle %tmp.14;
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 155 12 ]
+        symbol [ WatchUi %tmp.15 155 12 19 ];
+        %tmp.15 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.16 155 20 33 ];
+        %tmp.16 = getv function %tmp.15 :requestUpdate;
+        invoke %tmp.15 %tmp.16();
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_152_33_156_8_stop:
+        goto @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_152_8_156_8_if_end;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_152_8_156_8_if_end:
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 157 8 ]
+        %tmp.17 = true;
+        ret %tmp.17;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_151_26_158_4_stop:
+    }
+    [ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 161; @symbol_functiondef = [onSelect,161,13,21]; ]
+    function onSelect() {
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_161_24_198_4_start:
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 162 8 ]
+        try @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_162_8_195_8_beginTry @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_162_8_195_8_endTry @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_162_8_195_8_catch @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_162_8_195_8_finally;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_162_8_195_8_beginTry:
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_162_12_188_8_start:
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 164 12 ]
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_164_12_187_12_if_stmt:
+        symbol [ mPickerView %tmp.2 164 16 27 ];
+        %tmp.2 = getv ? :mPickerView;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_164_12_187_12_if_end;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_164_12_187_12_if_true:
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_164_37_187_12_start:
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 165 16 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_164_37_187_12_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_164_37_187_12_stop" ]
+        %windAngle.1 = local;
+        symbol [ windAngle %windAngle.1 165 20 29 ];
+        symbol [ mPickerView %tmp.6 165 32 43 ];
+        %tmp.6 = getv ? :mPickerView;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ mWindAngle %tmp.8 165 44 54 ];
+        %tmp.8 = getv %tmp.7 :mWindAngle;
+        lputv %windAngle.1 %tmp.8;
+        symbol [ windAngle %windAngle.1 165 20 29 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 168 16 ]
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_168_16_175_16_if_stmt:
+        symbol [ mModel %tmp.10 168 20 26 ];
+        %tmp.10 = getv ? :mModel;
+        %tmp.11 = null;
+        %tmp.12 = ne %tmp.10 %tmp.11;
+        bf %tmp.12 @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_168_16_175_16_if_end;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_168_16_175_16_if_true:
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_168_36_175_16_start:
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 170 20 ]
+        symbol [ mModel %tmp.13 170 20 26 ];
+        %tmp.13 = getv self :mModel;
+        %tmp.14 = as %tmp.13 { (!Null) };
+        symbol [ getData %tmp.15 170 27 34 ];
+        %tmp.15 = getv function %tmp.14 :getData;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        %tmp.17 = lgetv %windAngle.1;
+        symbol [ windAngle %tmp.17 170 59 68 ];
+        %tmp.18 = "initialWindAngle";
+        aputv %tmp.16 %tmp.18 %tmp.17;
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 171 20 ]
+        symbol [ System %tmp.19 171 20 26 ];
+        %tmp.19 = getm $.Toybox.System;
+        symbol [ println %tmp.20 171 27 34 ];
+        %tmp.20 = getv function %tmp.19 :println;
+        %tmp.21 = "Selected wind angle: ";
+        %tmp.22 = lgetv %windAngle.1;
+        symbol [ windAngle %tmp.22 171 61 70 ];
+        %tmp.23 = add %tmp.21 %tmp.22;
+        invoke %tmp.19 %tmp.20(%tmp.23);
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 174 20 ]
+        symbol [ mModel %tmp.24 174 20 26 ];
+        %tmp.24 = getv self :mModel;
+        symbol [ getData %tmp.25 174 27 34 ];
+        %tmp.25 = getv function %tmp.24 :getData;
+        %tmp.26 = invoke %tmp.24 %tmp.25();
+        %tmp.27 = lgetv %windAngle.1;
+        symbol [ windAngle %tmp.27 174 62 71 ];
+        %tmp.28 = "manualWindDirection";
+        aputv %tmp.26 %tmp.28 %tmp.27;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_168_36_175_16_stop:
+        goto @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_168_16_175_16_if_end;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_168_16_175_16_if_end:
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 178 16 ]
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_178_16_186_16_if_stmt:
+        symbol [ mApp %tmp.30 178 20 24 ];
+        %tmp.30 = getv ? :mApp;
+        %tmp.31 = null;
+        %tmp.32 = ne %tmp.30 %tmp.31;
+        bf %tmp.32 @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_178_16_186_16_if_end;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_178_16_186_16_if_true:
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_178_34_186_16_start:
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 180 20 ]
+        symbol [ mApp %tmp.34 180 20 24 ];
+        %tmp.34 = getv ? :mApp;
+        %tmp.35 = as %tmp.34 { (!Null) };
+        symbol [ startActivitySession %tmp.36 180 25 45 ];
+        %tmp.36 = getv function %tmp.35 :startActivitySession;
+        invoke %tmp.35 %tmp.36();
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 183 20 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_178_34_186_16_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_178_34_186_16_stop" ]
+        %view.2 = local;
+        symbol [ view %view.2 183 24 28 ];
+        symbol [ FoilTrackerView %tmp.40 183 35 50 ];
+        %tmp.40 = getv ? :FoilTrackerView;
+        symbol [ mModel %tmp.42 183 51 57 ];
+        %tmp.42 = getv ? :mModel;
+        %tmp.37 = newc %tmp.40 (%tmp.42);
+        lputv %view.2 %tmp.37;
+        symbol [ view %view.2 183 24 28 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 184 20 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_178_34_186_16_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_178_34_186_16_stop" ]
+        %delegate.3 = local;
+        symbol [ delegate %delegate.3 184 24 32 ];
+        symbol [ FoilTrackerDelegate %tmp.46 184 39 58 ];
+        %tmp.46 = getv ? :FoilTrackerDelegate;
+        %tmp.47 = lgetv %view.2;
+        symbol [ view %tmp.47 184 59 63 ];
+        symbol [ mModel %tmp.49 184 65 71 ];
+        %tmp.49 = getv ? :mModel;
+        symbol [ mApp %tmp.51 184 73 77 ];
+        %tmp.51 = getv ? :mApp;
+        symbol [ getWindTracker %tmp.52 184 78 92 ];
+        %tmp.52 = getv function %tmp.51 :getWindTracker;
+        %tmp.53 = invoke %tmp.51 %tmp.52();
+        %tmp.43 = newc %tmp.46 (%tmp.47, %tmp.49, %tmp.53);
+        lputv %delegate.3 %tmp.43;
+        symbol [ delegate %delegate.3 184 24 32 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 185 20 ]
+        symbol [ WatchUi %tmp.54 185 20 27 ];
+        %tmp.54 = getm $.Toybox.WatchUi;
+        symbol [ switchToView %tmp.55 185 28 40 ];
+        %tmp.55 = getv function %tmp.54 :switchToView;
+        %tmp.56 = lgetv %view.2;
+        symbol [ view %tmp.56 185 41 45 ];
+        %tmp.57 = lgetv %delegate.3;
+        symbol [ delegate %tmp.57 185 47 55 ];
+        symbol [ WatchUi %tmp.58 185 57 64 ];
+        %tmp.58 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.59 185 65 80 ];
+        %tmp.59 = getv %tmp.58 :SLIDE_IMMEDIATE;
+        invoke %tmp.54 %tmp.55(%tmp.56, %tmp.57, %tmp.59);
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_178_34_186_16_stop:
+        goto @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_178_16_186_16_if_end;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_178_16_186_16_if_end:
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_164_37_187_12_stop:
+        goto @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_164_12_187_12_if_end;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_164_12_187_12_if_end:
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_162_12_188_8_stop:
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_162_8_195_8_endTry:
+        jsr @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_162_8_195_8_finally;
+        goto @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_162_8_195_8_end;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_162_8_195_8_catch:
+        %tmp.60 = exception;
+        push %tmp.60;
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 188 10 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_162_8_195_8_catch" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_188_10_195_8_end" ]
+        %e.4 = local;
+        symbol [ e %e.4 188 17 18 ];
+        %tmp.61 = dup %tmp.60;
+        lputv %e.4 %tmp.61;
+        symbol [ e %e.4 188 17 18 ];
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_188_20_195_8_start:
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 189 12 ]
+        symbol [ System %tmp.62 189 12 18 ];
+        %tmp.62 = getm $.Toybox.System;
+        symbol [ println %tmp.63 189 19 26 ];
+        %tmp.63 = getv function %tmp.62 :println;
+        %tmp.64 = "Error in wind angle selection: ";
+        %tmp.65 = lgetv %e.4;
+        symbol [ e %tmp.65 189 63 64 ];
+        symbol [ getErrorMessage %tmp.66 189 65 80 ];
+        %tmp.66 = getv function %tmp.65 :getErrorMessage;
+        %tmp.67 = invoke %tmp.65 %tmp.66();
+        %tmp.68 = add %tmp.64 %tmp.67;
+        invoke %tmp.62 %tmp.63(%tmp.68);
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 192 12 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_188_20_195_8_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_188_20_195_8_stop" ]
+        %view.5 = local;
+        symbol [ view %view.5 192 16 20 ];
+        symbol [ FoilTrackerView %tmp.72 192 27 42 ];
+        %tmp.72 = getv ? :FoilTrackerView;
+        symbol [ mModel %tmp.74 192 43 49 ];
+        %tmp.74 = getv ? :mModel;
+        %tmp.69 = newc %tmp.72 (%tmp.74);
+        lputv %view.5 %tmp.69;
+        symbol [ view %view.5 192 16 20 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 193 12 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_188_20_195_8_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_188_20_195_8_stop" ]
+        %delegate.6 = local;
+        symbol [ delegate %delegate.6 193 16 24 ];
+        symbol [ FoilTrackerDelegate %tmp.78 193 31 50 ];
+        %tmp.78 = getv ? :FoilTrackerDelegate;
+        %tmp.79 = lgetv %view.5;
+        symbol [ view %tmp.79 193 51 55 ];
+        symbol [ mModel %tmp.81 193 57 63 ];
+        %tmp.81 = getv ? :mModel;
+        symbol [ mApp %tmp.83 193 65 69 ];
+        %tmp.83 = getv ? :mApp;
+        symbol [ getWindTracker %tmp.84 193 70 84 ];
+        %tmp.84 = getv function %tmp.83 :getWindTracker;
+        %tmp.85 = invoke %tmp.83 %tmp.84();
+        %tmp.75 = newc %tmp.78 (%tmp.79, %tmp.81, %tmp.85);
+        lputv %delegate.6 %tmp.75;
+        symbol [ delegate %delegate.6 193 16 24 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 194 12 ]
+        symbol [ WatchUi %tmp.86 194 12 19 ];
+        %tmp.86 = getm $.Toybox.WatchUi;
+        symbol [ switchToView %tmp.87 194 20 32 ];
+        %tmp.87 = getv function %tmp.86 :switchToView;
+        %tmp.88 = lgetv %view.5;
+        symbol [ view %tmp.88 194 33 37 ];
+        %tmp.89 = lgetv %delegate.6;
+        symbol [ delegate %tmp.89 194 39 47 ];
+        symbol [ WatchUi %tmp.90 194 49 56 ];
+        %tmp.90 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.91 194 57 72 ];
+        %tmp.91 = getv %tmp.90 :SLIDE_IMMEDIATE;
+        invoke %tmp.86 %tmp.87(%tmp.88, %tmp.89, %tmp.91);
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_188_20_195_8_stop:
+        jsr @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_162_8_195_8_finally;
+        pop;
+        goto @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_162_8_195_8_end;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_188_10_195_8_end:
+        try @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_162_8_195_8_catch @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_188_10_195_8_end @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_188_10_195_8_end @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_162_8_195_8_finally;
+        jsr @C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_162_8_195_8_finally;
+        throw %tmp.60;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_162_8_195_8_finally:
+        jsrret;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_162_8_195_8_end:
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 197 8 ]
+        %tmp.92 = true;
+        ret %tmp.92;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_161_24_198_4_stop:
+    }
+    [ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 201; @symbol_functiondef = [onBack,201,13,19]; ]
+    function onBack() {
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_201_22_210_4_start:
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 203 8 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_201_22_210_4_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_201_22_210_4_stop" ]
+        %app.1 = local;
+        symbol [ app %app.1 203 12 15 ];
+        symbol [ Application %tmp.2 203 18 29 ];
+        %tmp.2 = getv ? :Application;
+        symbol [ getApp %tmp.3 203 30 36 ];
+        %tmp.3 = getv function %tmp.2 :getApp;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %app.1 %tmp.4;
+        symbol [ app %app.1 203 12 15 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 204 8 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_201_22_210_4_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_201_22_210_4_stop" ]
+        %windView.2 = local;
+        symbol [ windView %windView.2 204 12 20 ];
+        symbol [ WindStrengthPickerView %tmp.8 204 27 49 ];
+        %tmp.8 = getv ? :WindStrengthPickerView;
+        symbol [ mModel %tmp.10 204 50 56 ];
+        %tmp.10 = getv ? :mModel;
+        %tmp.5 = newc %tmp.8 (%tmp.10);
+        lputv %windView.2 %tmp.5;
+        symbol [ windView %windView.2 204 12 20 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 205 8 ]
+        [ "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_201_22_210_4_start" "C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_201_22_210_4_stop" ]
+        %windDelegate.3 = local;
+        symbol [ windDelegate %windDelegate.3 205 12 24 ];
+        symbol [ StartupWindStrengthDelegate %tmp.14 205 31 58 ];
+        %tmp.14 = getv ? :StartupWindStrengthDelegate;
+        symbol [ mModel %tmp.16 205 59 65 ];
+        %tmp.16 = getv ? :mModel;
+        %tmp.17 = lgetv %app.1;
+        symbol [ app %tmp.17 205 67 70 ];
+        %tmp.11 = newc %tmp.14 (%tmp.16, %tmp.17);
+        lputv %windDelegate.3 %tmp.11;
+        symbol [ windDelegate %windDelegate.3 205 12 24 ];
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 206 8 ]
+        %tmp.18 = lgetv %windDelegate.3;
+        symbol [ windDelegate %tmp.18 206 8 20 ];
+        symbol [ setPickerView %tmp.19 206 21 34 ];
+        %tmp.19 = getv function %tmp.18 :setPickerView;
+        %tmp.20 = lgetv %windView.2;
+        symbol [ windView %tmp.20 206 35 43 ];
+        invoke %tmp.18 %tmp.19(%tmp.20);
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 208 8 ]
+        symbol [ WatchUi %tmp.21 208 8 15 ];
+        %tmp.21 = getm $.Toybox.WatchUi;
+        symbol [ switchToView %tmp.22 208 16 28 ];
+        %tmp.22 = getv function %tmp.21 :switchToView;
+        %tmp.23 = lgetv %windView.2;
+        symbol [ windView %tmp.23 208 29 37 ];
+        %tmp.24 = lgetv %windDelegate.3;
+        symbol [ windDelegate %tmp.24 208 39 51 ];
+        symbol [ WatchUi %tmp.25 208 53 60 ];
+        %tmp.25 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.26 208 61 71 ];
+        %tmp.26 = getv %tmp.25 :SLIDE_DOWN;
+        invoke %tmp.21 %tmp.22(%tmp.23, %tmp.24, %tmp.26);
+[ "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc" 209 8 ]
+        %tmp.27 = true;
+        ret %tmp.27;
+C_Users_skyeAM_OneDrive___Verona_Capital_Documents_garmin_FoilTracker_source_WindAnglePicker_mc_201_22_210_4_stop:
+    }
+}
+[ @file = "C:\Users\skyeAM\OneDrive - Verona Capital\Documents\garmin\FoilTracker\source\WindAnglePicker.mc"; @line = 4; ]
+<init> {
+}

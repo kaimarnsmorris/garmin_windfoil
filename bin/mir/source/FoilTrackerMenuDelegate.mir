@@ -1,0 +1,217 @@
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [WatchUi,1,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [System,2,13,19]; ]
+using Toybox.System;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc"; @line = 5; @symbol_classdef = [FoilTrackerMenuDelegate,5,6,29]; @symbol_extends<0> = [WatchUi,5,38,45]; @symbol_extends<1> = [MenuInputDelegate,5,46,63]; ]
+class FoilTrackerMenuDelegate extends WatchUi.MenuInputDelegate {
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc"; @line = 6; @position = 16; @symbol_vardef = [mModel,6,16,22]; ]
+    private
+    var mModel;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc"; @line = 8; @symbol_functiondef = [initialize,8,13,23]; @symbol_param<0> = [model,8,24,29]; ]
+    function initialize(model) as Void {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_8_31_11_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc" 9 8 ]
+        symbol [ MenuInputDelegate %tmp.2 9 8 25 ];
+        %tmp.2 = getv ? :MenuInputDelegate;
+        symbol [ initialize %tmp.3 9 26 36 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc" 10 8 ]
+        %tmp.4 = lgetv %model;
+        symbol [ model %tmp.4 10 17 22 ];
+        symbol [ mModel ? 10 8 14 ];
+        putv self :mModel %tmp.4;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_8_31_11_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc"; @line = 14; @symbol_functiondef = [onMenuItem,14,13,23]; @symbol_param<0> = [item,14,24,28]; ]
+    function onMenuItem(item) {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_14_30_36_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc" 15 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_15_8_35_8_if_stmt:
+        %tmp.1 = lgetv %item;
+        symbol [ item %tmp.1 15 12 16 ];
+        %tmp.3 = const :menuItemReset;
+        symbol [ menuItemReset %tmp.3 15 21 34 const ];
+        %tmp.4 = eq %tmp.1 %tmp.3;
+        bf %tmp.4 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_15_8_35_8_if_false;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_15_8_35_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_15_36_23_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc" 17 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_15_36_23_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_15_36_23_8_stop" ]
+        %data.1 = local;
+        symbol [ data %data.1 17 16 20 ];
+        symbol [ mModel %tmp.6 17 23 29 ];
+        %tmp.6 = getv ? :mModel;
+        symbol [ getData %tmp.7 17 30 37 ];
+        %tmp.7 = getv function %tmp.6 :getData;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        lputv %data.1 %tmp.8;
+        symbol [ data %data.1 17 16 20 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc" 18 12 ]
+        %tmp.9 = lgetv %data.1;
+        symbol [ data %tmp.9 18 12 16 ];
+        %tmp.10 = 0.0;
+        %tmp.11 = "maxSpeed";
+        aputv %tmp.9 %tmp.11 %tmp.10;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc" 19 12 ]
+        %tmp.12 = lgetv %data.1;
+        symbol [ data %tmp.12 19 12 16 ];
+        %tmp.13 = 0.0;
+        %tmp.14 = "max3sSpeed";
+        aputv %tmp.12 %tmp.14 %tmp.13;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc" 20 12 ]
+        %tmp.15 = lgetv %data.1;
+        symbol [ data %tmp.15 20 12 16 ];
+        %tmp.16 = 0;
+        %tmp.17 = "timeAboveThreshold";
+        aputv %tmp.15 %tmp.17 %tmp.16;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc" 21 12 ]
+        %tmp.18 = lgetv %data.1;
+        symbol [ data %tmp.18 21 12 16 ];
+        %tmp.19 = 0.0;
+        %tmp.20 = "percentOnFoil";
+        aputv %tmp.18 %tmp.20 %tmp.19;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc" 22 12 ]
+        symbol [ WatchUi %tmp.21 22 12 19 ];
+        %tmp.21 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.22 22 20 27 ];
+        %tmp.22 = getv function %tmp.21 :popView;
+        symbol [ WatchUi %tmp.23 22 28 35 ];
+        %tmp.23 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.24 22 36 46 ];
+        %tmp.24 = getv %tmp.23 :SLIDE_DOWN;
+        invoke %tmp.21 %tmp.22(%tmp.24);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_15_36_23_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_15_8_35_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_15_8_35_8_if_false:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc" 23 15 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_23_15_35_8_if_stmt:
+        %tmp.25 = lgetv %item;
+        symbol [ item %tmp.25 23 19 23 ];
+        %tmp.27 = const :menuItemHistory;
+        symbol [ menuItemHistory %tmp.27 23 28 43 const ];
+        %tmp.28 = eq %tmp.25 %tmp.27;
+        bf %tmp.28 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_23_15_35_8_if_false;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_23_15_35_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_23_45_26_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc" 25 12 ]
+        symbol [ WatchUi %tmp.29 25 12 19 ];
+        %tmp.29 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.30 25 20 28 ];
+        %tmp.30 = getv function %tmp.29 :pushView;
+        symbol [ HistoryView %tmp.34 25 33 44 ];
+        %tmp.34 = getv ? :HistoryView;
+        %tmp.31 = newc %tmp.34 ();
+        symbol [ HistoryDelegate %tmp.38 25 52 67 ];
+        %tmp.38 = getv ? :HistoryDelegate;
+        %tmp.35 = newc %tmp.38 ();
+        symbol [ WatchUi %tmp.39 25 71 78 ];
+        %tmp.39 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_LEFT %tmp.40 25 79 89 ];
+        %tmp.40 = getv %tmp.39 :SLIDE_LEFT;
+        invoke %tmp.29 %tmp.30(%tmp.31, %tmp.35, %tmp.40);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_23_45_26_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_23_15_35_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_23_15_35_8_if_false:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc" 26 15 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_26_15_35_8_if_stmt:
+        %tmp.41 = lgetv %item;
+        symbol [ item %tmp.41 26 19 23 ];
+        %tmp.43 = const :menuItemSettings;
+        symbol [ menuItemSettings %tmp.43 26 28 44 const ];
+        %tmp.44 = eq %tmp.41 %tmp.43;
+        bf %tmp.44 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_26_15_35_8_if_false;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_26_15_35_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_26_46_32_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc" 28 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_26_46_32_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_26_46_32_8_stop" ]
+        %view.2 = local;
+        symbol [ view %view.2 28 16 20 ];
+        symbol [ SettingsView %tmp.48 28 27 39 ];
+        %tmp.48 = getv ? :SettingsView;
+        symbol [ mModel %tmp.50 28 40 46 ];
+        %tmp.50 = getv ? :mModel;
+        %tmp.45 = newc %tmp.48 (%tmp.50);
+        lputv %view.2 %tmp.45;
+        symbol [ view %view.2 28 16 20 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc" 29 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_26_46_32_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_26_46_32_8_stop" ]
+        %delegate.3 = local;
+        symbol [ delegate %delegate.3 29 16 24 ];
+        symbol [ SettingsDelegate %tmp.54 29 31 47 ];
+        %tmp.54 = getv ? :SettingsDelegate;
+        symbol [ mModel %tmp.56 29 48 54 ];
+        %tmp.56 = getv ? :mModel;
+        %tmp.51 = newc %tmp.54 (%tmp.56);
+        lputv %delegate.3 %tmp.51;
+        symbol [ delegate %delegate.3 29 16 24 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc" 30 12 ]
+        %tmp.57 = lgetv %delegate.3;
+        symbol [ delegate %tmp.57 30 12 20 ];
+        symbol [ setSettingsView %tmp.58 30 21 36 ];
+        %tmp.58 = getv function %tmp.57 :setSettingsView;
+        %tmp.59 = lgetv %view.2;
+        symbol [ view %tmp.59 30 37 41 ];
+        invoke %tmp.57 %tmp.58(%tmp.59);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc" 31 12 ]
+        symbol [ WatchUi %tmp.60 31 12 19 ];
+        %tmp.60 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.61 31 20 28 ];
+        %tmp.61 = getv function %tmp.60 :pushView;
+        %tmp.62 = lgetv %view.2;
+        symbol [ view %tmp.62 31 29 33 ];
+        %tmp.63 = lgetv %delegate.3;
+        symbol [ delegate %tmp.63 31 35 43 ];
+        symbol [ WatchUi %tmp.64 31 45 52 ];
+        %tmp.64 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_UP %tmp.65 31 53 61 ];
+        %tmp.65 = getv %tmp.64 :SLIDE_UP;
+        invoke %tmp.60 %tmp.61(%tmp.62, %tmp.63, %tmp.65);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_26_46_32_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_26_15_35_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_26_15_35_8_if_false:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc" 32 15 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_32_15_35_8_if_stmt:
+        %tmp.66 = lgetv %item;
+        symbol [ item %tmp.66 32 19 23 ];
+        %tmp.68 = const :menuItemAbout;
+        symbol [ menuItemAbout %tmp.68 32 28 41 const ];
+        %tmp.69 = eq %tmp.66 %tmp.68;
+        bf %tmp.69 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_32_15_35_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_32_15_35_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_32_43_35_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc" 34 12 ]
+        symbol [ WatchUi %tmp.70 34 12 19 ];
+        %tmp.70 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.71 34 20 28 ];
+        %tmp.71 = getv function %tmp.70 :pushView;
+        symbol [ AboutView %tmp.75 34 33 42 ];
+        %tmp.75 = getv ? :AboutView;
+        %tmp.72 = newc %tmp.75 ();
+        symbol [ AboutDelegate %tmp.79 34 50 63 ];
+        %tmp.79 = getv ? :AboutDelegate;
+        %tmp.76 = newc %tmp.79 ();
+        symbol [ WatchUi %tmp.80 34 67 74 ];
+        %tmp.80 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_UP %tmp.81 34 75 83 ];
+        %tmp.81 = getv %tmp.80 :SLIDE_UP;
+        invoke %tmp.70 %tmp.71(%tmp.72, %tmp.76, %tmp.81);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_32_43_35_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_32_15_35_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_32_15_35_8_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_26_15_35_8_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_23_15_35_8_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_15_8_35_8_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_FoilTrackerMenuDelegate_mc_14_30_36_4_stop:
+    }
+}
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\FoilTrackerMenuDelegate.mc"; @line = 1; ]
+<init> {
+}

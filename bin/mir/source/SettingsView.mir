@@ -1,0 +1,555 @@
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [WatchUi,1,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [Graphics,2,13,21]; ]
+using Toybox.Graphics;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc"; @line = 5; @symbol_classdef = [SettingsView,5,6,18]; @symbol_extends<0> = [WatchUi,5,27,34]; @symbol_extends<1> = [View,5,35,39]; ]
+class SettingsView extends WatchUi.View {
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc"; @line = 6; @position = 16; @symbol_vardef = [mModel,6,16,22]; ]
+    private
+    var mModel;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc"; @line = 7; @position = 15; @symbol_vardef = [mSelectedOption,7,15,30]; ]
+    public
+    var mSelectedOption;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc"; @line = 9; @symbol_functiondef = [initialize,9,13,23]; @symbol_param<0> = [model,9,24,29]; ]
+    function initialize(model) as Void {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_9_31_13_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 10 8 ]
+        symbol [ View %tmp.2 10 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 10 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 11 8 ]
+        %tmp.4 = lgetv %model;
+        symbol [ model %tmp.4 11 17 22 ];
+        symbol [ mModel ? 11 8 14 ];
+        putv self :mModel %tmp.4;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 12 8 ]
+        %tmp.5 = 0;
+        symbol [ mSelectedOption ? 12 8 23 ];
+        putv self :mSelectedOption %tmp.5;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_9_31_13_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc"; @line = 15; @symbol_functiondef = [onLayout,15,13,21]; @symbol_param<0> = [dc,15,22,24]; ]
+    function onLayout(dc) {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc"; @line = 19; @symbol_functiondef = [onUpdate,19,13,21]; @symbol_param<0> = [dc,19,22,24]; ]
+    function onUpdate(dc) {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_19_26_52_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 21 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 21 8 10 ];
+        symbol [ setColor %tmp.2 21 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ Graphics %tmp.3 21 20 28 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.4 21 29 40 ];
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        symbol [ Graphics %tmp.5 21 42 50 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.6 21 51 62 ];
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 22 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 22 8 10 ];
+        symbol [ clear %tmp.8 22 11 16 ];
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 25 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_19_26_52_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_19_26_52_4_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 25 12 17 ];
+        %tmp.9 = lgetv %dc;
+        symbol [ dc %tmp.9 25 20 22 ];
+        symbol [ getWidth %tmp.10 25 23 31 ];
+        %tmp.10 = getv function %tmp.9 :getWidth;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        lputv %width.1 %tmp.11;
+        symbol [ width %width.1 25 12 17 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 26 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_19_26_52_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_19_26_52_4_stop" ]
+        %height.2 = local;
+        symbol [ height %height.2 26 12 18 ];
+        %tmp.12 = lgetv %dc;
+        symbol [ dc %tmp.12 26 21 23 ];
+        symbol [ getHeight %tmp.13 26 24 33 ];
+        %tmp.13 = getv function %tmp.12 :getHeight;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        lputv %height.2 %tmp.14;
+        symbol [ height %height.2 26 12 18 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 29 8 ]
+        %tmp.15 = lgetv %dc;
+        symbol [ dc %tmp.15 29 8 10 ];
+        symbol [ setColor %tmp.16 29 11 19 ];
+        %tmp.16 = getv function %tmp.15 :setColor;
+        symbol [ Graphics %tmp.17 29 20 28 ];
+        %tmp.17 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.18 29 29 40 ];
+        %tmp.18 = getv %tmp.17 :COLOR_WHITE;
+        symbol [ Graphics %tmp.19 29 42 50 ];
+        %tmp.19 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.20 29 51 68 ];
+        %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
+        invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 30 8 ]
+        %tmp.21 = lgetv %dc;
+        symbol [ dc %tmp.21 30 8 10 ];
+        symbol [ drawText %tmp.22 30 11 19 ];
+        %tmp.22 = getv function %tmp.21 :drawText;
+        %tmp.23 = lgetv %width.1;
+        symbol [ width %tmp.23 30 20 25 ];
+        %tmp.24 = 2;
+        %tmp.25 = div %tmp.23 %tmp.24;
+        %tmp.26 = 5;
+        symbol [ Graphics %tmp.27 30 32 40 ];
+        %tmp.27 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.28 30 41 52 ];
+        %tmp.28 = getv %tmp.27 :FONT_MEDIUM;
+        %tmp.29 = "SETTINGS";
+        symbol [ Graphics %tmp.30 30 66 74 ];
+        %tmp.30 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.31 30 75 94 ];
+        %tmp.31 = getv %tmp.30 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.21 %tmp.22(%tmp.25, %tmp.26, %tmp.28, %tmp.29, %tmp.31);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 33 8 ]
+        %tmp.32 = lgetv %dc;
+        symbol [ dc %tmp.32 33 8 10 ];
+        symbol [ setColor %tmp.33 33 11 19 ];
+        %tmp.33 = getv function %tmp.32 :setColor;
+        symbol [ Graphics %tmp.34 33 20 28 ];
+        %tmp.34 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_GRAY %tmp.35 33 29 42 ];
+        %tmp.35 = getv %tmp.34 :COLOR_DK_GRAY;
+        symbol [ Graphics %tmp.36 33 44 52 ];
+        %tmp.36 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.37 33 53 70 ];
+        %tmp.37 = getv %tmp.36 :COLOR_TRANSPARENT;
+        invoke %tmp.32 %tmp.33(%tmp.35, %tmp.37);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 34 8 ]
+        %tmp.38 = lgetv %dc;
+        symbol [ dc %tmp.38 34 8 10 ];
+        symbol [ drawLine %tmp.39 34 11 19 ];
+        %tmp.39 = getv function %tmp.38 :drawLine;
+        %tmp.40 = 10;
+        %tmp.41 = 30;
+        %tmp.42 = lgetv %width.1;
+        symbol [ width %tmp.42 34 28 33 ];
+        %tmp.43 = 10;
+        %tmp.44 = sub %tmp.42 %tmp.43;
+        %tmp.45 = 30;
+        invoke %tmp.38 %tmp.39(%tmp.40, %tmp.41, %tmp.44, %tmp.45);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 37 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_19_26_52_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_19_26_52_4_stop" ]
+        %settings.3 = local;
+        symbol [ settings %settings.3 37 12 20 ];
+        symbol [ mModel %tmp.47 37 23 29 ];
+        %tmp.47 = getv ? :mModel;
+        symbol [ getData %tmp.48 37 30 37 ];
+        %tmp.48 = getv function %tmp.47 :getData;
+        %tmp.49 = invoke %tmp.47 %tmp.48();
+        %tmp.50 = "settings";
+        %tmp.51 = agetv %tmp.49 %tmp.50;
+        lputv %settings.3 %tmp.51;
+        symbol [ settings %settings.3 37 12 20 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 40 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_40_8_44_8_if_stmt:
+        symbol [ mSelectedOption %tmp.53 40 12 27 ];
+        %tmp.53 = getv ? :mSelectedOption;
+        %tmp.54 = 0;
+        %tmp.55 = eq %tmp.53 %tmp.54;
+        bf %tmp.55 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_40_8_44_8_if_else_false;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_40_8_44_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_40_34_42_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 41 12 ]
+        %tmp.56 = lgetv %dc;
+        symbol [ dc %tmp.56 41 12 14 ];
+        symbol [ setColor %tmp.57 41 15 23 ];
+        %tmp.57 = getv function %tmp.56 :setColor;
+        symbol [ Graphics %tmp.58 41 24 32 ];
+        %tmp.58 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLUE %tmp.59 41 33 43 ];
+        %tmp.59 = getv %tmp.58 :COLOR_BLUE;
+        symbol [ Graphics %tmp.60 41 45 53 ];
+        %tmp.60 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.61 41 54 71 ];
+        %tmp.61 = getv %tmp.60 :COLOR_TRANSPARENT;
+        invoke %tmp.56 %tmp.57(%tmp.59, %tmp.61);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_40_34_42_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_40_8_44_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_40_8_44_8_if_else_false:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_42_15_44_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 43 12 ]
+        %tmp.62 = lgetv %dc;
+        symbol [ dc %tmp.62 43 12 14 ];
+        symbol [ setColor %tmp.63 43 15 23 ];
+        %tmp.63 = getv function %tmp.62 :setColor;
+        symbol [ Graphics %tmp.64 43 24 32 ];
+        %tmp.64 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.65 43 33 44 ];
+        %tmp.65 = getv %tmp.64 :COLOR_WHITE;
+        symbol [ Graphics %tmp.66 43 46 54 ];
+        %tmp.66 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.67 43 55 72 ];
+        %tmp.67 = getv %tmp.66 :COLOR_TRANSPARENT;
+        invoke %tmp.62 %tmp.63(%tmp.65, %tmp.67);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_42_15_44_8_stop:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_40_8_44_8_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 45 8 ]
+        %tmp.68 = lgetv %dc;
+        symbol [ dc %tmp.68 45 8 10 ];
+        symbol [ drawText %tmp.69 45 11 19 ];
+        %tmp.69 = getv function %tmp.68 :drawText;
+        %tmp.70 = lgetv %width.1;
+        symbol [ width %tmp.70 45 20 25 ];
+        %tmp.71 = 2;
+        %tmp.72 = div %tmp.70 %tmp.71;
+        %tmp.73 = 50;
+        symbol [ Graphics %tmp.74 45 33 41 ];
+        %tmp.74 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.75 45 42 52 ];
+        %tmp.75 = getv %tmp.74 :FONT_SMALL;
+        %tmp.76 = "Foiling Threshold";
+        symbol [ Graphics %tmp.77 45 75 83 ];
+        %tmp.77 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.78 45 84 103 ];
+        %tmp.78 = getv %tmp.77 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.68 %tmp.69(%tmp.72, %tmp.73, %tmp.75, %tmp.76, %tmp.78);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 46 8 ]
+        %tmp.79 = lgetv %dc;
+        symbol [ dc %tmp.79 46 8 10 ];
+        symbol [ drawText %tmp.80 46 11 19 ];
+        %tmp.80 = getv function %tmp.79 :drawText;
+        %tmp.81 = lgetv %width.1;
+        symbol [ width %tmp.81 46 20 25 ];
+        %tmp.82 = 2;
+        %tmp.83 = div %tmp.81 %tmp.82;
+        %tmp.84 = 75;
+        symbol [ Graphics %tmp.85 46 33 41 ];
+        %tmp.85 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.86 46 42 53 ];
+        %tmp.86 = getv %tmp.85 :FONT_MEDIUM;
+        %tmp.87 = lgetv %settings.3;
+        symbol [ settings %tmp.87 46 55 63 ];
+        %tmp.88 = "foilingThreshold";
+        %tmp.89 = agetv %tmp.87 %tmp.88;
+        symbol [ format %tmp.90 46 84 90 ];
+        %tmp.90 = getv function %tmp.89 :format;
+        %tmp.91 = "%.1f";
+        %tmp.92 = invoke %tmp.89 %tmp.90(%tmp.91);
+        %tmp.93 = " kt";
+        %tmp.94 = add %tmp.92 %tmp.93;
+        symbol [ Graphics %tmp.95 46 108 116 ];
+        %tmp.95 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.96 46 117 136 ];
+        %tmp.96 = getv %tmp.95 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.79 %tmp.80(%tmp.83, %tmp.84, %tmp.86, %tmp.94, %tmp.96);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 49 8 ]
+        %tmp.97 = lgetv %dc;
+        symbol [ dc %tmp.97 49 8 10 ];
+        symbol [ setColor %tmp.98 49 11 19 ];
+        %tmp.98 = getv function %tmp.97 :setColor;
+        symbol [ Graphics %tmp.99 49 20 28 ];
+        %tmp.99 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.100 49 29 42 ];
+        %tmp.100 = getv %tmp.99 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.101 49 44 52 ];
+        %tmp.101 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.102 49 53 70 ];
+        %tmp.102 = getv %tmp.101 :COLOR_TRANSPARENT;
+        invoke %tmp.97 %tmp.98(%tmp.100, %tmp.102);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 50 8 ]
+        %tmp.103 = lgetv %dc;
+        symbol [ dc %tmp.103 50 8 10 ];
+        symbol [ drawText %tmp.104 50 11 19 ];
+        %tmp.104 = getv function %tmp.103 :drawText;
+        %tmp.105 = lgetv %width.1;
+        symbol [ width %tmp.105 50 20 25 ];
+        %tmp.106 = 2;
+        %tmp.107 = div %tmp.105 %tmp.106;
+        %tmp.108 = lgetv %height.2;
+        symbol [ height %tmp.108 50 29 35 ];
+        %tmp.109 = 50;
+        %tmp.110 = sub %tmp.108 %tmp.109;
+        symbol [ Graphics %tmp.111 50 42 50 ];
+        %tmp.111 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.112 50 51 60 ];
+        %tmp.112 = getv %tmp.111 :FONT_TINY;
+        %tmp.113 = "UP/DOWN: Select, SELECT: Change";
+        symbol [ Graphics %tmp.114 50 97 105 ];
+        %tmp.114 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.115 50 106 125 ];
+        %tmp.115 = getv %tmp.114 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.103 %tmp.104(%tmp.107, %tmp.110, %tmp.112, %tmp.113, %tmp.115);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 51 8 ]
+        %tmp.116 = lgetv %dc;
+        symbol [ dc %tmp.116 51 8 10 ];
+        symbol [ drawText %tmp.117 51 11 19 ];
+        %tmp.117 = getv function %tmp.116 :drawText;
+        %tmp.118 = lgetv %width.1;
+        symbol [ width %tmp.118 51 20 25 ];
+        %tmp.119 = 2;
+        %tmp.120 = div %tmp.118 %tmp.119;
+        %tmp.121 = lgetv %height.2;
+        symbol [ height %tmp.121 51 29 35 ];
+        %tmp.122 = 25;
+        %tmp.123 = sub %tmp.121 %tmp.122;
+        symbol [ Graphics %tmp.124 51 42 50 ];
+        %tmp.124 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.125 51 51 60 ];
+        %tmp.125 = getv %tmp.124 :FONT_TINY;
+        %tmp.126 = "BACK: Return";
+        symbol [ Graphics %tmp.127 51 78 86 ];
+        %tmp.127 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.128 51 87 106 ];
+        %tmp.128 = getv %tmp.127 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.116 %tmp.117(%tmp.120, %tmp.123, %tmp.125, %tmp.126, %tmp.128);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_19_26_52_4_stop:
+    }
+}
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc"; @line = 56; @symbol_classdef = [SettingsDelegate,56,6,22]; @symbol_extends<0> = [WatchUi,56,31,38]; @symbol_extends<1> = [BehaviorDelegate,56,39,55]; ]
+class SettingsDelegate extends WatchUi.BehaviorDelegate {
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc"; @line = 56; ]
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc"; @line = 56; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc"; @line = 57; @position = 16; @symbol_vardef = [mModel,57,16,22]; ]
+    private
+    var mModel;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc"; @line = 58; @position = 16; @symbol_vardef = [mSettingsView,58,16,29]; ]
+    private
+    var mSettingsView;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc"; @line = 60; @symbol_functiondef = [initialize,60,13,23]; @symbol_param<0> = [model,60,24,29]; ]
+    function initialize(model) as Void {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_60_31_64_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 61 8 ]
+        symbol [ BehaviorDelegate %tmp.2 61 8 24 ];
+        %tmp.2 = getv ? :BehaviorDelegate;
+        symbol [ initialize %tmp.3 61 25 35 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 62 8 ]
+        %tmp.4 = lgetv %model;
+        symbol [ model %tmp.4 62 17 22 ];
+        symbol [ mModel ? 62 8 14 ];
+        putv self :mModel %tmp.4;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 63 8 ]
+        %tmp.5 = null;
+        symbol [ mSettingsView ? 63 8 21 ];
+        putv self :mSettingsView %tmp.5;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_60_31_64_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc"; @line = 67; @symbol_functiondef = [setSettingsView,67,13,28]; @symbol_param<0> = [view,67,29,33]; ]
+    function setSettingsView(view) {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_67_35_69_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 68 8 ]
+        %tmp.1 = lgetv %view;
+        symbol [ view %tmp.1 68 24 28 ];
+        symbol [ mSettingsView ? 68 8 21 ];
+        putv self :mSettingsView %tmp.1;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_67_35_69_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc"; @line = 71; @symbol_functiondef = [onNextPage,71,13,23]; ]
+    function onNextPage() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_71_26_78_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 73 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_73_8_76_8_if_stmt:
+        symbol [ mSettingsView %tmp.2 73 12 25 ];
+        %tmp.2 = getv ? :mSettingsView;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_73_8_76_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_73_8_76_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_73_35_76_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 74 12 ]
+        symbol [ mSettingsView %tmp.5 74 12 25 ];
+        %tmp.5 = getv self :mSettingsView;
+        %tmp.6 = as %tmp.5 { (!Null) };
+        symbol [ mSettingsView %tmp.8 74 45 58 ];
+        %tmp.8 = getv ? :mSettingsView;
+        %tmp.9 = as %tmp.8 { (!Null) };
+        symbol [ mSelectedOption %tmp.10 74 59 74 ];
+        %tmp.10 = getv %tmp.9 :mSelectedOption;
+        %tmp.11 = 1;
+        %tmp.12 = add %tmp.10 %tmp.11;
+        %tmp.13 = 3;
+        %tmp.14 = mod %tmp.12 %tmp.13;
+        symbol [ mSelectedOption ? 74 26 41 ];
+        putv %tmp.6 :mSelectedOption %tmp.14;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 75 12 ]
+        symbol [ WatchUi %tmp.15 75 12 19 ];
+        %tmp.15 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.16 75 20 33 ];
+        %tmp.16 = getv function %tmp.15 :requestUpdate;
+        invoke %tmp.15 %tmp.16();
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_73_35_76_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_73_8_76_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_73_8_76_8_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 77 8 ]
+        %tmp.17 = true;
+        ret %tmp.17;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_71_26_78_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc"; @line = 80; @symbol_functiondef = [onPreviousPage,80,13,27]; ]
+    function onPreviousPage() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_80_30_86_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 81 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_81_8_84_8_if_stmt:
+        symbol [ mSettingsView %tmp.2 81 12 25 ];
+        %tmp.2 = getv ? :mSettingsView;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_81_8_84_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_81_8_84_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_81_35_84_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 82 12 ]
+        symbol [ mSettingsView %tmp.5 82 12 25 ];
+        %tmp.5 = getv self :mSettingsView;
+        %tmp.6 = as %tmp.5 { (!Null) };
+        symbol [ mSettingsView %tmp.8 82 45 58 ];
+        %tmp.8 = getv ? :mSettingsView;
+        %tmp.9 = as %tmp.8 { (!Null) };
+        symbol [ mSelectedOption %tmp.10 82 59 74 ];
+        %tmp.10 = getv %tmp.9 :mSelectedOption;
+        %tmp.11 = 2;
+        %tmp.12 = add %tmp.10 %tmp.11;
+        %tmp.13 = 3;
+        %tmp.14 = mod %tmp.12 %tmp.13;
+        symbol [ mSelectedOption ? 82 26 41 ];
+        putv %tmp.6 :mSelectedOption %tmp.14;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 83 12 ]
+        symbol [ WatchUi %tmp.15 83 12 19 ];
+        %tmp.15 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.16 83 20 33 ];
+        %tmp.16 = getv function %tmp.15 :requestUpdate;
+        invoke %tmp.15 %tmp.16();
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_81_35_84_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_81_8_84_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_81_8_84_8_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 85 8 ]
+        %tmp.17 = true;
+        ret %tmp.17;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_80_30_86_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc"; @line = 88; @symbol_functiondef = [onSelect,88,13,21]; ]
+    function onSelect() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_88_24_101_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 89 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_89_8_99_8_if_stmt:
+        symbol [ mSettingsView %tmp.2 89 12 25 ];
+        %tmp.2 = getv ? :mSettingsView;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_89_8_99_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_89_8_99_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_89_35_99_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 90 12 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_89_35_99_8_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_89_35_99_8_stop" ]
+        %settings.1 = local;
+        symbol [ settings %settings.1 90 16 24 ];
+        symbol [ mModel %tmp.6 90 27 33 ];
+        %tmp.6 = getv ? :mModel;
+        symbol [ getData %tmp.7 90 34 41 ];
+        %tmp.7 = getv function %tmp.6 :getData;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = "settings";
+        %tmp.10 = agetv %tmp.8 %tmp.9;
+        lputv %settings.1 %tmp.10;
+        symbol [ settings %settings.1 90 16 24 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 91 12 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_91_12_96_12_if_stmt:
+        symbol [ mSettingsView %tmp.12 91 16 29 ];
+        %tmp.12 = getv ? :mSettingsView;
+        symbol [ mSelectedOption %tmp.13 91 30 45 ];
+        %tmp.13 = getv %tmp.12 :mSelectedOption;
+        %tmp.14 = 0;
+        %tmp.15 = eq %tmp.13 %tmp.14;
+        bf %tmp.15 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_91_12_96_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_91_12_96_12_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_91_52_96_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 92 16 ]
+        %tmp.16 = lgetv %settings.1;
+        symbol [ settings %tmp.16 92 16 24 ];
+        %tmp.17 = lgetv %settings.1;
+        symbol [ settings %tmp.17 92 16 24 ];
+        %tmp.18 = "foilingThreshold";
+        %tmp.19 = agetv %tmp.17 %tmp.18;
+        %tmp.20 = 0.5;
+        %tmp.21 = add %tmp.19 %tmp.20;
+        %tmp.22 = "foilingThreshold";
+        aputv %tmp.16 %tmp.22 dup %tmp.21;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 93 16 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_93_16_95_16_if_stmt:
+        %tmp.23 = lgetv %settings.1;
+        symbol [ settings %tmp.23 93 20 28 ];
+        %tmp.24 = "foilingThreshold";
+        %tmp.25 = agetv %tmp.23 %tmp.24;
+        %tmp.26 = 12.0;
+        %tmp.27 = gt %tmp.25 %tmp.26;
+        bf %tmp.27 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_93_16_95_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_93_16_95_16_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_93_57_95_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 94 20 ]
+        %tmp.28 = lgetv %settings.1;
+        symbol [ settings %tmp.28 94 20 28 ];
+        %tmp.29 = 5.0;
+        %tmp.30 = "foilingThreshold";
+        aputv %tmp.28 %tmp.30 %tmp.29;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_93_57_95_16_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_93_16_95_16_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_93_16_95_16_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_91_52_96_12_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_91_12_96_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_91_12_96_12_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 97 12 ]
+        symbol [ mModel %tmp.32 97 12 18 ];
+        %tmp.32 = getv ? :mModel;
+        symbol [ saveSettings %tmp.33 97 19 31 ];
+        %tmp.33 = getv function %tmp.32 :saveSettings;
+        invoke %tmp.32 %tmp.33();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 98 12 ]
+        symbol [ WatchUi %tmp.34 98 12 19 ];
+        %tmp.34 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.35 98 20 33 ];
+        %tmp.35 = getv function %tmp.34 :requestUpdate;
+        invoke %tmp.34 %tmp.35();
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_89_35_99_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_89_8_99_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_89_8_99_8_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 100 8 ]
+        %tmp.36 = true;
+        ret %tmp.36;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_88_24_101_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc"; @line = 103; @symbol_functiondef = [onBack,103,13,19]; ]
+    function onBack() {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_103_22_106_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 104 8 ]
+        symbol [ WatchUi %tmp.1 104 8 15 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.2 104 16 23 ];
+        %tmp.2 = getv function %tmp.1 :popView;
+        symbol [ WatchUi %tmp.3 104 24 31 ];
+        %tmp.3 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.4 104 32 42 ];
+        %tmp.4 = getv %tmp.3 :SLIDE_DOWN;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc" 105 8 ]
+        %tmp.5 = true;
+        ret %tmp.5;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SettingsView_mc_103_22_106_4_stop:
+    }
+}
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SettingsView.mc"; @line = 1; ]
+<init> {
+}

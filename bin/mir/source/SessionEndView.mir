@@ -1,0 +1,347 @@
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [WatchUi,1,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [Graphics,2,13,21]; ]
+using Toybox.Graphics;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [System,3,13,19]; ]
+using Toybox.System;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Application,4,13,24]; ]
+using Toybox.Application;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc"; @line = 7; @symbol_classdef = [SessionEndView,7,6,20]; @symbol_extends<0> = [WatchUi,7,29,36]; @symbol_extends<1> = [ConfirmationDelegate,7,37,57]; ]
+class SessionEndView extends WatchUi.ConfirmationDelegate {
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc"; @line = 7; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc"; @line = 8; @position = 16; @symbol_vardef = [mModel,8,16,22]; ]
+    private
+    var mModel;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc"; @line = 9; @position = 16; @symbol_vardef = [mApp,9,16,20]; ]
+    private
+    var mApp;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc"; @line = 11; @symbol_functiondef = [initialize,11,13,23]; @symbol_param<0> = [model,11,24,29]; @symbol_param<1> = [app,11,31,34]; ]
+    function initialize(model, app) as Void {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_11_36_15_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc" 12 8 ]
+        symbol [ ConfirmationDelegate %tmp.2 12 8 28 ];
+        %tmp.2 = getv ? :ConfirmationDelegate;
+        symbol [ initialize %tmp.3 12 29 39 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc" 13 8 ]
+        %tmp.4 = lgetv %model;
+        symbol [ model %tmp.4 13 17 22 ];
+        symbol [ mModel ? 13 8 14 ];
+        putv self :mModel %tmp.4;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc" 14 8 ]
+        %tmp.5 = lgetv %app;
+        symbol [ app %tmp.5 14 15 18 ];
+        symbol [ mApp ? 14 8 12 ];
+        putv self :mApp %tmp.5;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_11_36_15_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc"; @line = 17; @symbol_functiondef = [onResponse,17,13,23]; @symbol_param<0> = [response,17,24,32]; ]
+    function onResponse(response) {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_17_34_56_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc" 18 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_18_8_51_8_if_stmt:
+        %tmp.1 = lgetv %response;
+        symbol [ response %tmp.1 18 12 20 ];
+        symbol [ WatchUi %tmp.2 18 24 31 ];
+        %tmp.2 = getm $.Toybox.WatchUi;
+        symbol [ CONFIRM_YES %tmp.3 18 32 43 ];
+        %tmp.3 = getv %tmp.2 :CONFIRM_YES;
+        %tmp.4 = eq %tmp.1 %tmp.3;
+        bf %tmp.4 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_18_8_51_8_if_else_false;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_18_8_51_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_18_45_37_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc" 20 12 ]
+        symbol [ System %tmp.5 20 12 18 ];
+        %tmp.5 = getm $.Toybox.System;
+        symbol [ println %tmp.6 20 19 26 ];
+        %tmp.6 = getv function %tmp.5 :println;
+        %tmp.7 = "Saving activity";
+        invoke %tmp.5 %tmp.6(%tmp.7);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc" 23 12 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_23_12_25_12_if_stmt:
+        symbol [ mModel %tmp.9 23 16 22 ];
+        %tmp.9 = getv ? :mModel;
+        %tmp.10 = null;
+        %tmp.11 = ne %tmp.9 %tmp.10;
+        bf %tmp.11 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_23_12_25_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_23_12_25_12_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_23_32_25_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc" 24 16 ]
+        symbol [ mModel %tmp.13 24 16 22 ];
+        %tmp.13 = getv ? :mModel;
+        %tmp.14 = as %tmp.13 { (!Null) };
+        symbol [ saveActivityData %tmp.15 24 23 39 ];
+        %tmp.15 = getv function %tmp.14 :saveActivityData;
+        invoke %tmp.14 %tmp.15();
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_23_32_25_12_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_23_12_25_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_23_12_25_12_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc" 28 12 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_12_36_12_if_stmt:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_16_28_105_begin:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_16_28_71_begin:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_16_28_42_begin:
+        symbol [ mApp %tmp.17 28 16 20 ];
+        %tmp.17 = getv ? :mApp;
+        %tmp.18 = null;
+        %tmp.19 = ne %tmp.17 %tmp.18;
+        bf %tmp.19 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_12_36_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_32_28_42_true:
+        symbol [ mApp %tmp.21 28 32 36 ];
+        %tmp.21 = getv ? :mApp;
+        %tmp.22 = as %tmp.21 { (!Null) };
+        %tmp.24 = const :mSession;
+        symbol [ mSession %tmp.24 28 42 50 const ];
+        %tmp.25 = canhazplz %tmp.22 %tmp.24;
+        push %tmp.25;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_32_28_42_end:
+        %tmp.26 = phi [%tmp.19 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_16_28_42_begin] [%tmp.25 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_32_28_42_true] [%tmp.26 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_32_28_42_end];
+        bf %tmp.26 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_12_36_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_54_28_71_true:
+        symbol [ mApp %tmp.28 28 54 58 ];
+        %tmp.28 = getv ? :mApp;
+        %tmp.29 = as %tmp.28 { (interface { var mSession; }) && (!Null) };
+        symbol [ mSession %tmp.30 28 59 67 ];
+        %tmp.30 = getv %tmp.29 :mSession;
+        %tmp.31 = null;
+        %tmp.32 = ne %tmp.30 %tmp.31;
+        push %tmp.32;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_54_28_71_end:
+        %tmp.33 = phi [%tmp.26 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_16_28_71_begin] [%tmp.32 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_54_28_71_true] [%tmp.33 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_54_28_71_end];
+        bf %tmp.33 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_12_36_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_79_28_105_true:
+        symbol [ mApp %tmp.35 28 79 83 ];
+        %tmp.35 = getv ? :mApp;
+        %tmp.36 = as %tmp.35 { (interface { var mSession; }) && (!Null) };
+        symbol [ mSession %tmp.37 28 84 92 ];
+        %tmp.37 = getv %tmp.36 :mSession;
+        symbol [ isRecording %tmp.38 28 93 104 ];
+        %tmp.38 = getv function %tmp.37 :isRecording;
+        %tmp.39 = invoke %tmp.37 %tmp.38();
+        push %tmp.39;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_79_28_105_end:
+        %tmp.40 = phi [%tmp.33 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_16_28_105_begin] [%tmp.39 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_79_28_105_true] [%tmp.40 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_79_28_105_end];
+        bf %tmp.40 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_12_36_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_12_36_12_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_108_36_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc" 29 16 ]
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_29_16_35_16_beginTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_29_16_35_16_endTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_29_16_35_16_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_29_16_35_16_finally;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_29_16_35_16_beginTry:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_29_20_33_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc" 30 20 ]
+        symbol [ mApp %tmp.42 30 20 24 ];
+        %tmp.42 = getv ? :mApp;
+        symbol [ mSession %tmp.43 30 25 33 ];
+        %tmp.43 = getv %tmp.42 :mSession;
+        symbol [ stop %tmp.44 30 34 38 ];
+        %tmp.44 = getv function %tmp.43 :stop;
+        invoke %tmp.43 %tmp.44();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc" 31 20 ]
+        symbol [ mApp %tmp.46 31 20 24 ];
+        %tmp.46 = getv ? :mApp;
+        symbol [ mSession %tmp.47 31 25 33 ];
+        %tmp.47 = getv %tmp.46 :mSession;
+        symbol [ save %tmp.48 31 34 38 ];
+        %tmp.48 = getv function %tmp.47 :save;
+        invoke %tmp.47 %tmp.48();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc" 32 20 ]
+        symbol [ System %tmp.49 32 20 26 ];
+        %tmp.49 = getm $.Toybox.System;
+        symbol [ println %tmp.50 32 27 34 ];
+        %tmp.50 = getv function %tmp.49 :println;
+        %tmp.51 = "Activity recording saved";
+        invoke %tmp.49 %tmp.50(%tmp.51);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_29_20_33_16_stop:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_29_16_35_16_endTry:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_29_16_35_16_finally;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_29_16_35_16_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_29_16_35_16_catch:
+        %tmp.52 = exception;
+        push %tmp.52;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc" 33 18 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_29_16_35_16_catch" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_33_18_35_16_end" ]
+        %e.1 = local;
+        symbol [ e %e.1 33 25 26 ];
+        %tmp.53 = dup %tmp.52;
+        lputv %e.1 %tmp.53;
+        symbol [ e %e.1 33 25 26 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_33_28_35_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc" 34 20 ]
+        symbol [ System %tmp.54 34 20 26 ];
+        %tmp.54 = getm $.Toybox.System;
+        symbol [ println %tmp.55 34 27 34 ];
+        %tmp.55 = getv function %tmp.54 :println;
+        %tmp.56 = "Error saving activity: ";
+        %tmp.57 = lgetv %e.1;
+        symbol [ e %tmp.57 34 63 64 ];
+        symbol [ getErrorMessage %tmp.58 34 65 80 ];
+        %tmp.58 = getv function %tmp.57 :getErrorMessage;
+        %tmp.59 = invoke %tmp.57 %tmp.58();
+        %tmp.60 = add %tmp.56 %tmp.59;
+        invoke %tmp.54 %tmp.55(%tmp.60);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_33_28_35_16_stop:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_29_16_35_16_finally;
+        pop;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_29_16_35_16_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_33_18_35_16_end:
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_29_16_35_16_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_33_18_35_16_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_33_18_35_16_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_29_16_35_16_finally;
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_29_16_35_16_finally;
+        throw %tmp.52;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_29_16_35_16_finally:
+        jsrret;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_29_16_35_16_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_108_36_12_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_12_36_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_28_12_36_12_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_18_45_37_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_18_8_51_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_18_8_51_8_if_else_false:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_37_15_51_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc" 39 12 ]
+        symbol [ System %tmp.61 39 12 18 ];
+        %tmp.61 = getm $.Toybox.System;
+        symbol [ println %tmp.62 39 19 26 ];
+        %tmp.62 = getv function %tmp.61 :println;
+        %tmp.63 = "Discarding activity";
+        invoke %tmp.61 %tmp.62(%tmp.63);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc" 42 12 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_12_50_12_if_stmt:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_16_42_105_begin:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_16_42_71_begin:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_16_42_42_begin:
+        symbol [ mApp %tmp.65 42 16 20 ];
+        %tmp.65 = getv ? :mApp;
+        %tmp.66 = null;
+        %tmp.67 = ne %tmp.65 %tmp.66;
+        bf %tmp.67 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_12_50_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_32_42_42_true:
+        symbol [ mApp %tmp.69 42 32 36 ];
+        %tmp.69 = getv ? :mApp;
+        %tmp.70 = as %tmp.69 { (!Null) };
+        %tmp.72 = const :mSession;
+        symbol [ mSession %tmp.72 42 42 50 const ];
+        %tmp.73 = canhazplz %tmp.70 %tmp.72;
+        push %tmp.73;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_32_42_42_end:
+        %tmp.74 = phi [%tmp.67 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_16_42_42_begin] [%tmp.73 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_32_42_42_true] [%tmp.74 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_32_42_42_end];
+        bf %tmp.74 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_12_50_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_54_42_71_true:
+        symbol [ mApp %tmp.76 42 54 58 ];
+        %tmp.76 = getv ? :mApp;
+        %tmp.77 = as %tmp.76 { (interface { var mSession; }) && (!Null) };
+        symbol [ mSession %tmp.78 42 59 67 ];
+        %tmp.78 = getv %tmp.77 :mSession;
+        %tmp.79 = null;
+        %tmp.80 = ne %tmp.78 %tmp.79;
+        push %tmp.80;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_54_42_71_end:
+        %tmp.81 = phi [%tmp.74 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_16_42_71_begin] [%tmp.80 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_54_42_71_true] [%tmp.81 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_54_42_71_end];
+        bf %tmp.81 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_12_50_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_79_42_105_true:
+        symbol [ mApp %tmp.83 42 79 83 ];
+        %tmp.83 = getv ? :mApp;
+        %tmp.84 = as %tmp.83 { (interface { var mSession; }) && (!Null) };
+        symbol [ mSession %tmp.85 42 84 92 ];
+        %tmp.85 = getv %tmp.84 :mSession;
+        symbol [ isRecording %tmp.86 42 93 104 ];
+        %tmp.86 = getv function %tmp.85 :isRecording;
+        %tmp.87 = invoke %tmp.85 %tmp.86();
+        push %tmp.87;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_79_42_105_end:
+        %tmp.88 = phi [%tmp.81 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_16_42_105_begin] [%tmp.87 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_79_42_105_true] [%tmp.88 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_79_42_105_end];
+        bf %tmp.88 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_12_50_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_12_50_12_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_108_50_12_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc" 43 16 ]
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_43_16_49_16_beginTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_43_16_49_16_endTry @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_43_16_49_16_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_43_16_49_16_finally;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_43_16_49_16_beginTry:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_43_20_47_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc" 44 20 ]
+        symbol [ mApp %tmp.90 44 20 24 ];
+        %tmp.90 = getv ? :mApp;
+        symbol [ mSession %tmp.91 44 25 33 ];
+        %tmp.91 = getv %tmp.90 :mSession;
+        symbol [ stop %tmp.92 44 34 38 ];
+        %tmp.92 = getv function %tmp.91 :stop;
+        invoke %tmp.91 %tmp.92();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc" 45 20 ]
+        symbol [ mApp %tmp.94 45 20 24 ];
+        %tmp.94 = getv ? :mApp;
+        symbol [ mSession %tmp.95 45 25 33 ];
+        %tmp.95 = getv %tmp.94 :mSession;
+        symbol [ discard %tmp.96 45 34 41 ];
+        %tmp.96 = getv function %tmp.95 :discard;
+        invoke %tmp.95 %tmp.96();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc" 46 20 ]
+        symbol [ System %tmp.97 46 20 26 ];
+        %tmp.97 = getm $.Toybox.System;
+        symbol [ println %tmp.98 46 27 34 ];
+        %tmp.98 = getv function %tmp.97 :println;
+        %tmp.99 = "Activity recording discarded";
+        invoke %tmp.97 %tmp.98(%tmp.99);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_43_20_47_16_stop:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_43_16_49_16_endTry:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_43_16_49_16_finally;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_43_16_49_16_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_43_16_49_16_catch:
+        %tmp.100 = exception;
+        push %tmp.100;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc" 47 18 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_43_16_49_16_catch" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_47_18_49_16_end" ]
+        %e.2 = local;
+        symbol [ e %e.2 47 25 26 ];
+        %tmp.101 = dup %tmp.100;
+        lputv %e.2 %tmp.101;
+        symbol [ e %e.2 47 25 26 ];
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_47_28_49_16_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc" 48 20 ]
+        symbol [ System %tmp.102 48 20 26 ];
+        %tmp.102 = getm $.Toybox.System;
+        symbol [ println %tmp.103 48 27 34 ];
+        %tmp.103 = getv function %tmp.102 :println;
+        %tmp.104 = "Error discarding activity: ";
+        %tmp.105 = lgetv %e.2;
+        symbol [ e %tmp.105 48 67 68 ];
+        symbol [ getErrorMessage %tmp.106 48 69 84 ];
+        %tmp.106 = getv function %tmp.105 :getErrorMessage;
+        %tmp.107 = invoke %tmp.105 %tmp.106();
+        %tmp.108 = add %tmp.104 %tmp.107;
+        invoke %tmp.102 %tmp.103(%tmp.108);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_47_28_49_16_stop:
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_43_16_49_16_finally;
+        pop;
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_43_16_49_16_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_47_18_49_16_end:
+        try @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_43_16_49_16_catch @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_47_18_49_16_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_47_18_49_16_end @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_43_16_49_16_finally;
+        jsr @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_43_16_49_16_finally;
+        throw %tmp.100;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_43_16_49_16_finally:
+        jsrret;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_43_16_49_16_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_108_50_12_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_12_50_12_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_42_12_50_12_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_37_15_51_8_stop:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_18_8_51_8_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc" 54 8 ]
+        symbol [ System %tmp.109 54 8 14 ];
+        %tmp.109 = getm $.Toybox.System;
+        symbol [ exit %tmp.110 54 15 19 ];
+        %tmp.110 = getv function %tmp.109 :exit;
+        invoke %tmp.109 %tmp.110();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc" 55 8 ]
+        %tmp.111 = true;
+        ret %tmp.111;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_SessionEndView_mc_17_34_56_4_stop:
+    }
+}
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\SessionEndView.mc"; @line = 1; ]
+<init> {
+}

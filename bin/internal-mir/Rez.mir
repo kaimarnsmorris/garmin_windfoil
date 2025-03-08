@@ -1,0 +1,1698 @@
+[ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [WatchUi,3,13,20]; @symbol_usingAlias = [Ui,3,24,26]; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Graphics,4,13,21]; ]
+using Toybox.Graphics;
+[ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [Graphics,5,13,21]; @symbol_usingAlias = [Gfx,5,25,28]; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 7; @symbol_moduledef = [Rez,7,7,10]; ]
+module Rez {
+    [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 8; @symbol_moduledef = [Drawables,8,11,20]; ]
+    module Drawables {
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 9; @position = 27; initialized = true; @symbol_vardef = [LauncherIcon,9,27,39]; @symbol_type<0> = [ResourceId,9,43,53]; ]
+        var LauncherIcon as ResourceId;
+    }
+    [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 12; @symbol_moduledef = [Layouts,12,11,18]; ]
+    module Layouts {
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 12; ]
+        <init> {
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 13; @symbol_functiondef = [MainLayout,13,17,27]; @symbol_param<0> = [dc,13,28,30]; @symbol_param<0>_type<0> = [Graphics,13,34,42]; @symbol_param<0>_type<1> = [Dc,13,43,45]; @symbol_return<0> = [Array,13,50,55]; @symbol_return<1> = [WatchUi,13,56,63]; @symbol_return<2> = [Drawable,13,64,72]; ]
+        function MainLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+c_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_bin_gen_006_B3990_00_source_Rez_mcgen_13_74_17_8_start:
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 14 12 ]
+            [ "c_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_bin_gen_006_B3990_00_source_Rez_mcgen_13_74_17_8_start" "c_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_bin_gen_006_B3990_00_source_Rez_mcgen_13_74_17_8_stop" ]
+            %rez_cmp_local_text_title.1 = local;
+            symbol [ rez_cmp_local_text_title %rez_cmp_local_text_title.1 14 16 40 ];
+            symbol [ WatchUi %tmp.3 14 47 54 ];
+            %tmp.3 = getm $.Toybox.WatchUi;
+            symbol [ Text %tmp.4 14 55 59 ];
+            %tmp.4 = getv function ? %tmp.3 :Text;
+            %tmp.5 = newd 7;
+            %tmp.7 = const :identifier;
+            symbol [ identifier %tmp.7 14 62 72 const ];
+            %tmp.8 = "title";
+            %tmp.9 = dup %tmp.5;
+            %tmp.10 = aputv %tmp.9 %tmp.7 %tmp.8;
+            %tmp.12 = const :color;
+            symbol [ color %tmp.12 14 84 89 const ];
+            symbol [ Graphics %tmp.13 14 91 99 ];
+            %tmp.13 = getm $.Toybox.Graphics;
+            symbol [ COLOR_WHITE %tmp.14 14 100 111 ];
+            %tmp.14 = getv %tmp.13 :COLOR_WHITE;
+            %tmp.15 = dup %tmp.10;
+            %tmp.16 = aputv %tmp.15 %tmp.12 %tmp.14;
+            %tmp.18 = const :locX;
+            symbol [ locX %tmp.18 14 114 118 const ];
+            %tmp.19 = 260;
+            %tmp.20 = 0.5;
+            %tmp.21 = mul %tmp.19 %tmp.20;
+            %tmp.22 = dup %tmp.16;
+            %tmp.23 = aputv %tmp.22 %tmp.18 %tmp.21;
+            %tmp.25 = const :locY;
+            symbol [ locY %tmp.25 14 134 138 const ];
+            %tmp.26 = 15;
+            %tmp.27 = dup %tmp.23;
+            %tmp.28 = aputv %tmp.27 %tmp.25 %tmp.26;
+            %tmp.30 = const :text;
+            symbol [ text %tmp.30 14 145 149 const ];
+            symbol [ $ %tmp.31 14 151 152 ];
+            %tmp.31 = getm $;
+            symbol [ Rez %tmp.32 14 153 156 ];
+            %tmp.32 = getv %tmp.31 :Rez;
+            symbol [ Strings %tmp.33 14 157 164 ];
+            %tmp.33 = getv %tmp.32 :Strings;
+            symbol [ AppName %tmp.34 14 165 172 ];
+            %tmp.34 = getv %tmp.33 :AppName;
+            %tmp.35 = dup %tmp.28;
+            %tmp.36 = aputv %tmp.35 %tmp.30 %tmp.34;
+            %tmp.38 = const :justification;
+            symbol [ justification %tmp.38 14 175 188 const ];
+            symbol [ Graphics %tmp.39 14 190 198 ];
+            %tmp.39 = getm $.Toybox.Graphics;
+            symbol [ TEXT_JUSTIFY_CENTER %tmp.40 14 199 218 ];
+            %tmp.40 = getv %tmp.39 :TEXT_JUSTIFY_CENTER;
+            %tmp.41 = dup %tmp.36;
+            %tmp.42 = aputv %tmp.41 %tmp.38 %tmp.40;
+            %tmp.44 = const :font;
+            symbol [ font %tmp.44 14 221 225 const ];
+            symbol [ Graphics %tmp.45 14 227 235 ];
+            %tmp.45 = getm $.Toybox.Graphics;
+            symbol [ FONT_MEDIUM %tmp.46 14 236 247 ];
+            %tmp.46 = getv %tmp.45 :FONT_MEDIUM;
+            %tmp.47 = dup %tmp.42;
+            %tmp.48 = aputv %tmp.47 %tmp.44 %tmp.46;
+            %tmp.1 = newc %tmp.4 (%tmp.48);
+            lputv %rez_cmp_local_text_title.1 %tmp.1;
+            symbol [ rez_cmp_local_text_title %rez_cmp_local_text_title.1 14 16 40 ];
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 16 12 ]
+            %tmp.49 = newa 1 Array<WatchUi.Drawable>;
+            symbol [ Array %tmp.49 16 49 54 ];
+            symbol [ WatchUi %tmp.49 16 55 62 ];
+            symbol [ Drawable %tmp.49 16 63 71 ];
+            %tmp.50 = lgetv %rez_cmp_local_text_title.1;
+            symbol [ rez_cmp_local_text_title %tmp.50 16 20 44 ];
+            %tmp.51 = dup %tmp.49;
+            %tmp.52 = aputv %tmp.51 0 %tmp.50;
+            ret %tmp.52;
+c_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_bin_gen_006_B3990_00_source_Rez_mcgen_13_74_17_8_stop:
+        }
+    }
+    [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 20; @symbol_moduledef = [Menus,20,11,16]; ]
+    module Menus {
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 20; ]
+        <init> {
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 21; @symbol_classdef = [MainMenu,21,14,22]; @symbol_extends<0> = [WatchUi,21,31,38]; @symbol_extends<1> = [Menu,21,39,43]; ]
+        class MainMenu extends WatchUi.Menu {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 21; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 21; ]
+            static
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 22; @symbol_functiondef = [initialize,22,21,31]; ]
+            function initialize() as Void {
+c_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_bin_gen_006_B3990_00_source_Rez_mcgen_22_34_29_12_start:
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 23 16 ]
+                symbol [ Menu %tmp.2 23 16 20 ];
+                %tmp.2 = getv ? :Menu;
+                symbol [ initialize %tmp.3 23 21 31 ];
+                %tmp.3 = getv function %tmp.2 :initialize;
+                invoke %tmp.2 %tmp.3();
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 24 16 ]
+                symbol [ Menu %tmp.5 24 16 20 ];
+                %tmp.5 = getv ? :Menu;
+                symbol [ setTitle %tmp.6 24 21 29 ];
+                %tmp.6 = getv function %tmp.5 :setTitle;
+                symbol [ WatchUi %tmp.7 24 31 38 ];
+                %tmp.7 = getm $.Toybox.WatchUi;
+                symbol [ loadResource %tmp.8 24 39 51 ];
+                %tmp.8 = getv function %tmp.7 :loadResource;
+                symbol [ $ %tmp.9 24 52 53 ];
+                %tmp.9 = getm $;
+                symbol [ Rez %tmp.10 24 54 57 ];
+                %tmp.10 = getv %tmp.9 :Rez;
+                symbol [ Strings %tmp.11 24 58 65 ];
+                %tmp.11 = getv %tmp.10 :Strings;
+                symbol [ MenuTitle %tmp.12 24 66 75 ];
+                %tmp.12 = getv %tmp.11 :MenuTitle;
+                %tmp.13 = invoke %tmp.7 %tmp.8(%tmp.12);
+                %tmp.14 = as %tmp.13 String;
+                symbol [ String %tmp.14 24 80 86 ];
+                invoke %tmp.5 %tmp.6(%tmp.14);
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 25 16 ]
+                %tmp.15 = self;
+                symbol [ addItem %tmp.16 25 16 23 ];
+                %tmp.16 = getv function %tmp.15 :addItem;
+                symbol [ WatchUi %tmp.17 25 25 32 ];
+                %tmp.17 = getm $.Toybox.WatchUi;
+                symbol [ loadResource %tmp.18 25 33 45 ];
+                %tmp.18 = getv function %tmp.17 :loadResource;
+                symbol [ $ %tmp.19 25 46 47 ];
+                %tmp.19 = getm $;
+                symbol [ Rez %tmp.20 25 48 51 ];
+                %tmp.20 = getv %tmp.19 :Rez;
+                symbol [ Strings %tmp.21 25 52 59 ];
+                %tmp.21 = getv %tmp.20 :Strings;
+                symbol [ MenuItemReset %tmp.22 25 60 73 ];
+                %tmp.22 = getv %tmp.21 :MenuItemReset;
+                %tmp.23 = invoke %tmp.17 %tmp.18(%tmp.22);
+                %tmp.24 = as %tmp.23 String;
+                symbol [ String %tmp.24 25 78 84 ];
+                %tmp.26 = const :reset;
+                symbol [ reset %tmp.26 25 88 93 const ];
+                invoke %tmp.15 %tmp.16(%tmp.24, %tmp.26);
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 26 16 ]
+                %tmp.27 = self;
+                symbol [ addItem %tmp.28 26 16 23 ];
+                %tmp.28 = getv function %tmp.27 :addItem;
+                symbol [ WatchUi %tmp.29 26 25 32 ];
+                %tmp.29 = getm $.Toybox.WatchUi;
+                symbol [ loadResource %tmp.30 26 33 45 ];
+                %tmp.30 = getv function %tmp.29 :loadResource;
+                symbol [ $ %tmp.31 26 46 47 ];
+                %tmp.31 = getm $;
+                symbol [ Rez %tmp.32 26 48 51 ];
+                %tmp.32 = getv %tmp.31 :Rez;
+                symbol [ Strings %tmp.33 26 52 59 ];
+                %tmp.33 = getv %tmp.32 :Strings;
+                symbol [ MenuItemHistory %tmp.34 26 60 75 ];
+                %tmp.34 = getv %tmp.33 :MenuItemHistory;
+                %tmp.35 = invoke %tmp.29 %tmp.30(%tmp.34);
+                %tmp.36 = as %tmp.35 String;
+                symbol [ String %tmp.36 26 80 86 ];
+                %tmp.38 = const :history;
+                symbol [ history %tmp.38 26 90 97 const ];
+                invoke %tmp.27 %tmp.28(%tmp.36, %tmp.38);
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 27 16 ]
+                %tmp.39 = self;
+                symbol [ addItem %tmp.40 27 16 23 ];
+                %tmp.40 = getv function %tmp.39 :addItem;
+                symbol [ WatchUi %tmp.41 27 25 32 ];
+                %tmp.41 = getm $.Toybox.WatchUi;
+                symbol [ loadResource %tmp.42 27 33 45 ];
+                %tmp.42 = getv function %tmp.41 :loadResource;
+                symbol [ $ %tmp.43 27 46 47 ];
+                %tmp.43 = getm $;
+                symbol [ Rez %tmp.44 27 48 51 ];
+                %tmp.44 = getv %tmp.43 :Rez;
+                symbol [ Strings %tmp.45 27 52 59 ];
+                %tmp.45 = getv %tmp.44 :Strings;
+                symbol [ MenuItemSettings %tmp.46 27 60 76 ];
+                %tmp.46 = getv %tmp.45 :MenuItemSettings;
+                %tmp.47 = invoke %tmp.41 %tmp.42(%tmp.46);
+                %tmp.48 = as %tmp.47 String;
+                symbol [ String %tmp.48 27 81 87 ];
+                %tmp.50 = const :settings;
+                symbol [ settings %tmp.50 27 91 99 const ];
+                invoke %tmp.39 %tmp.40(%tmp.48, %tmp.50);
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 28 16 ]
+                %tmp.51 = self;
+                symbol [ addItem %tmp.52 28 16 23 ];
+                %tmp.52 = getv function %tmp.51 :addItem;
+                symbol [ WatchUi %tmp.53 28 25 32 ];
+                %tmp.53 = getm $.Toybox.WatchUi;
+                symbol [ loadResource %tmp.54 28 33 45 ];
+                %tmp.54 = getv function %tmp.53 :loadResource;
+                symbol [ $ %tmp.55 28 46 47 ];
+                %tmp.55 = getm $;
+                symbol [ Rez %tmp.56 28 48 51 ];
+                %tmp.56 = getv %tmp.55 :Rez;
+                symbol [ Strings %tmp.57 28 52 59 ];
+                %tmp.57 = getv %tmp.56 :Strings;
+                symbol [ MenuItemAbout %tmp.58 28 60 73 ];
+                %tmp.58 = getv %tmp.57 :MenuItemAbout;
+                %tmp.59 = invoke %tmp.53 %tmp.54(%tmp.58);
+                %tmp.60 = as %tmp.59 String;
+                symbol [ String %tmp.60 28 78 84 ];
+                %tmp.62 = const :about;
+                symbol [ about %tmp.62 28 88 93 const ];
+                invoke %tmp.51 %tmp.52(%tmp.60, %tmp.62);
+c_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_bin_gen_006_B3990_00_source_Rez_mcgen_22_34_29_12_stop:
+            }
+        }
+    }
+    [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 33; @symbol_moduledef = [Strings,33,11,18]; ]
+    module Strings {
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 33; ]
+        <init> {
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 34; @position = 27; initialized = true; @symbol_vardef = [ConfirmYes,34,27,37]; @symbol_type<0> = [ResourceId,34,41,51]; ]
+        var ConfirmYes as ResourceId;
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 35; @position = 27; initialized = true; @symbol_vardef = [ColorBlue,35,27,36]; @symbol_type<0> = [ResourceId,35,40,50]; ]
+        var ColorBlue as ResourceId;
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 36; @position = 27; initialized = true; @symbol_vardef = [MaxSpeed,36,27,35]; @symbol_type<0> = [ResourceId,36,39,49]; ]
+        var MaxSpeed as ResourceId;
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 37; @position = 27; initialized = true; @symbol_vardef = [MenuItemAbout,37,27,40]; @symbol_type<0> = [ResourceId,37,44,54]; ]
+        var MenuItemAbout as ResourceId;
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 38; @position = 27; initialized = true; @symbol_vardef = [BackgroundColorTitle,38,27,47]; @symbol_type<0> = [ResourceId,38,51,61]; ]
+        var BackgroundColorTitle as ResourceId;
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 39; @position = 27; initialized = true; @symbol_vardef = [ConfirmNo,39,27,36]; @symbol_type<0> = [ResourceId,39,40,50]; ]
+        var ConfirmNo as ResourceId;
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 40; @position = 27; initialized = true; @symbol_vardef = [MenuTitle,40,27,36]; @symbol_type<0> = [ResourceId,40,40,50]; ]
+        var MenuTitle as ResourceId;
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 41; @position = 27; initialized = true; @symbol_vardef = [ColorBlack,41,27,37]; @symbol_type<0> = [ResourceId,41,41,51]; ]
+        var ColorBlack as ResourceId;
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 42; @position = 27; initialized = true; @symbol_vardef = [PercentOnFoil,42,27,40]; @symbol_type<0> = [ResourceId,42,44,54]; ]
+        var PercentOnFoil as ResourceId;
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 43; @position = 27; initialized = true; @symbol_vardef = [AppName,43,27,34]; @symbol_type<0> = [ResourceId,43,38,48]; ]
+        var AppName as ResourceId;
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 44; @position = 27; initialized = true; @symbol_vardef = [ThresholdDesc,44,27,40]; @symbol_type<0> = [ResourceId,44,44,54]; ]
+        var ThresholdDesc as ResourceId;
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 45; @position = 27; initialized = true; @symbol_vardef = [AppVersion,45,27,37]; @symbol_type<0> = [ResourceId,45,41,51]; ]
+        var AppVersion as ResourceId;
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 46; @position = 27; initialized = true; @symbol_vardef = [Max3sSpeed,46,27,37]; @symbol_type<0> = [ResourceId,46,41,51]; ]
+        var Max3sSpeed as ResourceId;
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 47; @position = 27; initialized = true; @symbol_vardef = [MenuItemHistory,47,27,42]; @symbol_type<0> = [ResourceId,47,46,56]; ]
+        var MenuItemHistory as ResourceId;
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 48; @position = 27; initialized = true; @symbol_vardef = [MenuItemReset,48,27,40]; @symbol_type<0> = [ResourceId,48,44,54]; ]
+        var MenuItemReset as ResourceId;
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 49; @position = 27; initialized = true; @symbol_vardef = [ConfirmExit,49,27,38]; @symbol_type<0> = [ResourceId,49,42,52]; ]
+        var ConfirmExit as ResourceId;
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 50; @position = 27; initialized = true; @symbol_vardef = [ThresholdTitle,50,27,41]; @symbol_type<0> = [ResourceId,50,45,55]; ]
+        var ThresholdTitle as ResourceId;
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 51; @position = 27; initialized = true; @symbol_vardef = [MenuItemSettings,51,27,43]; @symbol_type<0> = [ResourceId,51,47,57]; ]
+        var MenuItemSettings as ResourceId;
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 52; @position = 27; initialized = true; @symbol_vardef = [ColorGreen,52,27,37]; @symbol_type<0> = [ResourceId,52,41,51]; ]
+        var ColorGreen as ResourceId;
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 53; @position = 27; initialized = true; @symbol_vardef = [Knots,53,27,32]; @symbol_type<0> = [ResourceId,53,36,46]; ]
+        var Knots as ResourceId;
+    }
+    [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 56; @symbol_moduledef = [Styles,56,11,17]; ]
+    module Styles {
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 56; ]
+        <init> {
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 57; @symbol_moduledef = [prompt_font_enhanced_readability__body_with_title,57,15,64]; ]
+        module prompt_font_enhanced_readability__body_with_title {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 57; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 58; @position = 18; @symbol_constdef = [exclude,58,18,25]; @symbol_type<0> = [Boolean,58,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 61; @symbol_moduledef = [system_size__menu_header,61,15,39]; ]
+        module system_size__menu_header {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 61; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 62; @position = 18; @symbol_constdef = [width,62,18,23]; @symbol_type<0> = [Number,62,27,33]; ]
+            const width as Number = 260;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 63; @position = 18; @symbol_constdef = [height,63,18,24]; @symbol_type<0> = [Number,63,28,34]; ]
+            const height as Number = 81;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 66; @symbol_moduledef = [system_loc__hint_button_left_bottom,66,15,50]; ]
+        module system_loc__hint_button_left_bottom {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 66; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 67; @position = 18; @symbol_constdef = [x,67,18,19]; @symbol_type<0> = [Number,67,23,29]; ]
+            const x as Number = 10;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 68; @position = 18; @symbol_constdef = [y,68,18,19]; @symbol_type<0> = [Number,68,23,29]; ]
+            const y as Number = 173;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 71; @symbol_moduledef = [prompt_font_enhanced_readability__body_no_title,71,15,62]; ]
+        module prompt_font_enhanced_readability__body_no_title {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 71; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 72; @position = 18; @symbol_constdef = [exclude,72,18,25]; @symbol_type<0> = [Boolean,72,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 75; @symbol_moduledef = [prompt_loc__body_no_title,75,15,40]; ]
+        module prompt_loc__body_no_title {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 75; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 76; @position = 18; @symbol_constdef = [x,76,18,19]; @symbol_type<0> = [Number,76,23,29]; ]
+            const x as Number = 26;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 77; @position = 18; @symbol_constdef = [y,77,18,19]; @symbol_type<0> = [Number,77,23,29]; ]
+            const y as Number = 26;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 80; @symbol_moduledef = [system_icon_dark__about,80,15,38]; ]
+        module system_icon_dark__about {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 80; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 81; @position = 18; @symbol_constdef = [filename,81,18,26]; @symbol_type<0> = [String,81,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_dark__about.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 82; @position = 18; @symbol_constdef = [compress,82,18,26]; @symbol_type<0> = [String,82,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 83; @position = 18; @symbol_constdef = [dithering,83,18,27]; @symbol_type<0> = [String,83,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 84; @position = 18; @symbol_constdef = [automaticPalette,84,18,34]; @symbol_type<0> = [String,84,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 87; @symbol_moduledef = [system_icon_light__question,87,15,42]; ]
+        module system_icon_light__question {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 87; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 88; @position = 18; @symbol_constdef = [filename,88,18,26]; @symbol_type<0> = [String,88,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_light__question.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 89; @position = 18; @symbol_constdef = [dithering,89,18,27]; @symbol_type<0> = [String,89,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 92; @symbol_moduledef = [system_loc__hint_button_left_top,92,15,47]; ]
+        module system_loc__hint_button_left_top {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 92; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 93; @position = 18; @symbol_constdef = [exclude,93,18,25]; @symbol_type<0> = [Boolean,93,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 96; @symbol_moduledef = [prompt_font__title,96,15,33]; ]
+        module prompt_font__title {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 96; ]
+            <init> {
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 97 18 ]
+                symbol [ Graphics %tmp.63 97 34 42 ];
+                %tmp.63 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.64 97 43 62 ];
+                %tmp.64 = getv %tmp.63 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.65 97 63 71 ];
+                %tmp.65 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.66 97 72 92 ];
+                %tmp.66 = getv %tmp.65 :TEXT_JUSTIFY_VCENTER;
+                %tmp.67 = bitor %tmp.64 %tmp.66;
+                putv self :justification %tmp.67;
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 98 18 ]
+                symbol [ Graphics %tmp.68 98 25 33 ];
+                %tmp.68 = getm $.Toybox.Graphics;
+                symbol [ FONT_XTINY %tmp.69 98 34 44 ];
+                %tmp.69 = getv %tmp.68 :FONT_XTINY;
+                putv self :font %tmp.69;
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 97; @position = 18; @symbol_constdef = [justification,97,18,31]; ]
+            const justification;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 98; @position = 18; @symbol_constdef = [font,98,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 101; @symbol_moduledef = [system_icon_dark__discard,101,15,40]; ]
+        module system_icon_dark__discard {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 101; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 102; @position = 18; @symbol_constdef = [filename,102,18,26]; @symbol_type<0> = [String,102,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_dark__discard.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 103; @position = 18; @symbol_constdef = [compress,103,18,26]; @symbol_type<0> = [String,103,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 104; @position = 18; @symbol_constdef = [dithering,104,18,27]; @symbol_type<0> = [String,104,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 105; @position = 18; @symbol_constdef = [automaticPalette,105,18,34]; @symbol_type<0> = [String,105,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 108; @symbol_moduledef = [system_size__menu_item,108,15,37]; ]
+        module system_size__menu_item {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 108; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 109; @position = 18; @symbol_constdef = [width,109,18,23]; @symbol_type<0> = [Number,109,27,33]; ]
+            const width as Number = 260;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 110; @position = 18; @symbol_constdef = [height,110,18,24]; @symbol_type<0> = [Number,110,28,34]; ]
+            const height as Number = 68;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 113; @symbol_moduledef = [system_color_dark__text,113,15,38]; ]
+        module system_color_dark__text {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 113; ]
+            <init> {
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 115 18 ]
+                symbol [ Graphics %tmp.70 115 31 39 ];
+                %tmp.70 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.71 115 40 57 ];
+                %tmp.71 = getv %tmp.70 :COLOR_TRANSPARENT;
+                putv self :background %tmp.71;
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 114; @position = 18; @symbol_constdef = [color,114,18,23]; @symbol_type<0> = [Number,114,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 115; @position = 18; @symbol_constdef = [background,115,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 118; @symbol_moduledef = [system_icon_destructive__discard,118,15,47]; ]
+        module system_icon_destructive__discard {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 118; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 119; @position = 18; @symbol_constdef = [filename,119,18,26]; @symbol_type<0> = [String,119,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_destructive__discard.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 120; @position = 18; @symbol_constdef = [dithering,120,18,27]; @symbol_type<0> = [String,120,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 123; @symbol_moduledef = [system_icon_dark__hint_action_menu,123,15,49]; ]
+        module system_icon_dark__hint_action_menu {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 123; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 124; @position = 18; @symbol_constdef = [filename,124,18,26]; @symbol_type<0> = [String,124,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_dark__hint_button_right_top.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 125; @position = 18; @symbol_constdef = [dithering,125,18,27]; @symbol_type<0> = [String,125,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 128; @symbol_moduledef = [prompt_size__title,128,15,33]; ]
+        module prompt_size__title {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 128; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 129; @position = 18; @symbol_constdef = [width,129,18,23]; @symbol_type<0> = [Number,129,27,33]; ]
+            const width as Number = 208;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 130; @position = 18; @symbol_constdef = [height,130,18,24]; @symbol_type<0> = [Number,130,28,34]; ]
+            const height as Number = 48;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 133; @symbol_moduledef = [confirmation_font__body,133,15,38]; ]
+        module confirmation_font__body {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 133; ]
+            <init> {
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 134 18 ]
+                symbol [ Graphics %tmp.72 134 34 42 ];
+                %tmp.72 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.73 134 43 62 ];
+                %tmp.73 = getv %tmp.72 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.74 134 63 71 ];
+                %tmp.74 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.75 134 72 92 ];
+                %tmp.75 = getv %tmp.74 :TEXT_JUSTIFY_VCENTER;
+                %tmp.76 = bitor %tmp.73 %tmp.75;
+                putv self :justification %tmp.76;
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 135 18 ]
+                symbol [ Graphics %tmp.77 135 25 33 ];
+                %tmp.77 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.78 135 34 43 ];
+                %tmp.78 = getv %tmp.77 :FONT_TINY;
+                putv self :font %tmp.78;
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 134; @position = 18; @symbol_constdef = [justification,134,18,31]; ]
+            const justification;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 135; @position = 18; @symbol_constdef = [font,135,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 138; @symbol_moduledef = [system_color_dark__background,138,15,44]; ]
+        module system_color_dark__background {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 138; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 139; @position = 18; @symbol_constdef = [color,139,18,23]; @symbol_type<0> = [Number,139,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 140; @position = 18; @symbol_constdef = [background,140,18,28]; @symbol_type<0> = [Number,140,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 143; @symbol_moduledef = [system_icon_destructive__hint_button_left_top,143,15,60]; ]
+        module system_icon_destructive__hint_button_left_top {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 143; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 144; @position = 18; @symbol_constdef = [filename,144,18,26]; @symbol_type<0> = [String,144,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_destructive__hint_button_left_top.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 145; @position = 18; @symbol_constdef = [dithering,145,18,27]; @symbol_type<0> = [String,145,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 148; @symbol_moduledef = [system_size__launch_icon,148,15,39]; ]
+        module system_size__launch_icon {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 148; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 149; @position = 18; @symbol_constdef = [scaleX,149,18,24]; @symbol_type<0> = [Number,149,28,34]; ]
+            const scaleX as Number = 40;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 150; @position = 18; @symbol_constdef = [scaleY,150,18,24]; @symbol_type<0> = [Number,150,28,34]; ]
+            const scaleY as Number = 40;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 151; @position = 18; @symbol_constdef = [scaleRelativeTo,151,18,33]; @symbol_type<0> = [String,151,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 154; @symbol_moduledef = [confirmation_input__confirm,154,15,42]; ]
+        module confirmation_input__confirm {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 154; ]
+            <init> {
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 155 18 ]
+                symbol [ WatchUi %tmp.79 155 27 34 ];
+                %tmp.79 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.80 155 35 44 ];
+                %tmp.80 = getv %tmp.79 :KEY_ENTER;
+                putv self :button %tmp.80;
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 155; @position = 18; @symbol_constdef = [button,155,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 158; @symbol_moduledef = [prompt_font__body_with_title,158,15,43]; ]
+        module prompt_font__body_with_title {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 158; ]
+            <init> {
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 159 18 ]
+                symbol [ Graphics %tmp.81 159 34 42 ];
+                %tmp.81 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.82 159 43 62 ];
+                %tmp.82 = getv %tmp.81 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.82;
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 160 18 ]
+                symbol [ Graphics %tmp.83 160 25 33 ];
+                %tmp.83 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.84 160 34 43 ];
+                %tmp.84 = getv %tmp.83 :FONT_TINY;
+                putv self :font %tmp.84;
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 159; @position = 18; @symbol_constdef = [justification,159,18,31]; ]
+            const justification;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 160; @position = 18; @symbol_constdef = [font,160,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 163; @symbol_moduledef = [confirmation_loc__body,163,15,37]; ]
+        module confirmation_loc__body {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 163; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 164; @position = 18; @symbol_constdef = [x,164,18,19]; @symbol_type<0> = [Number,164,23,29]; ]
+            const x as Number = 52;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 165; @position = 18; @symbol_constdef = [y,165,18,19]; @symbol_type<0> = [Number,165,23,29]; ]
+            const y as Number = 52;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 168; @symbol_moduledef = [system_icon_destructive__hint_button_left_bottom,168,15,63]; ]
+        module system_icon_destructive__hint_button_left_bottom {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 168; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 169; @position = 18; @symbol_constdef = [filename,169,18,26]; @symbol_type<0> = [String,169,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_destructive__hint_button_left_bottom.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 170; @position = 18; @symbol_constdef = [dithering,170,18,27]; @symbol_type<0> = [String,170,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 173; @symbol_moduledef = [prompt_color_dark__background,173,15,44]; ]
+        module prompt_color_dark__background {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 173; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 174; @position = 18; @symbol_constdef = [color,174,18,23]; @symbol_type<0> = [Number,174,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 175; @position = 18; @symbol_constdef = [background,175,18,28]; @symbol_type<0> = [Number,175,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 178; @symbol_moduledef = [system_icon_destructive__hint_action_menu,178,15,56]; ]
+        module system_icon_destructive__hint_action_menu {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 178; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 179; @position = 18; @symbol_constdef = [filename,179,18,26]; @symbol_type<0> = [String,179,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_destructive__hint_button_right_top.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 180; @position = 18; @symbol_constdef = [dithering,180,18,27]; @symbol_type<0> = [String,180,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 183; @symbol_moduledef = [system_loc__hint_action_menu,183,15,43]; ]
+        module system_loc__hint_action_menu {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 183; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 184; @position = 18; @symbol_constdef = [x,184,18,19]; @symbol_type<0> = [Number,184,23,29]; ]
+            const x as Number = 227;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 185; @position = 18; @symbol_constdef = [y,185,18,19]; @symbol_type<0> = [Number,185,23,29]; ]
+            const y as Number = 53;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 188; @symbol_moduledef = [confirmation_icon__hint_confirm,188,15,46]; ]
+        module confirmation_icon__hint_confirm {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 188; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 189; @position = 18; @symbol_constdef = [filename,189,18,26]; @symbol_type<0> = [String,189,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\confirmation_icon__hint_completion.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 190; @position = 18; @symbol_constdef = [dithering,190,18,27]; @symbol_type<0> = [String,190,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 193; @symbol_moduledef = [system_loc__hint_button_left_middle,193,15,50]; ]
+        module system_loc__hint_button_left_middle {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 193; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 194; @position = 18; @symbol_constdef = [x,194,18,19]; @symbol_type<0> = [Number,194,23,29]; ]
+            const x as Number = 1;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 195; @position = 18; @symbol_constdef = [y,195,18,19]; @symbol_type<0> = [Number,195,23,29]; ]
+            const y as Number = 109;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 198; @symbol_moduledef = [prompt_size__body_no_title,198,15,41]; ]
+        module prompt_size__body_no_title {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 198; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 199; @position = 18; @symbol_constdef = [width,199,18,23]; @symbol_type<0> = [Number,199,27,33]; ]
+            const width as Number = 208;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 200; @position = 18; @symbol_constdef = [height,200,18,24]; @symbol_type<0> = [Number,200,28,34]; ]
+            const height as Number = 208;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 203; @symbol_moduledef = [system_icon_light__hint_button_left_top,203,15,54]; ]
+        module system_icon_light__hint_button_left_top {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 203; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 204; @position = 18; @symbol_constdef = [filename,204,18,26]; @symbol_type<0> = [String,204,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_light__hint_button_left_top.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 205; @position = 18; @symbol_constdef = [dithering,205,18,27]; @symbol_type<0> = [String,205,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 208; @symbol_moduledef = [prompt_color_light__background,208,15,45]; ]
+        module prompt_color_light__background {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 208; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 209; @position = 18; @symbol_constdef = [color,209,18,23]; @symbol_type<0> = [Number,209,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 210; @position = 18; @symbol_constdef = [background,210,18,28]; @symbol_type<0> = [Number,210,32,38]; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 213; @symbol_moduledef = [confirmation_input__delete,213,15,41]; ]
+        module confirmation_input__delete {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 213; ]
+            <init> {
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 214 18 ]
+                symbol [ WatchUi %tmp.85 214 27 34 ];
+                %tmp.85 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.86 214 35 44 ];
+                %tmp.86 = getv %tmp.85 :KEY_ENTER;
+                putv self :button %tmp.86;
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 214; @position = 18; @symbol_constdef = [button,214,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 217; @symbol_moduledef = [system_icon_dark__hint_button_left_top,217,15,53]; ]
+        module system_icon_dark__hint_button_left_top {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 217; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 218; @position = 18; @symbol_constdef = [filename,218,18,26]; @symbol_type<0> = [String,218,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_dark__hint_button_left_top.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 219; @position = 18; @symbol_constdef = [dithering,219,18,27]; @symbol_type<0> = [String,219,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 222; @symbol_moduledef = [system_input__action_menu,222,15,40]; ]
+        module system_input__action_menu {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 222; ]
+            <init> {
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 223 18 ]
+                symbol [ WatchUi %tmp.87 223 27 34 ];
+                %tmp.87 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.88 223 35 44 ];
+                %tmp.88 = getv %tmp.87 :KEY_ENTER;
+                putv self :button %tmp.88;
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 223; @position = 18; @symbol_constdef = [button,223,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 226; @symbol_moduledef = [system_icon_light__save,226,15,38]; ]
+        module system_icon_light__save {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 226; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 227; @position = 18; @symbol_constdef = [filename,227,18,26]; @symbol_type<0> = [String,227,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_light__save.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 228; @position = 18; @symbol_constdef = [dithering,228,18,27]; @symbol_type<0> = [String,228,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 231; @symbol_moduledef = [prompt_color_light__body,231,15,39]; ]
+        module prompt_color_light__body {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 231; ]
+            <init> {
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 233 18 ]
+                symbol [ Graphics %tmp.89 233 31 39 ];
+                %tmp.89 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.90 233 40 57 ];
+                %tmp.90 = getv %tmp.89 :COLOR_TRANSPARENT;
+                putv self :background %tmp.90;
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 232; @position = 18; @symbol_constdef = [color,232,18,23]; @symbol_type<0> = [Number,232,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 233; @position = 18; @symbol_constdef = [background,233,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 236; @symbol_moduledef = [system_loc__subwindow,236,15,36]; ]
+        module system_loc__subwindow {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 236; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 237; @position = 18; @symbol_constdef = [exclude,237,18,25]; @symbol_type<0> = [Boolean,237,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 240; @symbol_moduledef = [system_icon_light__warning,240,15,41]; ]
+        module system_icon_light__warning {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 240; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 241; @position = 18; @symbol_constdef = [filename,241,18,26]; @symbol_type<0> = [String,241,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_light__warning.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 242; @position = 18; @symbol_constdef = [dithering,242,18,27]; @symbol_type<0> = [String,242,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 245; @symbol_moduledef = [confirmation_color_light__body,245,15,45]; ]
+        module confirmation_color_light__body {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 245; ]
+            <init> {
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 247 18 ]
+                symbol [ Graphics %tmp.91 247 31 39 ];
+                %tmp.91 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.92 247 40 57 ];
+                %tmp.92 = getv %tmp.91 :COLOR_TRANSPARENT;
+                putv self :background %tmp.92;
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 246; @position = 18; @symbol_constdef = [color,246,18,23]; @symbol_type<0> = [Number,246,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 247; @position = 18; @symbol_constdef = [background,247,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 250; @symbol_moduledef = [confirmation_icon_light__hint_keep,250,15,49]; ]
+        module confirmation_icon_light__hint_keep {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 250; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 251; @position = 18; @symbol_constdef = [filename,251,18,26]; @symbol_type<0> = [String,251,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\confirmation_icon__hint_keep.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 252; @position = 18; @symbol_constdef = [dithering,252,18,27]; @symbol_type<0> = [String,252,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 255; @symbol_moduledef = [activity_color_light__background,255,15,47]; ]
+        module activity_color_light__background {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 255; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 256; @position = 18; @symbol_constdef = [color,256,18,23]; @symbol_type<0> = [Number,256,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 257; @position = 18; @symbol_constdef = [background,257,18,28]; @symbol_type<0> = [Number,257,32,38]; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 260; @symbol_moduledef = [system_icon_positive__hint_button_right_top,260,15,58]; ]
+        module system_icon_positive__hint_button_right_top {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 260; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 261; @position = 18; @symbol_constdef = [filename,261,18,26]; @symbol_type<0> = [String,261,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_positive__hint_button_right_top.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 262; @position = 18; @symbol_constdef = [dithering,262,18,27]; @symbol_type<0> = [String,262,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 265; @symbol_moduledef = [system_size__screen,265,15,34]; ]
+        module system_size__screen {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 265; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 266; @position = 18; @symbol_constdef = [width,266,18,23]; @symbol_type<0> = [Number,266,27,33]; ]
+            const width as Number = 260;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 267; @position = 18; @symbol_constdef = [height,267,18,24]; @symbol_type<0> = [Number,267,28,34]; ]
+            const height as Number = 260;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 270; @symbol_moduledef = [system_icon_destructive__hint_button_right_bottom,270,15,64]; ]
+        module system_icon_destructive__hint_button_right_bottom {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 270; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 271; @position = 18; @symbol_constdef = [filename,271,18,26]; @symbol_type<0> = [String,271,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_destructive__hint_button_right_bottom.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 272; @position = 18; @symbol_constdef = [dithering,272,18,27]; @symbol_type<0> = [String,272,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 275; @symbol_moduledef = [system_color_light__background,275,15,45]; ]
+        module system_color_light__background {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 275; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 276; @position = 18; @symbol_constdef = [color,276,18,23]; @symbol_type<0> = [Number,276,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 277; @position = 18; @symbol_constdef = [background,277,18,28]; @symbol_type<0> = [Number,277,32,38]; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 280; @symbol_moduledef = [system_icon_destructive__hint_button_right_top,280,15,61]; ]
+        module system_icon_destructive__hint_button_right_top {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 280; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 281; @position = 18; @symbol_constdef = [filename,281,18,26]; @symbol_type<0> = [String,281,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_destructive__hint_button_right_top.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 282; @position = 18; @symbol_constdef = [dithering,282,18,27]; @symbol_type<0> = [String,282,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 285; @symbol_moduledef = [confirmation_loc__hint_confirm,285,15,45]; ]
+        module confirmation_loc__hint_confirm {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 285; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 286; @position = 18; @symbol_constdef = [x,286,18,19]; @symbol_type<0> = [Number,286,23,29]; ]
+            const x as Number = 205;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 287; @position = 18; @symbol_constdef = [y,287,18,19]; @symbol_type<0> = [Number,287,23,29]; ]
+            const y as Number = 50;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 290; @symbol_moduledef = [activity_color_dark__text,290,15,40]; ]
+        module activity_color_dark__text {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 290; ]
+            <init> {
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 292 18 ]
+                symbol [ Graphics %tmp.93 292 31 39 ];
+                %tmp.93 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.94 292 40 57 ];
+                %tmp.94 = getv %tmp.93 :COLOR_TRANSPARENT;
+                putv self :background %tmp.94;
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 291; @position = 18; @symbol_constdef = [color,291,18,23]; @symbol_type<0> = [Number,291,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 292; @position = 18; @symbol_constdef = [background,292,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 295; @symbol_moduledef = [confirmation_input__keep,295,15,39]; ]
+        module confirmation_input__keep {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 295; ]
+            <init> {
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 296 18 ]
+                symbol [ WatchUi %tmp.95 296 27 34 ];
+                %tmp.95 = getm $.Toybox.WatchUi;
+                symbol [ KEY_DOWN %tmp.96 296 35 43 ];
+                %tmp.96 = getv %tmp.95 :KEY_DOWN;
+                putv self :button %tmp.96;
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 296; @position = 18; @symbol_constdef = [button,296,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 299; @symbol_moduledef = [prompt_loc__body_with_title,299,15,42]; ]
+        module prompt_loc__body_with_title {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 299; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 300; @position = 18; @symbol_constdef = [x,300,18,19]; @symbol_type<0> = [Number,300,23,29]; ]
+            const x as Number = 26;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 301; @position = 18; @symbol_constdef = [y,301,18,19]; @symbol_type<0> = [Number,301,23,29]; ]
+            const y as Number = 78;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 304; @symbol_moduledef = [system_icon_dark__search,304,15,39]; ]
+        module system_icon_dark__search {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 304; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 305; @position = 18; @symbol_constdef = [filename,305,18,26]; @symbol_type<0> = [String,305,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_dark__search.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 306; @position = 18; @symbol_constdef = [compress,306,18,26]; @symbol_type<0> = [String,306,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 307; @position = 18; @symbol_constdef = [dithering,307,18,27]; @symbol_type<0> = [String,307,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 308; @position = 18; @symbol_constdef = [automaticPalette,308,18,34]; @symbol_type<0> = [String,308,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 311; @symbol_moduledef = [activity_color_light__text,311,15,41]; ]
+        module activity_color_light__text {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 311; ]
+            <init> {
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 313 18 ]
+                symbol [ Graphics %tmp.97 313 31 39 ];
+                %tmp.97 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.98 313 40 57 ];
+                %tmp.98 = getv %tmp.97 :COLOR_TRANSPARENT;
+                putv self :background %tmp.98;
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 312; @position = 18; @symbol_constdef = [color,312,18,23]; @symbol_type<0> = [Number,312,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 313; @position = 18; @symbol_constdef = [background,313,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 316; @symbol_moduledef = [confirmation_icon__hint_keep,316,15,43]; ]
+        module confirmation_icon__hint_keep {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 316; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 317; @position = 18; @symbol_constdef = [filename,317,18,26]; @symbol_type<0> = [String,317,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\confirmation_icon__hint_keep.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 318; @position = 18; @symbol_constdef = [dithering,318,18,27]; @symbol_type<0> = [String,318,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 321; @symbol_moduledef = [system_icon_dark__save,321,15,37]; ]
+        module system_icon_dark__save {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 321; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 322; @position = 18; @symbol_constdef = [filename,322,18,26]; @symbol_type<0> = [String,322,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_dark__save.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 323; @position = 18; @symbol_constdef = [compress,323,18,26]; @symbol_type<0> = [String,323,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 324; @position = 18; @symbol_constdef = [dithering,324,18,27]; @symbol_type<0> = [String,324,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 325; @position = 18; @symbol_constdef = [automaticPalette,325,18,34]; @symbol_type<0> = [String,325,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 328; @symbol_moduledef = [system_icon_destructive__hint_button_left_middle,328,15,63]; ]
+        module system_icon_destructive__hint_button_left_middle {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 328; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 329; @position = 18; @symbol_constdef = [filename,329,18,26]; @symbol_type<0> = [String,329,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_destructive__hint_button_left_middle.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 330; @position = 18; @symbol_constdef = [dithering,330,18,27]; @symbol_type<0> = [String,330,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 333; @symbol_moduledef = [system_icon_light__search,333,15,40]; ]
+        module system_icon_light__search {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 333; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 334; @position = 18; @symbol_constdef = [filename,334,18,26]; @symbol_type<0> = [String,334,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_light__search.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 335; @position = 18; @symbol_constdef = [dithering,335,18,27]; @symbol_type<0> = [String,335,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 338; @symbol_moduledef = [system_icon_dark__hint_button_left_bottom,338,15,56]; ]
+        module system_icon_dark__hint_button_left_bottom {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 338; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 339; @position = 18; @symbol_constdef = [filename,339,18,26]; @symbol_type<0> = [String,339,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_dark__hint_button_left_bottom.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 340; @position = 18; @symbol_constdef = [dithering,340,18,27]; @symbol_type<0> = [String,340,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 343; @symbol_moduledef = [system_icon_positive__hint_button_left_top,343,15,57]; ]
+        module system_icon_positive__hint_button_left_top {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 343; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 344; @position = 18; @symbol_constdef = [filename,344,18,26]; @symbol_type<0> = [String,344,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_positive__hint_button_left_top.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 345; @position = 18; @symbol_constdef = [dithering,345,18,27]; @symbol_type<0> = [String,345,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 348; @symbol_moduledef = [system_loc__hint_button_right_bottom,348,15,51]; ]
+        module system_loc__hint_button_right_bottom {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 348; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 349; @position = 18; @symbol_constdef = [x,349,18,19]; @symbol_type<0> = [Number,349,23,29]; ]
+            const x as Number = 224;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 350; @position = 18; @symbol_constdef = [y,350,18,19]; @symbol_type<0> = [Number,350,23,29]; ]
+            const y as Number = 172;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 353; @symbol_moduledef = [confirmation_icon_dark__hint_reject,353,15,50]; ]
+        module confirmation_icon_dark__hint_reject {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 353; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 354; @position = 18; @symbol_constdef = [filename,354,18,26]; @symbol_type<0> = [String,354,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 355; @position = 18; @symbol_constdef = [dithering,355,18,27]; @symbol_type<0> = [String,355,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 358; @symbol_moduledef = [confirmation_color_dark__body,358,15,44]; ]
+        module confirmation_color_dark__body {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 358; ]
+            <init> {
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 360 18 ]
+                symbol [ Graphics %tmp.99 360 31 39 ];
+                %tmp.99 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.100 360 40 57 ];
+                %tmp.100 = getv %tmp.99 :COLOR_TRANSPARENT;
+                putv self :background %tmp.100;
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 359; @position = 18; @symbol_constdef = [color,359,18,23]; @symbol_type<0> = [Number,359,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 360; @position = 18; @symbol_constdef = [background,360,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 363; @symbol_moduledef = [confirmation_icon_light__hint_confirm,363,15,52]; ]
+        module confirmation_icon_light__hint_confirm {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 363; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 364; @position = 18; @symbol_constdef = [filename,364,18,26]; @symbol_type<0> = [String,364,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\confirmation_icon__hint_completion.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 365; @position = 18; @symbol_constdef = [dithering,365,18,27]; @symbol_type<0> = [String,365,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 368; @symbol_moduledef = [prompt_color_dark__title,368,15,39]; ]
+        module prompt_color_dark__title {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 368; ]
+            <init> {
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 370 18 ]
+                symbol [ Graphics %tmp.101 370 31 39 ];
+                %tmp.101 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.102 370 40 57 ];
+                %tmp.102 = getv %tmp.101 :COLOR_TRANSPARENT;
+                putv self :background %tmp.102;
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 369; @position = 18; @symbol_constdef = [color,369,18,23]; @symbol_type<0> = [Number,369,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 370; @position = 18; @symbol_constdef = [background,370,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 373; @symbol_moduledef = [system_icon_destructive__cancel,373,15,46]; ]
+        module system_icon_destructive__cancel {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 373; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 374; @position = 18; @symbol_constdef = [filename,374,18,26]; @symbol_type<0> = [String,374,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_destructive__cancel.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 375; @position = 18; @symbol_constdef = [dithering,375,18,27]; @symbol_type<0> = [String,375,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 378; @symbol_moduledef = [system_icon_light__hint_button_right_bottom,378,15,58]; ]
+        module system_icon_light__hint_button_right_bottom {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 378; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 379; @position = 18; @symbol_constdef = [filename,379,18,26]; @symbol_type<0> = [String,379,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_light__hint_button_right_bottom.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 380; @position = 18; @symbol_constdef = [dithering,380,18,27]; @symbol_type<0> = [String,380,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 383; @symbol_moduledef = [prompt_loc__title,383,15,32]; ]
+        module prompt_loc__title {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 383; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 384; @position = 18; @symbol_constdef = [x,384,18,19]; @symbol_type<0> = [Number,384,23,29]; ]
+            const x as Number = 26;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 385; @position = 18; @symbol_constdef = [y,385,18,19]; @symbol_type<0> = [Number,385,23,29]; ]
+            const y as Number = 19;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 388; @symbol_moduledef = [confirmation_font_enhanced_readability__body,388,15,59]; ]
+        module confirmation_font_enhanced_readability__body {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 388; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 389; @position = 18; @symbol_constdef = [exclude,389,18,25]; @symbol_type<0> = [Boolean,389,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 392; @symbol_moduledef = [prompt_color_light__title,392,15,40]; ]
+        module prompt_color_light__title {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 392; ]
+            <init> {
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 394 18 ]
+                symbol [ Graphics %tmp.103 394 31 39 ];
+                %tmp.103 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.104 394 40 57 ];
+                %tmp.104 = getv %tmp.103 :COLOR_TRANSPARENT;
+                putv self :background %tmp.104;
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 393; @position = 18; @symbol_constdef = [color,393,18,23]; @symbol_type<0> = [Number,393,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 394; @position = 18; @symbol_constdef = [background,394,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 397; @symbol_moduledef = [system_icon_dark__hint_button_right_top,397,15,54]; ]
+        module system_icon_dark__hint_button_right_top {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 397; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 398; @position = 18; @symbol_constdef = [filename,398,18,26]; @symbol_type<0> = [String,398,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_dark__hint_button_right_top.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 399; @position = 18; @symbol_constdef = [dithering,399,18,27]; @symbol_type<0> = [String,399,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 402; @symbol_moduledef = [system_icon_dark__hint_button_left_middle,402,15,56]; ]
+        module system_icon_dark__hint_button_left_middle {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 402; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 403; @position = 18; @symbol_constdef = [filename,403,18,26]; @symbol_type<0> = [String,403,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_dark__hint_button_left_middle.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 404; @position = 18; @symbol_constdef = [dithering,404,18,27]; @symbol_type<0> = [String,404,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 407; @symbol_moduledef = [confirmation_icon_dark__hint_keep,407,15,48]; ]
+        module confirmation_icon_dark__hint_keep {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 407; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 408; @position = 18; @symbol_constdef = [filename,408,18,26]; @symbol_type<0> = [String,408,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\confirmation_icon__hint_keep.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 409; @position = 18; @symbol_constdef = [dithering,409,18,27]; @symbol_type<0> = [String,409,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 412; @symbol_moduledef = [system_icon_light__cancel,412,15,40]; ]
+        module system_icon_light__cancel {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 412; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 413; @position = 18; @symbol_constdef = [filename,413,18,26]; @symbol_type<0> = [String,413,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_light__cancel.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 414; @position = 18; @symbol_constdef = [dithering,414,18,27]; @symbol_type<0> = [String,414,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 417; @symbol_moduledef = [confirmation_icon_light__hint_reject,417,15,51]; ]
+        module confirmation_icon_light__hint_reject {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 417; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 418; @position = 18; @symbol_constdef = [filename,418,18,26]; @symbol_type<0> = [String,418,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 419; @position = 18; @symbol_constdef = [dithering,419,18,27]; @symbol_type<0> = [String,419,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 422; @symbol_moduledef = [system_icon_light__about,422,15,39]; ]
+        module system_icon_light__about {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 422; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 423; @position = 18; @symbol_constdef = [filename,423,18,26]; @symbol_type<0> = [String,423,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_light__about.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 424; @position = 18; @symbol_constdef = [dithering,424,18,27]; @symbol_type<0> = [String,424,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 427; @symbol_moduledef = [system_size__toast_icon,427,15,38]; ]
+        module system_size__toast_icon {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 427; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 428; @position = 18; @symbol_constdef = [scaleX,428,18,24]; @symbol_type<0> = [Number,428,28,34]; ]
+            const scaleX as Number = 21;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 429; @position = 18; @symbol_constdef = [scaleY,429,18,24]; @symbol_type<0> = [Number,429,28,34]; ]
+            const scaleY as Number = 21;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 430; @position = 18; @symbol_constdef = [scaleRelativeTo,430,18,33]; @symbol_type<0> = [String,430,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 433; @symbol_moduledef = [system_icon_dark__hint_button_right_middle,433,15,57]; ]
+        module system_icon_dark__hint_button_right_middle {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 433; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 434; @position = 18; @symbol_constdef = [exclude,434,18,25]; @symbol_type<0> = [Boolean,434,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 437; @symbol_moduledef = [confirmation_icon__hint_reject,437,15,45]; ]
+        module confirmation_icon__hint_reject {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 437; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 438; @position = 18; @symbol_constdef = [filename,438,18,26]; @symbol_type<0> = [String,438,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 439; @position = 18; @symbol_constdef = [dithering,439,18,27]; @symbol_type<0> = [String,439,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 442; @symbol_moduledef = [system_icon_light__hint_action_menu,442,15,50]; ]
+        module system_icon_light__hint_action_menu {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 442; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 443; @position = 18; @symbol_constdef = [filename,443,18,26]; @symbol_type<0> = [String,443,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_light__hint_button_right_top.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 444; @position = 18; @symbol_constdef = [dithering,444,18,27]; @symbol_type<0> = [String,444,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 447; @symbol_moduledef = [system_icon_light__hint_button_right_middle,447,15,58]; ]
+        module system_icon_light__hint_button_right_middle {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 447; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 448; @position = 18; @symbol_constdef = [exclude,448,18,25]; @symbol_type<0> = [Boolean,448,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 451; @symbol_moduledef = [system_icon_destructive__hint_button_right_middle,451,15,64]; ]
+        module system_icon_destructive__hint_button_right_middle {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 451; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 452; @position = 18; @symbol_constdef = [exclude,452,18,25]; @symbol_type<0> = [Boolean,452,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 455; @symbol_moduledef = [confirmation_loc__hint_reject,455,15,44]; ]
+        module confirmation_loc__hint_reject {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 455; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 456; @position = 18; @symbol_constdef = [x,456,18,19]; @symbol_type<0> = [Number,456,23,29]; ]
+            const x as Number = 13;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 457; @position = 18; @symbol_constdef = [y,457,18,19]; @symbol_type<0> = [Number,457,23,29]; ]
+            const y as Number = 174;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 458; @position = 18; @symbol_constdef = [horizontalJustification,458,18,41]; @symbol_type<0> = [String,458,45,51]; ]
+            const horizontalJustification as String = "left";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 461; @symbol_moduledef = [confirmation_icon_dark__hint_delete,461,15,50]; ]
+        module confirmation_icon_dark__hint_delete {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 461; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 462; @position = 18; @symbol_constdef = [filename,462,18,26]; @symbol_type<0> = [String,462,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\confirmation_icon__hint_delete.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 463; @position = 18; @symbol_constdef = [dithering,463,18,27]; @symbol_type<0> = [String,463,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 466; @symbol_moduledef = [activity_color_dark__background,466,15,46]; ]
+        module activity_color_dark__background {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 466; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 467; @position = 18; @symbol_constdef = [color,467,18,23]; @symbol_type<0> = [Number,467,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 468; @position = 18; @symbol_constdef = [background,468,18,28]; @symbol_type<0> = [Number,468,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 471; @symbol_moduledef = [system_icon_light__hint_button_left_bottom,471,15,57]; ]
+        module system_icon_light__hint_button_left_bottom {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 471; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 472; @position = 18; @symbol_constdef = [filename,472,18,26]; @symbol_type<0> = [String,472,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_light__hint_button_left_bottom.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 473; @position = 18; @symbol_constdef = [dithering,473,18,27]; @symbol_type<0> = [String,473,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 476; @symbol_moduledef = [system_icon_positive__hint_button_left_middle,476,15,60]; ]
+        module system_icon_positive__hint_button_left_middle {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 476; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 477; @position = 18; @symbol_constdef = [filename,477,18,26]; @symbol_type<0> = [String,477,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_positive__hint_button_left_middle.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 478; @position = 18; @symbol_constdef = [dithering,478,18,27]; @symbol_type<0> = [String,478,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 481; @symbol_moduledef = [system_size__menu_icon,481,15,37]; ]
+        module system_size__menu_icon {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 481; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 482; @position = 18; @symbol_constdef = [scaleX,482,18,24]; @symbol_type<0> = [Number,482,28,34]; ]
+            const scaleX as Number = 40;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 483; @position = 18; @symbol_constdef = [scaleY,483,18,24]; @symbol_type<0> = [Number,483,28,34]; ]
+            const scaleY as Number = 40;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 484; @position = 18; @symbol_constdef = [scaleRelativeTo,484,18,33]; @symbol_type<0> = [String,484,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 487; @symbol_moduledef = [system_icon_destructive__warning,487,15,47]; ]
+        module system_icon_destructive__warning {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 487; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 488; @position = 18; @symbol_constdef = [filename,488,18,26]; @symbol_type<0> = [String,488,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_destructive__warning.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 489; @position = 18; @symbol_constdef = [dithering,489,18,27]; @symbol_type<0> = [String,489,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 492; @symbol_moduledef = [system_loc__hint_button_right_middle,492,15,51]; ]
+        module system_loc__hint_button_right_middle {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 492; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 493; @position = 18; @symbol_constdef = [exclude,493,18,25]; @symbol_type<0> = [Boolean,493,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 496; @symbol_moduledef = [system_icon_dark__cancel,496,15,39]; ]
+        module system_icon_dark__cancel {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 496; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 497; @position = 18; @symbol_constdef = [filename,497,18,26]; @symbol_type<0> = [String,497,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_dark__cancel.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 498; @position = 18; @symbol_constdef = [compress,498,18,26]; @symbol_type<0> = [String,498,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 499; @position = 18; @symbol_constdef = [dithering,499,18,27]; @symbol_type<0> = [String,499,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 500; @position = 18; @symbol_constdef = [automaticPalette,500,18,34]; @symbol_type<0> = [String,500,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 503; @symbol_moduledef = [prompt_size__body_with_title,503,15,43]; ]
+        module prompt_size__body_with_title {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 503; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 504; @position = 18; @symbol_constdef = [width,504,18,23]; @symbol_type<0> = [Number,504,27,33]; ]
+            const width as Number = 208;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 505; @position = 18; @symbol_constdef = [height,505,18,24]; @symbol_type<0> = [Number,505,28,34]; ]
+            const height as Number = 156;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 508; @symbol_moduledef = [system_loc__hint_button_right_top,508,15,48]; ]
+        module system_loc__hint_button_right_top {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 508; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 509; @position = 18; @symbol_constdef = [x,509,18,19]; @symbol_type<0> = [Number,509,23,29]; ]
+            const x as Number = 224;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 510; @position = 18; @symbol_constdef = [y,510,18,19]; @symbol_type<0> = [Number,510,23,29]; ]
+            const y as Number = 50;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 513; @symbol_moduledef = [system_color_light__text,513,15,39]; ]
+        module system_color_light__text {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 513; ]
+            <init> {
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 515 18 ]
+                symbol [ Graphics %tmp.105 515 31 39 ];
+                %tmp.105 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.106 515 40 57 ];
+                %tmp.106 = getv %tmp.105 :COLOR_TRANSPARENT;
+                putv self :background %tmp.106;
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 514; @position = 18; @symbol_constdef = [color,514,18,23]; @symbol_type<0> = [Number,514,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 515; @position = 18; @symbol_constdef = [background,515,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 518; @symbol_moduledef = [system_icon_light__check,518,15,39]; ]
+        module system_icon_light__check {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 518; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 519; @position = 18; @symbol_constdef = [filename,519,18,26]; @symbol_type<0> = [String,519,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_light__check.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 520; @position = 18; @symbol_constdef = [dithering,520,18,27]; @symbol_type<0> = [String,520,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 523; @symbol_moduledef = [confirmation_input__reject,523,15,41]; ]
+        module confirmation_input__reject {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 523; ]
+            <init> {
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 524 18 ]
+                symbol [ WatchUi %tmp.107 524 27 34 ];
+                %tmp.107 = getm $.Toybox.WatchUi;
+                symbol [ KEY_DOWN %tmp.108 524 35 43 ];
+                %tmp.108 = getv %tmp.107 :KEY_DOWN;
+                putv self :button %tmp.108;
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 524; @position = 18; @symbol_constdef = [button,524,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 527; @symbol_moduledef = [system_icon_light__revert,527,15,40]; ]
+        module system_icon_light__revert {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 527; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 528; @position = 18; @symbol_constdef = [filename,528,18,26]; @symbol_type<0> = [String,528,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_light__revert.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 529; @position = 18; @symbol_constdef = [dithering,529,18,27]; @symbol_type<0> = [String,529,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 532; @symbol_moduledef = [system_size__subwindow,532,15,37]; ]
+        module system_size__subwindow {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 532; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 533; @position = 18; @symbol_constdef = [exclude,533,18,25]; @symbol_type<0> = [Boolean,533,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 536; @symbol_moduledef = [system_icon_positive__hint_button_left_bottom,536,15,60]; ]
+        module system_icon_positive__hint_button_left_bottom {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 536; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 537; @position = 18; @symbol_constdef = [filename,537,18,26]; @symbol_type<0> = [String,537,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_positive__hint_button_left_bottom.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 538; @position = 18; @symbol_constdef = [dithering,538,18,27]; @symbol_type<0> = [String,538,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 541; @symbol_moduledef = [system_icon_dark__check,541,15,38]; ]
+        module system_icon_dark__check {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 541; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 542; @position = 18; @symbol_constdef = [filename,542,18,26]; @symbol_type<0> = [String,542,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_dark__check.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 543; @position = 18; @symbol_constdef = [compress,543,18,26]; @symbol_type<0> = [String,543,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 544; @position = 18; @symbol_constdef = [dithering,544,18,27]; @symbol_type<0> = [String,544,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 545; @position = 18; @symbol_constdef = [automaticPalette,545,18,34]; @symbol_type<0> = [String,545,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 548; @symbol_moduledef = [confirmation_loc__hint_keep,548,15,42]; ]
+        module confirmation_loc__hint_keep {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 548; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 549; @position = 18; @symbol_constdef = [x,549,18,19]; @symbol_type<0> = [Number,549,23,29]; ]
+            const x as Number = 13;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 550; @position = 18; @symbol_constdef = [y,550,18,19]; @symbol_type<0> = [Number,550,23,29]; ]
+            const y as Number = 174;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 551; @position = 18; @symbol_constdef = [horizontalJustification,551,18,41]; @symbol_type<0> = [String,551,45,51]; ]
+            const horizontalJustification as String = "left";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 554; @symbol_moduledef = [confirmation_loc__hint_delete,554,15,44]; ]
+        module confirmation_loc__hint_delete {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 554; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 555; @position = 18; @symbol_constdef = [x,555,18,19]; @symbol_type<0> = [Number,555,23,29]; ]
+            const x as Number = 208;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 556; @position = 18; @symbol_constdef = [y,556,18,19]; @symbol_type<0> = [Number,556,23,29]; ]
+            const y as Number = 50;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 559; @symbol_moduledef = [system_icon_positive__hint_action_menu,559,15,53]; ]
+        module system_icon_positive__hint_action_menu {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 559; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 560; @position = 18; @symbol_constdef = [filename,560,18,26]; @symbol_type<0> = [String,560,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_positive__hint_button_right_top.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 561; @position = 18; @symbol_constdef = [dithering,561,18,27]; @symbol_type<0> = [String,561,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 564; @symbol_moduledef = [system_icon_positive__hint_button_right_middle,564,15,61]; ]
+        module system_icon_positive__hint_button_right_middle {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 564; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 565; @position = 18; @symbol_constdef = [exclude,565,18,25]; @symbol_type<0> = [Boolean,565,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 568; @symbol_moduledef = [system_icon_light__hint_button_left_middle,568,15,57]; ]
+        module system_icon_light__hint_button_left_middle {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 568; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 569; @position = 18; @symbol_constdef = [filename,569,18,26]; @symbol_type<0> = [String,569,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_light__hint_button_left_middle.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 570; @position = 18; @symbol_constdef = [dithering,570,18,27]; @symbol_type<0> = [String,570,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 573; @symbol_moduledef = [system_icon_dark__hint_button_right_bottom,573,15,57]; ]
+        module system_icon_dark__hint_button_right_bottom {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 573; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 574; @position = 18; @symbol_constdef = [filename,574,18,26]; @symbol_type<0> = [String,574,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_dark__hint_button_right_bottom.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 575; @position = 18; @symbol_constdef = [dithering,575,18,27]; @symbol_type<0> = [String,575,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 578; @symbol_moduledef = [system_icon_positive__hint_button_right_bottom,578,15,61]; ]
+        module system_icon_positive__hint_button_right_bottom {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 578; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 579; @position = 18; @symbol_constdef = [filename,579,18,26]; @symbol_type<0> = [String,579,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_positive__hint_button_right_bottom.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 580; @position = 18; @symbol_constdef = [dithering,580,18,27]; @symbol_type<0> = [String,580,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 583; @symbol_moduledef = [system_icon_dark__revert,583,15,39]; ]
+        module system_icon_dark__revert {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 583; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 584; @position = 18; @symbol_constdef = [filename,584,18,26]; @symbol_type<0> = [String,584,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_dark__revert.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 585; @position = 18; @symbol_constdef = [compress,585,18,26]; @symbol_type<0> = [String,585,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 586; @position = 18; @symbol_constdef = [dithering,586,18,27]; @symbol_type<0> = [String,586,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 587; @position = 18; @symbol_constdef = [automaticPalette,587,18,34]; @symbol_type<0> = [String,587,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 590; @symbol_moduledef = [confirmation_icon_light__hint_delete,590,15,51]; ]
+        module confirmation_icon_light__hint_delete {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 590; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 591; @position = 18; @symbol_constdef = [filename,591,18,26]; @symbol_type<0> = [String,591,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\confirmation_icon__hint_delete.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 592; @position = 18; @symbol_constdef = [dithering,592,18,27]; @symbol_type<0> = [String,592,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 595; @symbol_moduledef = [system_icon_dark__question,595,15,41]; ]
+        module system_icon_dark__question {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 595; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 596; @position = 18; @symbol_constdef = [filename,596,18,26]; @symbol_type<0> = [String,596,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_dark__question.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 597; @position = 18; @symbol_constdef = [compress,597,18,26]; @symbol_type<0> = [String,597,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 598; @position = 18; @symbol_constdef = [dithering,598,18,27]; @symbol_type<0> = [String,598,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 599; @position = 18; @symbol_constdef = [automaticPalette,599,18,34]; @symbol_type<0> = [String,599,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 602; @symbol_moduledef = [system_icon_light__discard,602,15,41]; ]
+        module system_icon_light__discard {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 602; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 603; @position = 18; @symbol_constdef = [filename,603,18,26]; @symbol_type<0> = [String,603,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_light__discard.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 604; @position = 18; @symbol_constdef = [dithering,604,18,27]; @symbol_type<0> = [String,604,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 607; @symbol_moduledef = [device_info,607,15,26]; ]
+        module device_info {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 607; ]
+            <init> {
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 609 18 ]
+                symbol [ Toybox %tmp.110 609 32 38 ];
+                %tmp.110 = getv ? :Toybox;
+                symbol [ System %tmp.111 609 39 45 ];
+                %tmp.111 = getv %tmp.110 :System;
+                symbol [ SCREEN_SHAPE_ROUND %tmp.112 609 46 64 ];
+                %tmp.112 = getv %tmp.111 :SCREEN_SHAPE_ROUND;
+                putv self :screenShape %tmp.112;
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 608; @position = 18; @symbol_constdef = [screenWidth,608,18,29]; @symbol_type<0> = [Number,608,33,39]; ]
+            const screenWidth as Number = 260;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 609; @position = 18; @symbol_constdef = [screenShape,609,18,29]; ]
+            const screenShape;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 610; @position = 18; @symbol_constdef = [hasNightMode,610,18,30]; @symbol_type<0> = [Boolean,610,34,41]; ]
+            const hasNightMode as Boolean = false;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 611; @position = 18; @symbol_constdef = [hasGpu,611,18,24]; @symbol_type<0> = [Boolean,611,28,35]; ]
+            const hasGpu as Boolean = false;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 612; @position = 18; @symbol_constdef = [screenHeight,612,18,30]; @symbol_type<0> = [Number,612,34,40]; ]
+            const screenHeight as Number = 260;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 613; @position = 18; @symbol_constdef = [hasTouchScreen,613,18,32]; @symbol_type<0> = [Boolean,613,36,43]; ]
+            const hasTouchScreen as Boolean = true;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 614; @position = 18; @symbol_constdef = [hasEnhancedReadabilityMode,614,18,44]; @symbol_type<0> = [Boolean,614,48,55]; ]
+            const hasEnhancedReadabilityMode as Boolean = false;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 617; @symbol_moduledef = [confirmation_icon_dark__hint_confirm,617,15,51]; ]
+        module confirmation_icon_dark__hint_confirm {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 617; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 618; @position = 18; @symbol_constdef = [filename,618,18,26]; @symbol_type<0> = [String,618,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\confirmation_icon__hint_completion.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 619; @position = 18; @symbol_constdef = [dithering,619,18,27]; @symbol_type<0> = [String,619,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 622; @symbol_moduledef = [prompt_font__body_no_title,622,15,41]; ]
+        module prompt_font__body_no_title {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 622; ]
+            <init> {
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 623 18 ]
+                symbol [ Graphics %tmp.113 623 34 42 ];
+                %tmp.113 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.114 623 43 62 ];
+                %tmp.114 = getv %tmp.113 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.115 623 63 71 ];
+                %tmp.115 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.116 623 72 92 ];
+                %tmp.116 = getv %tmp.115 :TEXT_JUSTIFY_VCENTER;
+                %tmp.117 = bitor %tmp.114 %tmp.116;
+                putv self :justification %tmp.117;
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 624 18 ]
+                symbol [ Graphics %tmp.118 624 25 33 ];
+                %tmp.118 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.119 624 34 43 ];
+                %tmp.119 = getv %tmp.118 :FONT_TINY;
+                putv self :font %tmp.119;
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 623; @position = 18; @symbol_constdef = [justification,623,18,31]; ]
+            const justification;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 624; @position = 18; @symbol_constdef = [font,624,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 627; @symbol_moduledef = [prompt_size__title_icon,627,15,38]; ]
+        module prompt_size__title_icon {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 627; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 628; @position = 18; @symbol_constdef = [scaleX,628,18,24]; @symbol_type<0> = [Float,628,28,33]; ]
+            const scaleX as Float = 0.1539;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 629; @position = 18; @symbol_constdef = [scaleRelativeTo,629,18,33]; @symbol_type<0> = [String,629,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 632; @symbol_moduledef = [system_icon_dark__warning,632,15,40]; ]
+        module system_icon_dark__warning {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 632; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 633; @position = 18; @symbol_constdef = [filename,633,18,26]; @symbol_type<0> = [String,633,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_dark__warning.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 634; @position = 18; @symbol_constdef = [compress,634,18,26]; @symbol_type<0> = [String,634,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 635; @position = 18; @symbol_constdef = [dithering,635,18,27]; @symbol_type<0> = [String,635,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 636; @position = 18; @symbol_constdef = [automaticPalette,636,18,34]; @symbol_type<0> = [String,636,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 639; @symbol_moduledef = [prompt_loc__title_icon,639,15,37]; ]
+        module prompt_loc__title_icon {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 639; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 640; @position = 18; @symbol_constdef = [x,640,18,19]; @symbol_type<0> = [Number,640,23,29]; ]
+            const x as Number = 130;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 641; @position = 18; @symbol_constdef = [y,641,18,19]; @symbol_type<0> = [Number,641,23,29]; ]
+            const y as Number = 39;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 642; @position = 18; @symbol_constdef = [horizontalJustification,642,18,41]; @symbol_type<0> = [String,642,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 643; @position = 18; @symbol_constdef = [verticalJustification,643,18,39]; @symbol_type<0> = [String,643,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 646; @symbol_moduledef = [prompt_font_enhanced_readability__title,646,15,54]; ]
+        module prompt_font_enhanced_readability__title {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 646; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 647; @position = 18; @symbol_constdef = [exclude,647,18,25]; @symbol_type<0> = [Boolean,647,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 650; @symbol_moduledef = [prompt_color_dark__body,650,15,38]; ]
+        module prompt_color_dark__body {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 650; ]
+            <init> {
+[ "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen" 652 18 ]
+                symbol [ Graphics %tmp.120 652 31 39 ];
+                %tmp.120 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.121 652 40 57 ];
+                %tmp.121 = getv %tmp.120 :COLOR_TRANSPARENT;
+                putv self :background %tmp.121;
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 651; @position = 18; @symbol_constdef = [color,651,18,23]; @symbol_type<0> = [Number,651,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 652; @position = 18; @symbol_constdef = [background,652,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 655; @symbol_moduledef = [confirmation_icon__hint_delete,655,15,45]; ]
+        module confirmation_icon__hint_delete {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 655; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 656; @position = 18; @symbol_constdef = [filename,656,18,26]; @symbol_type<0> = [String,656,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\confirmation_icon__hint_delete.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 657; @position = 18; @symbol_constdef = [dithering,657,18,27]; @symbol_type<0> = [String,657,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 660; @symbol_moduledef = [system_icon_light__hint_button_right_top,660,15,55]; ]
+        module system_icon_light__hint_button_right_top {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 660; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 661; @position = 18; @symbol_constdef = [filename,661,18,26]; @symbol_type<0> = [String,661,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_light__hint_button_right_top.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 662; @position = 18; @symbol_constdef = [dithering,662,18,27]; @symbol_type<0> = [String,662,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 665; @symbol_moduledef = [confirmation_size__body,665,15,38]; ]
+        module confirmation_size__body {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 665; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 666; @position = 18; @symbol_constdef = [width,666,18,23]; @symbol_type<0> = [Number,666,27,33]; ]
+            const width as Number = 156;
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 667; @position = 18; @symbol_constdef = [height,667,18,24]; @symbol_type<0> = [Number,667,28,34]; ]
+            const height as Number = 156;
+        }
+        [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 670; @symbol_moduledef = [system_icon_positive__check,670,15,42]; ]
+        module system_icon_positive__check {
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 670; ]
+            <init> {
+            }
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 671; @position = 18; @symbol_constdef = [filename,671,18,26]; @symbol_type<0> = [String,671,30,36]; ]
+            const filename as String = "C:\\Users\\kaima\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255m\\system_icon_positive__check.svg";
+            [ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 672; @position = 18; @symbol_constdef = [dithering,672,18,27]; @symbol_type<0> = [String,672,31,37]; ]
+            const dithering as String = "none";
+        }
+    }
+}
+[ @file = "c:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\bin\gen\006-B3990-00\source\Rez.mcgen"; @line = 1; ]
+<init> {
+}

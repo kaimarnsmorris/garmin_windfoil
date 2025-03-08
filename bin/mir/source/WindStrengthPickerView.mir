@@ -1,0 +1,508 @@
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [WatchUi,3,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Graphics,4,13,21]; ]
+using Toybox.Graphics;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [System,5,13,19]; ]
+using Toybox.System;
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc"; @line = 8; @symbol_classdef = [WindStrengthPickerView,8,6,28]; @symbol_extends<0> = [WatchUi,8,37,44]; @symbol_extends<1> = [View,8,45,49]; ]
+class WindStrengthPickerView extends WatchUi.View {
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc"; @line = 8; ]
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc"; @line = 8; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc"; @line = 9; @position = 16; @symbol_vardef = [mModel,9,16,22]; ]
+    private
+    var mModel;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc"; @line = 10; @position = 15; @symbol_vardef = [mSelectedIndex,10,15,29]; ]
+    public
+    var mSelectedIndex;
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc"; @line = 12; @symbol_functiondef = [initialize,12,13,23]; @symbol_param<0> = [model,12,24,29]; ]
+    function initialize(model) as Void {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_12_31_16_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 13 8 ]
+        symbol [ View %tmp.2 13 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 13 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 14 8 ]
+        %tmp.4 = lgetv %model;
+        symbol [ model %tmp.4 14 17 22 ];
+        symbol [ mModel ? 14 8 14 ];
+        putv self :mModel %tmp.4;
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 15 8 ]
+        %tmp.5 = 0;
+        symbol [ mSelectedIndex ? 15 8 22 ];
+        putv self :mSelectedIndex %tmp.5;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_12_31_16_4_stop:
+    }
+    [ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc"; @line = 18; @symbol_functiondef = [onUpdate,18,13,21]; @symbol_param<0> = [dc,18,22,24]; ]
+    function onUpdate(dc) {
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_18_26_67_4_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 20 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 20 8 10 ];
+        symbol [ setColor %tmp.2 20 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ Graphics %tmp.3 20 20 28 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.4 20 29 40 ];
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        symbol [ Graphics %tmp.5 20 42 50 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.6 20 51 62 ];
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 21 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 21 8 10 ];
+        symbol [ clear %tmp.8 21 11 16 ];
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 24 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_18_26_67_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_18_26_67_4_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 24 12 17 ];
+        %tmp.9 = lgetv %dc;
+        symbol [ dc %tmp.9 24 20 22 ];
+        symbol [ getWidth %tmp.10 24 23 31 ];
+        %tmp.10 = getv function %tmp.9 :getWidth;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        lputv %width.1 %tmp.11;
+        symbol [ width %width.1 24 12 17 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 25 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_18_26_67_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_18_26_67_4_stop" ]
+        %height.2 = local;
+        symbol [ height %height.2 25 12 18 ];
+        %tmp.12 = lgetv %dc;
+        symbol [ dc %tmp.12 25 21 23 ];
+        symbol [ getHeight %tmp.13 25 24 33 ];
+        %tmp.13 = getv function %tmp.12 :getHeight;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        lputv %height.2 %tmp.14;
+        symbol [ height %height.2 25 12 18 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 28 8 ]
+        %tmp.15 = lgetv %dc;
+        symbol [ dc %tmp.15 28 8 10 ];
+        symbol [ setColor %tmp.16 28 11 19 ];
+        %tmp.16 = getv function %tmp.15 :setColor;
+        symbol [ Graphics %tmp.17 28 20 28 ];
+        %tmp.17 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.18 28 29 40 ];
+        %tmp.18 = getv %tmp.17 :COLOR_WHITE;
+        symbol [ Graphics %tmp.19 28 42 50 ];
+        %tmp.19 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.20 28 51 68 ];
+        %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
+        invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 29 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_18_26_67_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_18_26_67_4_stop" ]
+        %fontHeight.3 = local;
+        symbol [ fontHeight %fontHeight.3 29 12 22 ];
+        %tmp.21 = lgetv %dc;
+        symbol [ dc %tmp.21 29 25 27 ];
+        symbol [ getFontHeight %tmp.22 29 28 41 ];
+        %tmp.22 = getv function %tmp.21 :getFontHeight;
+        symbol [ Graphics %tmp.23 29 42 50 ];
+        %tmp.23 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.24 29 51 61 ];
+        %tmp.24 = getv %tmp.23 :FONT_SMALL;
+        %tmp.25 = invoke %tmp.21 %tmp.22(%tmp.24);
+        %tmp.26 = 2;
+        %tmp.27 = div %tmp.25 %tmp.26;
+        lputv %fontHeight.3 %tmp.27;
+        symbol [ fontHeight %fontHeight.3 29 12 22 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 30 8 ]
+        %tmp.28 = lgetv %dc;
+        symbol [ dc %tmp.28 30 8 10 ];
+        symbol [ drawText %tmp.29 30 11 19 ];
+        %tmp.29 = getv function %tmp.28 :drawText;
+        %tmp.30 = lgetv %width.1;
+        symbol [ width %tmp.30 30 20 25 ];
+        %tmp.31 = 2;
+        %tmp.32 = div %tmp.30 %tmp.31;
+        %tmp.33 = 5;
+        %tmp.34 = lgetv %fontHeight.3;
+        symbol [ fontHeight %tmp.34 30 33 43 ];
+        %tmp.35 = add %tmp.33 %tmp.34;
+        symbol [ Graphics %tmp.36 30 45 53 ];
+        %tmp.36 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.37 30 54 64 ];
+        %tmp.37 = getv %tmp.36 :FONT_SMALL;
+        %tmp.38 = "Wind Strength";
+        symbol [ Graphics %tmp.39 30 83 91 ];
+        %tmp.39 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.40 30 92 111 ];
+        %tmp.40 = getv %tmp.39 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.28 %tmp.29(%tmp.32, %tmp.35, %tmp.37, %tmp.38, %tmp.40);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 33 8 ]
+        %tmp.41 = lgetv %dc;
+        symbol [ dc %tmp.41 33 8 10 ];
+        symbol [ setColor %tmp.42 33 11 19 ];
+        %tmp.42 = getv function %tmp.41 :setColor;
+        symbol [ Graphics %tmp.43 33 20 28 ];
+        %tmp.43 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_GRAY %tmp.44 33 29 42 ];
+        %tmp.44 = getv %tmp.43 :COLOR_DK_GRAY;
+        symbol [ Graphics %tmp.45 33 44 52 ];
+        %tmp.45 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.46 33 53 70 ];
+        %tmp.46 = getv %tmp.45 :COLOR_TRANSPARENT;
+        invoke %tmp.41 %tmp.42(%tmp.44, %tmp.46);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 34 8 ]
+        %tmp.47 = lgetv %dc;
+        symbol [ dc %tmp.47 34 8 10 ];
+        symbol [ drawLine %tmp.48 34 11 19 ];
+        %tmp.48 = getv function %tmp.47 :drawLine;
+        %tmp.49 = 10;
+        %tmp.50 = 30;
+        %tmp.51 = lgetv %fontHeight.3;
+        symbol [ fontHeight %tmp.51 34 29 39 ];
+        %tmp.52 = add %tmp.50 %tmp.51;
+        %tmp.53 = lgetv %width.1;
+        symbol [ width %tmp.53 34 41 46 ];
+        %tmp.54 = 10;
+        %tmp.55 = sub %tmp.53 %tmp.54;
+        %tmp.56 = 30;
+        %tmp.57 = lgetv %fontHeight.3;
+        symbol [ fontHeight %tmp.57 34 56 66 ];
+        %tmp.58 = add %tmp.56 %tmp.57;
+        invoke %tmp.47 %tmp.48(%tmp.49, %tmp.52, %tmp.55, %tmp.58);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 37 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_18_26_67_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_18_26_67_4_stop" ]
+        %options.4 = local;
+        symbol [ options %options.4 37 12 19 ];
+        symbol [ mModel %tmp.60 37 22 28 ];
+        %tmp.60 = getv ? :mModel;
+        symbol [ getWindStrengthOptions %tmp.61 37 29 51 ];
+        %tmp.61 = getv function %tmp.60 :getWindStrengthOptions;
+        %tmp.62 = invoke %tmp.60 %tmp.61();
+        lputv %options.4 %tmp.62;
+        symbol [ options %options.4 37 12 19 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 40 8 ]
+        %tmp.63 = lgetv %dc;
+        symbol [ dc %tmp.63 40 8 10 ];
+        symbol [ setColor %tmp.64 40 11 19 ];
+        %tmp.64 = getv function %tmp.63 :setColor;
+        symbol [ Graphics %tmp.65 40 20 28 ];
+        %tmp.65 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.66 40 29 40 ];
+        %tmp.66 = getv %tmp.65 :COLOR_WHITE;
+        symbol [ Graphics %tmp.67 40 42 50 ];
+        %tmp.67 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.68 40 51 68 ];
+        %tmp.68 = getv %tmp.67 :COLOR_TRANSPARENT;
+        invoke %tmp.63 %tmp.64(%tmp.66, %tmp.68);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 41 8 ]
+        %tmp.69 = lgetv %dc;
+        symbol [ dc %tmp.69 41 8 10 ];
+        symbol [ drawText %tmp.70 41 11 19 ];
+        %tmp.70 = getv function %tmp.69 :drawText;
+        %tmp.71 = lgetv %width.1;
+        symbol [ width %tmp.71 41 20 25 ];
+        %tmp.72 = 2;
+        %tmp.73 = div %tmp.71 %tmp.72;
+        %tmp.74 = lgetv %height.2;
+        symbol [ height %tmp.74 41 29 35 ];
+        %tmp.75 = 2;
+        %tmp.76 = div %tmp.74 %tmp.75;
+        symbol [ Graphics %tmp.77 41 39 47 ];
+        %tmp.77 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.78 41 48 59 ];
+        %tmp.78 = getv %tmp.77 :FONT_MEDIUM;
+        %tmp.79 = lgetv %options.4;
+        symbol [ options %tmp.79 41 61 68 ];
+        symbol [ mSelectedIndex %tmp.81 41 69 83 ];
+        %tmp.81 = getv ? :mSelectedIndex;
+        %tmp.82 = agetv %tmp.79 %tmp.81;
+        symbol [ Graphics %tmp.83 41 86 94 ];
+        %tmp.83 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.84 41 95 114 ];
+        %tmp.84 = getv %tmp.83 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.69 %tmp.70(%tmp.73, %tmp.76, %tmp.78, %tmp.82, %tmp.84);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 44 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_18_26_67_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_18_26_67_4_stop" ]
+        %mediumFontHeight.5 = local;
+        symbol [ mediumFontHeight %mediumFontHeight.5 44 12 28 ];
+        %tmp.85 = lgetv %dc;
+        symbol [ dc %tmp.85 44 31 33 ];
+        symbol [ getFontHeight %tmp.86 44 34 47 ];
+        %tmp.86 = getv function %tmp.85 :getFontHeight;
+        symbol [ Graphics %tmp.87 44 48 56 ];
+        %tmp.87 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.88 44 57 68 ];
+        %tmp.88 = getv %tmp.87 :FONT_MEDIUM;
+        %tmp.89 = invoke %tmp.85 %tmp.86(%tmp.88);
+        lputv %mediumFontHeight.5 %tmp.89;
+        symbol [ mediumFontHeight %mediumFontHeight.5 44 12 28 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 45 8 ]
+        [ "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_18_26_67_4_start" "C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_18_26_67_4_stop" ]
+        %arrowOffset.6 = local;
+        symbol [ arrowOffset %arrowOffset.6 45 12 23 ];
+        %tmp.90 = lgetv %mediumFontHeight.5;
+        symbol [ mediumFontHeight %tmp.90 45 26 42 ];
+        %tmp.91 = 2;
+        %tmp.92 = div %tmp.90 %tmp.91;
+        lputv %arrowOffset.6 %tmp.92;
+        symbol [ arrowOffset %arrowOffset.6 45 12 23 ];
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 48 8 ]
+        %tmp.93 = lgetv %dc;
+        symbol [ dc %tmp.93 48 8 10 ];
+        symbol [ setColor %tmp.94 48 11 19 ];
+        %tmp.94 = getv function %tmp.93 :setColor;
+        symbol [ Graphics %tmp.95 48 20 28 ];
+        %tmp.95 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.96 48 29 42 ];
+        %tmp.96 = getv %tmp.95 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.97 48 44 52 ];
+        %tmp.97 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.98 48 53 70 ];
+        %tmp.98 = getv %tmp.97 :COLOR_TRANSPARENT;
+        invoke %tmp.93 %tmp.94(%tmp.96, %tmp.98);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 51 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_51_8_56_8_if_stmt:
+        symbol [ mSelectedIndex %tmp.100 51 12 26 ];
+        %tmp.100 = getv ? :mSelectedIndex;
+        %tmp.101 = 0;
+        %tmp.102 = gt %tmp.100 %tmp.101;
+        bf %tmp.102 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_51_8_56_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_51_8_56_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_51_32_56_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 53 12 ]
+        %tmp.103 = lgetv %dc;
+        symbol [ dc %tmp.103 53 12 14 ];
+        symbol [ drawLine %tmp.104 53 15 23 ];
+        %tmp.104 = getv function %tmp.103 :drawLine;
+        %tmp.105 = lgetv %width.1;
+        symbol [ width %tmp.105 53 24 29 ];
+        %tmp.106 = 2;
+        %tmp.107 = div %tmp.105 %tmp.106;
+        %tmp.108 = lgetv %height.2;
+        symbol [ height %tmp.108 53 33 39 ];
+        %tmp.109 = 2;
+        %tmp.110 = div %tmp.108 %tmp.109;
+        %tmp.111 = 40;
+        %tmp.112 = sub %tmp.110 %tmp.111;
+        %tmp.113 = lgetv %arrowOffset.6;
+        symbol [ arrowOffset %tmp.113 53 49 60 ];
+        %tmp.114 = sub %tmp.112 %tmp.113;
+        %tmp.115 = lgetv %width.1;
+        symbol [ width %tmp.115 53 62 67 ];
+        %tmp.116 = 2;
+        %tmp.117 = div %tmp.115 %tmp.116;
+        %tmp.118 = 10;
+        %tmp.119 = sub %tmp.117 %tmp.118;
+        %tmp.120 = lgetv %height.2;
+        symbol [ height %tmp.120 53 76 82 ];
+        %tmp.121 = 2;
+        %tmp.122 = div %tmp.120 %tmp.121;
+        %tmp.123 = 30;
+        %tmp.124 = sub %tmp.122 %tmp.123;
+        %tmp.125 = lgetv %arrowOffset.6;
+        symbol [ arrowOffset %tmp.125 53 92 103 ];
+        %tmp.126 = sub %tmp.124 %tmp.125;
+        invoke %tmp.103 %tmp.104(%tmp.107, %tmp.114, %tmp.119, %tmp.126);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 54 12 ]
+        %tmp.127 = lgetv %dc;
+        symbol [ dc %tmp.127 54 12 14 ];
+        symbol [ drawLine %tmp.128 54 15 23 ];
+        %tmp.128 = getv function %tmp.127 :drawLine;
+        %tmp.129 = lgetv %width.1;
+        symbol [ width %tmp.129 54 24 29 ];
+        %tmp.130 = 2;
+        %tmp.131 = div %tmp.129 %tmp.130;
+        %tmp.132 = lgetv %height.2;
+        symbol [ height %tmp.132 54 33 39 ];
+        %tmp.133 = 2;
+        %tmp.134 = div %tmp.132 %tmp.133;
+        %tmp.135 = 40;
+        %tmp.136 = sub %tmp.134 %tmp.135;
+        %tmp.137 = lgetv %arrowOffset.6;
+        symbol [ arrowOffset %tmp.137 54 49 60 ];
+        %tmp.138 = sub %tmp.136 %tmp.137;
+        %tmp.139 = lgetv %width.1;
+        symbol [ width %tmp.139 54 62 67 ];
+        %tmp.140 = 2;
+        %tmp.141 = div %tmp.139 %tmp.140;
+        %tmp.142 = 10;
+        %tmp.143 = add %tmp.141 %tmp.142;
+        %tmp.144 = lgetv %height.2;
+        symbol [ height %tmp.144 54 76 82 ];
+        %tmp.145 = 2;
+        %tmp.146 = div %tmp.144 %tmp.145;
+        %tmp.147 = 30;
+        %tmp.148 = sub %tmp.146 %tmp.147;
+        %tmp.149 = lgetv %arrowOffset.6;
+        symbol [ arrowOffset %tmp.149 54 92 103 ];
+        %tmp.150 = sub %tmp.148 %tmp.149;
+        invoke %tmp.127 %tmp.128(%tmp.131, %tmp.138, %tmp.143, %tmp.150);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 55 12 ]
+        %tmp.151 = lgetv %dc;
+        symbol [ dc %tmp.151 55 12 14 ];
+        symbol [ drawLine %tmp.152 55 15 23 ];
+        %tmp.152 = getv function %tmp.151 :drawLine;
+        %tmp.153 = lgetv %width.1;
+        symbol [ width %tmp.153 55 24 29 ];
+        %tmp.154 = 2;
+        %tmp.155 = div %tmp.153 %tmp.154;
+        %tmp.156 = 10;
+        %tmp.157 = sub %tmp.155 %tmp.156;
+        %tmp.158 = lgetv %height.2;
+        symbol [ height %tmp.158 55 38 44 ];
+        %tmp.159 = 2;
+        %tmp.160 = div %tmp.158 %tmp.159;
+        %tmp.161 = 30;
+        %tmp.162 = sub %tmp.160 %tmp.161;
+        %tmp.163 = lgetv %arrowOffset.6;
+        symbol [ arrowOffset %tmp.163 55 54 65 ];
+        %tmp.164 = sub %tmp.162 %tmp.163;
+        %tmp.165 = lgetv %width.1;
+        symbol [ width %tmp.165 55 67 72 ];
+        %tmp.166 = 2;
+        %tmp.167 = div %tmp.165 %tmp.166;
+        %tmp.168 = 10;
+        %tmp.169 = add %tmp.167 %tmp.168;
+        %tmp.170 = lgetv %height.2;
+        symbol [ height %tmp.170 55 81 87 ];
+        %tmp.171 = 2;
+        %tmp.172 = div %tmp.170 %tmp.171;
+        %tmp.173 = 30;
+        %tmp.174 = sub %tmp.172 %tmp.173;
+        %tmp.175 = lgetv %arrowOffset.6;
+        symbol [ arrowOffset %tmp.175 55 97 108 ];
+        %tmp.176 = sub %tmp.174 %tmp.175;
+        invoke %tmp.151 %tmp.152(%tmp.157, %tmp.164, %tmp.169, %tmp.176);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_51_32_56_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_51_8_56_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_51_8_56_8_if_end:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 59 8 ]
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_59_8_64_8_if_stmt:
+        symbol [ mSelectedIndex %tmp.178 59 12 26 ];
+        %tmp.178 = getv ? :mSelectedIndex;
+        %tmp.179 = lgetv %options.4;
+        symbol [ options %tmp.179 59 29 36 ];
+        symbol [ size %tmp.180 59 37 41 ];
+        %tmp.180 = getv function %tmp.179 :size;
+        %tmp.181 = invoke %tmp.179 %tmp.180();
+        %tmp.182 = 1;
+        %tmp.183 = sub %tmp.181 %tmp.182;
+        %tmp.184 = lt %tmp.178 %tmp.183;
+        bf %tmp.184 @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_59_8_64_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_59_8_64_8_if_true:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_59_49_64_8_start:
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 61 12 ]
+        %tmp.185 = lgetv %dc;
+        symbol [ dc %tmp.185 61 12 14 ];
+        symbol [ drawLine %tmp.186 61 15 23 ];
+        %tmp.186 = getv function %tmp.185 :drawLine;
+        %tmp.187 = lgetv %width.1;
+        symbol [ width %tmp.187 61 24 29 ];
+        %tmp.188 = 2;
+        %tmp.189 = div %tmp.187 %tmp.188;
+        %tmp.190 = lgetv %height.2;
+        symbol [ height %tmp.190 61 33 39 ];
+        %tmp.191 = 2;
+        %tmp.192 = div %tmp.190 %tmp.191;
+        %tmp.193 = 40;
+        %tmp.194 = add %tmp.192 %tmp.193;
+        %tmp.195 = lgetv %arrowOffset.6;
+        symbol [ arrowOffset %tmp.195 61 49 60 ];
+        %tmp.196 = add %tmp.194 %tmp.195;
+        %tmp.197 = lgetv %width.1;
+        symbol [ width %tmp.197 61 62 67 ];
+        %tmp.198 = 2;
+        %tmp.199 = div %tmp.197 %tmp.198;
+        %tmp.200 = 10;
+        %tmp.201 = sub %tmp.199 %tmp.200;
+        %tmp.202 = lgetv %height.2;
+        symbol [ height %tmp.202 61 76 82 ];
+        %tmp.203 = 2;
+        %tmp.204 = div %tmp.202 %tmp.203;
+        %tmp.205 = 30;
+        %tmp.206 = add %tmp.204 %tmp.205;
+        %tmp.207 = lgetv %arrowOffset.6;
+        symbol [ arrowOffset %tmp.207 61 92 103 ];
+        %tmp.208 = add %tmp.206 %tmp.207;
+        invoke %tmp.185 %tmp.186(%tmp.189, %tmp.196, %tmp.201, %tmp.208);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 62 12 ]
+        %tmp.209 = lgetv %dc;
+        symbol [ dc %tmp.209 62 12 14 ];
+        symbol [ drawLine %tmp.210 62 15 23 ];
+        %tmp.210 = getv function %tmp.209 :drawLine;
+        %tmp.211 = lgetv %width.1;
+        symbol [ width %tmp.211 62 24 29 ];
+        %tmp.212 = 2;
+        %tmp.213 = div %tmp.211 %tmp.212;
+        %tmp.214 = lgetv %height.2;
+        symbol [ height %tmp.214 62 33 39 ];
+        %tmp.215 = 2;
+        %tmp.216 = div %tmp.214 %tmp.215;
+        %tmp.217 = 40;
+        %tmp.218 = add %tmp.216 %tmp.217;
+        %tmp.219 = lgetv %arrowOffset.6;
+        symbol [ arrowOffset %tmp.219 62 49 60 ];
+        %tmp.220 = add %tmp.218 %tmp.219;
+        %tmp.221 = lgetv %width.1;
+        symbol [ width %tmp.221 62 62 67 ];
+        %tmp.222 = 2;
+        %tmp.223 = div %tmp.221 %tmp.222;
+        %tmp.224 = 10;
+        %tmp.225 = add %tmp.223 %tmp.224;
+        %tmp.226 = lgetv %height.2;
+        symbol [ height %tmp.226 62 76 82 ];
+        %tmp.227 = 2;
+        %tmp.228 = div %tmp.226 %tmp.227;
+        %tmp.229 = 30;
+        %tmp.230 = add %tmp.228 %tmp.229;
+        %tmp.231 = lgetv %arrowOffset.6;
+        symbol [ arrowOffset %tmp.231 62 92 103 ];
+        %tmp.232 = add %tmp.230 %tmp.231;
+        invoke %tmp.209 %tmp.210(%tmp.213, %tmp.220, %tmp.225, %tmp.232);
+[ "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc" 63 12 ]
+        %tmp.233 = lgetv %dc;
+        symbol [ dc %tmp.233 63 12 14 ];
+        symbol [ drawLine %tmp.234 63 15 23 ];
+        %tmp.234 = getv function %tmp.233 :drawLine;
+        %tmp.235 = lgetv %width.1;
+        symbol [ width %tmp.235 63 24 29 ];
+        %tmp.236 = 2;
+        %tmp.237 = div %tmp.235 %tmp.236;
+        %tmp.238 = 10;
+        %tmp.239 = sub %tmp.237 %tmp.238;
+        %tmp.240 = lgetv %height.2;
+        symbol [ height %tmp.240 63 38 44 ];
+        %tmp.241 = 2;
+        %tmp.242 = div %tmp.240 %tmp.241;
+        %tmp.243 = 30;
+        %tmp.244 = add %tmp.242 %tmp.243;
+        %tmp.245 = lgetv %arrowOffset.6;
+        symbol [ arrowOffset %tmp.245 63 54 65 ];
+        %tmp.246 = add %tmp.244 %tmp.245;
+        %tmp.247 = lgetv %width.1;
+        symbol [ width %tmp.247 63 67 72 ];
+        %tmp.248 = 2;
+        %tmp.249 = div %tmp.247 %tmp.248;
+        %tmp.250 = 10;
+        %tmp.251 = add %tmp.249 %tmp.250;
+        %tmp.252 = lgetv %height.2;
+        symbol [ height %tmp.252 63 81 87 ];
+        %tmp.253 = 2;
+        %tmp.254 = div %tmp.252 %tmp.253;
+        %tmp.255 = 30;
+        %tmp.256 = add %tmp.254 %tmp.255;
+        %tmp.257 = lgetv %arrowOffset.6;
+        symbol [ arrowOffset %tmp.257 63 97 108 ];
+        %tmp.258 = add %tmp.256 %tmp.257;
+        invoke %tmp.233 %tmp.234(%tmp.239, %tmp.246, %tmp.251, %tmp.258);
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_59_49_64_8_stop:
+        goto @C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_59_8_64_8_if_end;
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_59_8_64_8_if_end:
+C_Users_kaima_OneDrive_Documents_GitHub_FoilTracker_2_source_WindStrengthPickerView_mc_18_26_67_4_stop:
+    }
+}
+[ @file = "C:\Users\kaima\OneDrive\Documents\GitHub\FoilTracker_2\source\WindStrengthPickerView.mc"; @line = 3; ]
+<init> {
+}
